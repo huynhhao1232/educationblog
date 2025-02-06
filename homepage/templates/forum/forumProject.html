@@ -1,0 +1,145 @@
+{% extends 'homepageSIMCODE/template.html' %}
+{% load static %}
+
+{%block forumProject %}
+
+
+<section class="section how-it-works forums mt-5" >
+    <div class="container">
+        <h3 style="margin-bottom: 40px">Dự án mới nhất </h3>
+        <div class="row">
+            <div class="col-md-9" data-aos="fade-up">
+                <div class="post clearfix">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="img-project">
+                                <img src="https://www.makerlab.vn/wp-content/uploads/2023/09/maxresdefault-485x360.jpg" width="100%" alt="">
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-8">
+                            <div class="projecttext">
+                                <h2><a href="#">Vòng lặp</a></h2>
+                                <div class="projectinfo d-flex">
+                                    <div class="projectbox">
+                                        Dự án
+                                    </div>
+                                    <p class="info">Ngo Huy - <span class="timeproject">01/01/2002</span> </p>
+                                </div>
+                                <p class="content-text">Người thảo luận để tìm ra cách giải hay cho một bài toán khó sẽ trở thành lập trình viên giỏi. Người hay hỏi bài tập thì không. Còn bạn thì sao?Người hay hỏi bài tập thì không. Còn bạn thì sao?Người hay hỏi bài tập thì không. Còn bạn thì sao?
+                                    <span class="expand-button">...</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" >
+                
+                <div class="forum-right">
+  
+                        <button type="button" class="btn btn-primary btn-topic" data-bs-toggle="modal" data-bs-target="#exampleModal"><span >+ </span>Dự án mới</button>
+
+                        
+
+                    <div class="forum-right-categories">
+                        <h3>Các chuyên mục</h3>
+                        <div class="divline"></div>
+                        <div class="forum-right-categories-manage">
+                            <ul class="forum-right-categories-list">
+                                <li>
+                                    <a href="#">
+                                        Hỏi và đáp
+                                        <span class="badge pull-right">2</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Dự án
+                                        <span class="badge pull-right">2</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+                    <div class="forum-right-categories">
+                        <h3>Người học tích cực</h3>
+                        <div class="divline"></div>
+                        <div class="forum-right-categories-manage ">
+                            <a href="#">Đoàn Huỳnh Nguyễn Châu Thanh Tú</a>
+                        </div>
+                        <div class="divline"></div>
+                        <div class="forum-right-categories-manage">
+                            <a href="#">Đoàn Huỳnh Nguyễn Châu Thanh Tú</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<form id="projectForm" action="">
+    {% csrf_token %}
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 500px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm dự án</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="topic-add">
+                        <div class="mb-3">
+                            <input type="text" name="projectName" class="form-control" placeholder="Nhập tên dự án" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <select name="categoryName"  class="form-select">
+                                <option value="#" selected>Chọn chuyên mục</option>
+                                {% for subject in subjects %}
+                                {% if subject != course.subject %}
+                                <option value="{{subject.subject_id}}">{{subject.subject_name}}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="alert alert-danger d-none" id="activityTypeError" role="alert">
+                            Vui lòng chọn chuyên mục!
+                        </div>
+
+                        <div class="mb-3">
+                            <textarea name="projectDesc" id="desc" placeholder="Mô tả dự án" class="form-control" style=" height: 145px;"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="upload">
+                                <button type="button" class="btn-warningg">
+                                    <i class="fa fa-upload"></i> Upload File
+                                    <input type="file">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{%endblock%}

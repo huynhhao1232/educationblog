@@ -1,0 +1,44 @@
+
+
+{% extends 'homepage/template.html' %}
+{% block title %} Trang chủ {%endblock%}
+{%block list-post%}
+{% load static %}
+
+
+            <!----------------------------------------------------------content-left---------------------------------->
+            <!----------------------------------------------------------content-right---------------------------------->
+            <div class="col-sm-9">
+              <ul class="list-group">
+                <li class="list-group-item" aria-current="true" style='background-color: #023EB6' >
+                  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" style="pađding:0; margin: 0">
+                    <ol class="breadcrumb" style='padding:0; margin:0'>
+                      <li class="breadcrumb-item"><a href="{% url 'homepage:Homepage' %}"  style="color: #fff; font-weight: bold; font-family: Roboto; text-decoration: none">Trang chủ</a></li>
+                      {%for i in categories%}
+                      {%if i.id == category_id%}
+                      <li class="breadcrumb-item active" aria-current="page" style="color: #fff; font-weight: bold; font-family: Roboto; text-decoration: none; text-transform: uppercase">{{i.name}}</li>
+                      {%endif%}
+                      {%endfor%}
+                    </ol>
+                  </nav>
+                </li>
+                {%for post in posts%}
+                <li class="list-group-item">
+                  <a href="{% url 'homepage:post' post_id=post.id%}" class="news-title">
+                    <p>{{post.title}}</p>
+                  </a>
+                  <p class="news-time text-muted" style="font-size: 14px;">{{ post.createdate|date:"d/m/Y H:i" }}</p>
+                </li>
+                {%endfor%}
+              </ul>
+            </div>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{%static 'assets/script.js'%}"></script>
+
+    {%endblock%}

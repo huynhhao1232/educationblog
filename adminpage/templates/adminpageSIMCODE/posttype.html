@@ -1,0 +1,114 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{%block posttype %}
+<nav aria-label="breadcrumb" class="i-name">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Diễn đàn</li>
+    </ol>
+  </nav>
+  
+
+<div style="margin:30px 30px 5px 30px; width: 96%; text-align: end;">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        + Thêm
+    </button>
+</div>
+
+
+<div class="board" style="margin: 0 0 30px 30px;">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>STT</td>
+                <td>Tên chuyên mục</td>
+                <td>Số lượng bài đăng</td>
+                <td>Đã duyệt</td>
+                <td>Chưa duyệt</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for posttype in posttypes%}
+            <tr>
+                <td class="people">
+                    <div class="people-de">
+                        <h5>{{posttype.posttype_id}}</h5>
+                        
+                    </div>
+                </td>
+                <td class="people-des">
+                    <p>{{posttype.posttype_name}}</p>
+                </td>
+
+
+                <td class="" style="padding: 0 80px">
+                    <p>{{posttype.count_post}}</p>
+                </td>
+
+                <td class="people-des" style="padding: 0 40px">
+                    <p>{{posttype.count_post_approved}}</p>
+                </td>
+
+                <td class="people-des" style="padding: 0 50px">
+                    <p>{{posttype.count_post_not_approved}}</p>
+                </td>
+                
+                <td class="view"><a href="{% url 'forumpost' posttype_id=posttype.posttype_id%}">View</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<form id="posttype" action="#" method="POST">
+    {% csrf_token %}
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm chuyên mục</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="posttype-add">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Tên chuyên mục</label>
+                            <input type="text" name="posttype_name" class="form-control posttype_name" required>
+                        </div>
+                        <div class="alert alert-danger d-none" id="posttypeNameError" role="alert">
+                            Tên chuyên mục đã tồn tại!
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thành công</h5>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text">Dữ liệu đã được thêm thành công!</p>
+                <button type="button" id="closeSuccessModalButton" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

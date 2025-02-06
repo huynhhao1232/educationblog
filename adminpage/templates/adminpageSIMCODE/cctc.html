@@ -1,0 +1,185 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block CCTC %} 
+                <h3 class="i-name">
+                    {{category.name}}
+                </h3>
+                
+                    
+                    <div class="course-detail">
+
+                        <div class="col-xl-12 course-detail-right">
+                            <div class="course-right-manage">
+                                <form id="course" action="" method = "POST" enctype="multipart/form-data" >
+                                    {% csrf_token %} 
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm giáo viên</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                
+                                                    <div class="modal-body">
+                                                    
+                                                        <div class="course-add">
+                                                            <div class="mb-3">
+                                                                <label for="" class="form-label">Tên giáo viên</label>
+                                                                <input type="text"  name="chapter_name" class="form-control chapterName" required>
+                                                                <input type="hidden" value="0" name="action" class="action">
+                                                                <input type="hidden" value="0" name="post-id" class="post-id">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="" class="form-label">Chức danh 1</label>
+                                                                <input type="text"  name="role1" class="form-control role1">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="" class="form-label">Chức danh 2</label>
+                                                                <input type="text"  name="role2" class="form-control role2" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="" class="form-label">Năm sinh</label>
+                                                                <input type="text"  name="namsinh" class="form-control namsinh" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="" class="form-label">Chuyên môn</label>
+                                                                <input type="text"  name="chuyenmon" class="form-control chuyenmon" required>
+                                                            </div>
+                                                            <select name="sex" id="sex" class="form-select">
+                                                                <option value="1">Nam</option>
+                                                                <option value="0">Nữ</option>
+                                                            </select>
+                                                            <select name="bac" id="bac" class="form-select">
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                            </select>
+
+                                                            <div class="alert alert-danger d-none" id="chapterNameError" role="alert">
+                                                                Chương này đã tồn tại!
+                                                            </div>
+                                                            
+
+                                                            <div class="mb-3">
+                                                                <div class="upload">
+                                                                    <button type="button" class="btn-warningg">
+                                                                        <i class="fa fa-upload"></i> Upload Image
+                                                                        <input type="file" name="topic-image" id="topic-image" class="topic-file" accept="image/*">
+                                                                    </button>
+                                                                </div>
+                                                                <div id="image-preview" style="margin-top: 10px;">
+                                                                    <!-- Hình ảnh sẽ hiển thị tại đây -->
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="mb-2 course-detail-left-items-toggle toggle-hidden ">
+                                                                <div class="toggle active">
+                                                                    <div class="toggle-button"></div>
+                                                                </div>
+                                                                <div class="text">Công khai</div>
+                                    
+                                                                <input type="hidden" class="enableHidden" name="enableHidden" value="1">
+
+                                    
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                                <button type="submit" id="chapter-submit" class="btn btn-primary">Cập nhật</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+    
+
+
+                                <div class="mb-3 course-right-add">
+                                    <button type="button" class="btn btn-primary" onclick="openAddGVModal()">
+                                        +   Thêm
+                                      </button>
+                                </div>
+                                <div class="board">
+                                    <table width="100%">
+                                        <thead>
+                                            <tr>
+                                                <td>Tên</td>
+                                                <td>Chức danh 1</td>
+                                                <td>Chức danh 2</td>
+                                                <td>Năm sinh</td>
+                                                <td>Chuyên môn</td>
+                                                <td>Giới tính</td>
+                                                <td>Bậc</td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for gv in gvs %}
+                                            
+                                            <tr>
+                                                <td class="people">
+                                                    <img src="{{gv.gv.image_file.url}}" alt="">
+                                                    <div class="people-de">
+                                                        <p>{{gv.gv.name}}</p>
+                                                    </div>
+                                                </td>
+
+                                                <td class="people-des"><p>{{gv.gv.role1}}</p></td>
+                                                <td class="people-des"><p>{{gv.gv.role2}}</p></td>
+                                                <td class="people-des"><p>{{gv.gv.namsinh}}</p></td>
+                                                <td class="people-des"><p>{{gv.gv.chuyenmon}}</p></td>
+                                                {%if gv.gv.sex == True%}
+                                                <td class="people-des"><p>Nam</p></td>
+                                                {%else%}
+                                                <td class="people-des"><p>Nữ</p></td>
+                                                {%endif%}
+                                                <td class="people-des"><p>{{gv.gv.bac}}</p></td>
+
+                                                {% comment %} <td class="active"><p>{{gv.role2}}</p></td> {% endcomment %}
+
+
+                                                <td class="view">                                            
+                                                    {%if pb.enable == True%}
+                                                    {%if gv.gv.sex == 1%}
+                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditGVModal({{gv.gv.id}}, '{{gv.gv.name}}', '{{gv.gv.role1}}', '{{gv.gv.role2}}', '{{gv.gv.namsinh}}', '{{gv.gv.chuyenmon}}', 1, {{gv.gv.bac}}, 1, '{{gv.gv.image_file.url}}')"></i>
+                                                    {%else%}
+                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditGVModal({{gv.gv.id}}, '{{gv.gv.name}}', '{{gv.gv.role1}}', '{{gv.gv.role2}}', '{{gv.gv.namsinh}}', '{{gv.gv.chuyenmon}}', 0, {{gv.gv.bac}}, 1, '{{gv.gv.image_file.url}}')"></i>
+                                                    {%endif%}
+                                                    {%else%}
+                                                    
+                                                    {%if gv.gv.sex == 1%}
+                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditGVModal({{gv.gv.id}}, '{{gv.gv.name}}', '{{gv.gv.role1}}', '{{gv.gv.role2}}', '{{gv.gv.namsinh}}', '{{gv.gv.chuyenmon}}', 1, {{gv.gv.bac}}, 0, '{{gv.gv.image_file.url}}')"></i>
+                                                    {%else%}
+                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditGVModal({{gv.gv.id}}, '{{gv.gv.name}}', '{{gv.gv.role1}}', '{{gv.gv.role2}}', '{{gv.gv.namsinh}}', '{{gv.gv.chuyenmon}}', 0, {{gv.gv.bac}}, 0, '{{gv.gv.image_file.url}}')"></i>
+        
+                                                    {%endif%}
+                                                    {%endif%}
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Thành công</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="modal-text">Dữ liệu đã được cập nhật!</p>
+                                    <button type="button" id="closeSuccessModalButton" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+{% endblock %}

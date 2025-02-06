@@ -1,0 +1,133 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block phongban %}
+<nav aria-label="breadcrumb" class="i-name">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Phòng ban</li>
+    </ol>
+  </nav>
+
+<div class="course">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="course-right" style="width: 100%;">
+  
+            
+                        <div class="mb-3 course-right-add">
+                            <button type="button" class="btn btn-primary btncourse" onclick="openAddModal()">
+                                + Thêm
+                            </button>
+                        </div>
+                        <div class="course-right-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Họ và tên</td>
+                                        <td>Số lượng thành viên</td>
+                                        <td>Tình trạng</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for pb in pbs %}
+                                    <tr>
+                                        <td>
+                                            <p>{{pb.name}}</p>
+                                        </td>
+                                        <td>
+                                            <p>{{pb.num_teachers}}</p>
+                                        </td>
+                                        {% if pb.enable %}
+                                        <td class="active">
+                                            <p>Công khai</p>
+                                        </td>
+                                        {% else %}
+                                        <td class="active">
+                                            <p>Riêng tư</p>
+                                        </td>
+                                        {%endif%}
+                                        <td class="view">
+
+                                            
+                                            <a href="{%url 'adminpage:CCTC' pb_id=pb.id%}"><i class="fa-regular fa-eye me-3"></i></a>
+                                            {%if pb.enable == True%}
+                                            <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditModal({{pb.id}}, '{{pb.name}}', 1)"></i>
+                                            {%else%}
+                                            <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditModal({{pb.id}}, '{{pb.name}}', 0)"></i>
+
+                                            {%endif%}
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<form id="course" action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm phòng ban</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="course-add">
+                        <div class="mb-1">
+                            <label for="" class="form-label">Tên phòng ban</label>
+                            <input type="text" name="category_name" class="form-control category_name" required>
+                            <input type="hidden" name="category_id" class="category_id" value="">
+                            <input type="hidden" value="0" name="action" class="action"> <!-- Action: 0 (Thêm), 1 (Cập nhật) -->
+                        </div>
+                        <div class="alert alert-danger d-none" id="courseNameError" role="alert">
+                            Tên danh mục đã tồn tại!
+                        </div>
+
+                        <div class="mb-2 course-detail-left-items-toggle toggle-hidden ">
+                            <div class="toggle active">
+                                <div class="toggle-button"></div>
+                            </div>
+                            <div class="text">Công khai</div>
+
+                            <input type="hidden" class="enableHidden" name="enableHidden" value="1">
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thành công</h5>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text">Dữ liệu đã được cập nhật!</p>
+                <button type="button" id="closeSuccessModalButton" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

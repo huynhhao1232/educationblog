@@ -1,0 +1,414 @@
+@font-face {
+    font-family: Roboto;
+    src: url(./Roboto/Roboto/Roboto-Regular.ttf);
+}
+:root{
+    --body-color: #E4E9F7;
+    --sidebar-color: #fff;
+    --primary-color: #023EB6;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: #ddd;
+    --text-color: #023EB6;
+    --text-line: #707070;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+
+
+body{
+    height: 100vh;
+    background: var(--body-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+
+}
+
+
+.line{
+    border-bottom: 1px solid #707070;
+    width: 100%;
+    margin-top: 20px
+}
+
+
+
+
+.banner{
+
+    top: 0;
+    
+
+}
+.banner img{
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    object-fit: cover ;
+
+}
+
+header{
+    display:  block;
+    margin-bottom: 360px;
+}
+
+#sidebar{
+    z-index: 1;
+    width: 100%;
+}
+
+.content-left{
+    font-family: Roboto;
+}
+
+.content-mid{
+    padding-right: 10px;
+    border-right: 1px solid var(--text-line)
+
+}
+
+.qihomemenudoc{
+    background-color: #023EB6 !important;
+    color: #fefefe;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 11px 17px;
+    box-shadow: 0.2px 3px 0 0 #f6f6f6;
+    background: #004480;
+}
+
+ul.qimenudoc{
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    clear: both;
+    display: block;
+}
+
+.qimenudoc li:nth-child(odd){
+    box-shadow: 0px 1px 0 0 rgba(209, 209, 209, 0.72);
+    background-color: #f4f3ed;
+    min-height: 36px;
+}
+
+.qimenudoc li:nth-chill(even){
+    background-color: #f7f7f7;
+    box-shadow: 0px 1px 0 0 rgba(209, 209, 209, 0.72);
+    min-height: 36px;
+}
+ul.quimenudoc li{
+    font-size: 14px;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: sub;
+    clear: both;
+}
+
+ul.qimenudoc li a{
+    color: #023EB6 !important;
+    text-transform: uppercase !important;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 13px 10px 16px;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+    white-space: break-spaces;
+    font-weight: bold;
+}
+
+.menuCap0{
+    min-width: 200px;
+
+}
+
+.qiitems li:first-child{
+    border-top: 1px solid #e5e5e5;
+}
+
+ul.qimenudoc .qilist .qiitems a{
+    padding: 7px 10px 7px 25px;
+}
+
+
+
+
+
+.carousel-inner img{
+    height: 300px;
+    object-fit: cover;
+}
+
+
+
+.qihome-tieudebg {
+    border-left: 5px solid #023EB6;
+    padding: 7px 10px;
+    width: 100%;
+    background-image: linear-gradient(to top, #dddddd, #ffffff);
+}
+
+.qiborderbottom-2 {
+    border-bottom: 1px solid #023EB6;
+}
+
+.qihome-tieude{
+    padding: 7px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    color: #023EB6;
+}
+
+.qiContainer-border{
+    overflow: hidden;
+    border: 1px solid #dcdcdc;
+    width: 100%;
+}
+
+.qiHeightTop{
+    height: 430px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    padding: 0
+    
+
+}
+
+
+
+.content-right{
+    display: block;
+
+ 
+}
+
+.qiContainer-border ul li{
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    text-align: justify;
+    line-height: 20px;
+    padding: 5px
+}
+
+.qiContainer-border ul li:nth-child(2n+1)
+{
+    background: #fff;
+}
+
+.qiContainer-border ul li:nth-child(2n)
+{
+    background: #f7f7f7;
+}
+
+.qiContainer-border ul li a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1c1c1c;
+    text-decoration: none;
+}
+
+.time{
+    color: #888888;
+    font-size: 11px;
+    /* padding-left: 3px; */
+    font-family: Roboto;
+}
+
+
+.title{
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.notification-content-top img{
+    width: 100%
+}
+
+.notification-content-top p{
+    font-size: 15px
+    
+}
+
+.notification-content-top a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+.notification-content-bottom p{
+    font-size: 14px;
+    font-family: Roboto;
+    text-align: justify;
+    margin-bottom: 4px;
+    
+}
+.notification-content-bottom a{
+    text-decoration: none;
+    color: #333333
+}
+
+.notification-content-bottom img{
+    width: 100%;
+}
+
+.news-content-top
+{
+    overflow: hidden;
+    display: flex;
+
+}
+
+.list-new{
+    overflow: hidden;
+
+}
+
+.news-content-top img{
+    width: 100%;
+}
+
+.news-content-top p{
+    font-size: 24px;
+    margin-bottom: 4px
+    
+}
+
+.news-content-top a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+.content-text{
+    font-size: 16px!important;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.news-content-bottom img{
+    width: 100%;
+}
+
+.news-title
+{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 24px;
+    font-family: Roboto;
+}
+
+.news-title p{
+    margin-bottom: 4px;
+}
+
+.news-description{
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.accordion-body{
+    padding: 0px!important;
+}
+
+.border .listitem{
+    border-bottom: 1px solid #ddd;
+    padding: 10px
+}
+
+.border .listitem a{
+    text-decoration: none;
+    color: #161616;
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+.s_LuotNghe{
+    font-weight: bold;
+    font-family: Roboto;
+    color: red;
+    font-size: 20px
+}
+
+.timeline{
+  
+
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #f3f3f4;
+    background-color: #f3f3f4;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+}
+
+.role{
+    text-align: center;
+    justify-content: center;
+    margin-top: 12px;
+    text-transform: uppercase;
+    font-family:Georgia;
+    font-weight: bold;
+    font-size: 16px;
+    color: #023EB6;
+}
+
+.main-name{
+
+    font-weight: bold; 
+    font-size: 18px;
+    color: #023EB6;
+
+}
+
+footer{
+    margin-top: 100px;
+    border-top: 1px solid #333333
+}
+footer .title{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* Cho màn hình lớn */
+
+  

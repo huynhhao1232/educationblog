@@ -1,0 +1,218 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block categorydetail %} 
+                <h3 class="i-name">
+                    {{category.name}}
+                </h3>
+                
+                    
+                    <div class="course-detail">
+                        <div class="col-xl-4 course-detail-left">
+                            <div class="course-detail-left-items">
+                                <form id="course" action="{% url 'adminpage:categorydetail' category_id=category.id%}" method = "POST" enctype="multipart/form-data" >
+                                    {% csrf_token %}
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Tên khóa học</label>
+                                        <input type="text" name="category_name" class="form-control category_name" value="{{category.name}}" required>
+                                        <input type="hidden" name="category_id" class="category_id" value="{{category.id}}" >
+                                        <input type="hidden" value="1" name="action" class="action">
+                                    </div>
+
+                                    <div class="alert alert-danger d-none" id="courseNameError" role="alert">
+                                        Tên khoá học đã tồn tại!
+                                    </div>
+                                    {% comment %} <div class="mb-3">
+                                        <label for="" class="form-label">Lớp</label>
+                                        <select name="gradeUpdate" id="grade" class="form-select">
+                                            <option value="{{course.grade.grade_id}}" selected>{{course.grade.grade_name}}</option>
+                                            {% for grade in grades %}
+                                            {% if grade != course.grade %}
+                                            <option value="{{grade.grade_id}}" >{{grade.grade_name}}</option>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </select>
+                                    </div> {% endcomment %}
+
+                                    {% comment %} <div class="mb-3">
+                                        <label for="" class="form-label">Môn</label>
+                                        <select name="subjectUpdate" id="subject" class="form-select">
+                                            <option value="{{course.subject.subject_id}}" selected>{{course.subject.subject_name}}</option>
+                                            {% for subject in subjects %}
+                                            {% if subject != course.subject %}
+                                            <option value="{{subject.subject_id}}">{{subject.subject_name}}</option>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </select>
+
+                                    </div> {% endcomment %}
+
+                                    <div class="mb-5 course-detail-left-items-toggle toggle-hidden">
+                                        {% if category.enable == True %}
+                                        <div class="toggle active">
+                                            <div class="toggle-button"></div>
+                                        </div>
+                                        <div class="text">Công khai</div>
+                                        {% else %}
+                                        <div class="toggle">
+                                            <div class="toggle-button"></div>
+                                        </div>
+                                        <div class="text">Riêng tư</div>
+                                        {% endif %}
+
+                                        {% if category.enable == True %}
+                                        <input type="hidden" class="enableHidden" name="enableHidden" value="1">
+                                        {% else %}
+                                        <input type="hidden" class="enableHidden" name="enableHidden" value="0">
+                                        {% endif %}
+                                    </div>
+
+
+                                    <div class="mb-3 course-detail-left-items-btn">
+                                        <button type="submit" class="btn btn-outline-dark"  >Cập nhật</button>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 course-detail-right">
+                            <div class="course-right-manage">
+                                <form id="course" action="{% url 'adminpage:categorydetail' category_id=category.id%}" method = "POST" enctype="multipart/form-data" >
+                                    {% csrf_token %} 
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm bài viết</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                
+                                                    <div class="modal-body">
+                                                    
+                                                        <div class="course-add">
+                                                            <div class="mb-3">
+                                                                <label for="" class="form-label">Tên bài viết</label>
+                                                                <input type="text"  name="chapter_name" class="form-control chapterName" required>
+                                                                <input type="hidden" value="0" name="action" class="action">
+                                                                <input type="hidden" value="0" name="post-id" class="post-id">
+                                                            </div>
+                                                            <div class="alert alert-danger d-none" id="chapterNameError" role="alert">
+                                                                Chương này đã tồn tại!
+                                                            </div>
+                                                            
+
+                                                            <div class="mb-3">
+                                                                <textarea class="ckeditor" cols="80" id="editor1" name="ckeditor1" rows="10"></textarea>
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <div class="upload">
+                                                                    <button type="button" class="btn-warningg">
+                                                                        <i class="fa fa-upload"></i> Upload Image
+                                                                        <input type="file" name="topic-image" id="topic-image" class="topic-file" accept="image/*">
+                                                                    </button>
+                                                                </div>
+                                                                <div id="image-preview" style="margin-top: 10px;">
+                                                                    <!-- Hình ảnh sẽ hiển thị tại đây -->
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="mb-3">
+                                                                <div class="upload">
+                                                                    <button type="button" class="btn-warningg">
+                                                                        <i class="fa fa-upload"></i> Upload File
+                                                                        <input type="file" name="topic-files" id="topic-files" class="topic-file" multiple>
+                                                                    </button>
+                                                                </div>
+                                                                <div id="files-list" style="margin-top: 10px; font-style: italic;">
+                                                                    <!-- Tên các file sẽ hiển thị tại đây -->
+                                                                </div>
+
+                                                                <input type="hidden" id="existing-files" name="existing-files" value="">
+
+                                                            
+                                                            </div>
+                                                            
+
+                                                            <div class="mb-2 course-detail-left-items-toggle toggle-hidden ">
+                                                                <div class="toggle active">
+                                                                    <div class="toggle-button"></div>
+                                                                </div>
+                                                                <div class="text">Công khai</div>
+                                    
+                                                                <input type="hidden" class="enableHidden" name="enableHidden" value="1">
+
+                                    
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                                <button type="submit" id="chapter-submit" class="btn btn-primary">Cập nhật</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+    
+
+
+                                <div class="mb-3 course-right-add">
+                                    <button type="button" class="btn btn-primary" onclick="openAddPostModal()">
+                                        +   Thêm
+                                      </button>
+                                </div>
+                                <div class="course-right-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>Tên bài viết</td>
+                                                <td>Số người đã xem</td>
+                                                <td>Tình trạng</td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for post in posts %}
+                                            <tr>
+
+                                                <td><p>{{post.title}}</p></td>
+                                                <td><p>1.000</p></td>
+                                                {% if post.enable == True %}
+                                                <td class="active"><p>Công khai</p></td>
+                                                {% else %}
+                                                <td class="active"><p>Riêng tư</p></td>
+                                                {% endif %}
+                                                <td class="view">
+
+                                            
+                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditPost({{post.id}})"></i>
+                                             
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Thành công</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="modal-text">Dữ liệu đã được cập nhật!</p>
+                                    <button type="button" id="closeSuccessModalButton" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+{% endblock %}

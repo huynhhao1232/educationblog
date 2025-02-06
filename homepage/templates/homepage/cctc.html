@@ -1,0 +1,89 @@
+
+
+
+{% extends 'homepage/template.html' %}
+{% block title %} Trang chủ {%endblock%}
+{%block cctc%}
+{% load static %}
+            <!----------------------------------------------------------content-right---------------------------------->
+            <div class="col-sm-9">
+              <ul class="list-group">
+                
+                <li class="list-group-item" aria-current="true" style="background-color: #023EB6; color: #fff; font-weight: bold; text-transform: uppercase; font-family: Roboto; ">{{pb.name}}</li>
+                <li class="list-group-item">
+                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="mySelect" onchange="reloadWithPBID()"> 
+                    <option selected>{{pb.name}}</option>
+                    {%for pb in pbs%}
+                    <option value="{{pb.id}}">{{pb.name}}</option>
+                    {%endfor%}
+                  </select>
+                </li>
+                {% for item in pb_gv%}
+                {%if item.gv.bac == 1%}
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <img src="{{item.gv.image_file.url}}" alt="" width="100%">
+                          <p class="role">{{item.gv.role1}}</p>
+                          <p class="role">{{item.gv.role2}}</p>
+                        </div>
+                        <div class="col-sm-7">
+                          {%if item.gv.sex == True%}
+                          <p class="main-name">Thầy {{item.gv.name}}</p>
+                          <p style="font-family: Roboto; font-size: 17px">Giới tính: Nam</p>
+                          {%else%}
+                          <p class="main-name">Cô {{item.gv.name}}</p>
+                          <p style="font-family: Roboto; font-size: 17px">Giới tính: Nữ</p>
+                          {%endif%}
+                          <p style="font-family: Roboto;font-size: 17px">Năm sinh: {{item.gv.namsinh}}</p>
+                          <p style="font-family: Roboto;font-size: 17px">Chuyên môn: {{item.gv.chuyenmon}}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  </div>
+                </li>
+                {%endif%}
+                {%endfor%}
+                {% for group in pb_gv_grouped %}
+
+                <li class="list-group-item">
+                  <div class="row">
+                    {% for item in group %}
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <img src="{{item.gv.image_file.url}}" alt="" width="100%" height="226.07px">
+                          <p class="role">{{item.gv.role2}}</p>
+                        </div>
+                        <div class="col-sm-7">
+                          {%if item.gv.sex == True%}
+                          <p class="main-name">Thầy {{item.gv.name}}</p>
+                          <p style="font-family: Roboto; font-size: 17px">Giới tính: Nam</p>
+                          {%else%}
+                          <p class="main-name">Cô {{item.gv.name}}</p>
+                          <p style="font-family: Roboto; font-size: 17px">Giới tính: Nữ</p>
+                          {%endif%}
+                          <p style="font-family: Roboto;font-size: 17px">Năm sinh: 1965</p>
+                          <p style="font-family: Roboto;font-size: 17px">Chuyên môn: Hoá học</p>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </li>
+                {%endfor%}
+
+              </ul>
+            </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{%static 'assets/script.js'%}"></script>
+
+{%endblock%}

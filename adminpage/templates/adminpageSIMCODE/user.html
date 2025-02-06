@@ -1,0 +1,98 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block user %}
+<h3 class="i-name">
+    Thống kê
+</h3>
+
+<div class="values">
+    <div class="val-box">
+        <i class="fas fa-users"></i>
+        <div>
+
+            <h3>{{new_users}}</h3>
+
+            <span>New Users</span>
+        </div>
+    </div>
+
+    <div class="val-box">
+        <i class="fa-solid fa-child"></i>
+        <div>
+            <h3>8.267</h3>
+            <span>Học sinh</span>
+        </div>
+    </div>
+
+    <div class="val-box">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <div>
+            <h3>8.267</h3>
+            <span>Giáo viên</span>
+        </div>
+    </div>
+
+    <div class="val-box">
+        <i class="fa-solid fa-book"></i>
+        <div>
+            <h3>8.267</h3>
+            <span>Khoá học</span>
+        </div>
+    </div>
+</div>
+
+<div class="board">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>Tên</td>
+                <td>Loại tài khoản</td>
+                <td>Trạng thái</td>
+                <td>Vai trò</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users%}
+            {% for account in user.account_set.all %}
+            <tr>
+                <td class="people">
+                    <img src="{{account.account_picture}}" alt="">
+                    <div class="people-de">
+                        <h5>{{ user.first_name }} {{ user.last_name }}</h5>
+                        <p>{{user.email}}</p>
+                    </div>
+                </td>
+                {% if account.accounttype.accounttype_role == 'admin' %}
+                <td class="people-des"><p>Admin</p></td>
+                {% else %}
+                <td class="people-des"><p>Học sinh</p></td>
+                {% endif %}
+
+                {% if user.is_active %}
+                <td class="active"><p>Hoạt động</p></td>
+                {% else %}
+                <td class="active" style="background: red"><p>Vô hiệu</p></td>
+                {% endif %}
+                <td class="role "><select class="role-select" name="select-role" id="role-select" data-account-id="{{ account.account_id }}">
+                    <option value="account.accounttype.accounttype_id" selected>
+                        {% if account.accounttype.accounttype_role == 'admin' %}
+                        Quản trị viên
+                        {% else %}
+                        Người dùng
+                        {% endif %}
+                    </option>
+                    {% if account.accounttype.accounttype_role == 'admin' %}
+                    <option value="2">Người dùng</option>
+                    {% else %}
+                    <option value="1">Quản trị viên</option>
+                    {% endif %}
+                </select></td>
+                <td class="view"><a href="#">View</a></td>
+            </tr>
+            {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
