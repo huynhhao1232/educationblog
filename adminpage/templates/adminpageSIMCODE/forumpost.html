@@ -1,0 +1,66 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block forumpost %}
+<nav aria-label="breadcrumb" class="i-name">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'posttype' %}">Diễn đàn</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{posttype.posttype_name}}</li>
+    </ol>
+</nav>
+
+<div class="filter-post" style="margin: 30px 30px 5px 30px">
+    <form action="" method="post" id="filterPost">
+        <select name="" id="" class="form-select" style="width: 12%;">
+            <option value="#" selected>Tất cả</option>
+            <option value="">Đã duyệt</option>
+            <option value="">Chưa duyệt</option>
+        </select>
+    </form>
+</div>
+
+<div class="board" style="margin: 0 0 30px 30px;">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>STT</td>
+                <td>Chủ đề bài đăng</td>
+                <td>Bình luận / Lượt xem</td>
+                <td>Tình trạng</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+            <tr>
+                <td class="people">
+                    <div class="people-de">
+                        <p>{{post.post_id}}</p>
+                    </div>
+                </td>
+                <td class="people-des"style=" width: 200px; word-wrap: break-word" >
+                    
+                    <h5 style="width: 400px;overflow-wrap: break-word;">{{post.post_title}}</h5>
+                </td>
+
+
+                <td class="" style="padding: 0 80px">
+                    <p>{{post.count_comment}} / {{post.count_view}}</p>
+                </td>
+
+                {% if post.check_post == 'not_approved' %}
+                <td class="unactive"><p>Chưa duyệt</p></td>
+                {% elif post.check_post == 'active' %}
+                <td class="active" ><p>Hoạt động</p></td>
+                {% elif post.check_post == 'not_active' %}
+                <td class="unactive" ><p>Vô hiệu</p></td>
+                {% endif %}
+
+                
+                <td class="view"><a href="{% url 'forumanswer' post_id=post.post_id%}"><i class="fa-regular fa-eye"></i></a></td>
+            </tr>
+            {%endfor%}
+            
+        </tbody>
+    </table>
+</div>
+{%endblock%}

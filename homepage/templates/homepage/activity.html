@@ -1,0 +1,137 @@
+{% extends 'homepage/template.html' %}
+{% block title %} Trang chủ {% endblock %}
+{% block activity %}
+{% load static %}
+
+<style>
+    .modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Khoảng cách giữa các nút và ảnh */
+    }
+
+    #modalImage {
+        max-height: 80vh; /* Giới hạn chiều cao */
+        max-width: 80%;   /* Giới hạn chiều rộng */
+    }
+
+    .btn-outline-primary {
+        border: none;
+        background: transparent;
+    }
+
+    .btn-outline-primary i {
+        color: #007bff;
+    }
+
+    .btn-outline-primary:disabled i {
+        color: #ccc; /* Màu xám khi bị disable */
+    }
+
+</style>
+
+<div class="col-sm-9">
+    <!-- Hiển thị từng bài post -->
+    {% for data in post_data %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ data.post.title }}</h5>
+                <p class="card-text">{{ data.post.content|safe }}</p>
+                <div class="row g-2 imageGallery">
+                    {% for file in data.files %}
+                        {% if forloop.counter <= 2 %}
+                            <!-- Hiển thị 2 hình đầu -->
+                            <img src="{{ file.pdf_file.url }}" class="col-6 img-thumbnail" style="cursor: pointer;"
+                                 onclick="openPopup('{{ data.post.id }}', {{ forloop.counter0 }})">
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if data.files|length > 2 %}
+                        <!-- Hộp che số ảnh còn lại -->
+                        <div class="col-6 d-flex align-items-center justify-content-center bg-dark text-white rounded p-3"
+                             style="cursor: pointer;" onclick="openPopup('{{ data.post.id }}', 2)">
+                            +{{ data.files|length|add:"-2" }} ảnh
+                        </div>
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- Bootstrap Modal để xem ảnh -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Xem ảnh hoạt động</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <!-- Nút Previous -->
+                <button class="btn btn-outline-primary me-3" id="prevBtn" onclick="changeImage(-1)">
+                    <i class="fas fa-chevron-left fa-2x"></i>
+                </button>
+
+                <!-- Hình ảnh -->
+                <img id="modalImage" class="img-fluid" alt="Ảnh hoạt động" style="max-height: 80vh; max-width: 80%;">
+
+                <!-- Nút Next -->
+                <button class="btn btn-outline-primary ms-3" id="nextBtn" onclick="changeImage(1)">
+                    <i class="fas fa-chevron-right fa-2x"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    // Lưu trữ dữ liệu hình ảnh của từng bài post
+    const postImages = {
+        {% for data in post_data %}
+            "{{ data.post.id }}": [
+                {% for file in data.files %}
+                    "{{ file.pdf_file.url }}",
+                {% endfor %}
+            ],
+        {% endfor %}
+    };
+
+    let currentPostId = null;
+    let currentIndex = 0;
+    const modalImage = document.getElementById("modalImage");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    // Mở popup và hiển thị hình ảnh
+    function openPopup(postId, index) {
+        currentPostId = postId;
+        currentIndex = index;
+        updateModalImage();
+        var modal = new bootstrap.Modal(document.getElementById("imageModal"));
+        modal.show();
+    }
+
+    // Cập nhật hình ảnh trong modal
+    function updateModalImage() {
+        modalImage.src = postImages[currentPostId][currentIndex];
+
+        // Vô hiệu hóa nút nếu ở đầu/cuối danh sách
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === postImages[currentPostId].length - 1;
+    }
+
+    // Thay đổi hình ảnh khi nhấn nút Previous/Next
+    function changeImage(step) {
+        currentIndex += step;
+        updateModalImage();
+    }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'homepage/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h1 class="display-1">Oops!</h1>
+            <h2 class="mb-4">Đã có lỗi xảy ra</h2>
+            <p class="lead mb-4">{{ error_message }}</p>
+            <div class="mb-4">
+                <a href="{% url 'homepage:Homepage' %}" class="btn btn-primary">Về trang chủ</a>
+                <button onclick="window.history.back()" class="btn btn-secondary">Quay lại trang trước</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

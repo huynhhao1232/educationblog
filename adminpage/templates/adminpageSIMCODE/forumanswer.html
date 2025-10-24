@@ -1,0 +1,157 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block forumanswer %} 
+<nav aria-label="breadcrumb" class="i-name">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'posttype' %}">Diễn đàn</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'posttype' %}">{{post.posttype.posttype_name}}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{post.post_title}}</li>
+    </ol>
+</nav>
+
+
+<div class="container" style="padding: 30px 30px 0 30px;">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            {%if post.post_approved %}
+            <div class="filter-post col-12 col-sm-12 col-md-12">
+                <form action="" method="post" id="filterPost">
+                    {% if post.post_enable%}
+                    <div class="alert alert-success" role="alert">
+                        Bài viết này đang hoạt động. Bạn có muốn <span class="change-active" data-action="0" data-postid="{{post.post_id}}" style="font-weight: bold; cursor: pointer;">TẮT</span>
+                    </div>
+                    {%else%}
+                    <div class="alert alert-danger" role="alert">
+                        Bài viết này đang bị vô hiệu. Bạn có muốn <span class="change-active" data-action="1" data-postid="{{post.post_id}}" style="font-weight: bold; cursor: pointer;">BẬT</span>
+                    </div>
+                    {%endif%}
+                </form>
+            </div>
+            {%else%}
+            <div class="alert alert-danger" role="alert">
+                Bài viết này chưa được duyệt!
+            </div>
+            {%endif%}
+            <div class="post beforepagination">
+                <div class="wraptop">
+                    <div class="user-infor pull-left">
+                        <div class="avatar">
+                            <img src="{{post.account.account_picture}}" alt="" width="37px">
+                        </div>
+                    </div>
+                    <div class="posttext" style="float: right!important">
+                        <h2>{{post.post_title}}</h2>
+                        <p style="font-size: 18px;">
+                            {{post.post_content|safe}}</p>
+                    </div>
+                </div>
+                <div class="post-images">
+                    <div class="row">
+                        {% for image in post.postfile_set.all%}
+                        <div class="col-md-3 col-sm-3 ">
+                            <img src="{{image.postfile_url}}" class="image" alt="Image 2">
+                        </div>
+                        {%endfor%}
+                    </div>
+                </div>
+                <div class="postinfobot">
+                    <div class="likeblock  d-flex" >
+                        <div class="up">
+                        
+                            <i class=" fa-regular fa-thumbs-up like" data-action="post" data-commentid="{{post.post_id}}"></i>
+                            {{post.count_like}}
+                        </div>
+                        
+                        <div class="down">
+                            <i class="fa-regular fa-thumbs-down dislike" data-action="post" data-commentid="{{post.post_id}}"></i>
+                            {{post.count_dislike}}
+                        </div>
+                        <div class="prev">
+                            <i class="fa fa-reply"></i> {{post.count_comment}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {%if post.post_approved == False%}
+            <div class="mt-3 post-approved" style="text-align: end">
+                <button class="btn btn-primary approved" data-action="1" data-postid="{{post.post_id}}">Duyệt</button>
+                <button class="btn btn-secondary approved" data-action="0" data-postid="{{post.post_id}}">Vô hiệu</button>
+            </div>
+            {%else%}
+            <div class="comment-container" id="first-comment">
+                {%for comment in comments%}
+                <div class="comment-card">
+                    <div class="comment-info">
+                        <h5 style="font-size: 18px" class='ml-3' data-accountid="{{comment.account.account_id}}">
+                            {{comment.get_account}}</h5>
+                    </div>
+                    <p>
+                        {{comment.comment_text}}
+                    </p>
+                    <div class="comment-footer">
+                        <div ><i style="cursor: pointer;" class="fa-regular fa-thumbs-up like" data-action="comment" data-commentid="{{comment.comment_id}}"></i> {{comment.count_comment_like}}
+                        </div>
+                        <div>
+                            <i style="cursor: pointer;" class="fa-regular fa-thumbs-down dislike" data-action="comment" data-commentid="{{comment.comment_id}}"></i> {{comment.count_comment_dislike}}
+                        </div>
+                        <div class="show-replies reply-trigger comment-trigger" data-commentid="{{comment.comment_id}}">
+                            <i style="cursor: pointer;" class="fa-solid fa-reply"></i> {{comment.count_comment_reply}}
+                        </div>
+                        <div>
+                            <i style="cursor: pointer;" class="fa-solid fa-eraser delete" data-commentid="{{comment.comment_id}}"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-none comment-container" id="first-reply-{{comment.comment_id}}">
+                    {%for reply in comment.get_replies%}
+                    <div class="comment-card">
+                        <div class="comment-info">
+                            <h5 style="font-size: 18px" class='ml-3' data-accountid="{{reply.account.account_id}}">
+                                {{reply.get_account}}</h5>
+                        </div>
+                        <p>
+                            <span style="font-weight: bold">{{reply.get_tag_account}}</span> {{reply.comment_text}}
+                        </p>
+                        <div class="comment-footer">
+                            <div><i style="cursor: pointer;" class="fa-regular fa-thumbs-up like" data-action="comment" data-commentid="{{reply.comment_id}}"></i> {{reply.count_comment_like}}
+                            </div>
+                            <div>
+                                <i style="cursor: pointer;" class="fa-regular fa-thumbs-down dislike" data-action="comment" data-commentid="{{reply.comment_id}}"></i> {{reply.count_comment_dislike}}
+                            </div>
+                            <div >
+                                <i style="cursor: pointer;" class="fa-solid fa-eraser delete" data-commentid="{{reply.comment_id}}"></i>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+
+                {%endfor%}
+
+
+            </div>
+                
+            {%endif%}
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text">Bạn có chắc muốn xoá bình luận này?</p>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" id="successModalButton" class="btn btn-primary" data-bs-dismiss="modal">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{%endblock%}

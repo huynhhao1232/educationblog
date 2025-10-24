@@ -1,0 +1,179 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block chapterdetail %} 
+<h3 class="i-name">
+    {{chapter.chapter_name}}
+</h3>
+
+    <div class="chapter-detail">
+        <div class="col-xl-4 chapter-detail-left">
+            <div class="chapter-detail-left-items">
+                <form id="chapterUpdate" action="{% url 'chapterdetail' chapter_id=chapter.chapter_id course_id=course.course_id %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="" class="form-label">Tên chương</label>
+                        <input type="text" class="form-control chapterNameUpdate" name="chapterName" value="{{chapter.chapter_name}}" required>
+                        <input type="hidden" class="courseHidden" value="{{course.course_id}}" >
+                        <input type="hidden" class="chapterHidden" value="{{chapter.chapter_id}}" >
+                    </div>
+                    <div class="alert alert-danger d-none" id="chapterNameError" role="alert">
+                        Tên chương này đã tồn tại!
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Tên khoá học </label>
+                        <input type="text" class="form-control" value="{{course.course_name}}" readonly>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">Thứ tự</label>
+                        <input type="number" min="1" class="form-control chapterOrderUpdate" name="chapterOrder"  value="{{chapter.chapter_order}}" required>
+
+                    </div>
+
+                    <div class="alert alert-danger d-none" id="chapterOrderError" role="alert">
+                        Thứ tự này đã tồn tại!
+                    </div>
+
+                    <div class="mb-5 chapter-detail-left-items-toggle ">
+                        {% if chapter.chapter_enable %}
+                        <div class="toggle active">
+                            <div class="toggle-button"></div>
+                        </div>
+                        <div class="text">Công khai</div>
+                        {% else %}
+                        <div class="toggle">
+                            <div class="toggle-button"></div>
+                        </div>
+                        <div class="text">Riêng tư</div>
+                        {% endif %}
+
+                        {% if chapter.chapter_enable %}
+                        <input type="hidden" class="enableHidden" name="enableHidden" value="1">
+                        {% else %}
+                        <input type="hidden" class="enableHidden" name="enableHidden" value="0">
+                        {% endif %}
+                    </div>
+
+
+                    <div class="mb-3 chapter-detail-left-items-btn">
+                        <button type="submit" class="btn btn-outline-dark">Cập nhật</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="col-xl-8 chapter-detail-right">
+            <div class="course-right-manage">
+                <form id="lesson" action="{% url 'chapterdetail' chapter_id=chapter.chapter_id course_id=course.course_id %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm bài học</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+
+                                    <div class="course-add">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Tên bài học</label>
+                                            <input type="text" name="lessonName" class="form-control lessonName" required>
+                                        </div>
+
+                                        <div class="alert alert-danger d-none" id="lessonNameError" role="alert">
+                                            Tên bài học này đã tồn tại!
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Thứ tự</label>
+                                            <input type="number" min="1" name="lessonOrder" class="form-control lessonOrder" required>
+                                        </div>
+                                        <div class="alert alert-danger d-none" id="lessonOrderError" role="alert">
+                                            Thứ tự này đã tồn tại!
+                                        </div>
+
+                                        <div class="alert alert-danger d-none" id="activityTypeError" role="alert">
+                                            Vui lòng chọn loại hoạt động!
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                    <button type="submit" class="btn btn-primary">Thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+                <div class="mb-3 course-right-add">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        + Thêm
+                    </button>
+                </div>
+                <div class="course-right-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>STT</td>
+                                <td>Tên bài học</td>
+                                <td>Số người hoàn thành</td>
+                                <td>Tình trạng</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for lesson in lessons %}
+                            <tr>
+                                <td>
+                                    <p>{{lesson.lesson_order}}</p>
+                                </td>
+                                <td>
+                                    <p>{{lesson.lesson_name}}</p>
+                                </td>
+                                <td>
+                                    <p>1.000</p>
+                                </td>
+                                {% if lesson.lesson_enable%}
+                                <td class="active">
+                                    <p>Công khai</p>
+                                </td>
+                                {% else %}
+                                <td class="active">
+                                    <p>Riêng tư</p>
+                                </td>
+                                {% endif %}
+                                <td class="view"><a href="{% url 'lessondetail' chapter_id=chapter.chapter_id lesson_id=lesson.lesson_id%}">View</a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thành công</h5>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-text">Dữ liệu đã được cập nhật!</p>
+                    <button type="button" id="closeSuccessModalButton" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}

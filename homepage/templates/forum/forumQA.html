@@ -1,0 +1,166 @@
+{% extends 'homepageSIMCODE/template.html' %}
+{%block title%}Diễn đàn{%endblock%}
+{% load static %}
+
+{%block forumQA %}
+
+
+<section class="section how-it-works forums mt-5" >
+    <div class="container">
+        <h3 style="margin-bottom: 40px">Bài viết mới nhất </h3>
+        <div class="row">
+            <div class="col-md-9" data-aos="fade-up">
+
+                <div class="post clearfix">
+                    <div class="wrap-ut pull-left">
+                        <div class="user-infor pull-left">
+                            <div class="avatar">
+                                <img src="{{post.account.account_picture}}" alt="">
+                            </div>
+                        </div>
+                        <div class="posttext pull-left">
+                            <h2><a href=""></a></h2>
+                            <div style="height:100px" class="content-text">{{post.post_content|safe}}</div>
+                            <span class="expand-button">...</span>
+                        </div>
+                    </div>
+                    <div class="postinfo pull-left">
+                        <div class="comments">
+                            <div class="commentbg">
+                                {{post.count_comment}}
+                                <div class="mark"></div>
+                            </div>
+                        </div>
+                        <div class="views">
+                            <i class="fa fa-eye"></i>
+                            {{post.count_view}}
+                        </div>
+                        <div class="time">
+                            <i class="fa fa-clock"></i>
+                            {{ post.post_createdate|date:"d/m/Y" }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" >
+                
+                <div class="forum-right">
+                    
+                        {% if user is True %}
+                        <button type="button" class="btn btn-primary btn-topic" data-bs-toggle="modal" data-bs-target="#exampleModal"><span >+ </span>Chủ đề mới</button>
+                        {% else %}
+                        <button type="button" class="btn btn-primary btn-topic" data-bs-toggle="modal" data-bs-target="#loginModal"><span >+ </span>Chủ đề mới</button>
+                        {% endif %}
+                        
+                        
+                    
+                    
+                    <div class="forum-right-categories">
+                        <h3>Câu hỏi phổ biến</h3>
+                        {% for post in top_5_posts%}
+                        <div class="divline"></div>
+                        <div class="forum-right-categories-manage">
+                            <a href="{% url 'homepage:forumAnswer' post_id=post.post_id%}">{{post.post_title}}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<form id="topicForm" action="{% url 'homepage:forumQA' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm chủ đề</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="topic-add">
+                        <div class="mb-3">
+                            <input type="text" name="topic-name" class="form-control" placeholder="Nhập tên chủ đề" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <select name="topic-category" id="topic-category" class="form-select topic-category">
+                                <option value="#" selected>Chọn chuyên mục</option>
+                                {% for posttype in posttypes %}
+                                <option value="{{posttype.posttype_id}}">{{posttype.posttype_name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="alert alert-danger d-none" id="topicCategoryError" role="alert">
+                            Vui lòng chọn chuyên mục!
+                        </div>
+
+                        <div class="mb-3">
+                            
+                            <textarea class="ckeditor topic-content" cols="52" id="editor1" name="ckeditor1" rows="10" required></textarea>
+
+                            
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="upload">
+                                <button type="button" class="btn-warningg">
+                                    <i class="fa fa-upload"></i> Upload File
+                                    <input type="file" name="topic-file" id="topic-file" class="topic-file" multiple>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-danger d-none" id="uploadError" role="alert">
+                            file này không được hỗ trợ!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thành công</h5>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text">Đăng bài thành công!</p>
+                <button type="button" id="closeSuccessModalButton" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Đăng nhập để tiếp tục</h5>
+            </div>
+            <div class="modal-body">
+                <a href="{%url 'homepage:Login'%}" class="btn btn-secondary">Đăng nhập</a>
+                <button type="button" id="closeSuccessModalButton" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,245 @@
+{% extends 'homepageSIMCODE/template.html' %}
+{% load static %}
+
+{%block forumAnswer %}
+<section class="section how-it-works forums mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="post beforepagination">
+                    <div class="wraptop">
+                        <div class="user-infor pull-left">
+                            <div class="avatar">
+
+                                <img src="{{post.account.account_picture}}" alt="">
+
+                            </div>
+                        </div>
+                        <div class="posttext" style="float: right!important">
+                            <h2>{{post.post_title}}</h2>
+                            <p style="font-size: 18px;">
+                                {{post.post_content|safe}}</p>
+                        </div>
+                    </div>
+                    <div class="post-images">
+                        <div class="row">
+                            {% for image in post.postfile_set.all%}
+                            <div class="col-md-3 col-sm-3 ">
+                                <img src="{{image.postfile_url}}" class="image" alt="Image 2">
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                    <div class="postinfobot">
+                        <div class="likeblock  d-flex" >
+                            <div class="up">
+                            
+                                <i class=" fa-regular fa-thumbs-up like" data-action="post" data-commentid="{{post.post_id}}"></i>
+                                {{post.count_like}}
+                            </div>
+                            
+                            <div class="down">
+                                <i class="fa-regular fa-thumbs-down dislike" data-action="post" data-commentid="{{post.post_id}}"></i>
+                                {{post.count_dislike}}
+                            </div>
+                            <div class="prev">
+                                <i class="fa fa-reply"></i> {{post.count_comment}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="comment-container" id="first-comment">
+                    {%for comment in comments%}
+                    <div class="comment-card">
+                        <div class="comment-info">
+                            <h5 style="font-size: 18px" class='ml-3' data-accountid="{{comment.account.account_id}}">
+                                {{comment.get_account}}</h5>
+                        </div>
+                        <p>
+                            {{comment.comment_text}}
+                        </p>
+                        <div class="comment-footer">
+                            <div><i class="fa-regular fa-thumbs-up like" data-action="comment" data-commentid="{{comment.comment_id}}"></i> {{comment.count_comment_like}}
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-thumbs-down dislike" data-action="comment" data-commentid="{{comment.comment_id}}"></i> {{comment.count_comment_dislike}}
+                            </div>
+                            <div class="show-replies reply-trigger comment-trigger" data-commentid="{{comment.comment_id}}">
+                                <i class="fa-solid fa-reply"></i> {{comment.count_comment_reply}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none comment-container" id="first-reply-{{comment.comment_id}}">
+                        {%for reply in comment.get_replies%}
+                        <div class="comment-card">
+                            <div class="comment-info">
+                                <h5 style="font-size: 18px" class='ml-3' data-accountid="{{reply.account.account_id}}">
+                                    {{reply.get_account}}</h5>
+                            </div>
+                            <p>
+                                <span style="font-weight: bold">{{reply.get_tag_account}}</span> {{reply.comment_text}}
+                            </p>
+                            <div class="comment-footer">
+                                <div><i class="fa-regular fa-thumbs-up like" data-action="comment" data-commentid="{{reply.comment_id}}"></i> {{reply.count_comment_like}}
+                                </div>
+                                <div>
+                                    <i class="fa-regular fa-thumbs-down dislike" data-action="comment" data-commentid="{{reply.comment_id}}"></i> {{reply.count_comment_dislike}}
+                                </div>
+                                <div class="show-replies reply-trigger" data-commentid="{{comment.comment_id}}">
+                                    <i class="fa-solid fa-reply"></i> 
+                                </div>
+                            </div>
+                        </div>
+                        {%endfor%}
+                        <div class="post d-none" id="post-{{comment.comment_id}}"
+                        
+                            style="margin-top: 20px; height: 180px; background-color: #ffffff">
+                            <form action="" method="post">
+                                
+                                <div class="wraptop" style="height: 75%">
+                                    <div class="user-infor pull-left">
+                                        <div class="avatar">
+
+                                            <img src="{{account.account_picture}}" alt="">
+
+                                        </div>
+                                    </div>
+                                    <div class="posttext pull-left" style="height: 100%">
+                                        <div class="textwraper">
+                                            <div class="postreply username">Gửi một câu trả lời</div>
+                                            <textarea style="height: 30px" class="reply" name="reply" id="reply"
+                                                placeholder="Nhập tin nhắn của bạn ở đây"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="postinfobot" style="height: 25%">
+                                    <div class="pull-right postreply">
+                                        <div class="pull-left">
+                                            <input type="hidden" class="account-id" name="account-id" value="">
+                                            <input type="hidden" class="comment-id" name="comment-id" value="">
+                                            <input type="hidden" class="user-id" name="user-id" value="{{account.account_id}}">
+                                            <input type="hidden" class="post-id" name="post-id" value="{{post.post_id}}">
+                                            <button type="submit" class="btn btn-primary">Đăng</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    {%endfor%}
+
+
+                </div>
+
+                <div class="post" style="margin-top: 20px; background-color: #ffffff">
+                    <form action="" method="post">
+                        <div class="wraptop">
+                            <div class="user-infor pull-left">
+                                <div class="avatar">
+
+                                    <img src="{{account.account_picture}}" alt="">
+
+                                </div>
+                            </div>
+                            <div class="posttext pull-left">
+                                <div class="textwraper">
+                                    <div class="postreply">Gửi một câu trả lời</div>
+                                    <textarea class="reply" id="reply"
+                                        placeholder="Nhập tin nhắn của bạn ở đây"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="postinfobot">
+                            <div class="pull-right postreply">
+                                <div class="pull-left">
+                                    <input type="hidden" class="comment-id" name="comment-id" value="0">
+                                    <input type="hidden" class="user-id" name="user-id" value="{{account.account_id}}">
+                                    <input type="hidden" class="post-id" name="post-id" value="{{post.post_id}}">
+                                    <button type="submit" class="btn btn-primary">Đăng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<div class="popup">
+    <div class="top-bar">
+        <div class="image-name">avatar.png</div>
+        <span class="close-btn"></span>
+    </div>
+    <button class="arrow-btn left-arrow"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="arrow-btn right-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+    <img src="{%static 'assets/img/image1.jpg'%}" class="large-image" alt="">
+    <h1 class="index-image">01</h1>
+</div>
+
+<form id="projectForm" action="">
+    {% csrf_token %}
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 500px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm dự án</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="topic-add">
+                        <div class="mb-3">
+                            <input type="text" name="projectName" class="form-control" placeholder="Nhập tên dự án"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <select name="categoryName" class="form-select">
+                                <option value="#" selected>Chọn chuyên mục</option>
+                                {% for subject in subjects %}
+                                {% if subject != course.subject %}
+                                <option value="{{subject.subject_id}}">{{subject.subject_name}}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="alert alert-danger d-none" id="activityTypeError" role="alert">
+                            Vui lòng chọn chuyên mục!
+                        </div>
+
+                        <div class="mb-3">
+                            <textarea name="projectDesc" id="desc" placeholder="Mô tả dự án" class="form-control"
+                                style=" height: 145px;"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="upload">
+                                <button type="button" class="btn-warningg">
+                                    <i class="fa fa-upload"></i> Upload File
+                                    <input type="file">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{%endblock%}

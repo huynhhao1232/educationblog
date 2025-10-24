@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Thông báo xét duyệt hồ sơ nhập học</h2>
+        </div>
+
+        <div class="content">
+            <p>Kính gửi: {{ full_name }},</p>
+
+            <p>Chúng tôi xin thông báo rằng hồ sơ xét tuyển của bạn đã được duyệt thành công.</p>
+
+            <p>Thông tin chi tiết:</p>
+            <ul>
+                <li>Năm học: {{ graduation_year }}</li>
+                <li>Cơ sở: {{ campus }}</li>
+                <li>Ca học: {{ shift }}</li>
+                <li>Tổ hợp môn: {{ subject_group }}</li>
+            </ul>
+
+            <p>Vui lòng chuẩn bị các giấy tờ sau và đến trường để hoàn tất thủ tục nhập học vào sáng thứ ba (08/07/2025).</p>
+            <div style="border:1px solid #333;padding:10px;margin:15px 0;">
+                <p style="color:#d60000;font-weight:bold;font-size:20px;text-align:center;margin-bottom:10px;">HỒ SƠ GIÁO DỤC THƯỜNG XUYÊN (LỚP 10)</p>
+                <ol style="color:#1a237e;">
+                    <li>Phiếu báo điểm thi tuyển sinh 10 (đối với học sinh tốt nghiệp trung học cơ sở năm 2025);</li>
+                    <li>Học bạ THCS <em>(02 bộ photo có công chứng)</em></li>
+                    <li>Giấy khai sinh <em>(02 bản sao có dấu đỏ)</em></li>
+                    <li>Bằng TN THCS hoặc Giấy chứng nhận TN tạm thời <em>(02 bản, 1 bản chính và 1 bản sao có công chứng)</em></li>
+                    <li>Căn cước công dân photo 2 mặt căn cước trên 1 mặt giấy A4 <em>(02 bản photo có công chứng)</em></li>
+                    <li>Giấy tờ ưu tiên khuyến khích <em>(01 bản photo công chứng, nếu có)</em></li>
+                    <li>Giấy chứng nhận khuyết tật <em>(01 bản photo công chứng, nếu có)</em></li>
+                </ol>
+            </div>
+
+            <p>Xin chúc mừng và hẹn gặp lại!</p>
+        </div>
+
+        <div class="footer">
+            <p>Đây là email tự động, vui lòng không trả lời email này.</p>
+            <p>Nếu bạn có thắc mắc, vui lòng liên hệ với nhà trường qua số điện thoại hoặc email chính thức.</p>
+        </div>
+    </div>
+</body>
+</html>

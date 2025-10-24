@@ -1,0 +1,500 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block activity %}
+<nav aria-label="breadcrumb" class="i-name">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item "><a href="{% url 'course' %}">Khoá học</a></li>
+        <li class="breadcrumb-item"><a
+                href="{% url 'activity' course_id=activity.course.course_id %}">{{activity.course.course_name}}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{activity.activity_name}}</li>
+    </ol>
+</nav>
+
+
+<div class="course-detail">
+    <div class='row' style="width: 100%">
+        <div class="col-xl-4 col-lg-4 course-detail-left">
+            <div class="course-detail-left-items">
+                <form id="activityDetail" action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="" class="form-label">Tên hoạt động</label>
+                        <input type="text" name="activityName" class="form-control activityName"
+                            value="{{activity.activity_name}}" required>
+                        <input type="hidden" value="{{activity.course.course_id}}" class="courseHidden">
+                        <input type="hidden" value="{{activity.activity_id}}" class="activityHidden">
+                    </div>
+                    <div class="alert alert-danger d-none" id="activityNameError" role="alert">
+                        Hoạt động này đã tồn tại!
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Thứ tự</label>
+                        <input type="number" min="1" name="activityOrder" class="form-control activityOrder"
+                            value="{{activity.activity_order}}" required>
+                    </div>
+                    <div class="alert alert-danger d-none" id="activityOrderError" role="alert">
+                        Thứ tự này đã tồn tại!
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">Loại hoạt động</label>
+                        <select name="activityType" id="activityType" class="form-select">
+                            <option value="{{activity.activitytype.activitytype_id}}" selected>
+                                {{activity.activitytype.activitytype_name}}</option>
+                            {% for ty in types %}
+                            {% if ty is not activity.activitytype%}
+                            <option value="{{ty.activitytype_id}}">{{ty.activitytype_name}}</option>
+                            {%endif%}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="alert alert-danger d-none" id="activityTypeError" role="alert">
+                        Vui lòng chọn loại hoạt động!
+                    </div>
+
+                    <div class="mb-5 course-detail-left-items-toggle toggle-hidden ">
+                        {% if activity.activity_enable %}
+                        <div class="toggle active">
+                            <div class="toggle-button"></div>
+                        </div>
+                        <div class="text">Công khai</div>
+                        {% else %}
+                        <div class="toggle">
+                            <div class="toggle-button"></div>
+                        </div>
+                        <div class="text">Riêng tư</div>
+                        {% endif %}
+
+                        {% if activity.activity_enable %}
+                        <input type="hidden" class="enableHidden" name="enableHidden" value="1">
+                        {% else %}
+                        <input type="hidden" class="enableHidden" name="enableHidden" value="0">
+                        {% endif %}
+
+                        {% if activity.activity_enable %}
+                        <input type="hidden" class="enableHidden2" name="enableHidden2" value="1">
+                        {% else %}
+                        <input type="hidden" class="enableHidden2" name="enableHidden2" value="0">
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-3 course-detail-left-items-btn">
+                        <button type="submit" class="btn btn-outline-dark">Cập nhật</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="col-xl-8 col-lg-8 course-detail-right" >
+            <div class="course-right-manage">
+                <input type="hidden" class="type-id" value="{{activity.activitytype.activitytype_id}}">
+                <form id="activity1" action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {%if activity.activitytype.activitytype_id == 1 %}
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm lý thuyết</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+
+                                    <div class="course-add">
+                                        <input type="hidden" class="dataHidden" name="dataHidden">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Tên bài</label>
+                                            <input type="text" name="Name" class="form-control Name" required>
+                                        </div>
+                                        <div class="alert alert-danger d-none" id="nameError" role="alert">
+                                            Tên bài này đã tồn tại!
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label mr-2">Thứ tự</label>
+                                            <input type="number" min="1" name="order" class="form-control order"
+                                                required>
+                                        </div>
+                                        <div class="alert alert-danger d-none" id="orderError" role="alert">
+                                            Thứ tự này đã tồn tại!
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="" class="form-label mr-2">Đường dẫn</label>
+                                            <input type="text" name="link" class="form-control link" required>
+                                            {% comment %} <label for="" class="form-label mr-2">Nội dung</label>
+                                            <textarea class="ckeditor" cols="80" id="editor1" name="ckeditor1"
+                                                rows="10"></textarea>
+
+                                            <script type="text/javascript">
+                                                CKEDITOR.replace("editor1", {
+                                                    filebrowserBrowseUrl: '', filebrowserUploadUrl: "{% url 'upload_image' %}",
+                                                    extraPlugins: 'uploadimage',
+                                                    clipboard_handleImages: false,
+                                                    filebrowserUploadMethod: 'ajax',
+                                                    on: {
+                                                        'fileUploadResponse': function (evt) {
+                                                            // Get the URL from the response and set the image source
+
+                                                            var response = evt.data
+
+                                                            if (response && response.url) {
+                                                                // Manipulate the URL if needed (remove MEDIA_URL, leading slash, etc.)
+                                                                var imageUrl = response.url.replace(settings.MEDIA_URL, '');
+                                                                imageUrl = imageUrl.replace(/^\//, '');
+                                                                imageUrl = settings.MEDIA_URL + imageUrl;
+                                                                // Set the image source in the CKEditor dialog
+                                                                evt.editor.document.$.getElementsByClassName('cke_dialog_ui_input_text')[0].value = imageUrl;
+                                                            }
+                                                        }
+                                                    }
+
+                                                });
+                                            </script> {% endcomment %}
+                                        </div>
+
+                                        <div class="mb-5 course-detail-left-items-toggle toggle-hidden d-none">
+                                            <div class="toggle active">
+                                                <div class="toggle-button"></div>
+                                            </div>
+                                            <div class="text">Công khai</div>
+
+                                            <input type="hidden" class="enableHidden" name="enableHidden" value="1">
+                                            <input type="hidden" class="enableHidden2" name="enableHidden2" value="1">
+
+                                        </div>
+
+
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Đóng</button>
+                                    <button type="submit" class="btn btn-primary btn-update">Thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%elif activity.activitytype.activitytype_id == 2 %}
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm trò chơi</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+
+                                    <div class="course-add">
+                                        <input type="hidden" class="dataHidden" name="dataHidden">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Tên trò chơi</label>
+                                            <input type="text" name="Name" class="form-control Name" required>
+                                        </div>
+                                        <div class="alert alert-danger d-none" id="nameError" role="alert">
+                                            Trò chơi này đã tồn tại!
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="" class="form-label mr-2">Đường dẫn</label>
+                                            <input type="text" name="link" class="form-control link" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="" class="form-label mr-2">Mô tả trò chơi</label>
+                                            <textarea class="ckeditor" cols="80" id="editor1" name="ckeditor1"
+                                                rows="10"></textarea>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <div class="upload">
+                                                <button type="button" class="btn-warningg">
+                                                    <i class="fa fa-upload"></i> Upload File
+                                                    <input type="file" name="topic-file" id="topic-file"
+                                                        class="topic-file">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <img src="" alt="" class="picture" style="width: 50%">
+                                        </div>
+
+                                        <div class="alert alert-danger d-none" id="uploadError" role="alert">
+                                            file này không được hỗ trợ!
+                                        </div>
+
+                                        <div class="mb-5 course-detail-left-items-toggle toggle-hidden d-none">
+                                            <div class="toggle active">
+                                                <div class="toggle-button"></div>
+                                            </div>
+                                            <div class="text">Công khai</div>
+
+                                            <input type="hidden" class="enableHidden" name="enableHidden" value="1">
+                                            <input type="hidden" class="enableHidden2" name="enableHidden2" value="1">
+
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Đóng</button>
+                                    <button type="submit" class="btn btn-primary btn-update">Thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%else%}
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm mô phỏng</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+
+                                    <div class="course-add">
+                                        <input type="hidden" name="dataHidden" class="dataHidden">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Tên mô phỏng</label>
+                                            <input type="text" name="Name" class="form-control Name" required>
+                                        </div>
+                                        <div class="alert alert-danger d-none" id="nameError" role="alert">
+                                            Mô phỏng này đã tồn tại!
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="" class="form-label mr-2">Đường dẫn</label>
+                                            <input type="text" name="link" class="form-control link" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="" class="form-label mr-2">Mô tả trò chơi</label>
+                                            <textarea class="ckeditor" cols="80" id="editor1" name="ckeditor1"
+                                                rows="10"></textarea>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <div class="upload">
+                                                <button type="button" class="btn-warningg">
+                                                    <i class="fa fa-upload"></i> Upload File
+                                                    <input type="file" name="topic-file" id="topic-file"
+                                                        class="topic-file">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <img src="" alt="" class="picture" style="width: 50%">
+                                        </div>
+
+                                        <div class="alert alert-danger d-none" id="uploadError" role="alert">
+                                            file này không được hỗ trợ!
+                                        </div>
+
+                                        <div class="mb-5 course-detail-left-items-toggle toggle-hidden d-none">
+                                            <div class="toggle active">
+                                                <div class="toggle-button"></div>
+                                            </div>
+                                            <div class="text">Công khai</div>
+
+                                            <input type="hidden" class="enableHidden" name="enableHidden" value="1">
+                                            <input type="hidden" class="enableHidden2" name="enableHidden2" value="1">
+
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Đóng</button>
+                                    <button type="submit" class="btn btn-primary btn-update">Thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endif%}
+                </form>
+
+
+
+                <div class="mb-3 course-right-add">
+                    <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        + Thêm
+                    </button>
+                </div>
+                {% if activity.activitytype.activitytype_id == 1 %}
+                <div class="course-right-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>STT</td>
+                                <td>Tên bài</td>
+                                <td>Số người hoàn thành</td>
+                                <td>Ngày tạo</td>
+                                <td>Tình trạng</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {% for t in ts %}
+                            <tr>
+                                <td>
+                                    <p>{{t.theory_order}}</p>
+                                </td>
+                                <td>
+                                    <p>{{t.theory_name}}</p>
+                                </td>
+                                <td>
+                                    <p>1.000</p>
+                                </td>
+                                {% if t.theory_enable %}
+                                <td class="active">
+                                    <p>Công khai</p>
+                                </td>
+                                {% else %}
+                                <td class="active">
+                                    <p>Riêng tư</p>
+                                </td>
+                                {% endif %}
+                                <td>
+                                    <p>{{t.theory_createdate|date:"d/m/Y"}}</p>
+                                </td>
+                                <td class="view"><i style="cursor: pointer;" class="fa-regular fa-pen-to-square update"
+                                        data-id="{{t.theory_id}}"></i>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                {% elif activity.activitytype.activitytype_id == 2%}
+                <div class="board">
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <td>Tên trò chơi</td>
+                                <td>Ngày khởi tạo</td>
+                                <td>Trạng thái</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for t in ts%}
+                            <tr>
+                                <td class="people">
+                                    <img src="{{t.game_picture}}" alt="">
+                                    <div class="people-de">
+                                        <h5>{{ t.game_name}}</h5>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <p>{{t.game_createdate|date:"d/m/Y"}}</p>
+                                </td>
+                                {% if t.game_enable %}
+                                <td class="active">
+                                    <p>Hoạt động</p>
+                                </td>
+                                {% else %}
+                                <td class="active" style="background: red">
+                                    <p>Vô hiệu</p>
+                                </td>
+                                {% endif %}
+                                <td class="view"><i style="cursor: pointer;" class="fa-regular fa-pen-to-square update"
+                                        data-id="{{t.game_id}}"></i>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="board">
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <td>Tên trò chơi</td>
+                                <td>Ngày khởi tạo</td>
+                                <td>Trạng thái</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for t in ts%}
+                            <tr>
+                                <td class="people">
+                                    <img src="{{t.simulation_picture}}" alt="">
+                                    <div class="people-de">
+                                        <h5>{{ t.simulation_name}}</h5>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <p>{{t.simulation_createdate|date:"d/m/Y"}}</p>
+                                </td>
+                                {% if t.simulation_enable %}
+                                <td class="active">
+                                    <p>Hoạt động</p>
+                                </td>
+                                {% else %}
+                                <td class="active">
+                                    <p>Vô hiệu</p>
+                                </td>
+                                {% endif %}
+                                <td class="view"><i style="cursor: pointer;" class="fa-regular fa-pen-to-square update"
+                                        data-id="{{t.simulation_id}}"></i>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thành công</h5>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text">Dữ liệu đã được cập nhật!</p>
+                <button type="button" id="closeSuccessModalButton" class="btn btn-secondary"
+                    data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

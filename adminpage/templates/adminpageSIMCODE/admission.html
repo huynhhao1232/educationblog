@@ -1,0 +1,439 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<style>
+    .filter-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 20px 30px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    .filter-header {
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .filter-fields {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 32px;
+        justify-content: space-between;
+    }
+    .filter-col {
+        flex: 1 1 22%;
+        min-width: 200px;
+        max-width: 24%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .filter-section label {
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 8px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .filter-section .form-control {
+        border: none;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    .filter-section .form-control:focus {
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-1px);
+    }
+    .filter-section .form-control:hover {
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    @media (max-width: 1200px) {
+        .filter-col { max-width: 48%; min-width: 180px; }
+        .filter-fields { gap: 20px 16px; }
+    }
+    @media (max-width: 768px) {
+        .filter-col { max-width: 100%; min-width: 100%; }
+        .filter-fields { flex-direction: column; gap: 12px; }
+    }
+</style>
+
+<h3 class="i-name">
+    Tuyển sinh
+</h3>
+
+<div class="values">
+    <div class="val-box">
+        <i class="fas fa-users"></i>
+        <div>
+            <h3>{{new_users}}</h3>
+            <span>New Users</span>
+        </div>
+    </div>
+
+    <div class="val-box">
+        <i class="fa-solid fa-child"></i>
+        <div>
+            <h3>8.267</h3>
+            <span>Học sinh</span>
+        </div>
+    </div>
+
+    <div class="val-box">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <div>
+            <h3>8.267</h3>
+            <span>Giáo viên</span>
+        </div>
+    </div>
+
+    <div class="val-box">
+        <i class="fa-solid fa-book"></i>
+        <div>
+            <h3>8.267</h3>
+            <span>Khoá học</span>
+        </div>
+    </div>
+</div>
+
+<div class="import-section" style="margin: 20px 30px; padding: 20px; border: 1px solid #f8d7da; border-radius: 10px; background: #fff0f0;">
+    <form method="post" enctype="multipart/form-data" action="{% url 'adminpage:delete_cccd_excel' %}">
+        {% csrf_token %}
+        <label for="excelFileDelete" style="font-weight: bold; color: #b71c1c;">Import file Excel để xoá học viên theo số CCCD:</label>
+        <input type="file" name="excel_file" id="excelFileDelete" accept=".xlsx,.xls" required style="margin: 0 10px;" />
+        <button type="submit" class="btn btn-danger">Import & Xoá</button>
+    </form>
+    {% if delete_result %}
+        <div style="margin-top:10px; color: #b71c1c; font-weight: bold;">{{ delete_result }}</div>
+    {% endif %}
+</div>
+
+<div class="import-section" style="margin: 20px 30px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f9f9f9;">
+    <form method="post" enctype="multipart/form-data" action="{% url 'adminpage:import_cccd_excel' %}">
+        {% csrf_token %}
+        <label for="excelFile" style="font-weight: bold;">Import file Excel để duyệt học viên theo số CCCD:</label>
+        <input type="file" name="excel_file" id="excelFile" accept=".xlsx,.xls" required style="margin: 0 10px;" />
+        <button type="submit" class="btn btn-success">Import & Duyệt</button>
+    </form>
+    {% if import_result %}
+        <div style="margin-top:10px; color: green; font-weight: bold;">{{ import_result }}</div>
+    {% endif %}
+</div>
+
+<div class="import-section" style="margin: 20px 30px; padding: 20px; border: 1px solid #28a745; border-radius: 10px; background: #f0fff0;">
+    <div style="margin-bottom: 15px;">
+        <a href="{% url 'adminpage:export_conduct_template' %}" class="btn btn-outline-primary">
+            <i class="fas fa-download me-2"></i>Tải template Excel
+        </a>
+    </div>
+    <form method="post" enctype="multipart/form-data" action="{% url 'adminpage:update_conduct_excel' %}">
+        {% csrf_token %}
+        <label for="excelFileConduct" style="font-weight: bold; color: #28a745;">Import file Excel để cập nhật hạnh kiểm theo số CCCD:</label>
+        <input type="file" name="excel_file" id="excelFileConduct" accept=".xlsx,.xls" required style="margin: 0 10px;" />
+        <button type="submit" class="btn btn-primary">Import & Cập nhật hạnh kiểm</button>
+    </form>
+    {% if conduct_update_result %}
+        <div style="margin-top:10px; color: #28a745; font-weight: bold;">{{ conduct_update_result }}</div>
+    {% endif %}
+    <div style="margin-top: 10px; font-size: 12px; color: #666;">
+        <strong>Lưu ý:</strong> File Excel phải có 2 cột: cột chứa số CCCD và cột chứa hạnh kiểm (Tốt/Khá/Trung bình/Yếu)
+    </div>
+</div>
+
+<div class="filter-section">
+    <div class="filter-header">
+        <i class="fas fa-filter me-2"></i>Bộ lọc tìm kiếm
+    </div>
+    <div class="filter-fields">
+        <!-- Hàng 1 -->
+        <div class="filter-col">
+            <label for="nameFilter"><i class="fas fa-user me-1"></i> Tên học sinh</label>
+            <input type="text" class="form-control" id="nameFilter" placeholder="Nhập tên..." value="{{ name_filter }}">
+        </div>
+        <div class="filter-col">
+            <label for="graduationYearFilter"><i class="fas fa-calendar-alt me-1"></i> Năm tốt nghiệp</label>
+            <select class="form-control" id="graduationYearFilter">
+                <option value="">Tất cả</option>
+                {% for year in graduation_years %}
+                    <option value="{{ year }}" {% if graduation_year_filter == year|stringformat:"s" %}selected{% endif %}>{{ year }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="filter-col">
+            <label for="statusFilter"><i class="fas fa-check-circle me-1"></i> Trạng thái</label>
+            <select class="form-control" id="statusFilter">
+                <option value="">Tất cả</option>
+                <option value="1" {% if status_filter == '1' %}selected{% endif %}>Đã duyệt</option>
+                <option value="0" {% if status_filter == '0' %}selected{% endif %}>Chưa duyệt</option>
+            </select>
+        </div>
+        <div class="filter-col">
+            <label for="campusFilter"><i class="fas fa-building me-1"></i> Cơ sở</label>
+            <select class="form-control" id="campusFilter">
+                <option value="">Tất cả</option>
+                {% for campus in campuses %}
+                    <option value="{{ campus.id }}" {% if campus_filter == campus.id|stringformat:"s" %}selected{% endif %}>{{ campus.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <!-- Hàng 2 -->
+        <div class="filter-col">
+            <label for="shiftFilter"><i class="fas fa-clock me-1"></i> Ca học</label>
+            <select class="form-control" id="shiftFilter">
+                <option value="">Tất cả</option>
+                {% for shift in shifts %}
+                    <option value="{{ shift.id }}" {% if shift_filter == shift.id|stringformat:"s" %}selected{% endif %}>{{ shift.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="filter-col">
+            <label for="subjectGroupFilter"><i class="fas fa-graduation-cap me-1"></i> Tổ hợp môn</label>
+            <select class="form-control" id="subjectGroupFilter">
+                <option value="">Tất cả</option>
+                {% for group in subject_groups %}
+                    <option value="{{ group.id }}" {% if subject_group_filter == group.id|stringformat:"s" %}selected{% endif %}>{{ group.code }} - {{ group.description }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="filter-col">
+            <label for="examScoreFilter"><i class="fas fa-chart-line me-1"></i> Điểm thi 2025</label>
+            <select class="form-control" id="examScoreFilter">
+                <option value="">Tất cả</option>
+                <option value="desc" {% if exam_score_order == 'desc' %}selected{% endif %}>Cao đến thấp</option>
+                <option value="asc" {% if exam_score_order == 'asc' %}selected{% endif %}>Thấp đến cao</option>
+            </select>
+        </div>
+        <div class="filter-col">
+            <label for="avgScoreFilter"><i class="fas fa-chart-bar me-1"></i> Điểm TB Toán, Văn</label>
+            <select class="form-control" id="avgScoreFilter">
+                <option value="">Tất cả</option>
+                <option value="desc" {% if avg_score_order == 'desc' %}selected{% endif %}>Cao đến thấp</option>
+                <option value="asc" {% if avg_score_order == 'asc' %}selected{% endif %}>Thấp đến cao</option>
+            </select>
+        </div>
+        <div class="filter-col">
+            <label for="conductFilter"><i class="fas fa-star me-1"></i> Hạnh kiểm</label>
+            <select class="form-control" id="conductFilter">
+                <option value="">Tất cả</option>
+                <option value="Tốt" {% if conduct_filter == 'Tốt' %}selected{% endif %}>Tốt</option>
+                <option value="Khá" {% if conduct_filter == 'Khá' %}selected{% endif %}>Khá</option>
+                <option value="Trung bình" {% if conduct_filter == 'Trung bình' %}selected{% endif %}>Trung bình</option>
+                <option value="Yếu" {% if conduct_filter == 'Yếu' %}selected{% endif %}>Yếu</option>
+            </select>
+        </div>
+        <div class="filter-col">
+            <label for="fromDateFilter"><i class="fas fa-calendar-day me-1"></i> Từ ngày</label>
+            <input type="date" class="form-control" id="fromDateFilter" value="{{ from_date_filter }}">
+        </div>
+        <div class="filter-col">
+            <label for="toDateFilter"><i class="fas fa-calendar-day me-1"></i> Đến ngày</label>
+            <input type="date" class="form-control" id="toDateFilter" value="{{ to_date_filter }}">
+        </div>
+    </div>
+</div>
+
+<div class="export-section">
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-2">
+            <!-- Existing filter buttons if any -->
+        </div>
+        <form method="GET" action="{% url 'adminpage:export_approved_admissions' %}" id="exportForm" style="display: inline;">
+            <input type="hidden" name="name" id="exportName" value="{{ name_filter }}">
+            <input type="hidden" name="graduation_year" id="exportGraduationYear" value="{{ graduation_year_filter }}">
+            <input type="hidden" name="status" id="exportStatus" value="{{ status_filter }}">
+            <input type="hidden" name="campus" id="exportCampus" value="{{ campus_filter }}">
+            <input type="hidden" name="shift" id="exportShift" value="{{ shift_filter }}">
+            <input type="hidden" name="subject_group" id="exportSubjectGroup" value="{{ subject_group_filter }}">
+            <input type="hidden" name="exam_score" id="exportExamScore" value="{{ exam_score_order }}">
+            <input type="hidden" name="avg_score" id="exportAvgScore" value="{{ avg_score_order }}">
+            <input type="hidden" name="conduct" id="exportConduct" value="{{ conduct_filter }}">
+            <input type="hidden" name="from_date" id="exportFromDate" value="{{ from_date_filter }}">
+            <input type="hidden" name="to_date" id="exportToDate" value="{{ to_date_filter }}">
+            <button type="submit" class="btn btn-success">
+                <i class="fas fa-file-excel me-2"></i>Xuất Excel theo bộ lọc
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="board">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>Tên</td>
+                <td>Giới tính</td>
+                <td>Năm sinh</td>
+                <td>Loại học viên</td>
+                <td>Điểm thi chuyển cấp</td>
+                <td>Điểm trung bình Toán, văn</td>
+                <td>Trạng thái</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in ad%}
+            <tr>
+                <td class="people">
+                    <div class="people-de">
+                        <h5>{{a.full_name}}</h5>
+
+                    </div>
+                </td>
+
+
+                <td class="people-des"><p>{{a.gender}}</p></td>
+                <td class="people-des"><p>{{a.birthday|date:"Y"}}</p></td>
+                {%if a.graduation_year == 'before'%}
+                <td class="people-des"><p>Tự do</p></td>
+                {%else%}
+                <td class="people-des"><p>Thi chuyển cấp 2025</p></td>
+                {%endif%}
+                {%if a.exam_score%}
+                <td class="people-des"><p>{{a.exam_score}}</p></td>
+                {%else%}
+                <td class="people-des"><p></p></td>
+                {%endif%}
+                {%if a.avg_score%}
+                <td class="people-des"><p>{{a.avg_score}}</p></td>
+                {%else%}
+                <td class="people-des"><p></p></td>
+                {%endif%}
+                {% if a.enable %}
+                <td class="active"><p>Đã duyệt</p></td>
+                {% else %}
+                <td class="active" ><p style="background: red; color: white">Chưa duyệt</p></td>
+                {% endif %}
+                <td class="view"><a href="{% url 'adminpage:letter' admission_id=a.id %}"><i class="fa-regular fa-eye me-3"></i></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="pagination d-flex justify-content-center mt-4">
+    {% if ad.has_previous %}
+        <a href="?page=1{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">&laquo; Đầu</a>
+        <a href="?page={{ ad.previous_page_number }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">Trước</a>
+    {% endif %}
+
+    {% for num in ad.paginator.page_range %}
+        {% if ad.number == num %}
+            <a href="?page={{ num }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-primary mx-1">{{ num }}</a>
+        {% elif num > ad.number|add:'-3' and num < ad.number|add:'3' %}
+            <a href="?page={{ num }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">{{ num }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if ad.has_next %}
+        <a href="?page={{ ad.next_page_number }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">Tiếp</a>
+        <a href="?page={{ ad.paginator.num_pages }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">Cuối &raquo;</a>
+    {% endif %}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Debounce function to limit how often a function can fire
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    // Function to update URL and reload page with filters
+    function applyFilters() {
+        const name = document.getElementById('nameFilter')?.value || '';
+        const graduationYear = document.getElementById('graduationYearFilter')?.value || '';
+        const status = document.getElementById('statusFilter')?.value || '';
+        const campus = document.getElementById('campusFilter')?.value || '';
+        const shift = document.getElementById('shiftFilter')?.value || '';
+        const subjectGroup = document.getElementById('subjectGroupFilter')?.value || '';
+        const examScore = document.getElementById('examScoreFilter')?.value || '';
+        const avgScore = document.getElementById('avgScoreFilter')?.value || '';
+        const conduct = document.getElementById('conductFilter')?.value || '';
+        const fromDate = document.getElementById('fromDateFilter')?.value || '';
+        const toDate = document.getElementById('toDateFilter')?.value || '';
+
+        // Update export form hidden inputs
+        if(document.getElementById('exportName')) document.getElementById('exportName').value = name;
+        if(document.getElementById('exportGraduationYear')) document.getElementById('exportGraduationYear').value = graduationYear;
+        if(document.getElementById('exportStatus')) document.getElementById('exportStatus').value = status;
+        if(document.getElementById('exportCampus')) document.getElementById('exportCampus').value = campus;
+        if(document.getElementById('exportShift')) document.getElementById('exportShift').value = shift;
+        if(document.getElementById('exportSubjectGroup')) document.getElementById('exportSubjectGroup').value = subjectGroup;
+        if(document.getElementById('exportExamScore')) document.getElementById('exportExamScore').value = examScore;
+        if(document.getElementById('exportAvgScore')) document.getElementById('exportAvgScore').value = avgScore;
+        if(document.getElementById('exportConduct')) document.getElementById('exportConduct').value = conduct;
+        if(document.getElementById('exportFromDate')) document.getElementById('exportFromDate').value = fromDate;
+        if(document.getElementById('exportToDate')) document.getElementById('exportToDate').value = toDate;
+
+        const params = new URLSearchParams(window.location.search);
+
+        // Update or remove parameters based on filter values
+        if (name) params.set('name', name);
+        else params.delete('name');
+
+        if (graduationYear) params.set('graduation_year', graduationYear);
+        else params.delete('graduation_year');
+
+        if (status) params.set('status', status);
+        else params.delete('status');
+
+        if (campus) params.set('campus', campus);
+        else params.delete('campus');
+
+        if (shift) params.set('shift', shift);
+        else params.delete('shift');
+
+        if (subjectGroup) params.set('subject_group', subjectGroup);
+        else params.delete('subject_group');
+
+        if (examScore) params.set('exam_score', examScore);
+        else params.delete('exam_score');
+
+        if (avgScore) params.set('avg_score', avgScore);
+        else params.delete('avg_score');
+
+        if (conduct) params.set('conduct', conduct); else params.delete('conduct');
+        if (fromDate) params.set('from_date', fromDate); else params.delete('from_date');
+        if (toDate) params.set('to_date', toDate); else params.delete('to_date');
+
+        // Remove page parameter when filters change
+        params.delete('page');
+
+        // Reload page with new filters
+        window.location.href = `${window.location.pathname}?${params.toString()}`;
+    }
+
+    // Debounced version for text input
+    const debouncedApplyFilters = debounce(applyFilters, 500);
+
+    // Add event listeners to all filters
+    if(document.getElementById('nameFilter')) document.getElementById('nameFilter').addEventListener('input', debouncedApplyFilters);
+    if(document.getElementById('graduationYearFilter')) document.getElementById('graduationYearFilter').addEventListener('change', applyFilters);
+    if(document.getElementById('statusFilter')) document.getElementById('statusFilter').addEventListener('change', applyFilters);
+    if(document.getElementById('campusFilter')) document.getElementById('campusFilter').addEventListener('change', applyFilters);
+    if(document.getElementById('shiftFilter')) document.getElementById('shiftFilter').addEventListener('change', applyFilters);
+    if(document.getElementById('subjectGroupFilter')) document.getElementById('subjectGroupFilter').addEventListener('change', applyFilters);
+    if(document.getElementById('examScoreFilter')) document.getElementById('examScoreFilter').addEventListener('change', applyFilters);
+    if(document.getElementById('avgScoreFilter')) document.getElementById('avgScoreFilter').addEventListener('change', applyFilters);
+    if(document.getElementById('conductFilter')) document.getElementById('conductFilter').addEventListener('change', applyFilters);
+    if(document.getElementById('fromDateFilter')) document.getElementById('fromDateFilter').addEventListener('change', applyFilters);
+    if(document.getElementById('toDateFilter')) document.getElementById('toDateFilter').addEventListener('change', applyFilters);
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends 'homepage/template.html' %}
+{% load static %}
+
+{% block login %}
+<style>
+.login-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.login-title {
+    color: #023EB6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-form .form-control {
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.login-form .form-control:focus {
+    border-color: #023EB6;
+    box-shadow: 0 0 0 0.25rem rgba(2, 62, 182, 0.25);
+}
+
+.login-btn {
+    background: #023EB6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.login-btn:hover {
+    background: #0233a3;
+    transform: translateY(-1px);
+    transition: all 0.2s;
+}
+
+.form-check-input:checked {
+    background-color: #023EB6;
+    border-color: #023EB6;
+}
+</style>
+
+<div class="login-container">
+    <div class="login-card">
+        <div class="text-center mb-4">
+            <img src="{% static 'assets/logo.png' %}" alt="Logo" style="max-height: 80px;">
+            <h2 class="login-title">Đăng nhập</h2>
+        </div>
+        
+        <form method="post" class="login-form">
+            {% csrf_token %}
+            
+            {% if error_message %}
+            <div class="alert alert-danger" role="alert">
+                {{ error_message }}
+            </div>
+            {% endif %}
+            
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Tên đăng nhập" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu" required>
+            </div>
+            
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                <label class="form-check-label" for="remember">Ghi nhớ đăng nhập</label>
+            </div>
+            
+            <button type="submit" class="login-btn">Đăng nhập</button>
+        </form>
+    </div>
+</div>
+{% endblock %} 

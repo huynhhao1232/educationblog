@@ -1,0 +1,186 @@
+
+
+
+{% extends 'homepage/template.html' %}
+{% block title %} Trang chủ {%endblock%}
+{%block cctc%}
+{% load static %}
+            <!----------------------------------------------------------content-right---------------------------------->
+            <div class="col-sm-9">
+              <ul class="list-group">
+
+                <li class="list-group-item" aria-current="true" style="background-color: #023EB6; color: #fff; font-weight: bold; text-transform: uppercase; font-family: Roboto; ">{{pb.name}}</li>
+                <li class="list-group-item">
+                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="mySelect" onchange="reloadWithPBID()">
+                    <option selected>{{pb.name}}</option>
+                    {%for pb in pbs%}
+                    <option value="{{pb.id}}">{{pb.name}}</option>
+                    {%endfor%}
+                  </select>
+                </li>
+                {%if pb.id == 5%}
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12">
+                          <img src="{%static 'assets/img/chiuy.jpg'%}" alt="" width="100%">
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="row">
+                            <div class="col-sm-7">
+                                {% with pb_gv.1 as first_gv %}
+                                <img src="{{ first_gv.gv.image_file.url }}" alt="Ảnh giáo viên"  width="100%">
+                                {% endwith %}
+
+                              <p class="role">PHÓ BÍ THƯ</p>
+                              <p class="main-name" style="text-align:center">Cô Nguyễn Thị Ngọc Xuân</p>
+                            <!--  <p class="role">{{item.gv.role2}}</p>-->
+                            </div>
+                            <!--<div class="col-sm-7">-->
+                            <!--  {%if item.gv.sex == True%}-->
+                            <!--  <p class="main-name">Thầy {{item.gv.name}}</p>-->
+                            <!--  <p style="font-family: Roboto; font-size: 17px">Giới tính: Nam</p>-->
+                            <!--  {%else%}-->
+                            <!--  <p class="main-name">Cô Nguyễn Thị Ngọc Xuân</p>-->
+                            <!--  <p style="font-family: Roboto; font-size: 17px">Giới tính: Nữ</p>-->
+                            <!--  {%endif%}-->
+                            <!--  <p style="font-family: Roboto;font-size: 17px">Năm sinh: {{item.gv.namsinh}}</p>-->
+                            <!--  <p style="font-family: Roboto;font-size: 17px">Chuyên môn: {{item.gv.chuyenmon}}</p>-->
+                            <!--</div>-->
+                          </div>
+                        </div>
+
+
+                      </div>
+                </li>
+                <li class="list-group-item">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="row">
+                            <div class="col-sm-7">
+                                {% with pb_gv.3 as first_gv %}
+                                <img src="{{ first_gv.gv.image_file.url }}" alt="Ảnh giáo viên"  width="100%">
+                                {% endwith %}
+
+                              <p class="role">CHI UỶ VIÊN</p>
+                              <p class="main-name" style="text-align:center">Cô Trần Thị Thanh Phước</p>
+                            <!--  <p class="role">{{item.gv.role2}}</p>-->
+                            </div>
+                            <!--<div class="col-sm-7">-->
+                            <!--  {%if item.gv.sex == True%}-->
+                            <!--  <p class="main-name">Thầy {{item.gv.name}}</p>-->
+                            <!--  <p style="font-family: Roboto; font-size: 17px">Giới tính: Nam</p>-->
+                            <!--  {%else%}-->
+                            <!--  <p class="main-name">Cô Nguyễn Thị Ngọc Xuân</p>-->
+                            <!--  <p style="font-family: Roboto; font-size: 17px">Giới tính: Nữ</p>-->
+                            <!--  {%endif%}-->
+                            <!--  <p style="font-family: Roboto;font-size: 17px">Năm sinh: {{item.gv.namsinh}}</p>-->
+                            <!--  <p style="font-family: Roboto;font-size: 17px">Chuyên môn: {{item.gv.chuyenmon}}</p>-->
+                            <!--</div>-->
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <div class="row">
+                            <div class="col-sm-7">
+                                {% with pb_gv.6 as first_gv %}
+                                <img src="{{ first_gv.gv.image_file.url }}" alt="Ảnh giáo viên"  width="95%">
+                                {% endwith %}
+
+                              <p class="role">CHI UỶ VIÊN</p>
+                              <p class="main-name" style="text-align:center">Thầy Phạm Trung Hiền</p>
+                            <!--  <p class="role">{{item.gv.role2}}</p>-->
+                            </div>
+                            <!--<div class="col-sm-7">-->
+                            <!--  {%if item.gv.sex == True%}-->
+                            <!--  <p class="main-name">Thầy {{item.gv.name}}</p>-->
+                            <!--  <p style="font-family: Roboto; font-size: 17px">Giới tính: Nam</p>-->
+                            <!--  {%else%}-->
+                            <!--  <p class="main-name">Cô Nguyễn Thị Ngọc Xuân</p>-->
+                            <!--  <p style="font-family: Roboto; font-size: 17px">Giới tính: Nữ</p>-->
+                            <!--  {%endif%}-->
+                            <!--  <p style="font-family: Roboto;font-size: 17px">Năm sinh: {{item.gv.namsinh}}</p>-->
+                            <!--  <p style="font-family: Roboto;font-size: 17px">Chuyên môn: {{item.gv.chuyenmon}}</p>-->
+                            <!--</div>-->
+                          </div>
+                        </div>
+
+
+                      </div>
+                </li>
+                {%else%}
+                {% for item in pb_gv%}
+
+                    {%if item.gv.bac == 1%}
+                    <li class="list-group-item">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="row">
+                            <div class="col-sm-5">
+                              <img src="{{item.gv.image_file.url}}" alt="" width="100%">
+                              <p class="role">{{item.gv.role1}}</p>
+                              <p class="role">{{item.gv.role2}}</p>
+                            </div>
+                            <div class="col-sm-7">
+                              {%if item.gv.sex == True%}
+                              <p class="main-name">Thầy {{item.gv.name}}</p>
+                              <p style="font-family: Roboto; font-size: 17px">Giới tính: Nam</p>
+                              {%else%}
+                              <p class="main-name">Cô {{item.gv.name}}</p>
+                              <p style="font-family: Roboto; font-size: 17px">Giới tính: Nữ</p>
+                              {%endif%}
+                              <p style="font-family: Roboto;font-size: 17px">Năm sinh: {{item.gv.namsinh}}</p>
+                              <p style="font-family: Roboto;font-size: 17px">Chuyên môn: {{item.gv.chuyenmon}}</p>
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </li>
+                {%endif%}
+                {%endfor%}
+
+                {%endif%}
+                {% for group in pb_gv_grouped %}
+
+                <li class="list-group-item">
+                  <div class="row">
+                    {% for item in group %}
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <img src="{{item.gv.image_file.url}}" alt="" width="100%" height="226.07px">
+                          <p class="role">{{item.gv.role2}}</p>
+                        </div>
+                        <div class="col-sm-7">
+                          {%if item.gv.sex == True%}
+                          <p class="main-name">Thầy {{item.gv.name}}</p>
+                          <p style="font-family: Roboto; font-size: 17px">Giới tính: Nam</p>
+                          {%else%}
+                          <p class="main-name">Cô {{item.gv.name}}</p>
+                          <p style="font-family: Roboto; font-size: 17px">Giới tính: Nữ</p>
+                          {%endif%}
+                          <p style="font-family: Roboto;font-size: 17px">Năm sinh: {{item.gv.namsinh}}</p>
+                          <p style="font-family: Roboto;font-size: 17px">Chuyên môn: {{item.gv.chuyenmon}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </li>
+                {%endfor%}
+
+              </ul>
+            </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{%static 'assets/script.js'%}"></script>
+
+{%endblock%}

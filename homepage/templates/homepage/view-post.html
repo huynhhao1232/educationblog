@@ -1,0 +1,102 @@
+
+
+
+
+
+{% extends 'homepage/template.html' %}
+{% block title %} Trang chủ {%endblock%}
+{%block post%}
+{% load static %}
+
+            <!----------------------------------------------------------content-left---------------------------------->
+
+            <!----------------------------------------------------------content-right---------------------------------->
+            <div class="col-sm-9">
+              <ul class="list-group">
+                <li class="list-group-item active" aria-current="true" style="background-color: #023EB6;">
+                  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" style="pađding:0; margin: 0">
+                    <ol class="breadcrumb" style='padding:0; margin:0'>
+                      <li class="breadcrumb-item"><a href="{% url 'homepage:Homepage' %}"  style="color: #fff; font-weight: bold; font-family: Roboto; text-decoration: none">Trang chủ</a></li>
+                      <li class="breadcrumb-item active" aria-current="page" style="color: #fff; font-weight: bold; font-family: Roboto; text-decoration: none; text-transform: uppercase">{{category.name}}</li>
+                    </ol>
+                  </nav>
+                </li>
+                <li class="list-group-item" style="padding: 10px 50px;">
+
+                  <p style="text-transform: uppercase; font-weight: 500; font-size: 25px; font-family: Roboto; color: #023EB6">{{post.title}}</p>
+                  <div class="timeline">
+                    <p class="news-time text-muted" style="font-size: 16px; font-family: Roboto;">{{ post.createdate|date:"d/m/Y H:i" }}, lượt đọc: <span style="font-family: Roboto;">{{post.views}}</span></p>
+                  </div>
+                  {%if post.content%}
+                  <p class="card-text">{{ post.content|safe }}</p>
+                  {%endif%}
+                  {% if files %}
+                  {% for file in files %}
+                      {% if file.pdf_file.url|lower|slice:"-4:" == ".pdf" %}
+                          <!-- Hiển thị PDF -->
+                          <a href="{{ file.pdf_file.url }}" target="_blank" download style="text-decoration: none; margin-bottom: 10px;">
+                              <i class="fa-solid fa-download"></i> <span>Tải file {{ forloop.counter }}: {{ file.pdf_file.name|slice:'7:' }}</span>
+                          </a>
+                          <div class="_df_book" height="600" webgl="true" backgroundcolor="#d1d1d1"
+                              source="{{ file.pdf_file.url }}" id="df_manual_book"
+                              style="border-radius: 10px; margin-bottom: 20px;">
+                          </div>
+
+                      {% elif file.pdf_file.url|lower|slice:"-4:" == ".mp4" %}
+                          <!-- Hiển thị Video -->
+                          <video width="100%" height="auto" controls style="border-radius: 10px; margin-bottom: 20px;">
+                              <source src="{{ file.pdf_file.url }}" type="video/mp4">
+                              Trình duyệt của bạn không hỗ trợ video.
+                          </video>
+
+                      {% elif file.pdf_file.url|lower|slice:"-4:" == ".jpg" or file.pdf_file.url|lower|slice:"-5:" == ".jpeg" or file.pdf_file.url|lower|slice:"-4:" == ".png" %}
+                          <!-- Hiển thị Hình ảnh -->
+                          <img src="{{ file.pdf_file.url }}" alt="Hình ảnh {{ forloop.counter }}" width="100%" style="border-radius: 10px; margin-bottom: 20px;">
+
+                      {% else %}
+                          <!-- File khác (hiển thị link tải) -->
+                          <a href="{{ file.pdf_file.url }}" target="_blank" download style="text-decoration: none; margin-bottom: 10px;">
+                              <i class="fa-solid fa-download"></i> <span>Tải file {{ forloop.counter }}: {{ file.pdf_file.name }}</span>
+                          </a>
+                      {% endif %}
+                  {% endfor %}
+              {% endif %}
+
+                </li>
+              </ul>
+
+              <section class="mt-4 new-near">
+                <p style="text-transform: uppercase; color: #023EB6; font-weight: 500, font-family: Roboto; font-size: 20px">Tin cùng chuyên mục</p>
+                <div style="width: 100%; border-top: 2px solid #333"> </div>
+                {%for post in posts%}
+                <div class="row mt-3">
+                    {%if post.image_file%}
+                  <div class="col-sm-5">
+                    <img class="" src="{{post.image_file.url}}" alt="" style="width: 100%">
+                  </div>
+                  <div class="col-sm-7">
+                    <p style="text-transform: uppercase; font-weight: bold, font-family: Roboto; font-size: 18px"> {{post.title}}</p>
+                    <p class="time my-1" style="font-size: 14px"> {{ post.createdate|date:"d/m/Y H:i" }}</p>
+
+                  </div>
+                  {%else%}
+                    <div class="col-sm-12">
+                        <p style="text-transform: uppercase; font-weight: bold, font-family: Roboto; font-size: 18px"> {{post.title}}</p>
+                        <p class="time my-1" style="font-size: 14px"> {{ post.createdate|date:"d/m/Y H:i" }}</p>
+
+                     </div>
+                    {%endif%}
+                </div>
+                <div class="line"> </div>
+                {%endfor%}
+              </section>
+
+
+
+            </div>
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{%endblock%}

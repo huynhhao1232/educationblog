@@ -1,0 +1,1151 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block letter %}
+<style>
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+
+<!-- Loading Overlay -->
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+</div>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">PHIẾU ĐĂNG KÝ XÉT TUYỂN</h3>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{% url 'adminpage:letter' admission_id=admission.id %}" id="letterForm">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" id="formAction" value="update">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Họ và tên</label>
+                                    <input type="text" class="form-control" name="full_name" value="{{ admission.full_name }}">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Giới tính</label>
+                                    <select class="form-control" name="gender">
+                                        <option value="Nam" {% if admission.gender == "Nam" %}selected{% endif %}>Nam</option>
+                                        <option value="Nữ" {% if admission.gender == "Nữ" %}selected{% endif %}>Nữ</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Ngày sinh</label>
+                                    {% if admission.birthday %}
+                                    <input type="text" class="form-control datepicker" name="birthday" value="{{ admission.birthday|date:'d/m/Y' }}" placeholder="dd/mm/yyyy">
+                                    {% else %}
+                                    <input type="text" class="form-control datepicker" name="birthday" placeholder="dd/mm/yyyy">
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Dân tộc</label>
+                                    <select class="form-control" name="ethnicity">
+                                        <option value="">-- Chọn dân tộc --</option>
+                                        <option value="Bana" {% if admission.ethnicity == "Bana" %}selected{% endif %}>Người Bana</option>
+                                        <option value="Bố Y" {% if admission.ethnicity == "Bố Y" %}selected{% endif %}>Người Bố Y</option>
+                                        <option value="Brâu" {% if admission.ethnicity == "Brâu" %}selected{% endif %}>Người Brâu</option>
+                                        <option value="Bru-Vân Kiều" {% if admission.ethnicity == "Bru-Vân Kiều" %}selected{% endif %}>Người Bru-Vân Kiều</option>
+                                        <option value="Chăm" {% if admission.ethnicity == "Chăm" %}selected{% endif %}>Người Chăm</option>
+                                        <option value="Chơ Ro" {% if admission.ethnicity == "Chơ Ro" %}selected{% endif %}>Người Chơ Ro</option>
+                                        <option value="Chu-Ru" {% if admission.ethnicity == "Chu-Ru" %}selected{% endif %}>Người Chu-Ru</option>
+                                        <option value="Chứt" {% if admission.ethnicity == "Chứt" %}selected{% endif %}>Người Chứt</option>
+                                        <option value="Co" {% if admission.ethnicity == "Co" %}selected{% endif %}>Người Co</option>
+                                        <option value="Cơ Ho" {% if admission.ethnicity == "Cơ Ho" %}selected{% endif %}>Người Cơ Ho</option>
+                                        <option value="Cờ Lao" {% if admission.ethnicity == "Cờ Lao" %}selected{% endif %}>Người Cờ Lao</option>
+                                        <option value="Cơ Tu" {% if admission.ethnicity == "Cơ Tu" %}selected{% endif %}>Người Cơ Tu</option>
+                                        <option value="Cống" {% if admission.ethnicity == "Cống" %}selected{% endif %}>Người Cống</option>
+                                        <option value="Dao" {% if admission.ethnicity == "Dao" %}selected{% endif %}>Người Dao</option>
+                                        <option value="Ê-Đê" {% if admission.ethnicity == "Ê-Đê" %}selected{% endif %}>Người Ê-Đê</option>
+                                        <option value="Gia Rai" {% if admission.ethnicity == "Gia Rai" %}selected{% endif %}>Người Gia Rai</option>
+                                        <option value="Giáy" {% if admission.ethnicity == "Giáy" %}selected{% endif %}>Người Giáy</option>
+                                        <option value="Gié-Triêng" {% if admission.ethnicity == "Gié-Triêng" %}selected{% endif %}>Người Gié-Triêng</option>
+                                        <option value="Hà Nhì" {% if admission.ethnicity == "Hà Nhì" %}selected{% endif %}>Người Hà Nhì</option>
+                                        <option value="Hoa" {% if admission.ethnicity == "Hoa" %}selected{% endif %}>Người Hoa</option>
+                                        <option value="Hrê" {% if admission.ethnicity == "Hrê" %}selected{% endif %}>Người Hrê</option>
+                                        <option value="Kháng" {% if admission.ethnicity == "Kháng" %}selected{% endif %}>Người Kháng</option>
+                                        <option value="Khmer" {% if admission.ethnicity == "Khmer" %}selected{% endif %}>Người Khmer</option>
+                                        <option value="Khơ Mú" {% if admission.ethnicity == "Khơ Mú" %}selected{% endif %}>Người Khơ Mú</option>
+                                        <option value="Kinh" {% if admission.ethnicity == "Kinh" %}selected{% endif %}>Người Kinh</option>
+                                        <option value="La Chí" {% if admission.ethnicity == "La Chí" %}selected{% endif %}>Người La Chí</option>
+                                        <option value="La Ha" {% if admission.ethnicity == "La Ha" %}selected{% endif %}>Người La Ha</option>
+                                        <option value="La Hủ" {% if admission.ethnicity == "La Hủ" %}selected{% endif %}>Người La Hủ</option>
+                                        <option value="Lào" {% if admission.ethnicity == "Lào" %}selected{% endif %}>Người Lào</option>
+                                        <option value="Lô Lô" {% if admission.ethnicity == "Lô Lô" %}selected{% endif %}>Người Lô Lô</option>
+                                        <option value="Lự" {% if admission.ethnicity == "Lự" %}selected{% endif %}>Người Lự</option>
+                                        <option value="Mạ" {% if admission.ethnicity == "Mạ" %}selected{% endif %}>Người Mạ</option>
+                                        <option value="Mảng" {% if admission.ethnicity == "Mảng" %}selected{% endif %}>Người Mảng</option>
+                                        <option value="Mnông" {% if admission.ethnicity == "Mnông" %}selected{% endif %}>Người Mnông</option>
+                                        <option value="Mông" {% if admission.ethnicity == "Mông" %}selected{% endif %}>Người Mông</option>
+                                        <option value="Mường" {% if admission.ethnicity == "Mường" %}selected{% endif %}>Người Mường</option>
+                                        <option value="Ngái" {% if admission.ethnicity == "Ngái" %}selected{% endif %}>Người Ngái</option>
+                                        <option value="Nùng" {% if admission.ethnicity == "Nùng" %}selected{% endif %}>Người Nùng</option>
+                                        <option value="Ơ Đu" {% if admission.ethnicity == "Ơ Đu" %}selected{% endif %}>Người Ơ Đu</option>
+                                        <option value="Pà Thẻn" {% if admission.ethnicity == "Pà Thẻn" %}selected{% endif %}>Người Pà Thẻn</option>
+                                        <option value="Phù Lá" {% if admission.ethnicity == "Phù Lá" %}selected{% endif %}>Người Phù Lá</option>
+                                        <option value="Pu Péo" {% if admission.ethnicity == "Pu Péo" %}selected{% endif %}>Người Pu Péo</option>
+                                        <option value="Ra Glay" {% if admission.ethnicity == "Ra Glay" %}selected{% endif %}>Người Ra Glay</option>
+                                        <option value="Rơ Măm" {% if admission.ethnicity == "Rơ Măm" %}selected{% endif %}>Người Rơ Măm</option>
+                                        <option value="Sán Chay" {% if admission.ethnicity == "Sán Chay" %}selected{% endif %}>Người Sán Chay</option>
+                                        <option value="Sán Dìu" {% if admission.ethnicity == "Sán Dìu" %}selected{% endif %}>Người Sán Dìu</option>
+                                        <option value="Si La" {% if admission.ethnicity == "Si La" %}selected{% endif %}>Người Si La</option>
+                                        <option value="Tà Ôi" {% if admission.ethnicity == "Tà Ôi" %}selected{% endif %}>Người Tà Ôi</option>
+                                        <option value="Tày" {% if admission.ethnicity == "Tày" %}selected{% endif %}>Người Tày</option>
+                                        <option value="Thái" {% if admission.ethnicity == "Thái" %}selected{% endif %}>Người Thái</option>
+                                        <option value="Thổ" {% if admission.ethnicity == "Thổ" %}selected{% endif %}>Người Thổ</option>
+                                        <option value="Xinh Mun" {% if admission.ethnicity == "Xinh Mun" %}selected{% endif %}>Người Xinh Mun</option>
+                                        <option value="Xơ Đăng" {% if admission.ethnicity == "Xơ Đăng" %}selected{% endif %}>Người Xơ Đăng</option>
+                                        <option value="Xtiêng" {% if admission.ethnicity == "Xtiêng" %}selected{% endif %}>Người Xtiêng</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" name="email" value="{{ admission.email }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Số điện thoại</label>
+                                    <input type="text" class="form-control" name="phone" value="{{ admission.phone }}">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Tôn giáo</label>
+                                    <select class="form-control" name="religion">
+                                        <option value="">-- Chọn tôn giáo --</option>
+                                        <option value="Không" {% if admission.religion == "Không" %}selected{% endif %}>Không</option>
+                                        <option value="Phật giáo" {% if admission.religion == "Phật giáo" %}selected{% endif %}>Phật giáo</option>
+                                        <option value="Công giáo" {% if admission.religion == "Công giáo" %}selected{% endif %}>Công giáo</option>
+                                        <option value="Tin Lành" {% if admission.religion == "Tin Lành" %}selected{% endif %}>Tin Lành</option>
+                                        <option value="Hồi giáo" {% if admission.religion == "Hồi giáo" %}selected{% endif %}>Hồi giáo</option>
+                                        <option value="Cao Đài" {% if admission.religion == "Cao Đài" %}selected{% endif %}>Cao Đài</option>
+                                        <option value="Hoà Hảo" {% if admission.religion == "Hoà Hảo" %}selected{% endif %}>Hoà Hảo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>CCCD/CMND</label>
+                                    <input type="text" class="form-control" name="id_number" value="{{ admission.id_number }}">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Ngày cấp</label>
+                                    <!-- Debug info -->
+                                    <div style="display: none" id="date-debug">
+                                        Raw value: {{ admission.id_issued_date }}
+                                        Formatted: {{ admission.id_issued_date|date:'d/m/Y' }}
+                                    </div>
+                                    {% if admission.id_issued_date %}
+                                    <input type="text" class="form-control datepicker" name="id_issued_date" value="{{ admission.id_issued_date|date:'d/m/Y' }}" placeholder="dd/mm/yyyy">
+                                    {% else %}
+                                    <input type="text" class="form-control datepicker" name="id_issued_date" placeholder="dd/mm/yyyy">
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Nơi cấp</label>
+                                    <input type="text" class="form-control" name="id_issued_place" value="{{ admission.id_issued_place }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Địa chỉ thường trú -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label class="form-label">Địa chỉ thường trú</label>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select class="form-control mb-2" id="cccd_province" name="cccd_province" data-selected="{{ admission.cccd_province }}">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select class="form-control mb-2" id="cccd_district" name="cccd_district" data-selected="{{ admission.cccd_district }}">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select class="form-control mb-2" id="cccd_ward" name="cccd_ward" data-selected="{{ admission.cccd_ward }}">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="cccd_town" value="{{ admission.cccd_town }}" placeholder="Tổ/Thôn/Xóm">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quê quán -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label class="form-label">Quê quán</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <select class="form-control" id="hometown_province" name="hometown_province" data-selected="{{ admission.hometown_province }}">
+                                        <option value="">-- Chọn Tỉnh/Thành phố --</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Debug info -->
+                        <div style="display: none">
+                            <div id="debug-info">
+                                Birth Reg Province Data: {{ admission.birth_reg_province }}<br>
+                                Birth Reg District Data: {{ admission.birth_reg_district }}<br>
+                                Birth Reg Ward Data: {{ admission.birth_reg_ward }}<br>
+                            </div>
+                        </div>
+
+                        <!-- Nơi đăng ký khai sinh -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label class="form-label">Nơi đăng ký khai sinh</label>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select class="form-control mb-2" id="birth_reg_province" name="birth_reg_province" data-selected="{{ admission.birth_reg_province }}">
+                                        <option value="">-- Chọn Tỉnh/Thành phố --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select class="form-control mb-2" id="birth_reg_district" name="birth_reg_district" data-selected="{{ admission.birth_reg_district }}">
+                                        <option value="">-- Chọn Quận/Huyện --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select class="form-control" id="birth_reg_ward" name="birth_reg_ward" data-selected="{{ admission.birth_reg_ward }}">
+                                        <option value="">-- Chọn Phường/Xã --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="birth_reg_town" id="birth_reg_town" value="{{ admission.birth_reg_town }}" placeholder="Tổ/Thôn/Xóm">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nơi sinh -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label class="form-label">Nơi sinh</label>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select class="form-control mb-2" id="birth_place_province" name="birth_place_province" data-selected="{{ admission.birth_place_province }}">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select class="form-control mb-2" id="birth_place_district" name="birth_place_district" data-selected="{{ admission.birth_place_district }}">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select class="form-control mb-2" id="birth_place_ward" name="birth_place_ward" data-selected="{{ admission.birth_place_ward }}">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="birth_place_facility" value="{{ admission.birth_place_facility }}" placeholder="Cơ sở y tế">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nơi ở hiện tại -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label class="form-label">Nơi ở hiện tại</label>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select class="form-control mb-2" id="current_province" name="current_province" data-selected="{{ admission.current_province }}">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select class="form-control mb-2" id="current_district" name="current_district" data-selected="{{ admission.current_district }}">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select class="form-control" id="current_ward" name="current_ward" data-selected="{{ admission.current_ward }}">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thông tin cha -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Họ tên cha</label>
+                                    <input type="text" class="form-control" name="father_name" value="{{ admission.father_name }}">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Nghề nghiệp của cha</label>
+                                    <input type="text" class="form-control" name="father_job" value="{{ admission.father_job }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Năm sinh</label>
+                                    <input type="text" class="form-control" name="father_birth" value="{{ admission.father_birth }}">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Điện thoại</label>
+                                    <input type="text" class="form-control" name="father_phone" value="{{ admission.father_phone }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thông tin mẹ -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Họ tên mẹ</label>
+                                    <input type="text" class="form-control" name="mother_name" value="{{ admission.mother_name }}">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Nghề nghiệp của mẹ</label>
+                                    <input type="text" class="form-control" name="mother_job" value="{{ admission.mother_job }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Năm sinh</label>
+                                    <input type="text" class="form-control" name="mother_birth" value="{{ admission.mother_birth }}">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Điện thoại</label>
+                                    <input type="text" class="form-control" name="mother_phone" value="{{ admission.mother_phone }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thông tin học vấn -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Trường đang học</label>
+                                    <input type="text" class="form-control" name="graduation_school" value="{{ admission.graduation_school }}">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Công việc hiện tại</label>
+                                    <input type="text" class="form-control" name="current_job" value="{{ admission.current_job }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CCCD Image -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Ảnh CCCD</label>
+                                    {% if admission.cccd_image %}
+                                        <div class="mb-2">
+                                            <img src="{{ admission.cccd_image.url }}" alt="CCCD Image" style="max-width: 300px; height: auto;">
+                                        </div>
+                                    {% endif %}
+                                    <input type="file" class="form-control" name="cccd_image" accept="image/*">
+                                    <small class="text-muted">Để trống nếu không muốn thay đổi ảnh</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ảnh học bạ -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Ảnh học bạ</label>
+                                    {% if admission.school_record_image %}
+                                        <div class="mb-2">
+                                            <img src="{{ admission.school_record_image.url }}" alt="School Record Image" style="max-width: 300px; height: auto;">
+                                        </div>
+                                    {% endif %}
+                                    <input type="file" class="form-control" name="school_record_image" accept="image/*">
+                                    <small class="text-muted">Để trống nếu không muốn thay đổi ảnh</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-3" id="examScoreCol">
+                                <div class="form-group">
+                                    <label>Điểm thi chuyển cấp</label>
+                                    <input type="number" step="0.01" class="form-control" name="exam_score" id="exam_score" value="{{ admission.exam_score }}">
+                                </div>
+                            </div>
+                            <div class="col-md-3" id="avgScoreCol">
+                                <div class="form-group">
+                                    <label>Điểm TB Toán, Văn</label>
+                                    <input type="number" step="0.01" class="form-control" name="avg_score" id="avg_score" value="{{ admission.avg_score }}">
+                                </div>
+                            </div>
+                            <div class="col-md-3" id="mathScoreCol">
+                                <div class="form-group">
+                                    <label>Điểm môn Toán</label>
+                                    <input type="number" step="0.01" class="form-control" name="math_score" id="math_score" value="{{ admission.math_score }}" oninput="calcAvgScoreAdmin()">
+                                </div>
+                            </div>
+                            <div class="col-md-3" id="literatureScoreCol">
+                                <div class="form-group">
+                                    <label>Điểm môn Văn</label>
+                                    <input type="number" step="0.01" class="form-control" name="literature_score" id="literature_score" value="{{ admission.literature_score }}" oninput="calcAvgScoreAdmin()">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Điểm các lớp THCS -->
+                        <div id="thcsScoresSection" style="display: none;">
+                            <div class="row mb-3">
+                                <div class="col-md-12">
+                                    <h5 class="text-center mb-3">Điểm các lớp THCS</h5>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Điểm Toán lớp 6</label>
+                                        <input type="number" step="0.01" class="form-control" name="math_score_6" id="math_score_6" value="{{ admission.math_score_6 }}" oninput="calcAvgScoreAdmin()">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Điểm Văn lớp 6</label>
+                                        <input type="number" step="0.01" class="form-control" name="literature_score_6" id="literature_score_6" value="{{ admission.literature_score_6 }}" oninput="calcAvgScoreAdmin()">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Điểm Toán lớp 7</label>
+                                        <input type="number" step="0.01" class="form-control" name="math_score_7" id="math_score_7" value="{{ admission.math_score_7 }}" oninput="calcAvgScoreAdmin()">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Điểm Văn lớp 7</label>
+                                        <input type="number" step="0.01" class="form-control" name="literature_score_7" id="literature_score_7" value="{{ admission.literature_score_7 }}" oninput="calcAvgScoreAdmin()">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Điểm Toán lớp 8</label>
+                                        <input type="number" step="0.01" class="form-control" name="math_score_8" id="math_score_8" value="{{ admission.math_score_8 }}" oninput="calcAvgScoreAdmin()">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Điểm Văn lớp 8</label>
+                                        <input type="number" step="0.01" class="form-control" name="literature_score_8" id="literature_score_8" value="{{ admission.literature_score_8 }}" oninput="calcAvgScoreAdmin()">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Điểm Toán lớp 9</label>
+                                        <input type="number" step="0.01" class="form-control" name="math_score_9" id="math_score_9" value="{{ admission.math_score_9 }}" oninput="calcAvgScoreAdmin()">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Điểm Văn lớp 9</label>
+                                        <input type="number" step="0.01" class="form-control" name="literature_score_9" id="literature_score_9" value="{{ admission.literature_score_9 }}" oninput="calcAvgScoreAdmin()">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Kết quả rèn luyện</label>
+                                    <select class="form-control" name="conduct">
+                                        <option value="Tốt" {% if admission.conduct == "Tốt" %}selected{% endif %}>Tốt</option>
+                                        <option value="Khá" {% if admission.conduct == "Khá" %}selected{% endif %}>Khá</option>
+                                        <option value="Trung bình" {% if admission.conduct == "Trung bình" %}selected{% endif %}>Trung bình</option>
+                                        <option value="Yếu" {% if admission.conduct == "Yếu" %}selected{% endif %}>Yếu</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Xếp loại</label>
+                                    <input class="form-control" name="graduation_rank" value="{{ admission.graduation_rank }}">
+
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Năm tốt nghiệp</label>
+                                    <select class="form-control" name="graduation_year" id="graduation_year" disabled>
+                                        <option value="2025" {% if admission.graduation_year == "2025" %}selected{% endif %}>2025</option>
+                                        <option value="before" {% if admission.graduation_year == "before" %}selected{% endif %}>Trước 2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Ban đăng ký</label>
+                                    <select class="form-control" name="subject_group" id="subject_group">
+                                        <option value="">-- Chọn tổ hợp --</option>
+                                        {% for group in subject_groups %}
+                                            <option value="{{ group.id }}" {% if admission.subject_group.id == group.id %}selected{% endif %}>
+                                                {{ group.code }} - {{ group.description }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Ca học</label>
+                                    <select class="form-control" name="shift" id="shift">
+                                        <option value="">-- Chọn ca học --</option>
+                                        {% for s in shifts %}
+                                            <option value="{{ s.id }}" {% if admission.shift.id == s.id %}selected{% endif %}>{{ s.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Cơ sở</label>
+                                    <input type="text" class="form-control" name="campus" value="{{ admission.campus }}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Trạng thái</label>
+                                    <select class="form-control" name="enable" id="status-select" {% if admission.enable %}disabled{% endif %}>
+                                        <option value="1" {% if admission.enable %}selected{% endif %}>Đã duyệt</option>
+                                        <option value="0" {% if not admission.enable %}selected{% endif %}>Chưa duyệt</option>
+                                    </select>
+                                    {% if admission.enable %}
+                                    <input type="hidden" name="enable" value="1">
+                                    <small class="text-muted">Trạng thái đã được duyệt không thể thay đổi</small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Lưu thay đổi</button>
+                            <a href="{% url 'adminpage:admission' %}" class="btn btn-secondary">Quay lại</a>
+                            <button type="button" class="btn btn-danger" id="deleteBtn">Xoá</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Add jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    window.onload = function() {
+
+        const graduationYear = document.getElementById('graduation_year').value;
+        const thcsScoresSection = document.getElementById('thcsScoresSection');
+        const examScoreCol = document.getElementById('examScoreCol');
+        const avgScoreCol = document.getElementById('avgScoreCol');
+        const mathScoreCol = document.getElementById('mathScoreCol');
+        const literatureScoreCol = document.getElementById('literatureScoreCol');
+        if (graduationYear === '2025') {
+            if (thcsScoresSection) thcsScoresSection.style.display = 'none';
+            if (examScoreCol) examScoreCol.style.display = '';
+            if (avgScoreCol) avgScoreCol.style.display = 'none';
+            if (mathScoreCol) mathScoreCol.style.display = 'none';
+            if (literatureScoreCol) literatureScoreCol.style.display = 'none';
+        } else {
+            if (thcsScoresSection) thcsScoresSection.style.display = 'block';
+            if (examScoreCol) examScoreCol.style.display = 'none';
+            if (avgScoreCol) avgScoreCol.style.display = '';
+            if (mathScoreCol) mathScoreCol.style.display = 'none';
+            if (literatureScoreCol) literatureScoreCol.style.display = 'none';
+        }
+    };
+</script>
+
+<script>
+$(document).ready(function() {
+
+
+
+    // Store initial form values
+    const initialFormValues = {};
+    const $form = $('form');
+
+    // Lưu giá trị ban đầu của tất cả các trường
+    function saveInitialValues() {
+        $form.find('input, select, textarea').each(function() {
+            const $field = $(this);
+            const name = $field.attr('name');
+            if (name) { // Chỉ lưu các trường có name attribute
+                initialFormValues[name] = $field.val();
+            }
+        });
+
+    }
+
+    // Kiểm tra xem form có thay đổi không
+    function checkFormChanged() {
+        let hasChanges = false;
+
+        $form.find('input, select, textarea').each(function() {
+            const $field = $(this);
+            const name = $field.attr('name');
+            if (name) {
+                const currentValue = $field.val();
+                const initialValue = initialFormValues[name];
+
+                if (currentValue !== initialValue) {
+
+                    hasChanges = true;
+                }
+            }
+        });
+
+        // Enable/disable submit button
+        $('#submitBtn').prop('disabled', !hasChanges);
+
+        return hasChanges;
+    }
+
+    // Theo dõi sự thay đổi của form
+    function setupFormChangeTracking() {
+        $form.find('input, select, textarea').on('change input', function() {
+            checkFormChanged();
+        });
+    }
+
+    // Hàm chung để load provinces
+    function loadProvinces($select) {
+
+
+        // Clear và thêm option mặc định
+        $select.empty().append('<option value="">-- Chọn Tỉnh/Thành phố --</option>');
+
+        $.ajax({
+            url: '/adminpage/api/provinces/',
+            method: 'GET',
+            beforeSend: function() {
+
+            },
+            success: function(response) {
+
+
+                if (response.provinces && Array.isArray(response.provinces)) {
+                    const selectedValue = String($select.data('selected'));
+
+
+                    response.provinces.forEach(function(p) {
+                        const isSelected = selectedValue === String(p.code);
+                        const option = `<option value="${p.code}" ${isSelected ? 'selected' : ''}>${p.name}</option>`;
+                        $select.append(option);
+                        if (isSelected) {
+
+                        }
+                    });
+
+                    // Trigger change nếu có giá trị được chọn
+                    const currentValue = $select.val();
+                    if (currentValue) {
+
+                        $select.trigger('change');
+                    } else if (selectedValue) {
+                        console.log('No option selected but we have selectedValue:', selectedValue);
+                        console.log('All options:', $select.find('option').map(function() {
+                            return {
+                                value: $(this).val(),
+                                text: $(this).text(),
+                                selected: $(this).is(':selected')
+                            };
+                        }).get());
+                    }
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Error loading provinces:', error);
+            }
+        });
+    }
+
+    // Hàm chung để load districts
+    function loadDistricts(provinceCode, $select) {
+
+
+        // Clear và thêm option mặc định
+        $select.empty().append('<option value="">-- Chọn Quận/Huyện --</option>');
+
+        if (!provinceCode) return;
+
+        $.ajax({
+            url: `/adminpage/api/districts/${provinceCode}/`,
+            method: 'GET',
+            success: function(response) {
+
+
+                if (response.districts && Array.isArray(response.districts)) {
+                    const selectedValue = String($select.data('selected'));
+
+
+                    response.districts.forEach(function(d) {
+                        const isSelected = selectedValue === String(d.code);
+                        const option = `<option value="${d.code}" ${isSelected ? 'selected' : ''}>${d.name}</option>`;
+                        $select.append(option);
+                        if (isSelected) {
+
+                        }
+                    });
+
+                    // Trigger change nếu có giá trị được chọn
+                    const currentValue = $select.val();
+                    if (currentValue) {
+
+                        $select.trigger('change');
+                    }
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Error loading districts:', error);
+            }
+        });
+    }
+
+    // Hàm chung để load wards
+    function loadWards(districtCode, $select) {
+
+
+        // Clear và thêm option mặc định
+        $select.empty().append('<option value="">-- Chọn Phường/Xã --</option>');
+
+        if (!districtCode) return;
+
+        $.ajax({
+            url: `/adminpage/api/wards/${districtCode}/`,
+            method: 'GET',
+            success: function(response) {
+
+
+                if (response.wards && Array.isArray(response.wards)) {
+                    const selectedValue = String($select.data('selected'));
+
+
+                    response.wards.forEach(function(w) {
+                        const isSelected = selectedValue === String(w.code);
+                        const option = `<option value="${w.code}" ${isSelected ? 'selected' : ''}>${w.name}</option>`;
+                        $select.append(option);
+                        if (isSelected) {
+
+                        }
+                    });
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Error loading wards:', error);
+            }
+        });
+    }
+
+    // Khởi tạo các select địa chỉ
+    function initializeAddressSelects() {
+        // Địa chỉ thường trú (CCCD)
+        const $cccdProvince = $('#cccd_province');
+        const $cccdDistrict = $('#cccd_district');
+        const $cccdWard = $('#cccd_ward');
+
+        if ($cccdProvince.length && $cccdDistrict.length && $cccdWard.length) {
+
+
+            loadProvinces($cccdProvince);
+
+            $cccdProvince.off('change').on('change', function() {
+                const provinceCode = $(this).val();
+
+                if (provinceCode) {
+                    loadDistricts(provinceCode, $cccdDistrict);
+                    $cccdWard.empty().append('<option value="">-- Chọn Phường/Xã --</option>');
+                }
+            });
+
+            $cccdDistrict.off('change').on('change', function() {
+                const districtCode = $(this).val();
+
+                if (districtCode) {
+                    loadWards(districtCode, $cccdWard);
+                }
+            });
+        }
+
+        // Nơi sinh
+        const $birthPlaceProvince = $('#birth_place_province');
+        const $birthPlaceDistrict = $('#birth_place_district');
+        const $birthPlaceWard = $('#birth_place_ward');
+
+        if ($birthPlaceProvince.length && $birthPlaceDistrict.length && $birthPlaceWard.length) {
+
+
+            loadProvinces($birthPlaceProvince);
+
+            $birthPlaceProvince.off('change').on('change', function() {
+                const provinceCode = $(this).val();
+
+                if (provinceCode) {
+                    loadDistricts(provinceCode, $birthPlaceDistrict);
+                    $birthPlaceWard.empty().append('<option value="">-- Chọn Phường/Xã --</option>');
+                }
+            });
+
+            $birthPlaceDistrict.off('change').on('change', function() {
+                const districtCode = $(this).val();
+
+                if (districtCode) {
+                    loadWards(districtCode, $birthPlaceWard);
+                }
+            });
+        }
+
+        // Nơi đăng ký khai sinh
+        const $birthRegProvince = $('#birth_reg_province');
+        const $birthRegDistrict = $('#birth_reg_district');
+        const $birthRegWard = $('#birth_reg_ward');
+
+
+
+        if ($birthRegProvince.length && $birthRegDistrict.length && $birthRegWard.length) {
+
+
+            // Load provinces
+            loadProvinces($birthRegProvince);
+
+            // Xử lý sự kiện change cho province
+            $birthRegProvince.off('change').on('change', function() {
+                const provinceCode = $(this).val();
+
+                if (provinceCode) {
+                    loadDistricts(provinceCode, $birthRegDistrict);
+                    $birthRegWard.empty().append('<option value="">-- Chọn Phường/Xã --</option>');
+                }
+            });
+
+            // Xử lý sự kiện change cho district
+            $birthRegDistrict.off('change').on('change', function() {
+                const districtCode = $(this).val();
+
+                if (districtCode) {
+                    loadWards(districtCode, $birthRegWard);
+                }
+            });
+        } else {
+            console.error('Missing birth registration elements');
+        }
+
+        // Nơi ở hiện tại
+        const $currentProvince = $('#current_province');
+        const $currentDistrict = $('#current_district');
+        const $currentWard = $('#current_ward');
+
+        if ($currentProvince.length && $currentDistrict.length && $currentWard.length) {
+
+
+            loadProvinces($currentProvince);
+
+            $currentProvince.off('change').on('change', function() {
+                const provinceCode = $(this).val();
+
+                if (provinceCode) {
+                    loadDistricts(provinceCode, $currentDistrict);
+                    $currentWard.empty().append('<option value="">-- Chọn Phường/Xã --</option>');
+                }
+            });
+
+            $currentDistrict.off('change').on('change', function() {
+                const districtCode = $(this).val();
+
+                if (districtCode) {
+                    loadWards(districtCode, $currentWard);
+                }
+            });
+        }
+
+        // Quê quán
+        const $hometownProvince = $('#hometown_province');
+
+        if ($hometownProvince.length) {
+
+            loadProvinces($hometownProvince);
+        }
+
+        // Sau khi tất cả các dropdown đã được khởi tạo và điền giá trị
+        // thì mới lưu trạng thái ban đầu của form
+        setTimeout(function() {
+            saveInitialValues();
+            setupFormChangeTracking();
+        }, 1000); // Đợi 1 giây để đảm bảo tất cả các API calls đã hoàn tất
+    }
+
+    // Khởi tạo datepicker cho các trường ngày tháng
+    function initializeDatepickers() {
+        $('.datepicker').each(function() {
+            $(this).datepicker({
+                format: 'dd/mm/yyyy',
+                autoclose: true,
+                todayHighlight: true,
+                language: 'vi'
+            });
+
+            // Nếu có giá trị, cập nhật datepicker
+            const $input = $(this);
+            const value = $input.val();
+            if (value) {
+                try {
+                    const parts = value.split('/');
+                    if (parts.length === 3) {
+                        const date = new Date(parts[2], parts[1] - 1, parts[0]);
+                        $input.datepicker('update', date);
+                    }
+                } catch (e) {
+                    console.error('Error parsing date:', value, e);
+                }
+            }
+        });
+    }
+
+    // Chuyển đổi định dạng ngày từ dd/mm/yyyy sang yyyy-mm-dd khi submit form
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+
+        // Tạo FormData object để gửi dữ liệu
+        const formData = new FormData(this);
+
+        // Thêm CSRF token
+        const csrftoken = $('[name=csrfmiddlewaretoken]').val();
+
+        // Chuyển đổi định dạng ngày
+        $('.datepicker').each(function() {
+            const $input = $(this);
+            const name = $input.attr('name');
+            const dateValue = $input.val();
+
+            if (dateValue) {
+                try {
+                    // Chuyển từ dd/mm/yyyy sang yyyy-mm-dd
+                    const parts = dateValue.split('/');
+                    if (parts.length === 3) {
+                        const formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+                        formData.set(name, formattedDate);
+                    }
+                } catch (error) {
+                    console.error(`Error converting date for ${name}:`, error);
+                }
+            }
+        });
+
+        // Đảm bảo giá trị enable được gửi đi đúng
+        const statusSelect = document.getElementById('status-select');
+        if (!statusSelect.disabled) {
+            formData.set('enable', statusSelect.value);
+        }
+
+        // Log dữ liệu sẽ gửi đi
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
+        }
+
+        // Gửi form với dữ liệu đã được format
+        $.ajax({
+            url: $(this).attr('action'),
+            method: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            headers: {
+                'X-CSRFToken': csrftoken
+            },
+            success: function(response) {
+                if (response.status === 'success') {
+                    alert('Cập nhật thành công!');
+                    window.location.reload();
+                } else {
+                    alert('Có lỗi xảy ra: ' + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                let errorMessage = 'Có lỗi xảy ra khi cập nhật:\n';
+
+                if (xhr.responseJSON) {
+                    errorMessage += JSON.stringify(xhr.responseJSON, null, 2);
+                } else if (xhr.responseText) {
+                    errorMessage += xhr.responseText;
+                } else {
+                    errorMessage += error;
+                }
+
+                console.error('Error details:', {
+                    status: xhr.status,
+                    statusText: xhr.statusText,
+                    responseText: xhr.responseText
+                });
+
+                alert(errorMessage);
+            }
+        });
+    });
+
+    // Gọi hàm khi trang được tải để thiết lập trạng thái ban đầu
+
+
+    // Khởi tạo khi trang đã load
+    initializeAddressSelects();
+    initializeDatepickers();
+
+    // Thêm xác nhận khi người dùng rời trang mà chưa lưu thay đổi
+    window.addEventListener('beforeunload', function(e) {
+        if (checkFormChanged()) {
+            e.preventDefault();
+            e.returnValue = '';
+        }
+    });
+});
+
+document.getElementById('letterForm').addEventListener('submit', function(e) {
+    // Show loading overlay
+    document.getElementById('loadingOverlay').style.display = 'flex';
+});
+
+// Optional: Hide loading if there's an error
+window.addEventListener('load', function() {
+    document.getElementById('loadingOverlay').style.display = 'none';
+});
+</script>
+
+<!-- Add Bootstrap Datepicker CSS and JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.vi.min.js"></script>
+
+<script>
+function calcAvgScoreAdmin() {
+    const math6 = parseFloat(document.getElementById("math_score_6").value) || 0;
+    const literature6 = parseFloat(document.getElementById("literature_score_6").value) || 0;
+    const math7 = parseFloat(document.getElementById("math_score_7").value) || 0;
+    const literature7 = parseFloat(document.getElementById("literature_score_7").value) || 0;
+    const math8 = parseFloat(document.getElementById("math_score_8").value) || 0;
+    const literature8 = parseFloat(document.getElementById("literature_score_8").value) || 0;
+    const math9 = parseFloat(document.getElementById("math_score_9").value) || 0;
+    const literature9 = parseFloat(document.getElementById("literature_score_9").value) || 0;
+    const total = math6 + literature6 + math7 + literature7 + math8 + literature8 + math9 + literature9;
+    const avg = (total / 8).toFixed(2);
+    const avgScoreInput = document.getElementById("avg_score");
+    if (avgScoreInput) avgScoreInput.value = avg;
+}
+</script>
+
+<script>
+    document.getElementById('deleteBtn').onclick = function() {
+        if (confirm('Bạn có chắc chắn muốn xoá hồ sơ này?')) {
+            document.getElementById('formAction').value = 'delete';
+            document.getElementById('letterForm').submit();
+        }
+    };
+    // Đảm bảo khi submit bình thường thì action là update
+    document.getElementById('letterForm').onsubmit = function(e) {
+        if (document.activeElement && document.activeElement.id !== 'deleteBtn') {
+            document.getElementById('formAction').value = 'update';
+        }
+    };
+</script>
+{% endblock %}

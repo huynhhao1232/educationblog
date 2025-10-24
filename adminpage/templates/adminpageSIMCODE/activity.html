@@ -1,0 +1,199 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block activity %}
+<nav aria-label="breadcrumb" class="i-name">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item " ><a href="{% url 'course' %}">Khoá học</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{course.course_name}}</li>
+    </ol>
+  </nav>
+
+<div class="lesson-detail">
+    <div class="col-xl-4 course-detail-left">
+        <div class="course-detail-left-items">
+            <form id="courseUpdate" action="" method = "POST" enctype="multipart/form-data" >
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="" class="form-label">Tên khóa học</label>
+                    <input type="text" name="course_name" class="form-control course_name" value="{{course.course_name}}" required>
+                    <input type="hidden" class="courseHidden" name="course_id" value="{{course.course_id}}" >
+                </div>
+
+                <div class="alert alert-danger d-none" id="courseNameError" role="alert">
+                    Tên khoá học đã tồn tại!
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Lớp</label>
+                    <select name="gradeUpdate" id="grade" class="form-select">
+                        <option value="{{course.grade.grade_id}}" selected>{{course.grade.grade_name}}</option>
+                        {% for grade in grades %}
+                        {% if grade != course.grade %}
+                        <option value="{{grade.grade_id}}" >{{grade.grade_name}}</option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Môn</label>
+                    <select name="subjectUpdate" id="subject" class="form-select">
+                        <option value="{{course.subject.subject_id}}" selected>{{course.subject.subject_name}}</option>
+                        {% for subject in subjects %}
+                        {% if subject != course.subject %}
+                        <option value="{{subject.subject_id}}">{{subject.subject_name}}</option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+
+                </div>
+
+                <div class="mb-5 course-detail-left-items-toggle ">
+                    {% if course.course_enable %}
+                    <div class="toggle active">
+                        <div class="toggle-button"></div>
+                    </div>
+                    <div class="text">Công khai</div>
+                    {% else %}
+                    <div class="toggle">
+                        <div class="toggle-button"></div>
+                    </div>
+                    <div class="text">Riêng tư</div>
+                    {% endif %}
+
+                    {% if course.course_enable %}
+                    <input type="hidden" class="enableHidden" name="enableHidden" value="1">
+                    {% else %}
+                    <input type="hidden" class="enableHidden" name="enableHidden" value="0">
+                    {% endif %}
+                </div>
+
+
+                <div class="mb-3 course-detail-left-items-btn">
+                    <button type="submit" class="btn btn-outline-dark" >Cập nhật</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="col-xl-8 lesson-detail-right">
+        <div class="course-right-manage">
+            <form id="activityDetail" action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm hoạt động</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <div class="course-add">
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Tên hoạt động</label>
+                                        <input type="text" name="activityName" class="form-control activityName" required>
+                                    </div>
+                                    <div class="alert alert-danger d-none" id="activityNameError" role="alert">
+                                        Hoạt động này đã tồn tại!
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Thứ tự</label>
+                                        <input type="number" min="1" name="activityOrder" class="form-control activityOrder" required>
+                                    </div>
+                                    <div class="alert alert-danger d-none" id="activityOrderError" role="alert">
+                                        Thứ tự này đã tồn tại!
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Loại hoạt động</label>
+                                        <select name="activityType" id="activityType" class="form-select">
+                                            <option value="0">Lựa chọn của bạn</option>
+                                            {% for type in types %}
+                                            <option value="{{type.activitytype_id}}">{{type.activitytype_name}}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="alert alert-danger d-none" id="activityTypeError" role="alert">
+                                        Vui lòng chọn loại hoạt động!
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                <button type="submit" class="btn btn-primary">Thêm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+            <div class="mb-3 course-right-add">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    + Thêm
+                </button>
+            </div>
+            <div class="course-right-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>STT</td>
+                            <td>Tên hoạt động</td>
+                            <td>Số người hoàn thành</td>
+                            <td>Ngày tạo</td>
+                            <td>Tình trạng</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for activity in activities %}
+                        <tr>
+                            <td>
+                                <p>{{activity.activity_order}}</p>
+                            </td>
+                            <td>
+                                <p>{{activity.activity_name}}</p>
+                            </td>
+                            <td>
+                                <p>1.000</p>
+                            </td>
+                            <td><p>{{ activity.activity_createdate|date:"d/m/Y" }}</p></td>
+                            {% if activity.activity_enable%}
+                            <td class="active">
+                                <p>Công khai</p>
+                            </td>
+                            {% else %}
+                            <td class="active">
+                                <p>Riêng tư</p>
+                            </td>
+                            {% endif %}
+                            <td class="view"><a href="{% url 'activitydetail' activity_id=activity.activity_id %}"><i class="fa-regular fa-eye"></i></a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thành công</h5>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text">Dữ liệu đã được cập nhật!</p>
+                <button type="button" id="closeSuccessModalButton" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,219 @@
+{% extends 'homepage/template.html' %}
+{% block title %} Trang chủ {%endblock%}
+{%block forumBase%}
+{% load static %}
+<style>
+
+
+
+
+    /* Cột bên trái: Danh sách bài viết */
+    .left-column {
+        flex: 2;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .post {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+
+    .post:last-child {
+        border-bottom: none;
+    }
+
+    .post h3 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .post p {
+        color: gray;
+        margin-bottom: 8px;
+    }
+
+    /* Nút "Xem thêm" */
+    .read-more {
+        display: inline-block;
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background 0.3s;
+    }
+
+    .read-more:hover {
+        background-color: #0056b3;
+    }
+
+    /* Cột bên phải: Form đăng bài + Đề xuất */
+    .right-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .post-form,
+    .suggestions {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-form h2,
+    .suggestions h3 {
+        margin: 0 0 10px;
+    }
+
+    .post-form input,
+    .post-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .post-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .post-form button:hover {
+        background-color: #218838;
+    }
+
+    .suggestions ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .suggestions li {
+        margin-bottom: 8px;
+    }
+
+    .suggestions a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    .suggestions a:hover {
+        text-decoration: underline;
+    }
+    .post-meta {
+        font-size: 14px;
+        color: #6c757d;
+        margin-bottom: 5px;
+    }
+</style>
+<div class="col-sm-9">
+    <div class="row">
+        <div class="col-sm-9">
+            <div class="left-column">
+                <h2>Bài viết mới</h2>
+                {%for post in posts%}
+                <div class="post">
+                    <h3>{{post.title}}</h3>
+                    <p class="post-meta">Đăng bởi <strong>{{ post.name }}</strong> vào ngày <em>{{ post.createdate|date:"d/m/Y" }}</em></p>
+                    <p class="post-content">{{ post.content|truncatechars:150 }}</p>
+                    <a href="{%url 'homepage:forumView' forum_id=post.id%}" class="read-more">Xem thêm</a>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="right-column">
+                <div class="post-form">
+                    <h2>Đăng bài mới</h2>
+                    <button onclick="openAddPostModal()">Đăng bài</button>
+                </div>
+
+                <div class="suggestions">
+                    <h3>Bài viết đề xuất</h3>
+                    <ul>
+                        <li><a href="#">Bài viết hay 1</a></li>
+                        <li><a href="#">Bài viết hay 2</a></li>
+                        <li><a href="#">Bài viết hay 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="post" action="" method = "POST" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm bài viết</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                        <div class="modal-body">
+
+                            <div class="course-add">
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Họ và tên người đăng</label>
+                                    <input type="text"  name="name" class="form-control name" required>
+                                    <input type="hidden" value="0" name="action" class="action">
+                                    <input type="hidden" value="0" name="post-id" class="post-id">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Tiêu đề bài viết</label>
+                                    <input type="text"  name="post-title" class="form-control post-title" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Nội dung bài viết</label>
+                                    <textarea  name="post-content" class="form-control post-content" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" id="chapter-submit" class="btn btn-primary">Đăng bài</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- Cột bên phải: Form đăng bài + Đề xuất -->
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const posts = document.querySelectorAll(".post-content");
+
+        posts.forEach(post => {
+            const maxLength = 150; // Giới hạn số ký tự
+            let text = post.innerText.trim();
+
+            if (text.length > maxLength) {
+                post.innerText = text.substring(0, maxLength) + "...";
+            }
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{%static 'assets/script.js'%}"></script>
+
+{%endblock%}
