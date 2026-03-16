@@ -1,0 +1,201 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<style>
+    .journal-container { margin: 20px 30px; background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .journal-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e9ecef; }
+    .journal-header h3 { color: #023EB6; font-size: 22px; font-weight: 700; margin: 0; }
+    .journal-card { border: 1px solid #dee2e6; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+    .journal-table { border-collapse: collapse; width: 100%; font-size: 13px; }
+    .journal-table th, .journal-table td { border: 1px solid #dee2e6; padding: 10px 12px; text-align: left; }
+    .journal-table th { background: #023EB6; color: #fff; font-weight: 600; }
+    .journal-table tbody tr:hover { background: #f8f9fa; }
+    .badge-week1 { background: #6c757d; }
+</style>
+<div class="journal-container">
+    <div class="journal-header">
+        <h3><i class="fa-solid fa-book-open me-2"></i>Quản lý Sổ đầu bài số (theo nhóm bộ môn)</h3>
+        <a href="{% url 'homepage:journal_login' %}" class="btn btn-outline-primary" target="_blank">Mở trang giáo viên (Vào sổ)</a>
+    </div>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} py-2">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="journal-card">
+                <h6 class="mb-3">Tạo sổ đầu bài mới (môn + năm)</h6>
+                <form method="post" action="{% url 'adminpage:journal_manager_dashboard' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="journal_action" value="create_journal">
+                    <div class="mb-2">
+                        <label class="form-label">Môn</label>
+                        <select class="form-select" name="subject" required>
+                            <option value="">-- Chọn môn --</option>
+                            {% for code, label in subject_choices %}
+                                <option value="{{ code }}">{{ label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Năm học</label>
+                        <input type="number" class="form-control" name="year" value="{{ current_year }}" min="2020" max="2030">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Tạo sổ đầu bài</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="journal-card">
+                <h6 class="mb-3">Import danh sách</h6>
+                <p class="text-muted small mb-2">Thêm giáo viên (DSGV) và danh sách lớp (DSL) từ file Excel.</p>
+                <a href="{% url 'adminpage:import_journal_dsgv' %}" class="btn btn-outline-primary me-2">Import DSGV (Giáo viên)</a>
+                <a href="{% url 'adminpage:import_journal_dsl' %}" class="btn btn-outline-secondary">Import DSL (Lớp)</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <div class="journal-card border-primary">
+                <h6 class="mb-2"><i class="fa-solid fa-file-export me-1"></i>Export sổ đầu bài in theo tuần (tất cả môn trong 1 file)</h6>
+                <form method="get" action="{% url 'adminpage:journal_export_excel_all_week' %}" class="row g-2 align-items-end">
+                    <div class="col-auto">
+                        <label class="form-label">Năm học</label>
+                        <input type="number" class="form-control form-control-sm" name="year" value="{{ current_year }}" min="2020" max="2035">
+                    </div>
+                    <div class="col-auto">
+                        <label class="form-label">Tuần</label>
+                        <input type="number" class="form-control form-control-sm" name="week" value="1" min="1" max="13">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-sm btn-primary mt-2">
+                            <i class="fa-solid fa-file-excel me-1"></i>Tải file Excel (1 sheet/môn)
+                        </button>
+                    </div>
+                </form>
+                <p class="text-muted small mt-2 mb-0">Một file Excel: mỗi môn một sheet, nội dung theo tuần đã chọn. Tự căn in vừa 2 trang; Lớp (từ 2 lớp trở lên) và Học viên vắng dài sẽ xuống dòng.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="journal-card">
+                <h6 class="mb-2">Export thống kê GV chưa ghi (tất cả môn theo tuần)</h6>
+                <form method="get" action="{% url 'adminpage:journal_missing_all_subjects_week_export' %}" class="row g-2 align-items-end">
+                    <div class="col-4">
+                        <label class="form-label">Năm học</label>
+                        <input type="number" class="form-control form-control-sm" name="year" value="{{ current_year }}" min="2020" max="2035">
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label">Tuần</label>
+                        <input type="number" class="form-control form-control-sm" name="week" value="1" min="1" max="13">
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-sm btn-outline-danger mt-2">
+                            <i class="fa-solid fa-file-excel me-1"></i>Export tất cả môn
+                        </button>
+                    </div>
+                </form>
+                <p class="text-muted small mt-2 mb-0">File Excel sẽ liệt kê những giáo viên chưa ghi đủ sổ đầu bài trong tuần đã chọn, cho tất cả sổ đầu bài theo môn.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="journal-card">
+                <h6 class="mb-2">Thống kê ghi sổ đầu bài (theo mẫu)</h6>
+                <form method="get" action="{% url 'adminpage:journal_thong_ke_export' %}" class="row g-2 align-items-end">
+                    <div class="col-4">
+                        <label class="form-label">Năm học</label>
+                        <input type="number" class="form-control form-control-sm" name="year" value="{{ current_year }}" min="2020" max="2035">
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label">Tuần</label>
+                        <input type="number" class="form-control form-control-sm" name="week" value="1" min="1" max="13">
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-sm btn-outline-success mt-2">
+                            <i class="fa-solid fa-file-excel me-1"></i>Export thống kê
+                        </button>
+                    </div>
+                </form>
+                <p class="text-muted small mt-2 mb-0">File Excel theo mẫu thong-ke.xlsx: Môn, Họ tên GV, Ngày dạy, Các tiết đã dạy.</p>
+            </div>
+        </div>
+    </div>
+
+    <h5 class="mb-3">Danh sách sổ đầu bài theo môn và năm</h5>
+    <form id="delete-journals-form" method="post" action="{% url 'adminpage:journal_manager_dashboard' %}" class="mb-2">
+        {% csrf_token %}
+        <input type="hidden" name="journal_action" value="delete_selected">
+        <button type="submit" class="btn btn-sm btn-danger"
+                onclick="return confirm('Bạn có chắc chắn muốn xoá các sổ đầu bài đã chọn? Hành động này không thể hoàn tác.');">
+            <i class="fa-solid fa-trash me-1"></i>Xoá sổ đã chọn
+        </button>
+    </form>
+    <div class="table-responsive">
+        <table class="journal-table">
+            <thead>
+                <tr>
+                    <th style="width: 48px;"><input type="checkbox" id="check-all-journals" title="Chọn tất cả"></th>
+                    <th>STT</th>
+                    <th>Môn</th>
+                    <th>Năm học</th>
+                    <th>Ngày bắt đầu tuần 1</th>
+                    <th>Số tuần</th>
+                    <th>Số hàng (GV)</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for j in journals %}
+                <tr>
+                    <td>
+                        <input type="checkbox"
+                               class="journal-checkbox"
+                               name="selected_journal_ids"
+                               value="{{ j.id }}"
+                               form="delete-journals-form">
+                    </td>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ j.get_subject_display|default:j.subject }}</td>
+                    <td>{{ j.year }}</td>
+                    <td>
+                        {% if j.week1_start_date %}
+                            {{ j.week1_start_date|date:"d/m/Y" }}
+                        {% else %}
+                            <form method="post" action="{% url 'adminpage:journal_manager_dashboard' %}" class="d-inline">
+                                {% csrf_token %}
+                                <input type="hidden" name="journal_action" value="set_week1">
+                                <input type="hidden" name="journal_id" value="{{ j.id }}">
+                                <input type="date" name="week1_start_date" class="form-control form-control-sm d-inline-block" style="width: 140px;" required>
+                                <button type="submit" class="btn btn-sm btn-success ms-1">Set & tạo 13 tuần</button>
+                            </form>
+                        {% endif %}
+                    </td>
+                    <td>{{ j.weeks.count }} tuần</td>
+                    <td>{{ j.rows.count }} hàng</td>
+                    <td>
+                        <a href="{% url 'adminpage:journal_subject_detail' j.id %}" class="btn btn-sm btn-outline-primary">Chi tiết</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="8" class="text-center text-muted py-4">Chưa có sổ đầu bài. Tạo sổ ở form trên hoặc import DSGV.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const checkAll = document.getElementById('check-all-journals');
+    const boxes = document.querySelectorAll('.journal-checkbox');
+    if (!checkAll) return;
+    checkAll.addEventListener('change', function () {
+        boxes.forEach((b) => { b.checked = checkAll.checked; });
+    });
+});
+</script>
+{% endblock %}

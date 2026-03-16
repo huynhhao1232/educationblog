@@ -1,0 +1,26 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<div class="container py-4">
+    <div class="card shadow-sm rounded-3">
+        <div class="card-header bg-info text-white rounded-top-3">
+            <h5 class="mb-0"><i class="fa-solid fa-layer-group me-2"></i>Import DSL (Danh sách lớp)</h5>
+        </div>
+        <div class="card-body">
+            <p class="text-muted">Import file Excel danh sách lớp để cập nhật <strong>sĩ số</strong> cho từng lớp. Cột: <strong>Lớp</strong> (tên lớp), <strong>Số HS</strong> (sĩ số học viên).</p>
+            <form method="post" enctype="multipart/form-data" action="{% url 'adminpage:import_dsl_excel' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label fw-bold">File DSL (.xlsx / .xls)</label>
+                    <input type="file" name="dsl_file" class="form-control" accept=".xlsx,.xls" required>
+                    <small class="text-muted">Dòng 1: Lớp, Số HS. Các dòng sau: 10ĐS1, 37; 10ĐS2, 38; ...</small>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-info">Import DSL</button>
+                    <a href="{% url 'adminpage:attendance_pivot' %}" class="btn btn-outline-secondary">Quay lại bảng chấm công</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

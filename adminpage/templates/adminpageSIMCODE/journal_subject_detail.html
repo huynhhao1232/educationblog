@@ -1,0 +1,107 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<style>
+    .journal-detail { margin: 20px 30px; background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .journal-detail h3 { color: #023EB6; margin-bottom: 20px; }
+    .journal-detail .info { margin-bottom: 20px; padding: 12px; background: #f8f9fa; border-radius: 8px; }
+    .journal-table { border-collapse: collapse; width: 100%; font-size: 13px; }
+    .journal-table th, .journal-table td { border: 1px solid #dee2e6; padding: 10px 12px; text-align: left; }
+    .journal-table th { background: #023EB6; color: #fff; font-weight: 600; }
+    .journal-table tbody tr:hover { background: #f8f9fa; }
+    .badge-locked { background: #dc3545; }
+    .badge-unlocked { background: #28a745; }
+</style>
+<div class="journal-detail">
+    <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+        <h3><i class="fa-solid fa-book-open me-2"></i>Sổ đầu bài: {{ journal.get_subject_display|default:journal.subject }} - {{ journal.year }}</h3>
+        <div>
+            <a href="{% url 'adminpage:journal_export_excel' journal.id %}" class="btn btn-success me-2"><i class="fa-solid fa-file-excel me-1"></i>Export Excel</a>
+            <a href="{% url 'adminpage:journal_manager_dashboard' %}" class="btn btn-outline-secondary">Quay lại danh sách</a>
+        </div>
+    </div>
+    <div class="info">
+        <strong>Môn:</strong> {{ journal.get_subject_display|default:journal.subject }} &nbsp;|&nbsp;
+        <strong>Năm học:</strong> {{ journal.year }} &nbsp;|&nbsp;
+        <strong>Ngày bắt đầu tuần 1:</strong> {{ journal.week1_start_date|date:"d/m/Y"|default:"—" }} &nbsp;|&nbsp;
+        <strong>Số hàng:</strong> {{ rows|length }}
+    </div>
+
+    <h5 class="mt-4 mb-3">Danh sách hàng (giáo viên)</h5>
+    <div class="table-responsive mb-4">
+        <table class="journal-table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Giáo viên</th>
+                    <th>Mã truy cập</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row.row_order }}</td>
+                    <td>{{ row.teacher.full_name }}</td>
+                    <td><code>{{ row.teacher.access_code }}</code></td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="3" class="text-center text-muted py-4">Chưa có hàng. Import DSGV để thêm giáo viên và tạo hàng.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <h5 class="mb-3">Quản lý tuần (khóa / mở lại)</h5>
+    <div class="table-responsive">
+        <table class="journal-table">
+            <thead>
+                <tr>
+                    <th>Tuần</th>
+                    <th>Từ ngày</th>
+                    <th>Đến ngày</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for w in weeks %}
+                <tr>
+                    <td>Tuần {{ w.week_number }}</td>
+                    <td>{{ w.start_date|date:"d/m/Y" }}</td>
+                    <td>{{ w.end_date|date:"d/m/Y" }}</td>
+                    <td>
+                        {% if w.end_date < today and not w.allow_late_edit %}
+                            <span class="badge badge-locked">Đã khóa (quá hạn)</span>
+                        {% elif w.end_date < today and w.allow_late_edit and not w.is_locked %}
+                            <span class="badge badge-unlocked">Đang mở (quá hạn)</span>
+                        {% elif w.is_locked %}
+                            <span class="badge badge-locked">Đã khóa</span>
+                        {% else %}
+                            <span class="badge badge-unlocked">Đang mở</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{% url 'adminpage:journal_week_summary' journal.id w.week_number %}" class="btn btn-sm btn-info me-1">Xem tổng hợp</a>
+                        <form method="post" action="{% url 'adminpage:journal_manager_dashboard' %}" class="d-inline">
+                            {% csrf_token %}
+                            <input type="hidden" name="journal_action" value="toggle_week_lock">
+                            <input type="hidden" name="week_id" value="{{ w.id }}">
+                            <input type="hidden" name="journal_id" value="{{ journal.id }}">
+                            {% if w.is_locked %}
+                                <button type="submit" class="btn btn-sm btn-success">Mở lại</button>
+                            {% elif w.end_date < today and not w.allow_late_edit %}
+                                <button type="submit" class="btn btn-sm btn-success">Mở lại</button>
+                            {% else %}
+                                <button type="submit" class="btn btn-sm btn-warning">Khóa</button>
+                            {% endif %}
+                        </form>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="5" class="text-center text-muted py-4">Chưa có tuần. Set ngày bắt đầu tuần 1 tại trang danh sách sổ đầu bài.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

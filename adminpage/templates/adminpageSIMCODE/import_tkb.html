@@ -1,0 +1,122 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<div class="container py-4">
+    <div class="card shadow-sm rounded-3">
+        <div class="card-header bg-primary text-white rounded-top-3">
+            <h5 class="mb-0"><i class="fa-solid fa-file-excel me-2"></i>Import TKB theo phiên bản thời gian</h5>
+        </div>
+        <div class="card-body">
+            <p class="text-muted">Nhập TKB theo <strong>tuần trong tháng</strong> theo chuẩn <strong>thứ 2 → chủ nhật</strong> (tuần đầu/tháng có thể là tuần ngắn). Nếu chưa nhập tuần hiện tại thì hệ thống sẽ áp dụng TKB tuần trước trong cùng tháng.</p>
+            <form method="post" enctype="multipart/form-data" action="{% url 'adminpage:import_tkb_excel' %}">
+                {% csrf_token %}
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold">Năm</label>
+                        <input type="number" id="yearInput" name="year" class="form-control" min="2020" max="2030" value="{{ selected_year|default:2025 }}" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold">Tháng</label>
+                        <select id="monthSelect" name="month" class="form-control" required>
+                            <option value="1" {% if selected_month == 1 %}selected{% endif %}>1</option>
+                            <option value="2" {% if selected_month == 2 %}selected{% endif %}>2</option>
+                            <option value="3" {% if selected_month == 3 %}selected{% endif %}>3</option>
+                            <option value="4" {% if selected_month == 4 %}selected{% endif %}>4</option>
+                            <option value="5" {% if selected_month == 5 %}selected{% endif %}>5</option>
+                            <option value="6" {% if selected_month == 6 %}selected{% endif %}>6</option>
+                            <option value="7" {% if selected_month == 7 %}selected{% endif %}>7</option>
+                            <option value="8" {% if selected_month == 8 %}selected{% endif %}>8</option>
+                            <option value="9" {% if selected_month == 9 %}selected{% endif %}>9</option>
+                            <option value="10" {% if selected_month == 10 %}selected{% endif %}>10</option>
+                            <option value="11" {% if selected_month == 11 %}selected{% endif %}>11</option>
+                            <option value="12" {% if selected_month == 12 %}selected{% endif %}>12</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold">Tuần trong tháng</label>
+                        <select id="weekSelect" name="week" class="form-control" required>
+                            {% for w in week_options %}
+                            <option value="{{ w.value }}">
+                                Tuần {{ w.value }} ({{ w.start_day }}/{{ selected_month }} - {{ w.end_day }}/{{ selected_month }})
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Buổi TKB</label>
+                    <select name="session" class="form-control" required>
+                        <option value="sang">Sáng</option>
+                        <option value="chieu">Chiều</option>
+                        <option value="toi">Tối</option>
+                    </select>
+                    <small class="text-muted">Chọn đúng buổi của file TKB. Import 3 file (sáng/chiều/tối) cho cùng tháng+tuần để cộng dồn tiết.</small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">File Excel TKB</label>
+                    <input type="file" name="excel_file" class="form-control" accept=".xlsx,.xls" required>
+                    <small class="text-muted">File TKB.xls dạng ma trận: dòng header có Tiết và tên lớp (10AS1, 10AS2...); mỗi ô dạng "MÔN - MãGV" (vd: SH - C.Quyên).</small>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">Import TKB</button>
+                    <a href="{% url 'adminpage:import_dsgv_excel' %}" class="btn btn-outline-primary">Import DSGV riêng</a>
+                    <a href="{% url 'adminpage:attendance_pivot' %}" class="btn btn-outline-secondary">Quay lại bảng chấm công</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    (function () {
+        function pad2(n) {
+            return String(n).padStart(2, '0');
+        }
+
+        // Trả về các tuần theo chuẩn Thứ 2 -> Chủ nhật, cắt trong phạm vi tháng.
+        function getWeekRanges(year, month) {
+            const firstDate = new Date(year, month - 1, 1);
+            const daysInMonth = new Date(year, month, 0).getDate();
+            const firstWeekday = (firstDate.getDay() + 6) % 7; // Monday=0 ... Sunday=6
+            const maxWeek = Math.floor((daysInMonth + firstWeekday - 1) / 7) + 1;
+            const ranges = [];
+
+            for (let weekNo = 1; weekNo <= maxWeek; weekNo++) {
+                const dayStart = Math.max(1, (7 * (weekNo - 1)) - firstWeekday + 1);
+                const dayEnd = Math.min(daysInMonth, (7 * weekNo) - firstWeekday);
+                ranges.push({ weekNo, dayStart, dayEnd });
+            }
+            return ranges;
+        }
+
+        function rebuildWeekOptions() {
+            const yearInput = document.getElementById('yearInput');
+            const monthSelect = document.getElementById('monthSelect');
+            const weekSelect = document.getElementById('weekSelect');
+            if (!yearInput || !monthSelect || !weekSelect) return;
+
+            const year = parseInt(yearInput.value, 10);
+            const month = parseInt(monthSelect.value, 10);
+            if (Number.isNaN(year) || Number.isNaN(month) || month < 1 || month > 12) return;
+
+            const previousWeek = weekSelect.value;
+            const ranges = getWeekRanges(year, month);
+            weekSelect.innerHTML = '';
+
+            ranges.forEach((r) => {
+                const opt = document.createElement('option');
+                opt.value = r.weekNo;
+                opt.textContent = `Tuần ${r.weekNo} (${pad2(r.dayStart)}/${pad2(month)} - ${pad2(r.dayEnd)}/${pad2(month)})`;
+                weekSelect.appendChild(opt);
+            });
+
+            if (previousWeek && ranges.some((r) => String(r.weekNo) === String(previousWeek))) {
+                weekSelect.value = previousWeek;
+            }
+        }
+
+        document.getElementById('yearInput')?.addEventListener('change', rebuildWeekOptions);
+        document.getElementById('monthSelect')?.addEventListener('change', rebuildWeekOptions);
+        document.addEventListener('DOMContentLoaded', rebuildWeekOptions);
+    })();
+</script>
+{% endblock %}

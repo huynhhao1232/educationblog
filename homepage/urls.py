@@ -18,4 +18,11 @@ urlpatterns = [
     path('api/check-cccd/<str:cccd>/', views.check_cccd_exists, name='check-cccd'),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
+    # path('student-exam-registration/', views.student_exam_registration_step1, name='student_exam_registration_step1'),
+    # path('student-exam-registration/step2/', views.student_exam_registration_step2, name='student_exam_registration_step2'),
+    # Sổ đầu bài số
+    path('so-dau-bai/', views.journal_login, name='journal_login'),
+    path('so-dau-bai/ca-nhan/', views.journal_personal, name='journal_personal'),
+    path('so-dau-bai/ca-nhan/sua/<int:entry_id>/', views.journal_entry_edit, name='journal_entry_edit'),
+    path('so-dau-bai/thoat/', views.journal_logout, name='journal_logout'),
 ]

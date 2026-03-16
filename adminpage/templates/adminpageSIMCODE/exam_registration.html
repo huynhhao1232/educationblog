@@ -1,0 +1,292 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<style>
+    .filter-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 20px 30px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    .filter-header {
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .filter-fields {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 32px;
+        justify-content: space-between;
+    }
+    .filter-col {
+        flex: 1 1 22%;
+        min-width: 200px;
+        max-width: 24%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .filter-section label {
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 8px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .filter-section .form-control {
+        border: none;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    .filter-section .form-control:focus {
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-1px);
+    }
+    .btn-export {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .btn-export:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        color: white;
+        text-decoration: none;
+    }
+    .exam-subjects-badge {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .exam-subject-tag {
+        background: #023EB6;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+</style>
+
+<h3 class="i-name">
+    <i class="fas fa-clipboard-check"></i> Quản lý đăng ký thi tốt nghiệp
+</h3>
+
+<div class="values">
+    <div class="val-box">
+        <i class="fas fa-users"></i>
+        <div>
+            <h3>{{ total_registrations }}</h3>
+            <span>Tổng số đăng ký</span>
+        </div>
+    </div>
+
+    <div class="val-box">
+        <i class="fas fa-calendar-day"></i>
+        <div>
+            <h3>{{ today_registrations }}</h3>
+            <span>Đăng ký hôm nay</span>
+        </div>
+    </div>
+
+    <div class="val-box">
+        <i class="fas fa-file-excel"></i>
+        <div>
+            <a href="{% url 'adminpage:export_exam_registrations' %}?{% if student_code_filter %}student_code={{ student_code_filter }}&{% endif %}{% if student_name_filter %}student_name={{ student_name_filter }}&{% endif %}{% if campus_filter %}campus={{ campus_filter }}&{% endif %}{% if subject_group_filter %}subject_group={{ subject_group_filter }}&{% endif %}{% if class_name_filter %}class_name={{ class_name_filter }}&{% endif %}{% if exam_subjects_filter %}exam_subjects={{ exam_subjects_filter }}&{% endif %}{% if email_filter %}email={{ email_filter }}&{% endif %}{% if phone_filter %}phone={{ phone_filter }}{% endif %}" class="btn-export">
+                <i class="fas fa-download"></i> Xuất Excel
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="filter-section">
+    <div class="filter-header">
+        <i class="fas fa-filter"></i> Bộ lọc tìm kiếm
+    </div>
+    <form method="get" action="{% url 'adminpage:exam_registration' %}">
+        <div class="filter-fields">
+            <div class="filter-col">
+                <label>Mã học viên</label>
+                <input type="text" name="student_code" class="form-control"
+                       value="{{ student_code_filter }}" placeholder="Nhập mã học viên">
+            </div>
+            <div class="filter-col">
+                <label>Họ và tên</label>
+                <input type="text" name="student_name" class="form-control"
+                       value="{{ student_name_filter }}" placeholder="Nhập họ tên">
+            </div>
+            <div class="filter-col">
+                <label>Cơ sở</label>
+                <select name="campus" class="form-control">
+                    <option value="">Tất cả</option>
+                    {% for campus in campuses %}
+                        <option value="{{ campus.id }}" {% if campus_filter == campus.id|stringformat:"s" %}selected{% endif %}>
+                            {{ campus.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="filter-col">
+                <label>Tổ hợp môn</label>
+                <select name="subject_group" class="form-control">
+                    <option value="">Tất cả</option>
+                    {% for sg in subject_groups %}
+                        <option value="{{ sg.id }}" {% if subject_group_filter == sg.id|stringformat:"s" %}selected{% endif %}>
+                            Tổ hợp {{ sg.code }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="filter-col">
+                <label>Lớp</label>
+                <input type="text" name="class_name" class="form-control"
+                       value="{{ class_name_filter }}" placeholder="Nhập tên lớp">
+            </div>
+            <div class="filter-col">
+                <label>Trạng thái chọn môn thi</label>
+                <select name="exam_subjects" class="form-control">
+                    <option value="">Tất cả</option>
+                    <option value="yes" {% if exam_subjects_filter == 'yes' %}selected{% endif %}>Đã chọn môn thi</option>
+                    <option value="no" {% if exam_subjects_filter == 'no' %}selected{% endif %}>Chưa chọn môn thi</option>
+                </select>
+            </div>
+            <div class="filter-col">
+                <label>Email</label>
+                <input type="text" name="email" class="form-control"
+                       value="{{ email_filter }}" placeholder="Nhập email">
+            </div>
+            <div class="filter-col">
+                <label>Số điện thoại</label>
+                <input type="text" name="phone" class="form-control"
+                       value="{{ phone_filter }}" placeholder="Nhập số điện thoại">
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button type="submit" class="btn-export" style="margin-right: 10px;">
+                <i class="fas fa-search"></i> Tìm kiếm
+            </button>
+            <a href="{% url 'adminpage:exam_registration' %}" class="btn-export" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">
+                <i class="fas fa-redo"></i> Làm mới
+            </a>
+        </div>
+    </form>
+</div>
+
+<div class="board">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>STT</td>
+                <td>Mã học viên</td>
+                <td>Họ và tên</td>
+                <td>Lớp</td>
+                <td>Cơ sở</td>
+                <td>Tổ hợp môn</td>
+                <td>Email</td>
+                <td>Số điện thoại</td>
+                <td>Môn thi tốt nghiệp</td>
+                <td>Ngày đăng ký</td>
+                <td>Số lần cập nhật</td>
+                <td>Thao tác</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reg in registrations %}
+            <tr>
+                <td>{{ forloop.counter0|add:registrations.start_index }}</td>
+                <td><strong>{{ reg.student.student_code }}</strong></td>
+                <td>{{ reg.student.full_name|upper }}</td>
+                <td>{{ reg.student.class_name }}</td>
+                <td>{{ reg.student.campus.name }}</td>
+                <td><span style="background: #023EB6; color: white; padding: 4px 10px; border-radius: 8px; font-weight: 600;">
+                    Tổ hợp {{ reg.student.subject_group.code }}
+                </span></td>
+                <td>{{ reg.email }}</td>
+                <td>{{ reg.phone }}</td>
+                <td>
+                    <div class="exam-subjects-badge">
+                        {% for subject in reg.exam_subjects %}
+                            <span class="exam-subject-tag">{{ subject }}</span>
+                        {% endfor %}
+                    </div>
+                </td>
+                <td>
+                    {% if reg.registration_date %}
+                        {{ reg.registration_date|date:"d/m/Y H:i" }}
+                    {% else %}
+                        {{ reg.created_at|date:"d/m/Y H:i" }}
+                    {% endif %}
+                </td>
+                <td>
+                    <span style="background: {% if reg.update_count >= 2 %}#dc3545{% else %}#28a745{% endif %}; color: white; padding: 4px 10px; border-radius: 12px; font-weight: 600; font-size: 12px;">
+                        {{ reg.update_count }}/2
+                    </span>
+                </td>
+                <td>
+                    <a href="{% url 'adminpage:registration_history' reg.id %}" class="btn-history" style="background: #023EB6; color: white; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 600; display: inline-block;">
+                        <i class="fas fa-history"></i> Xem lịch sử
+                    </a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="12" style="text-align: center; padding: 30px; color: #999;">
+                    <i class="fas fa-inbox" style="font-size: 48px; margin-bottom: 10px; display: block;"></i>
+                    Không có dữ liệu đăng ký
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Pagination -->
+{% if registrations.has_other_pages %}
+<div class="pagination" style="margin: 20px 30px; display: flex; justify-content: center; gap: 10px;">
+    {% if registrations.has_previous %}
+        <a href="?page=1{% if student_code_filter %}&student_code={{ student_code_filter }}{% endif %}{% if student_name_filter %}&student_name={{ student_name_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if class_name_filter %}&class_name={{ class_name_filter }}{% endif %}{% if exam_subjects_filter %}&exam_subjects={{ exam_subjects_filter }}{% endif %}{% if email_filter %}&email={{ email_filter }}{% endif %}{% if phone_filter %}&phone={{ phone_filter }}{% endif %}"
+           class="btn-export" style="padding: 8px 15px;">
+            <i class="fas fa-angle-double-left"></i>
+        </a>
+        <a href="?page={{ registrations.previous_page_number }}{% if student_code_filter %}&student_code={{ student_code_filter }}{% endif %}{% if student_name_filter %}&student_name={{ student_name_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if class_name_filter %}&class_name={{ class_name_filter }}{% endif %}{% if exam_subjects_filter %}&exam_subjects={{ exam_subjects_filter }}{% endif %}{% if email_filter %}&email={{ email_filter }}{% endif %}{% if phone_filter %}&phone={{ phone_filter }}{% endif %}"
+           class="btn-export" style="padding: 8px 15px;">
+            <i class="fas fa-angle-left"></i>
+        </a>
+    {% endif %}
+
+    <span style="padding: 8px 15px; background: #f8f9fa; border-radius: 8px; font-weight: 600;">
+        Trang {{ registrations.number }} / {{ registrations.paginator.num_pages }}
+    </span>
+
+    {% if registrations.has_next %}
+        <a href="?page={{ registrations.next_page_number }}{% if student_code_filter %}&student_code={{ student_code_filter }}{% endif %}{% if student_name_filter %}&student_name={{ student_name_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if class_name_filter %}&class_name={{ class_name_filter }}{% endif %}{% if exam_subjects_filter %}&exam_subjects={{ exam_subjects_filter }}{% endif %}{% if email_filter %}&email={{ email_filter }}{% endif %}{% if phone_filter %}&phone={{ phone_filter }}{% endif %}"
+           class="btn-export" style="padding: 8px 15px;">
+            <i class="fas fa-angle-right"></i>
+        </a>
+        <a href="?page={{ registrations.paginator.num_pages }}{% if student_code_filter %}&student_code={{ student_code_filter }}{% endif %}{% if student_name_filter %}&student_name={{ student_name_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if class_name_filter %}&class_name={{ class_name_filter }}{% endif %}{% if exam_subjects_filter %}&exam_subjects={{ exam_subjects_filter }}{% endif %}{% if email_filter %}&email={{ email_filter }}{% endif %}{% if phone_filter %}&phone={{ phone_filter }}{% endif %}"
+           class="btn-export" style="padding: 8px 15px;">
+            <i class="fas fa-angle-double-right"></i>
+        </a>
+    {% endif %}
+</div>
+{% endif %}
+
+{% endblock %}
+

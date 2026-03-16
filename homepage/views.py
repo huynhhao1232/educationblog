@@ -8,7 +8,9 @@ from django.contrib.auth import authenticate, login as auth_login, logout as aut
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.conf import settings
+from django.contrib import messages
 from django.core.mail import send_mail
+from django.utils import timezone
 # Create your views here.
 def group_list(lst, n):
     return [lst[i:i + n] for i in range(0, len(lst), n)]
@@ -459,3 +461,505 @@ def login_view(request):
 def logout_view(request):
     auth_logout(request)
     return redirect('homepage:login')
+
+from .forms import StudentCodeForm, StudentExamRegistrationForm
+from .models import Student, StudentExamRegistration, RegistrationHistory
+
+def student_exam_registration_step1(request):
+    """Bước 1: Nhập mã học viên"""
+    if request.method == 'POST':
+        form = StudentCodeForm(request.POST)
+        if form.is_valid():
+            student_code = form.cleaned_data['student_code']
+            try:
+                # Tìm học viên theo mã
+                student = Student.objects.get(student_code=student_code)
+                # Lưu mã học viên vào session để dùng ở bước 2
+                request.session['student_code'] = student_code
+                return redirect('homepage:student_exam_registration_step2')
+            except Student.DoesNotExist:
+                form.add_error('student_code', 'Mã học viên không tồn tại trong hệ thống')
+    else:
+        form = StudentCodeForm()
+
+    categories = Category.objects.filter(enable=True)
+    context = {
+        'form': form,
+        'categories': categories,
+        'step': 1
+    }
+    return render(request, 'homepage/student_exam_registration_step1.html', context)
+
+def student_exam_registration_step2(request):
+    """Bước 2: Điền thông tin đăng ký"""
+    # Kiểm tra xem có mã học viên trong session không
+    student_code = request.session.get('student_code')
+    if not student_code:
+        return redirect('homepage:student_exam_registration_step1')
+
+    try:
+        student = Student.objects.get(student_code=student_code)
+    except Student.DoesNotExist:
+        del request.session['student_code']
+        return redirect('homepage:student_exam_registration_step1')
+
+    # Kiểm tra xem học viên đã đăng ký chưa
+    existing_registration = None
+    try:
+        existing_registration = StudentExamRegistration.objects.get(student=student)
+    except StudentExamRegistration.DoesNotExist:
+        pass
+
+    # Kiểm tra xem học viên có thể cập nhật không (tối đa 2 lần)
+    can_update = True
+    if existing_registration:
+        can_update = existing_registration.can_update()
+
+    if request.method == 'POST':
+        # Nếu đã quá 2 lần cập nhật, không cho phép cập nhật nữa
+        if existing_registration and not can_update:
+            categories = Category.objects.filter(enable=True)
+            context = {
+                'form': None,
+                'student': student,
+                'categories': categories,
+                'step': 2,
+                'has_existing_registration': True,
+                'existing_registration': existing_registration,
+                'can_update': False,
+                'error_message': 'Bạn đã cập nhật thông tin đăng ký quá 2 lần. Bạn chỉ có thể xem thông tin đăng ký.'
+            }
+            return render(request, 'homepage/student_exam_registration_step2.html', context)
+
+        if existing_registration:
+            # Cập nhật thông tin đã có
+            form = StudentExamRegistrationForm(request.POST, subject_group=student.subject_group, instance=existing_registration)
+        else:
+            # Tạo mới
+            form = StudentExamRegistrationForm(request.POST, subject_group=student.subject_group)
+
+        if form.is_valid():
+            # Lưu thông tin đăng ký
+            registration = form.save(commit=False)
+            registration.student = student
+
+            # Lưu thông tin cũ trước khi cập nhật (nếu là cập nhật)
+            old_email = None
+            old_phone = None
+            old_exam_subjects = []
+            action_type = 'created'
+            update_count_value = 0
+
+            if existing_registration:
+                # Lưu thông tin cũ
+                old_email = existing_registration.email
+                old_phone = existing_registration.phone
+                old_exam_subjects = existing_registration.exam_subjects if existing_registration.exam_subjects else []
+
+                # Cập nhật số lần cập nhật
+                update_count_value = existing_registration.update_count + 1
+                registration.update_count = update_count_value
+                action_type = 'updated'
+            else:
+                # Lần đầu đăng ký, update_count = 0
+                registration.update_count = 0
+                update_count_value = 0
+
+            # Cập nhật ngày đăng ký
+            registration.registration_date = timezone.now()
+
+            # Lưu registration trước
+            registration.save()
+
+            # Lưu lịch sử cập nhật
+            RegistrationHistory.objects.create(
+                registration=registration,
+                old_email=old_email,
+                old_phone=old_phone,
+                old_exam_subjects=old_exam_subjects,
+                new_email=registration.email,
+                new_phone=registration.phone,
+                new_exam_subjects=registration.exam_subjects if registration.exam_subjects else [],
+                action_type=action_type,
+                update_count=update_count_value
+            )
+
+            # Xóa mã học viên khỏi session
+            del request.session['student_code']
+
+            # Hiển thị thông báo thành công
+            categories = Category.objects.filter(enable=True)
+            context = {
+                'student': student,
+                'registration': registration,
+                'categories': categories,
+                'success': True,
+                'updated': existing_registration is not None
+            }
+            return render(request, 'homepage/student_exam_registration_success.html', context)
+    else:
+        if existing_registration:
+            # Kiểm tra nếu không thể cập nhật nữa, chỉ hiển thị thông tin
+            if not can_update:
+                form = None
+            else:
+                # Hiển thị form với dữ liệu đã có để cập nhật
+                form = StudentExamRegistrationForm(subject_group=student.subject_group, instance=existing_registration)
+        else:
+            # Form trống để điền mới
+            form = StudentExamRegistrationForm(subject_group=student.subject_group)
+
+    categories = Category.objects.filter(enable=True)
+    context = {
+        'form': form,
+        'student': student,
+        'categories': categories,
+        'step': 2,
+        'has_existing_registration': existing_registration is not None,
+        'existing_registration': existing_registration,
+        'can_update': can_update
+    }
+    return render(request, 'homepage/student_exam_registration_step2.html', context)
+
+# ---------- Sổ đầu bài số ----------
+
+def _get_school_config():
+    """Lấy cấu hình ngày/tuần hiện tại (một bản ghi, fallback nếu chưa có)."""
+    from adminpage.models import SchoolConfig
+    config = SchoolConfig.objects.first()
+    if config:
+        return config.current_date, config.current_week
+    from datetime import date
+    today = date.today()
+    # Tuần trong năm (ISO): 1-53
+    week = today.isocalendar()[1]
+    return today, week
+
+
+def journal_login(request):
+    """Form nhập Mã số giáo viên. POST: kiểm tra mã, lưu session, chuyển đến Sổ đầu bài cá nhân."""
+    from adminpage.models import JournalTeacher
+    categories = Category.objects.filter(enable=True)
+    error = None
+    if request.method == 'POST':
+        code = (request.POST.get('access_code') or '').strip()
+        if not code:
+            error = 'Vui lòng nhập mã số.'
+        else:
+            teacher = JournalTeacher.objects.filter(access_code=code).first()
+            if teacher:
+                request.session['journal_teacher_id'] = teacher.id
+                return redirect('homepage:journal_personal')
+            error = 'Mã số không hợp lệ.'
+    context = {'error': error, 'categories': categories}
+    return render(request, 'homepage/journal_login.html', context)
+
+
+def journal_personal(request):
+    """Sổ đầu bài cá nhân: theo JournalRow/JournalEntry, tuần từ SubjectJournal."""
+    from adminpage.models import (
+        JournalTeacher, JournalRow, JournalEntry, JournalClass,
+        SubjectJournal, JournalWeek, normalize_subject_code,
+    )
+    from datetime import date, timedelta
+
+    teacher_id = request.session.get('journal_teacher_id')
+    if not teacher_id:
+        return redirect('homepage:journal_login')
+    teacher = get_object_or_404(JournalTeacher, id=teacher_id)
+    today = date.today()
+    current_year = today.year
+    subject_code = normalize_subject_code(teacher.subject)
+    subject_raw_lower = str(teacher.subject).strip().lower()
+    categories = Category.objects.filter(enable=True)
+
+    # Tìm SubjectJournal cho môn + năm (thử cả mã chuẩn và tên gốc vì DB có thể lưu "kt-pl" hoặc "ktpl")
+    subject_journal = SubjectJournal.objects.filter(
+        subject=subject_code, year=current_year
+    ).first()
+    if not subject_journal and subject_raw_lower != subject_code:
+        subject_journal = SubjectJournal.objects.filter(
+            subject=subject_raw_lower, year=current_year
+        ).first()
+    if not subject_journal:
+        context = {
+            'teacher': teacher, 'categories': categories,
+            'error': 'Chưa có sổ đầu bài cho môn của bạn trong năm nay. Liên hệ quản trị viên.',
+        }
+        return render(request, 'homepage/journal_personal.html', context)
+
+    # Danh sách tuần của sổ (cho phép GV xem lại tuần trước)
+    all_weeks = list(
+        JournalWeek.objects.filter(subject_journal=subject_journal).order_by('week_number')
+    )
+    # Tuần chứa hôm nay (nếu có)
+    week_today_obj = JournalWeek.objects.filter(
+        subject_journal=subject_journal,
+        start_date__lte=today,
+        end_date__gte=today,
+    ).first()
+
+    # Danh sách hàng của giáo viên
+    rows = JournalRow.objects.filter(
+        subject_journal=subject_journal, teacher=teacher
+    ).order_by('row_order')
+    journal_classes = JournalClass.objects.all().order_by('name')
+
+    # Chọn tuần hiển thị: ưu tiên query param/post, nếu không có thì lấy tuần hiện tại
+    selected_week_raw = (request.GET.get('week') or request.POST.get('selected_week_number') or '').strip()
+    selected_week_obj = None
+    if selected_week_raw.isdigit():
+        selected_week_num = int(selected_week_raw)
+        selected_week_obj = next((w for w in all_weeks if w.week_number == selected_week_num), None)
+    if not selected_week_obj:
+        selected_week_obj = week_today_obj or (all_weeks[0] if all_weeks else None)
+
+    week_start = week_end = current_week_num = None
+    if selected_week_obj:
+        week_start = selected_week_obj.start_date
+        week_end = selected_week_obj.end_date
+        current_week_num = selected_week_obj.week_number
+        current_week_obj = selected_week_obj
+        is_expired = today > week_end
+        is_effective_locked = selected_week_obj.is_locked or (is_expired and not selected_week_obj.allow_late_edit)
+        # Tuần quá hạn tự khóa, nhưng nếu admin mở lại (allow_late_edit=True) thì vẫn cho nhập/sửa.
+        can_edit = (not is_effective_locked) and today >= week_start
+    else:
+        current_week_obj = None
+        can_edit = False
+
+    # POST: Lưu tiết mới (tự gán hàng đầu tiên, giới hạn theo số hàng)
+    if request.method == 'POST' and can_edit and current_week_obj and not current_week_obj.is_locked:
+        # Đếm số tiết đã nhập tuần này (giới hạn = số hàng của GV)
+        entries_count_week = 0
+        if current_week_num and rows:
+            for row in rows:
+                entries_count_week += JournalEntry.objects.filter(
+                    journal_row=row, week_number=current_week_num
+                ).count()
+        max_entries = rows.count() if rows else 0
+
+        lesson_date_str = request.POST.get('lesson_date', '').strip()
+        classes_taught = request.POST.getlist('classes_taught')  # checkbox
+        period = request.POST.get('period', '1')
+        student_count = request.POST.get('student_count', '').strip()
+        lesson_title = (request.POST.get('lesson_title') or '').strip()
+        absent_students = (request.POST.get('absent_students') or '').strip()
+        comment = (request.POST.get('comment') or '').strip()
+
+        try:
+            period = max(1, min(5, int(period)))
+        except (ValueError, TypeError):
+            period = 1
+
+        # Kiểm tra bắt buộc (trừ học viên vắng)
+        classes_str = ', '.join(c for c in classes_taught if c)
+        # Tiết đôi: chọn tiết X thì tự tạo tiết X+1 với cùng nội dung (X=1..4; tiết 5 chỉ 1 ô)
+        next_period = period + 1 if period < 5 else None
+        slots_needed = 2 if next_period else 1
+        if entries_count_week + slots_needed > max_entries:
+            messages.error(
+                request,
+                f'Bạn chỉ có {max_entries} hàng trong tuần này. Đã nhập {entries_count_week} tiết.'
+                + (f' Khi ghi tiết {period} sẽ tự tạo thêm tiết {next_period}, cần 2 ô trống.' if next_period else '')
+            )
+        elif not lesson_date_str or not classes_str or not lesson_title.strip() or not comment.strip():
+            messages.error(request, 'Vui lòng nhập đủ: Ngày dạy, Lớp dạy, Sĩ số, Tên bài giảng, Nhận xét.')
+        elif not student_count:
+            messages.error(request, 'Vui lòng nhập Sĩ số.')
+        else:
+            try:
+                sc_val = max(0, min(999, int(student_count)))
+            except (ValueError, TypeError):
+                sc_val = None
+            if sc_val is None:
+                messages.error(request, 'Sĩ số không hợp lệ.')
+            else:
+                journal_row = rows.first() if rows else None
+                if journal_row and lesson_date_str:
+                    from datetime import datetime
+                    lesson_date = datetime.strptime(lesson_date_str, '%Y-%m-%d').date()
+                    if week_start <= lesson_date <= week_end and lesson_date <= today:
+                        JournalEntry.objects.create(
+                            journal_row=journal_row,
+                            week_number=current_week_num,
+                            lesson_date=lesson_date,
+                            period=period,
+                            classes_taught=classes_str,
+                            student_count=sc_val,
+                            lesson_title=lesson_title,
+                            absent_students=absent_students,
+                            comment=comment,
+                        )
+                        # Tiết đôi: chọn tiết X thì tự tạo tiết X+1 với cùng nội dung (X=1..4)
+                        if next_period:
+                            JournalEntry.objects.create(
+                                journal_row=journal_row,
+                                week_number=current_week_num,
+                                lesson_date=lesson_date,
+                                period=next_period,
+                                classes_taught=classes_str,
+                                student_count=sc_val,
+                                lesson_title=lesson_title,
+                                absent_students=absent_students,
+                                comment=comment,
+                            )
+                            messages.success(request, f'Đã lưu tiết {period} và tiết {next_period} với cùng nội dung.')
+        target_url = f"{reverse('homepage:journal_personal')}?week={current_week_num}" if current_week_num else reverse('homepage:journal_personal')
+        return redirect(target_url)
+
+    # Ngày có thể chọn: từ đầu tuần đến min(hôm nay, cuối tuần)
+    selectable_dates = []
+    if week_start and week_end:
+        d = week_start
+        while d <= week_end and d <= today:
+            selectable_dates.append(d)
+            d += timedelta(days=1)
+
+    # Lấy entries của tuần hiện tại (theo các hàng của GV)
+    entries = []
+    if current_week_num:
+        for row in rows:
+            ents = JournalEntry.objects.filter(
+                journal_row=row, week_number=current_week_num
+            ).order_by('lesson_date', 'period')
+            entries.extend(ents)
+    entries.sort(key=lambda e: (e.lesson_date, e.period))
+
+    # Chỉ cho nhập thêm khi còn chỗ (số tiết < số hàng)
+    can_add_entry = can_edit and len(entries) < rows.count()
+
+    context = {
+        'teacher': teacher,
+        'subject_journal': subject_journal,
+        'rows': rows,
+        'all_weeks': all_weeks,
+        'journal_classes': journal_classes,
+        'current_week_obj': current_week_obj,
+        'week_start': week_start,
+        'week_end': week_end,
+        'current_week_num': current_week_num or 0,
+        'entries': entries,
+        'selectable_dates': selectable_dates,
+        'can_edit': can_edit,
+        'can_add_entry': can_add_entry,
+        'today': today,
+        'categories': categories,
+    }
+    return render(request, 'homepage/journal_personal.html', context)
+
+
+def journal_entry_edit(request, entry_id):
+    """Sửa tiết đã nhập (chỉ khi tuần chưa khóa)."""
+    from adminpage.models import (
+        JournalTeacher, JournalRow, JournalEntry, JournalClass,
+        SubjectJournal, JournalWeek, normalize_subject_code,
+    )
+    from datetime import date, timedelta, datetime
+
+    teacher_id = request.session.get('journal_teacher_id')
+    if not teacher_id:
+        return redirect('homepage:journal_login')
+    teacher = get_object_or_404(JournalTeacher, id=teacher_id)
+    entry = get_object_or_404(JournalEntry, id=entry_id)
+
+    # Chỉ được sửa entry thuộc hàng của mình
+    if entry.journal_row.teacher_id != teacher_id:
+        messages.error(request, 'Bạn không có quyền sửa tiết này.')
+        return redirect('homepage:journal_personal')
+
+    # Kiểm tra tuần có bị khóa không
+    subject_journal = entry.journal_row.subject_journal
+    week_obj = JournalWeek.objects.filter(
+        subject_journal=subject_journal, week_number=entry.week_number
+    ).first()
+    today = date.today()
+    is_expired = week_obj.end_date < today if week_obj else True
+    is_effective_locked = (week_obj.is_locked if week_obj else True) or (is_expired and not (week_obj.allow_late_edit if week_obj else False))
+    if not week_obj or is_effective_locked or today < week_obj.start_date:
+        messages.error(request, 'Tuần này đang ở chế độ chỉ xem, không thể sửa.')
+        return redirect('homepage:journal_personal')
+
+    week_start, week_end = week_obj.start_date, week_obj.end_date
+    journal_classes = JournalClass.objects.all().order_by('name')
+
+    # Ngày có thể chọn
+    selectable_dates = []
+    d = week_start
+    while d <= week_end and d <= today:
+        selectable_dates.append(d)
+        d += timedelta(days=1)
+
+    # Lớp đã chọn (từ DB hoặc từ POST khi validation fail)
+    entry_classes = [c.strip() for c in (entry.classes_taught or '').split(',') if c.strip()]
+
+    if request.method == 'POST':
+        lesson_date_str = request.POST.get('lesson_date', '').strip()
+        classes_taught = request.POST.getlist('classes_taught')
+        period = request.POST.get('period', '1')
+        student_count = request.POST.get('student_count', '').strip()
+        lesson_title = (request.POST.get('lesson_title') or '').strip()
+        absent_students = (request.POST.get('absent_students') or '').strip()
+        comment = (request.POST.get('comment') or '').strip()
+
+        try:
+            period = max(1, min(5, int(period)))
+        except (ValueError, TypeError):
+            period = 1
+
+        classes_str = ', '.join(c for c in classes_taught if c)
+        valid = True
+        if not lesson_date_str or not classes_str or not lesson_title.strip() or not comment.strip():
+            messages.error(request, 'Vui lòng nhập đủ: Ngày dạy, Lớp dạy, Sĩ số, Tên bài giảng, Nhận xét.')
+            valid = False
+        elif not student_count:
+            messages.error(request, 'Vui lòng nhập Sĩ số.')
+            valid = False
+        else:
+            try:
+                sc_val = max(0, min(999, int(student_count)))
+            except (ValueError, TypeError):
+                sc_val = None
+            if sc_val is None:
+                messages.error(request, 'Sĩ số không hợp lệ.')
+                valid = False
+
+        if valid and lesson_date_str:
+            lesson_date = datetime.strptime(lesson_date_str, '%Y-%m-%d').date()
+            if week_start <= lesson_date <= week_end and lesson_date <= today:
+                try:
+                    sc_val = max(0, min(999, int(student_count)))
+                except (ValueError, TypeError):
+                    sc_val = None
+                entry.lesson_date = lesson_date
+                entry.period = period
+                entry.classes_taught = classes_str
+                entry.student_count = sc_val
+                entry.lesson_title = lesson_title
+                entry.absent_students = absent_students
+                entry.comment = comment
+                entry.save()
+                messages.success(request, 'Đã cập nhật tiết.')
+                return redirect('homepage:journal_personal')
+        if valid:
+            return redirect('homepage:journal_personal')
+        # Validation failed: dùng giá trị POST để hiển thị lại form
+        entry_classes = [c for c in classes_taught if c]
+
+    categories = Category.objects.filter(enable=True)
+    context = {
+        'entry': entry,
+        'teacher': teacher,
+        'journal_classes': journal_classes,
+        'selectable_dates': selectable_dates,
+        'entry_classes': entry_classes,
+        'week_obj': week_obj,
+        'categories': categories,
+    }
+    return render(request, 'homepage/journal_entry_edit.html', context)
+
+
+def journal_logout(request):
+    """Thoát sổ đầu bài (xóa mã khỏi session)."""
+    request.session.pop('journal_teacher_id', None)
+    return redirect('homepage:journal_login')

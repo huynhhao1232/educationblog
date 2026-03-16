@@ -1,0 +1,28 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<div class="container py-4">
+    <div class="card shadow-sm rounded-3 border-danger">
+        <div class="card-header bg-danger text-white rounded-top-3">
+            <h5 class="mb-0"><i class="fa-solid fa-trash me-2"></i>Xóa hết dữ liệu DSGV và TKB</h5>
+        </div>
+        <div class="card-body">
+            <p class="text-danger fw-bold">Bạn có chắc muốn xóa toàn bộ dữ liệu chấm công?</p>
+            <ul class="mb-3">
+                <li>Danh sách giáo viên (DSGV)</li>
+                <li>Tất cả tiết TKB</li>
+                <li>Tất cả phiên bản TKB</li>
+                <li>Tất cả lớp học (tạo từ TKB)</li>
+            </ul>
+            <p class="text-muted">Thao tác này không thể hoàn tác. Sau khi xóa, bạn cần import lại DSGV và TKB.</p>
+            <form method="post" action="{% url 'adminpage:clear_attendance_data' %}" onsubmit="return confirm('Xác nhận xóa hết dữ liệu DSGV và TKB?');">
+                {% csrf_token %}
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-danger">Xóa hết</button>
+                    <a href="{% url 'adminpage:attendance_pivot' %}" class="btn btn-outline-secondary">Hủy</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

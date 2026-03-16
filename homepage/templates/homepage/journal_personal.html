@@ -1,0 +1,203 @@
+{% extends 'homepage/template.html' %}
+{% load static %}
+{% block title %}Sổ đầu bài cá nhân{% endblock %}
+{% block index %}
+<style>
+  .journal-page { max-width: 1150px; margin: 0 auto; padding: 20px 0 30px; font-family: "Inter", "Segoe UI", Arial, sans-serif; }
+  .journal-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .journal-title { font-size: 28px; font-weight: 800; color: #111827; letter-spacing: .4px; margin: 0; }
+  .btn-logout-modern { border-radius: 999px; padding: 8px 14px; font-weight: 600; }
+  .journal-meta-card { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: #fff; border-radius: 14px; padding: 16px 18px; box-shadow: 0 10px 24px rgba(30, 58, 138, .25); margin-bottom: 14px; }
+  .journal-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 14px; font-size: 14px; }
+  .journal-meta-grid strong { color: #bfdbfe; font-weight: 700; margin-right: 6px; }
+  .journal-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; box-shadow: 0 8px 20px rgba(17, 24, 39, .05); padding: 16px; margin-bottom: 14px; }
+  .journal-card h6 { margin: 0 0 10px; font-size: 16px; font-weight: 700; color: #111827; }
+  .journal-note { color: #6b7280; font-size: 12px; margin-bottom: 10px; }
+  .journal-week-select { max-width: 300px; }
+  .class-box { border: 1px solid #dbe3f1; border-radius: 10px; background: #f8fafc; padding: 8px; max-height: 100px; overflow-y: auto; }
+  .form-label { font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 4px; }
+  .journal-table-wrap { overflow-x: auto; }
+  .journal-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 12px; }
+  .journal-table th { background: #eef2ff; color: #1f2937; border: 1px solid #cbd5e1; padding: 8px 10px; text-align: center; font-weight: 700; }
+  .journal-table td { background: #fff; border: 1px solid #e2e8f0; padding: 8px 10px; vertical-align: top; color: #1f2937; }
+  .journal-table tbody tr:nth-child(even) td { background: #f8fafc; }
+  .journal-table .col-stt { width: 46px; text-align: center; }
+  .journal-table .col-ngay { width: 96px; text-align: center; }
+  .journal-table .col-lop { width: 95px; }
+  .journal-table .col-tiet { width: 55px; text-align: center; }
+  .journal-table .col-siso { width: 65px; text-align: center; }
+  .journal-table .col-vang { width: 120px; }
+  .journal-table .col-bai { width: 260px; }
+  .journal-table .col-nhanxet { width: 150px; }
+  .journal-table .col-thaotac { width: 78px; text-align: center; }
+  .readonly-alert { background: #fff7ed; border: 1px solid #fdba74; color: #9a3412; border-radius: 10px; padding: 10px 12px; margin-bottom: 12px; font-size: 13px; }
+  .summary-text { color: #64748b; font-size: 13px; margin-top: 10px; }
+</style>
+
+<div class="container journal-page">
+  <div class="journal-top">
+    <h2 class="journal-title">Sổ đầu bài</h2>
+    <a href="{% url 'homepage:journal_logout' %}" class="btn btn-outline-secondary btn-sm btn-logout-modern">
+      <i class="fas fa-sign-out-alt me-1"></i>Thoát
+    </a>
+  </div>
+
+  <div class="journal-meta-card">
+    <div class="journal-meta-grid">
+      <div><strong>Tuần:</strong>{{ current_week_num|default:"—" }}</div>
+      <div><strong>Từ ngày:</strong>{{ week_start|date:"d/m/Y"|default:"—" }}</div>
+      <div><strong>Đến ngày:</strong>{{ week_end|date:"d/m/Y"|default:"—" }}</div>
+      <div><strong>Giáo viên:</strong>{{ teacher.full_name }}</div>
+      <div><strong>Môn:</strong>{{ teacher.subject }}</div>
+      {% if not can_edit and current_week_obj %}
+      <div><strong>Trạng thái:</strong>Chỉ xem</div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if all_weeks %}
+  <div class="journal-card py-3">
+    <form method="get" action="{% url 'homepage:journal_personal' %}" class="d-flex align-items-center gap-2 flex-wrap">
+      <label class="form-label mb-0">Xem tuần</label>
+      <select name="week" class="form-select form-select-sm journal-week-select" onchange="this.form.submit()">
+        {% for w in all_weeks %}
+        <option value="{{ w.week_number }}" {% if current_week_num == w.week_number %}selected{% endif %}>
+          Tuần {{ w.week_number }} ({{ w.start_date|date:"d/m" }} - {{ w.end_date|date:"d/m" }})
+        </option>
+        {% endfor %}
+      </select>
+    </form>
+  </div>
+  {% endif %}
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} py-2">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+
+  {% if error %}
+  <div class="alert alert-warning">{{ error }}</div>
+  {% endif %}
+
+  {% if not rows %}
+    <div class="alert alert-info">Chưa có hàng sổ đầu bài cho bạn. Liên hệ quản trị viên import DSGV.</div>
+  {% elif can_add_entry %}
+    <div class="journal-card">
+      <h6>Nhập tiết dạy mới</h6>
+      <div class="journal-note">Các trường có dấu * bắt buộc (trừ Học viên vắng).</div>
+      <form method="post" action="{% url 'homepage:journal_personal' %}" class="row g-2" id="form-journal-new" onsubmit="return validateClassesTaught()">
+        {% csrf_token %}
+        <input type="hidden" name="selected_week_number" value="{{ current_week_num }}">
+        <div class="col-md-2">
+          <label class="form-label">Ngày dạy <span class="text-danger">*</span></label>
+          <select class="form-select form-select-sm" name="lesson_date" required>
+            <option value="">-- Chọn --</option>
+            {% for d in selectable_dates %}
+            <option value="{{ d|date:'Y-m-d' }}">{{ d|date:"d/m" }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Lớp dạy <span class="text-danger">*</span></label>
+          <div class="class-box">
+            {% for c in journal_classes %}
+            <div class="form-check form-check-inline me-2">
+              <input class="form-check-input" type="checkbox" name="classes_taught" value="{{ c.name }}" id="cls_{{ c.id }}">
+              <label class="form-check-label small" for="cls_{{ c.id }}">{{ c.name }}</label>
+            </div>
+            {% empty %}
+            <small class="text-muted">Chưa có lớp. Import DSL ở trang quản trị.</small>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-md-1">
+          <label class="form-label">Tiết <span class="text-danger">*</span></label>
+          <select class="form-select form-select-sm" name="period" required>
+            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+          </select>
+        </div>
+        <div class="col-md-1">
+          <label class="form-label">Sĩ số <span class="text-danger">*</span></label>
+          <input type="number" class="form-control form-control-sm" name="student_count" placeholder="Sĩ số" min="0" max="999" required>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Tên bài giảng <span class="text-danger">*</span></label>
+          <input type="text" class="form-control form-control-sm" name="lesson_title" placeholder="Tên bài giảng" required>
+        </div>
+        <div class="col-md-2">
+          <label class="form-label">Học viên vắng</label>
+          <input type="text" class="form-control form-control-sm" name="absent_students" placeholder="Họ tên HS vắng">
+        </div>
+        <div class="col-12">
+          <label class="form-label">Nhận xét của giáo viên sau tiết dạy <span class="text-danger">*</span></label>
+          <input type="text" class="form-control form-control-sm" name="comment" placeholder="Nhận xét" required>
+        </div>
+        <div class="col-12 mt-2">
+          <button type="submit" class="btn btn-primary btn-sm px-3">Lưu tiết</button>
+        </div>
+      </form>
+    </div>
+  {% elif can_edit and entries|length >= rows|length %}
+    <div class="readonly-alert">Bạn đã nhập đủ {{ entries|length }} tiết (số hàng của bạn: {{ rows|length }}). Không thể thêm mới.</div>
+  {% elif not can_edit %}
+    <div class="readonly-alert">Tuần này đang ở chế độ chỉ xem (đã khóa hoặc chưa tới thời gian nhập).</div>
+  {% endif %}
+
+  <div class="journal-card">
+    <h6>Lịch sử tiết đã nhập</h6>
+    <div class="journal-table-wrap">
+      <table class="journal-table">
+        <thead>
+          <tr>
+            <th class="col-stt">STT</th>
+            <th class="col-ngay">Ngày dạy</th>
+            <th class="col-lop">Lớp dạy</th>
+            <th class="col-tiet">Tiết</th>
+            <th class="col-siso">Sĩ số</th>
+            <th class="col-vang">Học viên vắng</th>
+            <th class="col-bai">Tên bài giảng</th>
+            <th class="col-nhanxet">Nhận xét của GV sau tiết dạy</th>
+            {% if can_edit %}<th class="col-thaotac">Thao tác</th>{% endif %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for e in entries %}
+          <tr>
+            <td class="col-stt">{{ forloop.counter }}</td>
+            <td class="col-ngay">{{ e.lesson_date|date:"d/m/Y" }}</td>
+            <td class="col-lop">{{ e.classes_taught|default:"—" }}</td>
+            <td class="col-tiet">{{ e.period }}</td>
+            <td class="col-siso">{{ e.student_count|default:"—" }}</td>
+            <td class="col-vang">{{ e.absent_students|default:"—" }}</td>
+            <td class="col-bai">{{ e.lesson_title|default:"—" }}</td>
+            <td class="col-nhanxet">{{ e.comment|default:"—" }}</td>
+            {% if can_edit %}
+            <td class="col-thaotac">
+              <a href="{% url 'homepage:journal_entry_edit' e.id %}" class="btn btn-outline-primary btn-sm">Sửa</a>
+            </td>
+            {% endif %}
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="{% if can_edit %}9{% else %}8{% endif %}" class="text-center text-muted py-4">Chưa có tiết nào trong tuần này.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="summary-text mb-0">Số tiết đã nhập: {{ entries|length }} | Số hàng của bạn: {{ rows|length }}</p>
+  </div>
+</div>
+
+<script>
+function validateClassesTaught() {
+  var cbs = document.querySelectorAll('input[name="classes_taught"]:checked');
+  if (cbs.length === 0) {
+    alert('Vui lòng chọn ít nhất một lớp dạy.');
+    return false;
+  }
+  return true;
+}
+</script>
+{% endblock %}

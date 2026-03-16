@@ -246,3 +246,95 @@ class AdmissionForm(models.Model):
     def __str__(self):
         return self.full_name
 
+
+class Student(models.Model):
+    """Model lưu thông tin học viên từ hệ thống"""
+    student_code = models.CharField(max_length=7, unique=True, primary_key=True, verbose_name="Mã học viên")
+    # Mã học viên: 7 số (2 số đầu: cơ sở, 2 số tiếp: tổ hợp môn, 3 số cuối: số thứ tự)
+    campus = models.ForeignKey(Campus, on_delete=models.PROTECT, verbose_name="Cơ sở")
+    subject_group = models.ForeignKey(SubjectGroup, on_delete=models.PROTECT, verbose_name="Tổ hợp môn")
+    class_name = models.CharField(max_length=50, verbose_name="Lớp")
+    full_name = models.CharField(max_length=255, verbose_name="Họ và tên")
+    birthday = models.DateField(verbose_name="Ngày sinh")
+    id_number = models.CharField(max_length=20, verbose_name="Số CCCD")
+    birth_place = models.CharField(max_length=255, verbose_name="Nơi sinh")
+    ethnicity = models.CharField(max_length=50, verbose_name="Dân tộc")
+    gender = models.CharField(max_length=10, verbose_name="Giới tính")
+
+    # Thông tin bổ sung học viên có thể điền
+    email = models.EmailField(max_length=254, blank=True, null=True, verbose_name="Email")
+    phone = models.CharField(max_length=20, blank=True, null=True, verbose_name="Số điện thoại")
+    address = models.TextField(blank=True, null=True, verbose_name="Địa chỉ thường trú")
+    parent_name = models.CharField(max_length=255, blank=True, null=True, verbose_name="Họ tên phụ huynh")
+    parent_phone = models.CharField(max_length=20, blank=True, null=True, verbose_name="Số điện thoại phụ huynh")
+    note = models.TextField(blank=True, null=True, verbose_name="Ghi chú")
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Học viên"
+        verbose_name_plural = "Học viên"
+
+    def __str__(self):
+        return f"{self.student_code} - {self.full_name}"
+
+    def get_campus_name(self):
+        """Lấy tên cơ sở từ mã học viên"""
+        return self.campus.name if self.campus else ""
+
+
+class StudentExamRegistration(models.Model):
+    """Model lưu thông tin đăng ký thi tốt nghiệp của học viên"""
+    student = models.OneToOneField(Student, on_delete=models.CASCADE, verbose_name="Học viên")
+    email = models.EmailField(max_length=254, blank=True, null=True, verbose_name="Email", help_text="Học viên có thể điền sau")
+    phone = models.CharField(max_length=20, blank=True, null=True, verbose_name="Số điện thoại", help_text="Học viên có thể điền sau")
+    exam_subjects = models.JSONField(default=list, blank=True, verbose_name="Môn thi tốt nghiệp", help_text="Danh sách các môn học viên đã chọn")
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    registration_date = models.DateTimeField(null=True, blank=True, verbose_name="Ngày đăng ký", help_text="Ngày đăng ký cuối cùng")
+    update_count = models.PositiveIntegerField(default=0, verbose_name="Số lần cập nhật", help_text="Số lần học viên đã cập nhật thông tin đăng ký")
+
+    class Meta:
+        verbose_name = "Đăng ký thi tốt nghiệp"
+        verbose_name_plural = "Đăng ký thi tốt nghiệp"
+
+    def __str__(self):
+        return f"{self.student.student_code} - {self.student.full_name}"
+
+    def can_update(self):
+        """Kiểm tra xem học viên có thể cập nhật thông tin không (tối đa 2 lần)"""
+        return self.update_count < 2
+
+
+class RegistrationHistory(models.Model):
+    """Model lưu lịch sử cập nhật đăng ký thi tốt nghiệp"""
+    registration = models.ForeignKey(StudentExamRegistration, on_delete=models.CASCADE, related_name='history', verbose_name="Đăng ký")
+
+    # Thông tin trước khi cập nhật
+    old_email = models.EmailField(max_length=254, blank=True, null=True, verbose_name="Email cũ")
+    old_phone = models.CharField(max_length=20, blank=True, null=True, verbose_name="Số điện thoại cũ")
+    old_exam_subjects = models.JSONField(default=list, blank=True, verbose_name="Môn thi tốt nghiệp cũ")
+
+    # Thông tin sau khi cập nhật
+    new_email = models.EmailField(max_length=254, blank=True, null=True, verbose_name="Email mới")
+    new_phone = models.CharField(max_length=20, blank=True, null=True, verbose_name="Số điện thoại mới")
+    new_exam_subjects = models.JSONField(default=list, blank=True, verbose_name="Môn thi tốt nghiệp mới")
+
+    # Thông tin cập nhật
+    action_type = models.CharField(max_length=20, choices=[
+        ('created', 'Đăng ký lần đầu'),
+        ('updated', 'Cập nhật thông tin'),
+    ], default='updated', verbose_name="Loại hành động")
+    update_count = models.PositiveIntegerField(verbose_name="Số lần cập nhật tại thời điểm này")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Thời gian cập nhật")
+
+    class Meta:
+        verbose_name = "Lịch sử đăng ký"
+        verbose_name_plural = "Lịch sử đăng ký"
+        ordering = ['-created_at']  # Sắp xếp theo thời gian mới nhất
+
+    def __str__(self):
+        return f"{self.registration.student.student_code} - {self.get_action_type_display()} - {self.created_at.strftime('%d/%m/%Y %H:%M')}"
+

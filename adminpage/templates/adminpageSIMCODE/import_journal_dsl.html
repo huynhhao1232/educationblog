@@ -1,0 +1,24 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3><i class="fa-solid fa-file-excel me-2"></i>Import danh sách lớp (DSL)</h3>
+        <a href="{% url 'adminpage:journal_manager_dashboard' %}" class="btn btn-outline-secondary">Quay lại</a>
+    </div>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p class="text-muted">File Excel cần cột <strong>Lớp</strong> chứa tên lớp (vd: 10AS1, 11BS3...).</p>
+            <p class="small text-muted">Tham khảo mẫu file DSL trong folder <em>sổ đầu bài số</em>.</p>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Chọn file Excel (DSL)</label>
+                    <input type="file" class="form-control" name="dsl_file" accept=".xlsx,.xls" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Import</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

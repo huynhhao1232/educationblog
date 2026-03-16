@@ -1,0 +1,72 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<style>
+    .journal-summary { margin: 20px 30px; background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .journal-summary h3 { color: #023EB6; margin-bottom: 20px; }
+    .journal-summary .info { margin-bottom: 20px; padding: 12px; background: #f8f9fa; border-radius: 8px; }
+    .journal-table { border-collapse: collapse; width: 100%; font-size: 13px; }
+    .journal-table th, .journal-table td { border: 1px solid #333; padding: 8px 10px; text-align: left; }
+    .journal-table th { background: #d9e2f3; font-weight: 700; }
+    .journal-table tbody tr:hover { background: #f8f9fa; }
+    .journal-table .col-stt { width: 45px; text-align: center; }
+    .journal-table .col-gv { width: 140px; }
+    .journal-table .col-ngay { width: 90px; text-align: center; }
+    .journal-table .col-lop { width: 90px; }
+    .journal-table .col-tiet { width: 55px; text-align: center; }
+    .journal-table .col-siso { width: 55px; text-align: center; }
+    .journal-table .col-vang { width: 100px; }
+    .journal-table .col-bai { width: 200px; }
+    .journal-table .col-nhanxet { width: 130px; }
+</style>
+<div class="journal-summary">
+    <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+        <h3><i class="fa-solid fa-book-open me-2"></i>Tổng hợp sổ đầu bài — {{ journal.get_subject_display|default:journal.subject }} — Tuần {{ week_obj.week_number }}</h3>
+        <div class="d-flex gap-2">
+            <a href="{% url 'adminpage:journal_week_missing_export' journal.id week_obj.week_number %}" class="btn btn-sm btn-outline-danger">
+                <i class="fa-solid fa-file-excel me-1"></i>Export GV chưa ghi
+            </a>
+            <a href="{% url 'adminpage:journal_subject_detail' journal.id %}" class="btn btn-outline-secondary btn-sm">Quay lại</a>
+        </div>
+    </div>
+    <div class="info">
+        <strong>Tuần {{ week_obj.week_number }}:</strong> {{ week_obj.start_date|date:"d/m/Y" }} — {{ week_obj.end_date|date:"d/m/Y" }}
+        &nbsp;|&nbsp; <strong>Số tiết:</strong> {{ entries|length }}
+    </div>
+
+    <div class="table-responsive">
+        <table class="journal-table">
+            <thead>
+                <tr>
+                    <th class="col-stt">STT</th>
+                    <th class="col-gv">Họ và tên giáo viên</th>
+                    <th class="col-ngay">Ngày dạy</th>
+                    <th class="col-lop">Lớp dạy</th>
+                    <th class="col-tiet">Tiết dạy</th>
+                    <th class="col-siso">Sĩ số</th>
+                    <th class="col-vang">Học viên vắng</th>
+                    <th class="col-bai">Tên bài dạy</th>
+                    <th class="col-nhanxet">Nhận xét tiết dạy</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in entries %}
+                <tr>
+                    <td class="col-stt">{{ forloop.counter }}</td>
+                    <td class="col-gv">{{ item.teacher.full_name }}</td>
+                    <td class="col-ngay">{{ item.entry.lesson_date|date:"d/m/Y" }}</td>
+                    <td class="col-lop">{{ item.entry.classes_taught|default:"—" }}</td>
+                    <td class="col-tiet">{{ item.entry.period }}</td>
+                    <td class="col-siso">{{ item.entry.student_count|default:"—" }}</td>
+                    <td class="col-vang">{{ item.entry.absent_students|default:"—" }}</td>
+                    <td class="col-bai">{{ item.entry.lesson_title|default:"—" }}</td>
+                    <td class="col-nhanxet">{{ item.entry.comment|default:"—" }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="9" class="text-center text-muted py-4">Chưa có tiết nào trong tuần này.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

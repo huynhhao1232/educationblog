@@ -1,0 +1,27 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<div class="container py-4">
+    <div class="card shadow-sm rounded-3">
+        <div class="card-header bg-success text-white rounded-top-3">
+            <h5 class="mb-0"><i class="fa-solid fa-users me-2"></i>Import DSGV (Danh sách giáo viên)</h5>
+        </div>
+        <div class="card-body">
+            <p class="text-muted">Chỉ import file DSGV. Cột: STT, Mã GV, Họ tên. Nếu có cột <strong>Môn</strong> (cột thứ 4) thì tên môn sẽ hiển thị ở cột Môn trong bảng chấm công.</p>
+            <form method="post" enctype="multipart/form-data" action="{% url 'adminpage:import_dsgv_excel' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label fw-bold">File DSGV (.xls / .xlsx)</label>
+                    <input type="file" name="dsgv_file" class="form-control" accept=".xlsx,.xls" required>
+                    <small class="text-muted">Dòng 6 trở đi: STT, Mã GV, Họ tên [, Môn].</small>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-success">Import DSGV</button>
+                    <a href="{% url 'adminpage:import_tkb_excel' %}" class="btn btn-outline-primary">Import TKB riêng</a>
+                    <a href="{% url 'adminpage:attendance_pivot' %}" class="btn btn-outline-secondary">Quay lại bảng chấm công</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,540 @@
+{% extends 'homepage/template.html' %}
+{% block title %} Đăng ký thi tốt nghiệp - Bước 2 {% endblock %}
+{% block admission %}
+{% load static %}
+<style>
+    .registration-wrapper {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+    .registration-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #fff;
+        padding: 50px 40px;
+        border-radius: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+    .registration-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .registration-header h2 {
+        color: #023EB6;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .step-indicator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .step-indicator::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 3px;
+        background: #023EB6;
+        z-index: 0;
+    }
+    .step-indicator .step {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #023EB6;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        border: 3px solid #023EB6;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 4px 15px rgba(2, 62, 182, 0.3);
+    }
+    .info-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        border: 1px solid #dee2e6;
+    }
+    .info-section h4 {
+        color: #023EB6;
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .info-section h4 i {
+        font-size: 24px;
+    }
+    .info-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-bottom: 20px;
+    }
+    .info-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .info-item label {
+        font-weight: 600;
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .info-item span {
+        color: #022468;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 12px;
+        background: white;
+        border-radius: 8px;
+        border-left: 3px solid #023EB6;
+    }
+    .form-section {
+        margin-top: 30px;
+    }
+    .form-section h4 {
+        color: #023EB6;
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .form-group {
+        margin-bottom: 30px;
+    }
+    .form-group label {
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #022468;
+        display: block;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 15px 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: all 0.3s;
+        box-sizing: border-box;
+    }
+    .form-group input:focus {
+        outline: none;
+        border-color: #023EB6;
+        box-shadow: 0 0 0 3px rgba(2, 62, 182, 0.1);
+    }
+    .subjects-container {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 15px;
+        border: 2px solid #e0e0e0;
+        margin-top: 15px;
+    }
+    .subjects-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #dee2e6;
+    }
+    .subjects-count {
+        background: linear-gradient(135deg, #023EB6 0%, #022468 100%);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .subjects-count.warning {
+        background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+    }
+    .subjects-count.success {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    }
+    .form-check {
+        margin-bottom: 15px;
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        transition: all 0.3s;
+        background: white;
+        cursor: pointer;
+    }
+    .form-check:hover {
+        background: #f8f9fa;
+        border-color: #023EB6;
+        transform: translateX(5px);
+    }
+    .form-check.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background: #f5f5f5;
+    }
+    .form-check.disabled:hover {
+        transform: none;
+        border-color: #e0e0e0;
+    }
+    .form-check-input {
+        margin-right: 12px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    .form-check-label {
+        font-weight: 500;
+        color: #333;
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+    .form-check-input:checked + .form-check-label {
+        color: #023EB6;
+        font-weight: 600;
+    }
+    .btn-submit {
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(135deg, #023EB6 0%, #022468 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(2, 62, 182, 0.3);
+        margin-top: 20px;
+    }
+    .btn-submit:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(2, 62, 182, 0.4);
+    }
+    .btn-submit:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+    .error-message {
+        color: #dc3545;
+        font-size: 14px;
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .error-message::before {
+        content: '⚠';
+        font-size: 16px;
+    }
+    .help-text {
+        color: #666;
+        font-size: 14px;
+        margin-top: 8px;
+        padding: 10px;
+        background: #fff3cd;
+        border-radius: 8px;
+        border-left: 3px solid #ffc107;
+    }
+    .alert-info {
+        background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+        border: 2px solid #bee5eb;
+        color: #0c5460;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .alert-info h5 {
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+</style>
+
+<div class="registration-wrapper">
+    <div class="registration-container">
+        <div class="registration-header">
+            <h2>Đăng ký thi tốt nghiệp</h2>
+        </div>
+
+        <div class="step-indicator">
+            <span class="step active">1</span>
+            <span class="step active">2</span>
+        </div>
+
+        {% if has_existing_registration and not can_update %}
+        <div class="alert-info" style="background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); border: 2px solid #ffc107; color: #856404;">
+            <h5><i class="fas fa-exclamation-triangle"></i> Thông báo quan trọng</h5>
+            <p><strong>Bạn đã cập nhật thông tin đăng ký quá 2 lần.</strong> Bạn chỉ có thể xem thông tin đăng ký, không thể cập nhật nữa.</p>
+            <p style="margin-top: 10px; font-size: 14px;">
+                <i class="fas fa-info-circle"></i> Số lần đã cập nhật: <strong>{{ existing_registration.update_count }}/2</strong><br>
+                {% if existing_registration.registration_date %}
+                Ngày đăng ký cuối cùng: <strong>{{ existing_registration.registration_date|date:"d/m/Y H:i" }}</strong>
+                {% endif %}
+            </p>
+        </div>
+        {% endif %}
+
+        <div class="info-section">
+            <h4><i class="fas fa-user-graduate"></i> Thông tin học viên</h4>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>Tên trường</label>
+                    <span>{{ student.get_campus_name }}</span>
+                </div>
+                <div class="info-item">
+                    <label>Mã học viên</label>
+                    <span>{{ student.student_code }}</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>Họ và tên</label>
+                    <span>{{ student.full_name|upper }}</span>
+                </div>
+                <div class="info-item">
+                    <label>Ngày sinh</label>
+                    <span>{{ student.birthday|date:"d/m/Y" }}</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>Số CCCD</label>
+                    <span>{{ student.id_number }}</span>
+                </div>
+                <div class="info-item">
+                    <label>Nơi sinh</label>
+                    <span>{{ student.birth_place }}</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>Dân tộc</label>
+                    <span>{{ student.ethnicity }}</span>
+                </div>
+                <div class="info-item">
+                    <label>Giới tính</label>
+                    <span>{% if student.gender == 'Nam' or student.gender == 'M' %}Nam{% else %}Nữ{% endif %}</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>Lớp</label>
+                    <span>{{ student.class_name }}</span>
+                </div>
+            </div>
+        </div>
+
+        {% if has_existing_registration %}
+        <div class="info-section">
+            <h4><i class="fas fa-clipboard-check"></i> Thông tin đăng ký hiện tại</h4>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>Email</label>
+                    <span>{{ existing_registration.email|default:"Chưa cập nhật" }}</span>
+                </div>
+                <div class="info-item">
+                    <label>Số điện thoại</label>
+                    <span>{{ existing_registration.phone|default:"Chưa cập nhật" }}</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>Môn thi tốt nghiệp đã chọn</label>
+                    <span>
+                        {% if existing_registration.exam_subjects %}
+                            {% for subject in existing_registration.exam_subjects %}
+                                <strong>{{ subject }}</strong>{% if not forloop.last %}, {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            Chưa chọn
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="info-item">
+                    <label>Ngày đăng ký cuối cùng</label>
+                    <span>
+                        {% if existing_registration.registration_date %}
+                            {{ existing_registration.registration_date|date:"d/m/Y H:i" }}
+                        {% else %}
+                            {{ existing_registration.created_at|date:"d/m/Y H:i" }}
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>Số lần đã cập nhật</label>
+                    <span>{{ existing_registration.update_count }}/2</span>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if can_update %}
+        <div class="form-section">
+            <h4><i class="fas fa-edit"></i> Thông tin đăng ký</h4>
+            {% if has_existing_registration %}
+            <div class="alert alert-info" style="background: #d1ecf1; border: 1px solid #bee5eb; color: #0c5460; padding: 12px; border-radius: 8px; margin-bottom: 20px;">
+                <i class="fas fa-info-circle"></i>
+                <strong>Thông báo:</strong> Bạn đã có hồ sơ đăng ký trong hệ thống. Vui lòng kiểm tra và cập nhật thông tin nếu cần.
+                {% if existing_registration.update_count > 0 %}
+                <br><span style="margin-top: 5px; display: block;">Số lần đã cập nhật: <strong>{{ existing_registration.update_count }}/2</strong></span>
+                {% endif %}
+            </div>
+            {% endif %}
+            {% if form %}
+            <form method="post" id="registrationForm">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="{{ form.email.id_for_label }}">
+                        <i class="fas fa-envelope" style="margin-right: 8px;"></i>
+                        {{ form.email.label }}
+                    </label>
+                    {{ form.email }}
+                    {% if form.email.errors %}
+                        <div class="error-message">
+                            {% for error in form.email.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.phone.id_for_label }}">
+                        <i class="fas fa-phone" style="margin-right: 8px;"></i>
+                        {{ form.phone.label }}
+                    </label>
+                    {{ form.phone }}
+                    {% if form.phone.errors %}
+                        <div class="error-message">
+                            {% for error in form.phone.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-book" style="margin-right: 8px;"></i>
+                        {{ form.exam_subjects.label }}
+                    </label>
+                    {% if form.exam_subjects.help_text %}
+                        <div class="help-text">
+                            <i class="fas fa-info-circle" style="margin-right: 5px;"></i>
+                            {{ form.exam_subjects.help_text }}
+                        </div>
+                    {% endif %}
+                    <div class="subjects-container">
+                        <div class="subjects-header">
+                            <span style="font-weight: 600; color: #666;">Danh sách môn học</span>
+                            <span class="subjects-count" id="subjectsCount">Đã chọn: 0/2</span>
+                        </div>
+                        <div id="subjectsList">
+                            {% for choice in form.exam_subjects %}
+                                <div class="form-check">
+                                    {{ choice.tag }}
+                                    <label class="form-check-label" for="{{ choice.id_for_label }}">
+                                        {{ choice.choice_label }}
+                                    </label>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% if form.exam_subjects.errors %}
+                        <div class="error-message">
+                            {% for error in form.exam_subjects.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn" disabled>
+                    <i class="fas fa-check-circle" style="margin-right: 8px;"></i>
+                    {% if has_existing_registration %}Cập nhật thông tin đăng ký{% else %}Hoàn tất đăng ký{% endif %}
+                </button>
+            </form>
+            {% else %}
+            <div class="alert alert-warning" style="background: #fff3cd; border: 1px solid #ffc107; color: #856404; padding: 20px; border-radius: 10px; text-align: center;">
+                <i class="fas fa-exclamation-triangle" style="font-size: 24px; margin-bottom: 10px;"></i>
+                <p>Không thể tải form đăng ký. Vui lòng thử lại sau.</p>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const checkboxes = document.querySelectorAll('.exam-subject-checkbox');
+    const countDisplay = document.getElementById('subjectsCount');
+    const submitBtn = document.getElementById('submitBtn');
+    const maxSelections = 2;
+
+    function updateCount() {
+        const checked = document.querySelectorAll('.exam-subject-checkbox:checked').length;
+        countDisplay.textContent = `Đã chọn: ${checked}/${maxSelections}`;
+
+        // Cập nhật màu sắc
+        countDisplay.className = 'subjects-count';
+        if (checked === 0) {
+            countDisplay.className = 'subjects-count';
+        } else if (checked < maxSelections) {
+            countDisplay.className = 'subjects-count warning';
+        } else {
+            countDisplay.className = 'subjects-count success';
+        }
+
+        // Enable/disable các checkbox khác
+        checkboxes.forEach(checkbox => {
+            const formCheck = checkbox.closest('.form-check');
+            if (!checkbox.checked && checked >= maxSelections) {
+                formCheck.classList.add('disabled');
+                checkbox.disabled = true;
+            } else {
+                formCheck.classList.remove('disabled');
+                checkbox.disabled = false;
+            }
+        });
+
+        // Enable/disable nút submit
+        if (checked === maxSelections) {
+            submitBtn.disabled = false;
+        } else {
+            submitBtn.disabled = true;
+        }
+    }
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateCount);
+    });
+
+    // Khởi tạo
+    updateCount();
+});
+</script>
+{% endblock %}

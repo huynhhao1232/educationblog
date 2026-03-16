@@ -1,0 +1,28 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3><i class="fa-solid fa-file-excel me-2"></i>Import danh sách giáo viên (DSGV)</h3>
+        <a href="{% url 'adminpage:journal_manager_dashboard' %}" class="btn btn-outline-secondary">Quay lại</a>
+    </div>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p class="text-muted">File Excel cần các cột: <strong>Mã GV</strong>, <strong>Họ và tên Giáo viên</strong>, <strong>Môn</strong>, <strong>Số lớp</strong>.</p>
+            <p class="small text-muted">Tham khảo mẫu file DSGV trong folder <em>sổ đầu bài số</em>.</p>
+            <ul class="small">
+                <li>Nếu môn chưa có sổ đầu bài, hệ thống tự tạo sổ theo năm hiện tại.</li>
+                <li>Số hàng trong sổ = Số lớp × 2 (ví dụ: 2 lớp → 4 hàng).</li>
+            </ul>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Chọn file Excel (DSGV)</label>
+                    <input type="file" class="form-control" name="dsgv_file" accept=".xlsx,.xls" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Import</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

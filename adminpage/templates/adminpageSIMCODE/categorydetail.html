@@ -1,11 +1,11 @@
 {% extends 'adminpageSIMCODE/base.html' %}
 {% load static %}
-{% block categorydetail %} 
+{% block categorydetail %}
                 <h3 class="i-name">
                     {{category.name}}
                 </h3>
-                
-                    
+
+
                     <div class="course-detail">
                         <div class="col-xl-4 course-detail-left">
                             <div class="course-detail-left-items">
@@ -78,7 +78,7 @@
                         <div class="col-xl-8 course-detail-right">
                             <div class="course-right-manage">
                                 <form id="course" action="{% url 'adminpage:categorydetail' category_id=category.id%}" method = "POST" enctype="multipart/form-data" >
-                                    {% csrf_token %} 
+                                    {% csrf_token %}
                                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -86,9 +86,9 @@
                                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm bài viết</h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
-                                                
+
                                                     <div class="modal-body">
-                                                    
+
                                                         <div class="course-add">
                                                             <div class="mb-3">
                                                                 <label for="" class="form-label">Tên bài viết</label>
@@ -99,7 +99,7 @@
                                                             <div class="alert alert-danger d-none" id="chapterNameError" role="alert">
                                                                 Chương này đã tồn tại!
                                                             </div>
-                                                            
+
 
                                                             <div class="mb-3">
                                                                 <textarea class="ckeditor" cols="80" id="editor1" name="ckeditor1" rows="10"></textarea>
@@ -116,7 +116,7 @@
                                                                     <!-- Hình ảnh sẽ hiển thị tại đây -->
                                                                 </div>
                                                             </div>
-                                                            
+
                                                             <div class="mb-3">
                                                                 <div class="upload">
                                                                     <button type="button" class="btn-warningg">
@@ -130,24 +130,24 @@
 
                                                                 <input type="hidden" id="existing-files" name="existing-files" value="">
 
-                                                            
+
                                                             </div>
-                                                            
+
 
                                                             <div class="mb-2 course-detail-left-items-toggle toggle-hidden ">
                                                                 <div class="toggle active">
                                                                     <div class="toggle-button"></div>
                                                                 </div>
                                                                 <div class="text">Công khai</div>
-                                    
+
                                                                 <input type="hidden" class="enableHidden" name="enableHidden" value="1">
 
-                                    
+
                                                             </div>
-                                    
+
                                                         </div>
                                                     </div>
-                                                
+
                                                 <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
                                                 <button type="submit" id="chapter-submit" class="btn btn-primary">Cập nhật</button>
@@ -156,7 +156,7 @@
                                         </div>
                                     </div>
                                 </form>
-    
+
 
 
                                 <div class="mb-3 course-right-add">
@@ -172,6 +172,7 @@
                                                 <td>Số người đã xem</td>
                                                 <td>Tình trạng</td>
                                                 <td></td>
+                                                <td>Xoá</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -186,10 +187,17 @@
                                                 <td class="active"><p>Riêng tư</p></td>
                                                 {% endif %}
                                                 <td class="view">
-
-                                            
                                                     <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditPost({{post.id}})"></i>
-                                             
+                                                </td>
+                                                <td class="view">
+                                                    <form method="POST" action="{% url 'adminpage:categorydetail' category_id=category.id %}" onsubmit="return confirm('Bạn có chắc chắn muốn xoá bài viết này?');">
+                                                        {% csrf_token %}
+                                                        <input type="hidden" name="action" value="3">
+                                                        <input type="hidden" name="post-id" value="{{ post.id }}">
+                                                        <button type="submit" class="btn btn-link p-0 m-0 text-danger">
+                                                            <i class="fa-regular fa-trash-can"></i>
+                                                        </button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                             {% endfor %}
@@ -197,7 +205,7 @@
                                     </table>
                                 </div>
                             </div>
-                                
+
                             </div>
                         </div>
                     </div>

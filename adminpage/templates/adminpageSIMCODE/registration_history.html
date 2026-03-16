@@ -1,0 +1,417 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<style>
+    .history-container {
+        margin: 20px 30px;
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #e0e0e0;
+    }
+    .header-section h3 {
+        color: #023EB6;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .btn-back {
+        background: #6c757d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s;
+    }
+    .btn-back:hover {
+        background: #5a6268;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .registration-info {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        border: 2px solid #dee2e6;
+    }
+    .registration-info h4 {
+        color: #023EB6;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .info-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .info-item label {
+        font-weight: 600;
+        color: #666;
+        font-size: 13px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .info-item span {
+        color: #022468;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 12px;
+        background: white;
+        border-radius: 8px;
+        border-left: 3px solid #023EB6;
+    }
+    .history-section {
+        margin-top: 30px;
+    }
+    .history-section h4 {
+        color: #023EB6;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .history-item {
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        position: relative;
+    }
+    .history-item:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+    }
+    .history-item.created {
+        border-left: 5px solid #28a745;
+    }
+    .history-item.updated {
+        border-left: 5px solid #ffc107;
+    }
+    .history-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #f0f0f0;
+    }
+    .history-action {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .action-badge {
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+    .action-badge.created {
+        background: #28a745;
+        color: white;
+    }
+    .action-badge.updated {
+        background: #ffc107;
+        color: #856404;
+    }
+    .history-time {
+        color: #666;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .history-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    .change-item {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .change-item h5 {
+        color: #023EB6;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .old-value, .new-value {
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+    .old-value {
+        background: #fff3cd;
+        border-left: 3px solid #ffc107;
+        color: #856404;
+    }
+    .new-value {
+        background: #d4edda;
+        border-left: 3px solid #28a745;
+        color: #155724;
+    }
+    .value-label {
+        font-weight: 600;
+        font-size: 12px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+    .no-changes {
+        color: #6c757d;
+        font-style: italic;
+        font-size: 14px;
+    }
+    .update-count-badge {
+        background: linear-gradient(135deg, #023EB6 0%, #022468 100%);
+        color: white;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 13px;
+    }
+    .empty-history {
+        text-align: center;
+        padding: 60px 20px;
+        color: #999;
+    }
+    .empty-history i {
+        font-size: 64px;
+        margin-bottom: 20px;
+        display: block;
+        opacity: 0.5;
+    }
+    .subjects-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 8px;
+    }
+    .subject-tag {
+        background: #023EB6;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+</style>
+
+<div class="history-container">
+    <div class="header-section">
+        <h3>
+            <i class="fas fa-history"></i>
+            Lịch sử cập nhật đăng ký thi tốt nghiệp
+        </h3>
+        <a href="{% url 'adminpage:exam_registration' %}" class="btn-back">
+            <i class="fas fa-arrow-left"></i>
+            Quay lại danh sách
+        </a>
+    </div>
+
+    <!-- Thông tin hồ sơ -->
+    <div class="registration-info">
+        <h4>
+            <i class="fas fa-user-graduate"></i>
+            Thông tin học viên
+        </h4>
+        <div class="info-grid">
+            <div class="info-item">
+                <label>Mã học viên</label>
+                <span>{{ registration.student.student_code }}</span>
+            </div>
+            <div class="info-item">
+                <label>Họ và tên</label>
+                <span>{{ registration.student.full_name|upper }}</span>
+            </div>
+            <div class="info-item">
+                <label>Lớp</label>
+                <span>{{ registration.student.class_name }}</span>
+            </div>
+            <div class="info-item">
+                <label>Cơ sở</label>
+                <span>{{ registration.student.campus.name }}</span>
+            </div>
+            <div class="info-item">
+                <label>Tổ hợp môn</label>
+                <span>Tổ hợp {{ registration.student.subject_group.code }}</span>
+            </div>
+            <div class="info-item">
+                <label>Số lần cập nhật</label>
+                <span class="update-count-badge">{{ registration.update_count }}/2</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lịch sử cập nhật -->
+    <div class="history-section">
+        <h4>
+            <i class="fas fa-list-alt"></i>
+            Chi tiết lịch sử cập nhật
+        </h4>
+
+        {% if history_list %}
+            {% for history in history_list %}
+            <div class="history-item {{ history.action_type }}">
+                <div class="history-header">
+                    <div class="history-action">
+                        <span class="action-badge {{ history.action_type }}">
+                            {% if history.action_type == 'created' %}
+                                <i class="fas fa-plus-circle"></i> Đăng ký lần đầu
+                            {% else %}
+                                <i class="fas fa-edit"></i> Cập nhật lần {{ history.update_count }}
+                            {% endif %}
+                        </span>
+                        <span class="update-count-badge" style="background: #6c757d;">
+                            Lần thứ {{ history.update_count|add:1 }}
+                        </span>
+                    </div>
+                    <div class="history-time">
+                        <i class="fas fa-clock"></i>
+                        {{ history.created_at|date:"d/m/Y H:i:s" }}
+                    </div>
+                </div>
+
+                <div class="history-details">
+                    <!-- Email -->
+                    <div class="change-item">
+                        <h5>Email</h5>
+                        {% if history.old_email != history.new_email or history.action_type == 'created' %}
+                            {% if history.action_type == 'created' %}
+                                <div class="new-value">
+                                    <div class="value-label">Giá trị mới:</div>
+                                    {{ history.new_email|default:"Chưa cập nhật" }}
+                                </div>
+                            {% else %}
+                                {% if history.old_email %}
+                                <div class="old-value">
+                                    <div class="value-label">Giá trị cũ:</div>
+                                    {{ history.old_email }}
+                                </div>
+                                {% endif %}
+                                <div class="new-value">
+                                    <div class="value-label">Giá trị mới:</div>
+                                    {{ history.new_email|default:"Chưa cập nhật" }}
+                                </div>
+                            {% endif %}
+                        {% else %}
+                            <div class="no-changes">Không thay đổi</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Số điện thoại -->
+                    <div class="change-item">
+                        <h5>Số điện thoại</h5>
+                        {% if history.old_phone != history.new_phone or history.action_type == 'created' %}
+                            {% if history.action_type == 'created' %}
+                                <div class="new-value">
+                                    <div class="value-label">Giá trị mới:</div>
+                                    {{ history.new_phone|default:"Chưa cập nhật" }}
+                                </div>
+                            {% else %}
+                                {% if history.old_phone %}
+                                <div class="old-value">
+                                    <div class="value-label">Giá trị cũ:</div>
+                                    {{ history.old_phone }}
+                                </div>
+                                {% endif %}
+                                <div class="new-value">
+                                    <div class="value-label">Giá trị mới:</div>
+                                    {{ history.new_phone|default:"Chưa cập nhật" }}
+                                </div>
+                            {% endif %}
+                        {% else %}
+                            <div class="no-changes">Không thay đổi</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Môn thi tốt nghiệp -->
+                    <div class="change-item" style="grid-column: 1 / -1;">
+                        <h5>Môn thi tốt nghiệp</h5>
+                        {% if history.action_type == 'created' %}
+                            <div class="new-value">
+                                <div class="value-label">Môn đã chọn:</div>
+                                <div class="subjects-list">
+                                    {% if history.new_exam_subjects %}
+                                        {% for subject in history.new_exam_subjects %}
+                                            <span class="subject-tag">{{ subject }}</span>
+                                        {% endfor %}
+                                    {% else %}
+                                        <span class="no-changes">Chưa chọn môn</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% else %}
+                            {% if history.old_exam_subjects %}
+                            <div class="old-value">
+                                <div class="value-label">Môn cũ:</div>
+                                <div class="subjects-list">
+                                    {% for subject in history.old_exam_subjects %}
+                                        <span class="subject-tag" style="background: #ffc107; color: #856404;">{{ subject }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endif %}
+                            <div class="new-value">
+                                <div class="value-label">Môn mới:</div>
+                                <div class="subjects-list">
+                                    {% if history.new_exam_subjects %}
+                                        {% for subject in history.new_exam_subjects %}
+                                            <span class="subject-tag">{{ subject }}</span>
+                                        {% endfor %}
+                                    {% else %}
+                                        <span class="no-changes">Chưa chọn môn</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="empty-history">
+                <i class="fas fa-history"></i>
+                <h4>Chưa có lịch sử cập nhật</h4>
+                <p>Hồ sơ này chưa có bất kỳ thay đổi nào.</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+

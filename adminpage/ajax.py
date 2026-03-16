@@ -7,6 +7,81 @@ import os
 from django.conf import settings
 import requests
 
+def save_attendance_cell(request):
+    """Lưu ô sửa trực tiếp trên bảng chấm công (teacher, year, month, day, value)."""
+    if not request.user.is_authenticated:
+        return JsonResponse({'ok': False, 'error': 'Chưa đăng nhập'}, status=401)
+    if request.method != 'POST':
+        return JsonResponse({'ok': False, 'error': 'Method not allowed'}, status=405)
+    try:
+        from homepage.models import Account, AccountType
+        account = Account.objects.get(user=request.user)
+        if AccountType.objects.get(accounttype_id=account.accounttype_id).accounttype_role != 'admin':
+            return JsonResponse({'ok': False, 'error': 'Không có quyền'}, status=403)
+    except Exception:
+        return JsonResponse({'ok': False, 'error': 'Không có quyền'}, status=403)
+    data = json.loads(request.body) if request.body else {}
+    teacher_id = data.get('teacher_id')
+    year = data.get('year')
+    month = data.get('month')
+    day = data.get('day')
+    value = data.get('value', 0)
+    if not all([teacher_id, year, month, day is not None]):
+        return JsonResponse({'ok': False, 'error': 'Thiếu tham số'}, status=400)
+    try:
+        value = max(0, int(value))
+        teacher_id = int(teacher_id)
+        year = int(year)
+        month = int(month)
+        day = int(day)
+    except (ValueError, TypeError):
+        return JsonResponse({'ok': False, 'error': 'Giá trị không hợp lệ'}, status=400)
+    obj, _ = AttendanceOverride.objects.update_or_create(
+        teacher_id=teacher_id, year=year, month=month, day=day,
+        defaults={'value': value},
+    )
+    return JsonResponse({'ok': True, 'value': obj.value})
+
+
+def save_attendance_cells_bulk(request):
+    """Lưu hàng loạt ô đã sửa. POST: {year, month, cells: [{teacher_id, day, value}, ...]}."""
+    if not request.user.is_authenticated:
+        return JsonResponse({'ok': False, 'error': 'Chưa đăng nhập'}, status=401)
+    if request.method != 'POST':
+        return JsonResponse({'ok': False, 'error': 'Method not allowed'}, status=405)
+    try:
+        from homepage.models import Account, AccountType
+        account = Account.objects.get(user=request.user)
+        if AccountType.objects.get(accounttype_id=account.accounttype_id).accounttype_role != 'admin':
+            return JsonResponse({'ok': False, 'error': 'Không có quyền'}, status=403)
+    except Exception:
+        return JsonResponse({'ok': False, 'error': 'Không có quyền'}, status=403)
+    data = json.loads(request.body) if request.body else {}
+    year = data.get('year')
+    month = data.get('month')
+    cells = data.get('cells', [])
+    if not all([year, month]) or not isinstance(cells, list):
+        return JsonResponse({'ok': False, 'error': 'Thiếu tham số'}, status=400)
+    try:
+        year = int(year)
+        month = int(month)
+    except (ValueError, TypeError):
+        return JsonResponse({'ok': False, 'error': 'Năm/tháng không hợp lệ'}, status=400)
+    saved = 0
+    for c in cells:
+        try:
+            tid = int(c.get('teacher_id'))
+            day = int(c.get('day'))
+            val = max(0, int(c.get('value', 0)))
+        except (ValueError, TypeError, KeyError):
+            continue
+        AttendanceOverride.objects.update_or_create(
+            teacher_id=tid, year=year, month=month, day=day,
+            defaults={'value': val},
+        )
+        saved += 1
+    return JsonResponse({'ok': True, 'saved': saved})
+
 
 def get_provinces(request):
     try:

@@ -1,0 +1,188 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<style>
+    .attendance-container { margin: 20px 30px; background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .attendance-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e9ecef; }
+    .attendance-header h3 { color: #023EB6; font-size: 22px; font-weight: 700; margin: 0; }
+    .filter-sidebar { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; margin-bottom: 20px; }
+    .filter-sidebar label { font-weight: 600; color: #495057; font-size: 13px; margin-bottom: 4px; }
+    .filter-sidebar select { min-width: 120px; padding: 8px 12px; border-radius: 8px; border: 1px solid #dee2e6; }
+    .filter-sidebar .form-group { display: flex; flex-direction: column; }
+    .btn-apply { padding: 8px 20px; border-radius: 8px; font-weight: 600; }
+    .pivot-wrapper { overflow-x: auto; margin-top: 16px; border: 1px solid #dee2e6; border-radius: 8px; }
+    .pivot-table { border-collapse: collapse; min-width: 100%; font-size: 13px; }
+    .pivot-table th, .pivot-table td { border: 1px solid #dee2e6; padding: 8px 10px; text-align: center; background: #fff; }
+    .pivot-table th { background: #023EB6; color: #fff; font-weight: 600; white-space: nowrap; }
+    .pivot-table th.th-fixed-left { position: sticky; left: 0; z-index: 2; background: #023EB6; }
+    .pivot-table td.td-fixed-left { position: sticky; left: 0; z-index: 1; background: #fff; }
+    .pivot-table td.td-fixed-stt { width: 48px; min-width: 48px; }
+    .pivot-table td.td-fixed-name { min-width: 160px; text-align: left; }
+    .pivot-table td.td-fixed-mon { min-width: 80px; }
+    .pivot-table tbody tr:hover td { background: #f8f9fa; }
+    .pivot-table tbody tr:hover td.td-fixed-left { background: #f8f9fa; }
+    .pivot-table .th-total { background: #0d6efd; font-weight: 700; }
+    .pivot-table .td-total { background: #e7f1ff; font-weight: 600; }
+    .pivot-table .td-total.td-fixed-left { background: #e7f1ff; }
+    .day-cell { min-width: 40px; }
+    .day-cell input { width: 36px; text-align: center; padding: 4px; border: 1px solid #dee2e6; border-radius: 4px; }
+    .day-cell input:focus { outline: none; border-color: #023EB6; }
+    .link-import { margin-left: auto; }
+</style>
+<div class="attendance-container">
+    <div class="attendance-header">
+        <h3><i class="fa-solid fa-calendar-check me-2"></i>Chấm công tự động - Bảng tiết quy đổi</h3>
+        <a href="{% url 'adminpage:import_dsgv_excel' %}" class="btn btn-success link-import me-2"><i class="fa-solid fa-users me-1"></i>Import DSGV</a>
+        <a href="{% url 'adminpage:import_dsl_excel' %}" class="btn btn-info link-import me-2"><i class="fa-solid fa-layer-group me-1"></i>Import DSL</a>
+        <a href="{% url 'adminpage:import_tkb_excel' %}" class="btn btn-primary link-import me-2"><i class="fa-solid fa-file-excel me-1"></i>Import TKB</a>
+        <a href="{% url 'adminpage:clear_attendance_data' %}" class="btn btn-outline-danger link-import"><i class="fa-solid fa-trash me-1"></i>Xóa hết DSGV & TKB</a>
+    </div>
+
+    <form method="get" action="{% url 'adminpage:attendance_pivot' %}" id="filter-form">
+        <div class="filter-sidebar">
+            <div class="form-group d-flex flex-column">
+                <label>Tháng / Năm</label>
+                <div class="d-flex gap-1">
+                    <input type="number" name="month" value="{{ month }}" min="1" max="12" style="width:60px; padding:8px; border-radius:8px; border:1px solid #dee2e6;">
+                    <span class="align-self-center">/</span>
+                    <input type="number" name="year" value="{{ year }}" min="2020" max="2030" style="width:72px; padding:8px; border-radius:8px; border:1px solid #dee2e6;">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Cơ sở / Điểm</label>
+                <select name="location_id" id="location_id">
+                    <option value="">-- Tất cả --</option>
+                    {% for loc in campuses %}
+                        <option value="{{ loc.id }}" {% if location_id|stringformat:"s" == loc.id|stringformat:"s" %}selected{% endif %}>{{ loc.code }} - {{ loc.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Khối</label>
+                <select name="grade" id="sub_filter">
+                    <option value="">-- Tất cả --</option>
+                    <option value="10" {% if grade == '10' %}selected{% endif %}>10</option>
+                    <option value="11" {% if grade == '11' %}selected{% endif %}>11</option>
+                    <option value="12" {% if grade == '12' %}selected{% endif %}>12</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Sĩ số</label>
+                <select name="size_group" id="sub_filter_size">
+                    <option value="">-- Tất cả --</option>
+                    <option value="gte47" {% if size_group == 'gte47' %}selected{% endif %}>&ge; 47</option>
+                    <option value="lt47" {% if size_group == 'lt47' %}selected{% endif %}>&lt; 47</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Phiên bản TKB</label>
+                <select name="version_id">
+                    <option value="">-- Tất cả --</option>
+                    {% for v in versions %}
+                        <option value="{{ v.id }}" {% if version_id|stringformat:"s" == v.id|stringformat:"s" %}selected{% endif %}>{{ v.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-apply">Áp dụng</button>
+        </div>
+    </form>
+
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <button type="button" id="btn-save-attendance" class="btn btn-success"><i class="fa-solid fa-save me-1"></i>Lưu thay đổi</button>
+        <a href="#" id="link-export-excel" class="btn btn-outline-success"><i class="fa-solid fa-file-excel me-1"></i>Xuất Excel</a>
+    </div>
+    <div class="pivot-wrapper">
+        <table class="pivot-table">
+            <thead>
+                <tr>
+                    <th class="th-fixed-left td-fixed-stt">STT</th>
+                    <th class="th-fixed-left td-fixed-name">Họ và Tên</th>
+                    <th class="th-fixed-left td-fixed-mon">Môn</th>
+                    {% for cd in calendar_days %}
+                        <th class="day-cell">{{ cd.day }}<br><small>{{ cd.label }}</small></th>
+                    {% endfor %}
+                    <th class="th-total">Số tiết làm hồ sơ</th>
+                    <th class="th-total">Tổng cộng</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in pivot_rows %}
+                <tr data-teacher-id="{{ row.teacher.id }}">
+                    <td class="td-fixed-left td-fixed-stt">{{ row.stt }}</td>
+                    <td class="td-fixed-left td-fixed-name">{{ row.teacher.full_name }}</td>
+                    <td class="td-fixed-left td-fixed-mon">{{ row.subject_display }}</td>
+                    {% for item in row.days_list %}
+                        <td class="day-cell">
+                            <input type="number" min="0" value="{{ item.val }}" data-day="{{ item.day }}" data-original="{{ item.val }}" class="attendance-cell">
+                        </td>
+                    {% endfor %}
+                    <td class="td-total row-so-tiet">{{ row.so_tiet_lam_ho_so }}</td>
+                    <td class="td-total row-tong">{{ row.tong_cong }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="100" class="text-center text-muted py-4">Chưa có dữ liệu. Vui lòng chọn bộ lọc hoặc Import TKB.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+(function(){
+    var year = {{ year }};
+    var month = {{ month }};
+    var saveBulkUrl = "{% url 'adminpage:save_attendance_cells_bulk' %}";
+    var exportBase = "{% url 'adminpage:export_attendance_excel' %}";
+    function getCookie(n){var c=document.cookie.split(';');for(var i=0;i<c.length;i++){var p=c[i].trim();if(p.indexOf(n+'=')===0)return decodeURIComponent(p.substring(n.length+1));}return null;}
+    var csrf = getCookie('csrftoken');
+    function recalcRow(tr){
+        var inputs = tr.querySelectorAll('.attendance-cell');
+        var sum = 0;
+        for(var i=0;i<inputs.length;i++){sum += parseInt(inputs[i].value||0,10);}
+        tr.querySelector('.row-so-tiet').textContent = sum;
+        tr.querySelector('.row-tong').textContent = sum;
+    }
+    document.querySelectorAll('.attendance-cell').forEach(function(inp){
+        inp.addEventListener('change', function(){
+            var val = parseInt(this.value||0,10);
+            if(isNaN(val)||val<0)val=0;
+            this.value = val;
+            recalcRow(this.closest('tr'));
+        });
+    });
+    document.getElementById('btn-save-attendance').addEventListener('click', function(){
+        var cells = [];
+        document.querySelectorAll('tr[data-teacher-id]').forEach(function(tr){
+            var tid = tr.dataset.teacherId;
+            tr.querySelectorAll('.attendance-cell').forEach(function(inp){
+                var val = parseInt(inp.value||0,10);
+                if(val<0)val=0;
+                var orig = parseInt(inp.dataset.original||0,10);
+                if(val !== orig){
+                    cells.push({teacher_id:tid, day:inp.dataset.day, value:val});
+                    inp.dataset.original = val;
+                }
+            });
+        });
+        if(cells.length === 0){
+            alert('Không có thay đổi nào cần lưu.');
+            return;
+        }
+        var btn = this;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-1"></i>Đang lưu...';
+        fetch(saveBulkUrl, {
+            method:'POST',
+            headers:{'Content-Type':'application/json','X-CSRFToken':csrf},
+            body:JSON.stringify({year:year, month:month, cells:cells}),
+            credentials:'same-origin'
+        }).then(function(r){return r.json();}).then(function(d){
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-save me-1"></i>Lưu thay đổi';
+            if(d.ok){alert('Đã lưu ' + d.saved + ' ô.');} else {alert('Lỗi: ' + (d.error||'Không xác định'));}
+        }).catch(function(){btn.disabled=false; btn.innerHTML='<i class="fa-solid fa-save me-1"></i>Lưu thay đổi';});
+    });
+    var qs = window.location.search || '';
+    document.getElementById('link-export-excel').href = exportBase + (qs ? qs : '?year='+year+'&month='+month);
+})();
+</script>
+{% endblock %}

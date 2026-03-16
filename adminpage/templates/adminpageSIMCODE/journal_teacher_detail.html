@@ -1,0 +1,71 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<style>
+    .journal-detail { margin: 20px 30px; background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .journal-detail h3 { color: #023EB6; margin-bottom: 20px; }
+    .journal-detail .info { margin-bottom: 20px; padding: 12px; background: #f8f9fa; border-radius: 8px; }
+    .journal-detail .week-range { margin-bottom: 16px; padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; border-radius: 4px; font-size: 14px; }
+    .journal-table { border-collapse: collapse; width: 100%; font-size: 13px; }
+    .journal-table th, .journal-table td { border: 1px solid #333; padding: 10px 12px; text-align: left; }
+    .journal-table th { background: #023EB6; color: #fff; font-weight: 600; }
+    .journal-table tbody tr:hover { background: #f8f9fa; }
+    .journal-table .col-thu-ngay { width: 100px; }
+    .journal-table .col-tiet { width: 50px; text-align: center; }
+    .journal-table .col-mon { width: 90px; }
+    .journal-table .col-vang { width: 120px; }
+    .journal-table .col-bai { min-width: 140px; }
+    .journal-table .col-danhgia { width: 90px; text-align: center; }
+    .journal-table .col-hoanthanh { width: 70px; text-align: center; }
+    .tong-hop { border: 1px solid #dee2e6; padding: 12px 16px; margin-top: 1rem; background: #f8f9fa; border-radius: 4px; font-size: 13px; }
+</style>
+<div class="journal-detail">
+    <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+        <h3><i class="fa-solid fa-book-open me-2"></i>Chi tiết sổ đầu bài: {{ teacher.full_name }}</h3>
+        <a href="{% url 'adminpage:journal_manager_dashboard' %}" class="btn btn-outline-secondary">Quay lại danh sách</a>
+    </div>
+    <div class="info">
+        <strong>Giáo viên:</strong> {{ teacher.full_name }} &nbsp;|&nbsp;
+        <strong>Môn:</strong> {{ teacher.subject }} &nbsp;|&nbsp;
+        <strong>Mã số truy cập:</strong> <code>{{ teacher.access_code }}</code>
+    </div>
+    <div class="week-range">
+        <strong>Tuần hiện tại (cấu hình):</strong> {{ current_week }}
+    </div>
+
+    <h5 class="mb-3">Các tiết đã nhập (theo mẫu sổ đầu bài)</h5>
+    <div class="table-responsive">
+        <table class="journal-table">
+            <thead>
+                <tr>
+                    <th class="col-thu-ngay">Thứ, ngày</th>
+                    <th class="col-tiet">Tiết</th>
+                    <th class="col-mon">Môn</th>
+                    <th class="col-vang">Học sinh vắng</th>
+                    <th class="col-bai">Tên bài giảng</th>
+                    <th class="col-danhgia">Đánh giá tiết học</th>
+                    <th class="col-hoanthanh">Hoàn thành</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for e in entries %}
+                <tr>
+                    <td class="col-thu-ngay">{{ e.lesson_date|date:"d/m/Y" }}</td>
+                    <td class="col-tiet">{{ forloop.counter }}</td>
+                    <td class="col-mon">{{ e.subject|default:"—" }}</td>
+                    <td class="col-vang">{{ e.absent_students|default:"—"|truncatewords:8 }}</td>
+                    <td class="col-bai">{{ e.lesson_title|default:"—" }}</td>
+                    <td class="col-danhgia">{{ e.get_rating_display|default:"—" }}</td>
+                    <td class="col-hoanthanh">{% if e.completed %}<i class="fas fa-check text-success"></i>{% else %}—{% endif %}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="7" class="text-center text-muted py-4">Chưa có tiết nào.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="tong-hop">
+        <strong>TỔNG HỢP</strong> — Số tiết đã nhập: {{ entries|length }}
+    </div>
+</div>
+{% endblock %}
