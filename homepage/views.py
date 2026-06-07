@@ -381,7 +381,8 @@ def getAdmission(request):
         _send_admission_confirmation_email(obj.email, obj.full_name)
         return JsonResponse({'success': True, 'redirect': '/admission/?success=1'})
 
-    campuses = Campus.objects.all()
+    configured_campus_ids = CampusShiftGroup.objects.values_list('campus_id', flat=True).distinct()
+    campuses = Campus.objects.filter(id__in=configured_campus_ids).order_by('name')
     subject_groups = SubjectGroup.objects.all()
     shifts = Shift.objects.all()
     return render(request, 'homepage/admission.html', {
