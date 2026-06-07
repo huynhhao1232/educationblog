@@ -4,7 +4,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('homepage', '0024_student_address_student_email_student_note_and_more'),
+        ('homepage', '0028_examroomshiftconfig'),
     ]
 
     operations = [
