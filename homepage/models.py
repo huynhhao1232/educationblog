@@ -379,6 +379,13 @@ class AdmissionForm(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
 
+    @property
+    def student_type_label(self):
+        if self.graduation_year == 'before':
+            return 'Tự do'
+        from django.utils import timezone
+        return f'Thi chuyển cấp {timezone.now().year}'
+
     def __str__(self):
         return self.full_name
 

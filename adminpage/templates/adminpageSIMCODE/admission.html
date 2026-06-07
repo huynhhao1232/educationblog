@@ -350,7 +350,7 @@
         <thead>
             <tr>
                 <td>Tên</td>
-                <td>Giới tính</td>
+                <td>Ngày đăng kí</td>
                 <td>Năm sinh</td>
                 <td>Loại học viên</td>
                 <td>Điểm thi chuyển cấp</td>
@@ -370,13 +370,9 @@
                 </td>
 
 
-                <td class="people-des"><p>{{a.gender}}</p></td>
+                <td class="people-des"><p>{{ a.created_at|date:"d/m/Y" }}</p></td>
                 <td class="people-des"><p>{{a.birthday|date:"Y"}}</p></td>
-                {%if a.graduation_year == 'before'%}
-                <td class="people-des"><p>Tự do</p></td>
-                {%else%}
-                <td class="people-des"><p>Thi chuyển cấp 2025</p></td>
-                {%endif%}
+                <td class="people-des"><p>{{ a.student_type_label }}</p></td>
                 {%if a.exam_score%}
                 <td class="people-des"><p>{{a.exam_score}}</p></td>
                 {%else%}

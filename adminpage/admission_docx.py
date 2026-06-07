@@ -24,14 +24,6 @@ def _fmt_sign_date(value):
     return f'ngày {value.day:02d} tháng {value.month:02d} năm {value.year}'
 
 
-def _graduation_year_label(value):
-    if value == 'current':
-        return '2025-2026'
-    if value == 'before':
-        return 'Trước đây'
-    return value or ''
-
-
 def _subject_group_paragraph(admission):
     sg = admission.subject_group
     shift = admission.shift.name if admission.shift_id else ''
@@ -101,7 +93,7 @@ def _build_placeholder_map(admission):
         '{{CUR_STREET}}': admission.current_district or '',
         '{{CUR_WARD}}': admission.current_ward or '',
         '{{CUR_PROVINCE}}': admission.current_province or '',
-        '{{GRADUATION_YEAR}}': _graduation_year_label(admission.graduation_year),
+        '{{GRADUATION_YEAR}}': '',
         '{{GRADUATION_SCHOOL}}': admission.graduation_school or '',
         '{{FATHER_NAME}}': admission.father_name or '',
         '{{FATHER_BIRTH}}': admission.father_birth or '',
