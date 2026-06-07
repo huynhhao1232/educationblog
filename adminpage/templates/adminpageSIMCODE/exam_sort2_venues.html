@@ -1,0 +1,180 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% block admission %}
+<style>
+  .es2-wrap { margin: 90px 30px 24px; }
+  .es2-header h3 { color: #023EB6; font-weight: 800; }
+  .es2-sbd-panel {
+    border: 2px solid #198754; border-radius: 10px; background: #f0fdf4;
+    padding: 14px 16px; margin-bottom: 16px;
+  }
+  .es2-sbd-panel h5 { color: #146c43; font-weight: 800; font-size: 15px; margin-bottom: 8px; }
+  table.es2-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.es2-table th, table.es2-table td { border: 1px solid #dee2e6; padding: 8px 10px; }
+  table.es2-table thead th { background: #023EB6; color: #fff; }
+</style>
+
+<div class="es2-wrap">
+  <div class="es2-header d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+    <h3><i class="fa-solid fa-location-dot me-2"></i>Sắp xếp phòng thi II — Điểm thi</h3>
+    <div class="d-flex gap-2">
+      <a class="btn btn-sm btn-outline-secondary" href="{% url 'adminpage:exam_sort2_candidates' %}">
+        <i class="fa-solid fa-users me-1"></i>Thí sinh
+      </a>
+      <a class="btn btn-sm btn-success" href="{% url 'adminpage:exam_sort2_statistics_export_all' %}">
+        <i class="fa-solid fa-file-excel me-1"></i>Xuất thống kê (tất cả điểm thi)
+      </a>
+      <a class="btn btn-sm btn-outline-success" href="{% url 'adminpage:exam_sort2_elective_counts_export_all' %}"
+         title="File 2 sheet Môn 1 / Môn 2 — đếm theo vị trí môn trong từng phòng">
+        <i class="fa-solid fa-chart-column me-1"></i>Thống kê môn TC (tất cả)
+      </a>
+      <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addVenueModal">
+        <i class="fa-solid fa-plus me-1"></i>Thêm điểm thi
+      </button>
+    </div>
+  </div>
+
+  {% if messages %}
+    {% for message in messages %}<div class="alert alert-{{ message.tags }} py-2">{{ message }}</div>{% endfor %}
+  {% endif %}
+
+  <div class="es2-sbd-panel" id="es2-sbd">
+    <h5><i class="fa-solid fa-hashtag me-2"></i>Đánh số báo danh — toàn hệ thống (mọi điểm thi)</h5>
+    <p class="small text-muted mb-2 mb-md-3">
+      Dùng <strong>sau khi</strong> đã xếp thí sinh vào phòng ở <em>tất cả</em> điểm thi.
+      Hệ thống sẽ sắp lại STT ghế trong từng phòng (tên → tên đệm → họ, bảng chữ cái TV),
+      rồi đánh SBD tăng dần: <strong>STT điểm thi</strong> (xong hết phòng điểm thi 1 → điểm thi 2) → <strong>STT phòng</strong> → họ tên (TV).
+      Hiện có <strong>{{ seated_count }}</strong> thí sinh đã xếp ghế.
+    </p>
+    <form method="post" class="d-flex flex-wrap gap-3 align-items-end"
+          onsubmit="return confirm('Sắp lại họ tên trong MỌI phòng (mọi điểm thi), rồi đánh SBD tăng dần cho toàn bộ thí sinh đã xếp ghế. Tiếp tục?');">
+      {% csrf_token %}
+      <input type="hidden" name="action" value="assign_exam_numbers">
+      <div>
+        <label class="form-label form-label-sm mb-0">Mã TP (2 số)</label>
+        <input type="text" name="sbd_city_prefix" class="form-control form-control-sm" style="width:4.5rem"
+               value="{{ exam_sort2_sbd_city_prefix }}" maxlength="2" pattern="[0-9]{2}" title="VD: 79" required>
+      </div>
+      <div>
+        <label class="form-label form-label-sm mb-0">STT bắt đầu (6 số)</label>
+        <input type="number" name="sbd_start" class="form-control form-control-sm" style="width:7rem"
+               value="{{ exam_sort2_sbd_start }}" min="1" max="999999">
+      </div>
+      <button type="submit" class="btn btn-success">
+        <i class="fa-solid fa-hashtag me-1"></i>Đánh SBD (toàn hệ thống)
+      </button>
+    </form>
+  </div>
+
+  <div class="border rounded overflow-hidden bg-white">
+    <table class="es2-table">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Mã điểm thi</th>
+          <th>Tên điểm thi</th>
+          <th>Thí sinh</th>
+          <th>Phòng</th>
+          <th>Chi tiết</th>
+          <th>Sửa</th>
+          <th>Xóa</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for v in venues %}
+        <tr>
+          <td>{{ v.sort_order }}</td>
+          <td>{{ v.code }}</td>
+          <td>{{ v.name }}</td>
+          <td class="text-center">{{ v.candidate_count }}</td>
+          <td class="text-center">{{ v.room_count }}</td>
+          <td>
+            <a href="{% url 'adminpage:exam_sort2_venue_detail' v.id %}" class="btn btn-sm btn-outline-primary">
+              Mở dashboard
+            </a>
+          </td>
+          <td class="text-center">
+            <button type="button" class="btn btn-sm btn-outline-secondary btn-edit-venue"
+                    data-bs-toggle="modal" data-bs-target="#editVenueModal"
+                    data-venue-id="{{ v.id }}"
+                    data-code="{{ v.code }}"
+                    data-name="{{ v.name }}"
+                    data-sort-order="{{ v.sort_order }}">
+              <i class="fa-solid fa-pen"></i>
+            </button>
+          </td>
+          <td class="text-center">
+            <form method="post" class="d-inline" onsubmit="return confirm('Xóa điểm thi {{ v.code }} và toàn bộ dữ liệu?');">
+              {% csrf_token %}
+              <input type="hidden" name="action" value="delete">
+              <input type="hidden" name="venue_id" value="{{ v.id }}">
+              <button type="submit" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+            </form>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="8" class="text-center text-muted py-4">Chưa có điểm thi.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="modal fade" id="addVenueModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="add">
+        <div class="modal-header"><h5 class="modal-title">Thêm điểm thi</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body">
+          <div class="mb-2"><label class="form-label">Mã điểm thi</label><input name="code" class="form-control" required></div>
+          <div class="mb-2"><label class="form-label">Tên điểm thi</label><input name="name" class="form-control" required></div>
+          <div class="mb-2"><label class="form-label">STT</label><input type="number" name="sort_order" class="form-control" value="0" min="0"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+          <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editVenueModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="post" id="editVenueForm">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="edit">
+        <input type="hidden" name="venue_id" id="editVenueId">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa-solid fa-pen me-1"></i>Sửa điểm thi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-2"><label class="form-label">Mã điểm thi</label><input name="code" id="editVenueCode" class="form-control" required></div>
+          <div class="mb-2"><label class="form-label">Tên điểm thi</label><input name="name" id="editVenueName" class="form-control" required></div>
+          <div class="mb-2"><label class="form-label">STT</label><input type="number" name="sort_order" id="editVenueSort" class="form-control" min="0"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+          <button type="submit" class="btn btn-primary btn-sm">Lưu thay đổi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.btn-edit-venue').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.getElementById('editVenueId').value = btn.getAttribute('data-venue-id') || '';
+      document.getElementById('editVenueCode').value = btn.getAttribute('data-code') || '';
+      document.getElementById('editVenueName').value = btn.getAttribute('data-name') || '';
+      document.getElementById('editVenueSort').value = btn.getAttribute('data-sort-order') || '0';
+    });
+  });
+});
+</script>
+{% endblock %}

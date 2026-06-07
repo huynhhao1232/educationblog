@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, re_path
 from . import views
 from . import ajax
+from . import exam_sort2_views
 from . import student_info_check
 from django.views.decorators.csrf import csrf_exempt
 app_name = 'adminpage'
@@ -102,6 +103,21 @@ urlpatterns = [
     path('exam-room/update/<int:room_id>/', views.exam_room_update, name='exam_room_update'),
     path('exam-room/<int:room_id>/export-excel/', views.exam_room_detail_export_excel, name='exam_room_detail_export_excel'),
     path('exam-room/<int:room_id>/', views.exam_room_detail, name='exam_room_detail'),
+    # Sắp xếp phòng thi II
+    path('exam-sort2/candidates/', exam_sort2_views.exam_sort2_candidates, name='exam_sort2_candidates'),
+    path('exam-sort2/import/', exam_sort2_views.exam_sort2_import_candidates, name='exam_sort2_import_candidates'),
+    path('exam-sort2/save-import/', exam_sort2_views.exam_sort2_save_import, name='exam_sort2_save_import'),
+    path('exam-sort2/venues/', exam_sort2_views.exam_sort2_venues, name='exam_sort2_venues'),
+    path('exam-sort2/venues/<int:venue_id>/', exam_sort2_views.exam_sort2_venue_detail, name='exam_sort2_venue_detail'),
+    path('exam-sort2/venues/<int:venue_id>/import-rooms/', exam_sort2_views.exam_sort2_import_rooms, name='exam_sort2_import_rooms'),
+    path('exam-sort2/venues/<int:venue_id>/save-rooms-import/', exam_sort2_views.exam_sort2_save_rooms_import, name='exam_sort2_save_rooms_import'),
+    path('exam-sort2/phongthi-mau.xlsx', exam_sort2_views.exam_sort2_phongthi_template, name='exam_sort2_phongthi_template'),
+    path('exam-sort2/statistics-export/', exam_sort2_views.exam_sort2_statistics_export_all, name='exam_sort2_statistics_export_all'),
+    path('exam-sort2/elective-counts-export/', exam_sort2_views.exam_sort2_elective_counts_export_all, name='exam_sort2_elective_counts_export_all'),
+    path('exam-sort2/venues/<int:venue_id>/statistics-export/', exam_sort2_views.exam_sort2_statistics_export_venue, name='exam_sort2_statistics_export_venue'),
+    path('exam-sort2/venues/<int:venue_id>/elective-counts-export/', exam_sort2_views.exam_sort2_elective_counts_export_venue, name='exam_sort2_elective_counts_export_venue'),
+    path('exam-sort2/venues/<int:venue_id>/export-excel/', exam_sort2_views.exam_sort2_venue_export_excel, name='exam_sort2_venue_export_excel'),
+    path('exam-sort2/rooms/<int:room_id>/', exam_sort2_views.exam_sort2_room_detail, name='exam_sort2_room_detail'),
     # Sổ đầu bài số (Quản lý)
     path('so-dau-bai/', views.journal_manager_dashboard, name='journal_manager_dashboard'),
     path('so-dau-bai/mon/<int:journal_id>/', views.journal_subject_detail, name='journal_subject_detail'),

@@ -1,0 +1,480 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% block admission %}
+<style>
+  .es2-detail { margin: 90px 20px 24px; }
+  .es2-detail h3 { color: #023EB6; font-weight: 800; }
+  .es2-split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+  @media (max-width: 1100px) { .es2-split { grid-template-columns: 1fr; } }
+  .es2-panel { border: 1px solid #dee2e6; border-radius: 10px; background: #fff; padding: 14px; min-height: 320px; }
+  .es2-panel h5 { font-size: 15px; font-weight: 800; color: #023EB6; border-bottom: 2px solid #e9ecef; padding-bottom: 8px; margin-bottom: 12px; }
+  table.mini { width: 100%; font-size: 12px; border-collapse: collapse; }
+  table.mini th, table.mini td { border: 1px solid #dee2e6; padding: 6px 8px; }
+  table.mini thead th { background: #f0f4ff; }
+  .room-card { border: 1px solid #dee2e6; border-radius: 8px; padding: 10px; margin-bottom: 12px; background: #fafbfc; }
+  .seat-grid { display: grid; gap: 4px; margin-top: 8px; }
+  .seat-cell { border: 1px solid #ccc; border-radius: 4px; padding: 4px 6px; font-size: 10px; min-height: 42px; background: #fff; }
+  .seat-cell.empty { background: #f8f9fa; color: #adb5bd; }
+  .seat-cell .sn { font-weight: 700; color: #023EB6; }
+  .badge-unassigned { background: #fff3cd; color: #664d03; font-size: 11px; }
+  .es2-stats { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+  .es2-stat-card {
+    flex: 1; min-width: 140px; border: 1px solid #dee2e6; border-radius: 10px;
+    background: #f8f9fa; padding: 12px 16px; text-align: center;
+  }
+  .es2-stat-card .num { font-size: 26px; font-weight: 800; color: #023EB6; line-height: 1.1; }
+  .es2-stat-card .lbl { font-size: 12px; color: #6c757d; margin-top: 4px; }
+  .es2-stat-card.rooms { border-color: #b6d4fe; background: #e7f1ff; }
+  .es2-stat-card.rooms .num { color: #023EB6; }
+</style>
+
+<div class="es2-detail">
+  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+    <div>
+      <h3 class="mb-1"><i class="fa-solid fa-building me-2"></i>{{ venue.code }} — {{ venue.name }}</h3>
+      <p class="small text-muted mb-0">STT điểm thi: <strong>{{ venue.sort_order }}</strong> — đánh SBD xong toàn bộ phòng ở điểm thi này trước khi sang điểm thi STT cao hơn</p>
+      <div class="d-flex gap-2 align-items-center flex-wrap mt-1">
+        <a href="{% url 'adminpage:exam_sort2_venues' %}" class="small text-decoration-none">&larr; Danh sách điểm thi</a>
+        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editVenueModal">
+          <i class="fa-solid fa-pen me-1"></i>Sửa điểm thi
+        </button>
+      </div>
+    </div>
+    <a class="btn btn-outline-success btn-sm" href="{% url 'adminpage:exam_sort2_venue_export_excel' venue.id %}?so_do=0"
+       title="Danh sách + sơ đồ 4 môn + 2 sheet môn TC (STT/SBD/Môn/Đề STT)">
+      <i class="fa-solid fa-file-export me-1"></i>Xuất DS &amp; sơ đồ phòng
+    </a>
+    <a class="btn btn-outline-secondary btn-sm" href="{% url 'adminpage:exam_sort2_venue_export_excel' venue.id %}?so_do=0&amp;tc_pa=1"
+       title="Thêm sheet môn tự chọn theo PA 1, 2, 5 (mẫu in)">
+      <i class="fa-solid fa-file-excel me-1"></i>+ PA 1/2/5 (TC)
+    </a>
+    <a class="btn btn-success btn-sm" href="{% url 'adminpage:exam_sort2_statistics_export_venue' venue.id %}">
+      <i class="fa-solid fa-file-excel me-1"></i>Xuất thống kê phòng thi
+    </a>
+    <a class="btn btn-outline-success btn-sm" href="{% url 'adminpage:exam_sort2_elective_counts_export_venue' venue.id %}"
+       title="2 sheet Môn 1 / Môn 2: mỗi môn xuất hiện trong phòng một dòng (vd. 1A: LÝ(13), HÓA(8))">
+      <i class="fa-solid fa-chart-column me-1"></i>Thống kê môn TC
+    </a>
+    <form method="post" class="d-flex gap-2 align-items-center flex-wrap"
+          onsubmit="return confirm('Tối thiểu 24 TS/phòng (phòng đủ chỗ); tối đa 3 tổ hợp/phòng (thường 2).\nXếp theo phòng gần TB. HV: trên→dưới danh sách (tên TV). Tiếp tục?');">
+      {% csrf_token %}
+      <input type="hidden" name="action" value="assign_seats">
+      <div class="form-check form-check-inline mb-0">
+        <input class="form-check-input" type="checkbox" name="clear_existing" value="1" id="clearExisting" checked>
+        <label class="form-check-label small" for="clearExisting">Xóa xếp chỗ cũ trước khi xếp lại</label>
+      </div>
+      <button type="submit" class="btn btn-success btn-sm">
+        <i class="fa-solid fa-wand-magic-sparkles me-1"></i>Xếp phòng + STT ghế
+      </button>
+    </form>
+    <a class="btn btn-outline-success btn-sm" href="{% url 'adminpage:exam_sort2_venues' %}#es2-sbd"
+       title="Đánh SBD một lần cho mọi điểm thi sau khi xếp phòng xong">
+      <i class="fa-solid fa-hashtag me-1"></i>Đánh SBD → danh sách điểm thi
+    </a>
+  </div>
+
+  {% if messages %}
+    {% for message in messages %}<div class="alert alert-{{ message.tags }} py-2">{{ message }}</div>{% endfor %}
+  {% endif %}
+
+  <div class="es2-stats">
+    <div class="es2-stat-card">
+      <div class="num">{{ candidate_count }}</div>
+      <div class="lbl">Thí sinh tại điểm thi</div>
+      <div class="small text-muted mt-1">
+        Chưa xếp: <strong>{{ unassigned_count }}</strong>
+        · Đã xếp: <strong>{{ assigned_seat_count }}</strong>
+      </div>
+    </div>
+    <div class="es2-stat-card rooms">
+      <div class="num">{{ room_count }}</div>
+      <div class="lbl">Phòng thi</div>
+      <div class="small text-muted mt-1">
+        Tổng sức chứa: <strong>{{ total_capacity }}</strong> chỗ
+      </div>
+    </div>
+  </div>
+
+  <div class="es2-split">
+    <!-- Layout Trái: thí sinh tại điểm thi -->
+    <div class="es2-panel">
+      <h5>
+        <i class="fa-solid fa-users me-1"></i>Thí sinh dự thi tại điểm này
+        <span class="badge bg-primary ms-1">{{ candidate_count }}</span>
+      </h5>
+      <p class="small text-muted mb-2">
+        Danh sách: <strong>SBD tăng dần</strong> (sau khi đánh SBD); chưa có SBD thì cuối bảng, theo tên TV.
+        <strong>Xếp phòng</strong>: neo cụm (chia đều cụm, vd. 51 Sử+Địa → 26+25); TB+1 bằng tổ hợp lẻ khác trùng môn (không thêm cùng TC);
+        tối thiểu <strong>24 TS/phòng</strong>; ưu tiên ≤ TB; tối đa <strong>3 tổ hợp/phòng</strong> khi phòng vẫn dưới TB (thường 2).
+        Nhóm 1–2 TS (vd. Hóa+KTPL) được chuyển sang phòng có <strong>môn trùng</strong> (vd. 2B Hóa+Lý: 26→27).
+        HV trong tổ hợp: danh sách theo <strong>cặp môn</strong> (mỗi môn đúng vị trí trong phòng, vd. Lý+Hóa và Sinh+Hóa) rồi tên A→Z (TV).
+      </p>
+      <div class="d-flex flex-wrap gap-2 mb-2">
+        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#pickModal">
+          <i class="fa-solid fa-user-plus me-1"></i>Lấy thí sinh
+        </button>
+        {% if candidate_count %}
+        <form method="post" class="d-inline"
+              onsubmit="return confirm('Gỡ hết {{ candidate_count }} thí sinh khỏi điểm thi này? Toàn bộ xếp ghế sẽ mất. Danh sách master (trang Thí sinh) và SBD vẫn giữ.');">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="delete_all_venue_candidates">
+          <button type="submit" class="btn btn-sm btn-outline-danger">
+            <i class="fa-solid fa-user-minus me-1"></i>Xóa hết thí sinh tại điểm thi
+          </button>
+        </form>
+        {% endif %}
+      </div>
+      <div class="table-responsive" style="max-height: 520px;">
+        <table class="mini">
+          <thead>
+            <tr><th>#</th><th>SBD</th><th>Họ tên</th><th>Cơ sở gốc</th><th>Lớp</th><th>Môn thi</th><th>Trạng thái</th><th></th></tr>
+          </thead>
+          <tbody>
+            {% for vc in venue_candidates %}
+            <tr>
+              <td>{{ forloop.counter }}</td>
+              <td class="text-nowrap">{{ vc.candidate.exam_number|default:"—" }}</td>
+              <td>{{ vc.candidate.full_name }}</td>
+              <td>{{ vc.candidate.campus.code }}</td>
+              <td>{{ vc.candidate.class_name }}</td>
+              <td class="small">{{ vc.candidate.get_exam_subjects_display }}</td>
+              <td>
+                {% if vc.id in assigned_vc_ids %}
+                  <span class="badge bg-success">Đã xếp phòng</span>
+                {% else %}
+                  <span class="badge badge-unassigned">Chưa xếp</span>
+                {% endif %}
+              </td>
+              <td>
+                <form method="post" class="d-inline" onsubmit="return confirm('Gỡ thí sinh khỏi điểm thi?');">
+                  {% csrf_token %}
+                  <input type="hidden" name="action" value="remove_venue_candidate">
+                  <input type="hidden" name="venue_candidate_id" value="{{ vc.id }}">
+                  <button type="submit" class="btn btn-link btn-sm text-danger p-0">Gỡ</button>
+                </form>
+              </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="8" class="text-muted text-center">Chưa có thí sinh. Bấm &quot;Lấy thí sinh&quot;.</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Layout Phải: phòng thi & xếp chỗ -->
+    <div class="es2-panel">
+      <h5>
+        <i class="fa-solid fa-door-open me-1"></i>Phòng thi &amp; xếp chỗ
+        <span class="badge bg-primary ms-1">{{ room_count }}</span>
+        <span class="badge bg-secondary ms-1" title="Tổng sức chứa">{{ total_capacity }} chỗ</span>
+      </h5>
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addRoomModal">
+          <i class="fa-solid fa-plus me-1"></i>Thêm phòng thi
+        </button>
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#importRoomsModal">
+          <i class="fa-solid fa-file-arrow-up me-1"></i>Import phòng thi (Excel)
+        </button>
+        <a class="btn btn-sm btn-outline-secondary" href="{% url 'adminpage:exam_sort2_phongthi_template' %}">
+          <i class="fa-solid fa-download me-1"></i>Mẫu phongthi.xlsx
+        </a>
+        {% if room_count %}
+        <form method="post" class="d-inline"
+              onsubmit="return confirm('Xóa hết {{ room_count }} phòng thi tại điểm này? Toàn bộ xếp ghế sẽ mất. Thí sinh vẫn giữ trong danh sách điểm thi.');">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="delete_all_rooms">
+          <button type="submit" class="btn btn-sm btn-outline-danger">
+            <i class="fa-solid fa-trash-can me-1"></i>Xóa hết phòng thi
+          </button>
+        </form>
+        {% endif %}
+      </div>
+
+      {% for block in room_blocks %}
+      {% with room=block.room %}
+      <div class="room-card">
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+          <div>
+            <a href="{% url 'adminpage:exam_sort2_room_detail' room.id %}" class="text-decoration-none fw-bold">
+              <span class="badge bg-secondary me-1">STT {{ room.sort_order }}</span>
+              <i class="fa-solid fa-door-open me-1"></i>{{ room.name }}
+            </a>
+            <span class="small text-muted d-block">
+              {{ room.col_count }} cột × {{ room.row_count }} hàng = {{ room.capacity }} chỗ
+              · Đối tượng: <strong>{{ room.target_campus.code }}</strong>
+              · Đã xếp: {{ block.seat_count }}/{{ room.capacity }}
+              {% if block.elective_combo_count is not None %}
+              · <strong>{{ block.elective_combo_count }}</strong> tổ hợp môn TC
+              {% endif %}
+            </span>
+            <a href="{% url 'adminpage:exam_sort2_room_detail' room.id %}" class="btn btn-sm btn-link p-0 small">
+              Mở sơ đồ phòng &amp; danh sách thí sinh →
+            </a>
+          </div>
+          <div class="d-flex gap-1">
+            <button type="button" class="btn btn-sm btn-outline-primary btn-edit-room"
+                    data-bs-toggle="modal" data-bs-target="#editRoomModal"
+                    data-room-id="{{ room.id }}"
+                    data-room-name="{{ room.name }}"
+                    data-col-count="{{ room.col_count }}"
+                    data-row-count="{{ room.row_count }}"
+                    data-target-campus-id="{{ room.target_campus.id }}"
+                    data-sort-order="{{ room.sort_order }}">
+              <i class="fa-solid fa-pen"></i> Sửa
+            </button>
+            <form method="post" class="d-inline" onsubmit="return confirm('Xóa phòng {{ room.name }}?');">
+              {% csrf_token %}
+              <input type="hidden" name="action" value="delete_room">
+              <input type="hidden" name="room_id" value="{{ room.id }}">
+              <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+            </form>
+          </div>
+        </div>
+        <p class="small text-muted mb-0">
+          <i class="fa-solid fa-circle-info me-1"></i>
+          Bấm tên phòng để xem sơ đồ <strong>4 môn</strong> và danh sách thí sinh chi tiết.
+        </p>
+      </div>
+      {% endwith %}
+      {% empty %}
+      <p class="text-muted small">Chưa có phòng. Thêm phòng và bấm &quot;Xếp thí sinh vào phòng&quot;.</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Modal Lấy thí sinh -->
+<div class="modal fade" id="pickModal" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Lấy thí sinh từ danh sách gốc</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p class="small text-muted">Có thể chọn thí sinh từ bất kỳ cơ sở nào (trộn thí sinh).</p>
+        <form method="get" action="{% url 'adminpage:exam_sort2_venue_detail' venue.id %}" id="pickFilterForm" class="row g-2 mb-3 align-items-end">
+          <input type="hidden" name="open_pick" value="1">
+          <div class="col-md-4">
+            <label class="form-label form-label-sm" for="pickCampusSelect">Cơ sở</label>
+            <select id="pickCampusSelect" name="pick_campus" class="form-select form-select-sm">
+              <option value="">Tất cả cơ sở</option>
+              {% for c in campuses %}
+                <option value="{{ c.id }}" {% if pick_campus == c.id|stringformat:"s" %}selected{% endif %}>{{ c.code }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-5">
+            <label class="form-label form-label-sm" for="pickQInput">Tìm kiếm</label>
+            <input id="pickQInput" type="text" name="pick_q" class="form-control form-control-sm" value="{{ pick_q }}" placeholder="Tìm họ tên, lớp">
+          </div>
+          <div class="col-md-3">
+            <button type="submit" class="btn btn-sm btn-outline-primary w-100">Lọc</button>
+          </div>
+        </form>
+        <p class="small text-muted mb-2">
+          Hiển thị <strong>{{ pick_candidates|length }}</strong> thí sinh (tối đa 200) chưa có tại điểm thi này.
+          {% if pick_campus or pick_q %}<span class="badge bg-info text-dark">Đang lọc</span>{% endif %}
+        </p>
+        <form method="post" action="{% url 'adminpage:exam_sort2_venue_detail' venue.id %}" id="pickSubmitForm">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="pick_candidates">
+          <div class="table-responsive" style="max-height: 360px;">
+            <table class="table table-sm table-bordered">
+              <thead class="table-light">
+                <tr>
+                  <th><input type="checkbox" id="pick-all"></th>
+                  <th>Họ tên</th><th>Cơ sở</th><th>Lớp</th><th>Môn thi</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for s in pick_candidates %}
+                <tr>
+                  <td><input type="checkbox" class="pick-cb" name="candidate_ids" value="{{ s.id }}"></td>
+                  <td>{{ s.full_name }}</td>
+                  <td>{{ s.campus.code }}</td>
+                  <td>{{ s.class_name }}</td>
+                  <td class="small">{{ s.get_exam_subjects_display }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="5" class="text-muted">Không còn thí sinh khả dụng (hoặc thử đổi bộ lọc).</td></tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Đóng</button>
+        <button type="submit" form="pickSubmitForm" class="btn btn-primary btn-sm">Lấy về điểm thi</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal import phòng thi -->
+<div class="modal fade" id="importRoomsModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="post" enctype="multipart/form-data" action="{% url 'adminpage:exam_sort2_import_rooms' venue.id %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa-solid fa-file-import me-1"></i>Import phòng thi từ Excel</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="file" name="excel_file" class="form-control" accept=".xlsx,.xls,.csv" required>
+          <div class="alert alert-info small mt-3 mb-0">
+            <p class="mb-1"><strong>5 cột (dòng 1 là tiêu đề):</strong></p>
+            <ul class="mb-1">
+              <li><strong>Tên Phòng</strong> — VD: 1A, 2B</li>
+              <li><strong>Số cột</strong>, <strong>Số hàng</strong> — sức chứa = cột × hàng</li>
+              <li><strong>Đối tượng</strong> — mã cơ sở (AS, AT, BS, … hoặc số 1–9 như import thí sinh; <strong>9 = ĐS</strong>)</li>
+              <li><strong>STT</strong> — thứ tự phòng khi đánh SBD (1, 2, 3…); để trống = tự tăng</li>
+            </ul>
+            <p class="mb-0">File mẫu: <code>Sắp xếp phòng thi II/phongthi.xlsx</code>.
+              <a href="{% url 'adminpage:exam_sort2_phongthi_template' %}">Tải mẫu</a>.
+              Upload → xem trước → Lưu.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+          <button type="submit" class="btn btn-primary btn-sm">Upload &amp; xem trước</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal sửa điểm thi -->
+<div class="modal fade" id="editVenueModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="edit_venue">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa-solid fa-pen me-1"></i>Sửa điểm thi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-2"><label class="form-label">Mã điểm thi</label><input name="code" class="form-control" value="{{ venue.code }}" required></div>
+          <div class="mb-2"><label class="form-label">Tên điểm thi</label><input name="name" class="form-control" value="{{ venue.name }}" required></div>
+          <div class="mb-2"><label class="form-label">STT</label><input type="number" name="sort_order" class="form-control" value="{{ venue.sort_order }}" min="0"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+          <button type="submit" class="btn btn-primary btn-sm">Lưu thay đổi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal sửa phòng thi -->
+<div class="modal fade" id="editRoomModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="post" id="editRoomForm">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="edit_room">
+        <input type="hidden" name="room_id" id="editRoomId">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa-solid fa-pen me-1"></i>Sửa phòng thi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-2"><label class="form-label">Tên phòng thi</label><input name="room_name" id="editRoomName" class="form-control" required></div>
+          <div class="mb-2"><label class="form-label">STT</label><input type="number" name="sort_order" id="editRoomSortOrder" class="form-control" min="0"></div>
+          <div class="row g-2">
+            <div class="col-6"><label class="form-label">Số cột</label><input type="number" name="col_count" id="editRoomCol" class="form-control" min="1" required></div>
+            <div class="col-6"><label class="form-label">Số hàng</label><input type="number" name="row_count" id="editRoomRow" class="form-control" min="1" required></div>
+          </div>
+          <small class="text-muted d-block mt-1">Sức chứa = cột × hàng. Không thu nhỏ nhỏ hơn số ghế đã xếp.</small>
+          <div class="mt-2">
+            <label class="form-label">Đối tượng cơ sở</label>
+            <select name="target_campus_id" id="editRoomCampus" class="form-select" required>
+              {% for c in campuses %}
+                <option value="{{ c.id }}">{{ c.code }} — {{ c.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+          <button type="submit" class="btn btn-primary btn-sm">Lưu thay đổi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal thêm phòng -->
+<div class="modal fade" id="addRoomModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="add_room">
+        <div class="modal-header"><h5 class="modal-title">Thêm phòng thi</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body">
+          <div class="mb-2"><label class="form-label">Tên phòng thi</label><input name="room_name" class="form-control" required placeholder="VD: P101"></div>
+          <div class="mb-2">
+            <label class="form-label">STT</label>
+            <input type="number" name="sort_order" class="form-control" min="0" placeholder="Tự động: {{ next_room_stt }}">
+            <small class="text-muted">Thứ tự phòng khi đánh SBD (trong điểm thi). Để trống = STT {{ next_room_stt }}.</small>
+          </div>
+          <div class="row g-2">
+            <div class="col-6"><label class="form-label">Số cột</label><input type="number" name="col_count" class="form-control" min="1" value="3" required></div>
+            <div class="col-6"><label class="form-label">Số hàng</label><input type="number" name="row_count" class="form-control" min="1" value="4" required></div>
+          </div>
+          <small class="text-muted d-block mt-1">Sức chứa = cột × hàng (VD: 3×4 = 12 chỗ).</small>
+          <div class="mt-2">
+            <label class="form-label">Đối tượng cơ sở</label>
+            <select name="target_campus_id" class="form-select" required>
+              <option value="">-- Chọn cơ sở --</option>
+              {% for c in campuses %}
+                <option value="{{ c.id }}">{{ c.code }} — {{ c.name }}</option>
+              {% endfor %}
+            </select>
+            <small class="text-muted">Chỉ thí sinh có cơ sở gốc trùng mới được xếp vào phòng này.</small>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+          <button type="submit" class="btn btn-primary btn-sm">Lưu phòng</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.btn-edit-room').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.getElementById('editRoomId').value = btn.getAttribute('data-room-id') || '';
+      document.getElementById('editRoomName').value = btn.getAttribute('data-room-name') || '';
+      document.getElementById('editRoomCol').value = btn.getAttribute('data-col-count') || '1';
+      document.getElementById('editRoomRow').value = btn.getAttribute('data-row-count') || '1';
+      document.getElementById('editRoomCampus').value = btn.getAttribute('data-target-campus-id') || '';
+      document.getElementById('editRoomSortOrder').value = btn.getAttribute('data-sort-order') || '0';
+    });
+  });
+
+  var pickAll = document.getElementById('pick-all');
+  if (pickAll) {
+    pickAll.addEventListener('change', function() {
+      document.querySelectorAll('.pick-cb').forEach(function(cb) { cb.checked = pickAll.checked; });
+    });
+  }
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('open_pick') === '1' || params.get('pick_campus') || params.get('pick_q')) {
+    var pickModal = document.getElementById('pickModal');
+    if (pickModal && typeof bootstrap !== 'undefined') {
+      bootstrap.Modal.getOrCreateInstance(pickModal).show();
+    }
+  }
+});
+</script>
+{% endblock %}

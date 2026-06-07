@@ -173,6 +173,21 @@ class AttendanceExcludedDay(models.Model):
     def __str__(self):
         return f"{self.year}-{self.month:02d}-{self.day:02d}"
 
+class AttendanceExcludedDay(models.Model):
+    """Ngày được đánh dấu không chấm công theo tháng/năm."""
+    year = models.PositiveSmallIntegerField()
+    month = models.PositiveSmallIntegerField()
+    day = models.PositiveSmallIntegerField()
+
+    class Meta:
+        verbose_name = 'Ngày không chấm công'
+        verbose_name_plural = 'Ngày không chấm công'
+        unique_together = ('year', 'month', 'day')
+
+    def __str__(self):
+        return f"{self.year}-{self.month:02d}-{self.day:02d}"
+
+
 # ---------- Sổ đầu bài số (theo nhóm bộ môn) ----------
 
 # Map tên môn (từ DSGV) sang mã dùng trong SubjectJournal
@@ -293,8 +308,6 @@ class JournalWeek(models.Model):
 
     def __str__(self):
         return f"{self.subject_journal} - Tuần {self.week_number}"
-
-
 
 
 class JournalTeacherWeekLimitOverride(models.Model):

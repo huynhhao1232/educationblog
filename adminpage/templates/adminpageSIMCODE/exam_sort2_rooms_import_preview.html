@@ -1,0 +1,55 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% block admission %}
+<div style="margin: 90px 30px 24px;">
+  <h3 class="text-primary fw-bold">Xem trước import phòng thi</h3>
+  <p class="text-muted">Điểm thi: <strong>{{ venue.code }} — {{ venue.name }}</strong></p>
+  <p>Hợp lệ: <strong>{{ total_count }}</strong> phòng{% if errors %}; cảnh báo/lỗi: <strong>{{ errors|length }}</strong>{% endif %}</p>
+
+  {% if errors %}
+  <div class="alert alert-warning">
+    <ul class="mb-0 small">{% for e in errors %}<li>{{ e }}</li>{% endfor %}</ul>
+  </div>
+  {% endif %}
+
+  <div class="table-responsive border rounded mb-3" style="max-height: 420px;">
+    <table class="table table-sm table-bordered mb-0">
+      <thead class="table-primary">
+        <tr>
+          <th>Dòng</th>
+          <th>Tên phòng</th>
+          <th>Số cột</th>
+          <th>Số hàng</th>
+          <th>Sức chứa</th>
+          <th>Đối tượng</th>
+          <th>STT</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in rows %}
+        <tr>
+          <td>{{ r.row_number }}</td>
+          <td>{{ r.name }}</td>
+          <td>{{ r.col_count }}</td>
+          <td>{{ r.row_count }}</td>
+          <td>{{ r.capacity }}</td>
+          <td>{{ r.target_campus_code }}</td>
+          <td>{% if r.sort_order %}{{ r.sort_order }}{% else %}<span class="text-muted">tự động</span>{% endif %}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="7" class="text-muted">Không có dòng hợp lệ.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="d-flex gap-2 flex-wrap">
+    <a href="{% url 'adminpage:exam_sort2_venue_detail' venue.id %}" class="btn btn-outline-secondary btn-sm">Quay lại</a>
+    {% if total_count %}
+    <form method="post" action="{% url 'adminpage:exam_sort2_save_rooms_import' venue.id %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-primary btn-sm">Lưu {{ total_count }} phòng vào điểm thi</button>
+    </form>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,184 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% block admission %}
+<style>
+  .es2-wrap { margin: 90px 30px 24px; }
+  .es2-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+  .es2-header h3 { color: #023EB6; font-weight: 800; margin: 0; }
+  .table-wrap { border: 1px solid #dee2e6; border-radius: 10px; overflow: hidden; background: #fff; }
+  table.es2-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.es2-table th, table.es2-table td { border: 1px solid #dee2e6; padding: 8px 10px; }
+  table.es2-table thead th { background: #023EB6; color: #fff; }
+</style>
+
+<div class="es2-wrap">
+  <div class="es2-header">
+    <h3><i class="fa-solid fa-users me-2"></i>Sắp xếp phòng thi II — Thí sinh</h3>
+    <div class="d-flex gap-2 flex-wrap">
+      <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addCandidateModal">
+        <i class="fa-solid fa-plus me-1"></i>Thêm thí sinh
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#importModal">
+        <i class="fa-solid fa-file-arrow-up me-1"></i>Import Excel/CSV
+      </button>
+      <a class="btn btn-sm btn-outline-secondary" href="{% url 'adminpage:exam_sort2_venues' %}">
+        <i class="fa-solid fa-location-dot me-1"></i>Điểm thi
+      </a>
+      <form method="post" class="d-inline" action="{% url 'adminpage:exam_sort2_candidates' %}"
+            onsubmit="return confirm('Xoá TOÀN BỘ {{ candidate_total }} thí sinh trong danh sách gốc?\n\nCũng xoá thí sinh đã lấy về điểm thi và dữ liệu xếp ghế. Phòng thi và điểm thi KHÔNG bị xoá.');">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="delete_all">
+        <button type="submit" class="btn btn-sm btn-outline-danger">
+          <i class="fa-solid fa-trash me-1"></i>Xoá toàn bộ thí sinh
+          {% if has_candidates %}<span class="badge bg-light text-danger ms-1">{{ candidate_total }}</span>{% endif %}
+        </button>
+      </form>
+    </div>
+  </div>
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} py-2">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+
+  <form method="get" class="row g-2 align-items-end mb-3">
+    <div class="col-auto">
+      <label class="form-label form-label-sm mb-1">Cơ sở</label>
+      <select name="campus_id" class="form-select form-select-sm" style="min-width: 160px;">
+        <option value="">Tất cả</option>
+        {% for c in campuses %}
+          <option value="{{ c.id }}" {% if filter_campus == c.id|stringformat:"s" %}selected{% endif %}>{{ c.code }} — {{ c.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="col-auto">
+      <label class="form-label form-label-sm mb-1">Tìm kiếm</label>
+      <input type="text" name="q" class="form-control form-control-sm" value="{{ search_q }}" placeholder="Họ tên, lớp">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-sm btn-primary">Lọc</button>
+    </div>
+  </form>
+
+  <p class="small text-muted">
+    Đang hiển thị: <strong>{{ total }}</strong> thí sinh
+    {% if filter_campus or search_q %}(đã lọc){% endif %}
+    · Trong hệ thống: <strong>{{ candidate_total }}</strong> thí sinh
+  </p>
+
+  <div class="table-wrap">
+    <table class="es2-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Họ và tên</th>
+          <th>Thuộc cơ sở</th>
+          <th>Lớp</th>
+          <th>Môn thi (4 môn)</th>
+          <th>Xóa</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for s in candidates %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ s.full_name }}</td>
+          <td>{{ s.campus.code }} — {{ s.campus.name }}</td>
+          <td>{{ s.class_name }}</td>
+          <td class="small">{{ s.get_exam_subjects_display }}</td>
+          <td class="text-center">
+            <form method="post" class="d-inline" onsubmit="return confirm('Xóa thí sinh này?');">
+              {% csrf_token %}
+              <input type="hidden" name="action" value="delete">
+              <input type="hidden" name="candidate_id" value="{{ s.id }}">
+              <button type="submit" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+            </form>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="6" class="text-center text-muted py-4">Chưa có thí sinh.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="modal fade" id="addCandidateModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="add">
+        <div class="modal-header">
+          <h5 class="modal-title">Thêm thí sinh</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-2">
+            <label class="form-label">Họ và tên</label>
+            <input type="text" name="full_name" class="form-control" required>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Thuộc cơ sở</label>
+            <select name="campus_id" class="form-select" required>
+              <option value="">-- Chọn --</option>
+              {% for c in campuses %}
+                <option value="{{ c.id }}">{{ c.code }} — {{ c.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Lớp</label>
+            <input type="text" name="class_name" class="form-control" required>
+          </div>
+          <div class="row g-2">
+            <div class="col-6">
+              <label class="form-label">Môn tự chọn 1</label>
+              <input type="text" name="elective_subject_1" class="form-control" placeholder="VD: Lý">
+            </div>
+            <div class="col-6">
+              <label class="form-label">Môn tự chọn 2</label>
+              <input type="text" name="elective_subject_2" class="form-control" placeholder="VD: T.Anh">
+            </div>
+          </div>
+          <small class="text-muted">Bắt buộc: Văn + Toán. Nhập 2 môn tự chọn (khi thêm tay).</small>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+          <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="importModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form method="post" enctype="multipart/form-data" action="{% url 'adminpage:exam_sort2_import_candidates' %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <h5 class="modal-title">Import danh sách thí sinh</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="file" name="excel_file" class="form-control" accept=".xlsx,.xls,.csv" required>
+          <div class="alert alert-info small mt-3 mb-0">
+            <p class="mb-1"><strong>Cột đầu (Mã cơ sở)</strong> — số nguyên, hệ thống tự quy đổi:</p>
+            <ul class="mb-1">
+              <li>1 → AS, 2 → AT, 3 → BS, 4 → CS, 5 → VH, 6 → KT, 7 → CN, 8 → HT, <strong>9 → ĐS</strong></li>
+            </ul>
+            <p class="mb-1">File tham khảo: <code>Sắp xếp phòng thi II/test.xls</code></p>
+            <p class="mb-0">Hệ thống đọc <strong>Văn, Toán</strong> (bắt buộc) và <strong>2 môn tự chọn</strong> từ các cột Lý, Hóa, Sinh, Sử, Địa, KTPL, Tin, T.Anh, … Ô có tên môn (ô khác là 0 hoặc -).
+              Trong cột <strong>T.Anh</strong>, nếu ghi <strong>T.Nhật</strong> thì hệ thống nhận là Tiếng Nhật.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+          <button type="submit" class="btn btn-primary btn-sm">Upload &amp; xem trước</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

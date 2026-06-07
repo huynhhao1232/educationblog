@@ -661,3 +661,129 @@ class StudentInfoVerificationHistory(models.Model):
     def __str__(self):
         return f"{self.verification.student.student_code} — lần {self.submit_index} @ {self.created_at}"
 
+
+# --- Sắp xếp phòng thi II (phân hệ thí sinh + điểm thi, trộn cơ sở) ---
+
+EXAM_SORT2_CAMPUS_CODE_BY_INT = {
+    1: 'AS',
+    2: 'AT',
+    3: 'BS',
+    4: 'CS',
+    5: 'VH',
+    6: 'KT',
+    7: 'CN',
+    8: 'HT',
+    9: 'ĐS',
+}
+
+
+class ExamSort2Candidate(models.Model):
+    """Thí sinh gốc (phân hệ 1) — danh sách master để lấy về điểm thi."""
+    full_name = models.CharField(max_length=255, verbose_name="Họ và tên")
+    campus = models.ForeignKey(Campus, on_delete=models.PROTECT, verbose_name="Thuộc cơ sở")
+    class_name = models.CharField(max_length=50, verbose_name="Lớp")
+    elective_subject_1 = models.CharField(
+        max_length=50, blank=True, default='', verbose_name="Môn tự chọn 1",
+    )
+    elective_subject_2 = models.CharField(
+        max_length=50, blank=True, default='', verbose_name="Môn tự chọn 2",
+    )
+    exam_number = models.CharField(
+        max_length=12, blank=True, default='', verbose_name="Số báo danh",
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Thí sinh (SXPT II)"
+        verbose_name_plural = "Thí sinh (SXPT II)"
+        ordering = ['campus__code', 'class_name', 'full_name']
+
+    def __str__(self):
+        return f"{self.full_name} ({self.campus.code} — {self.class_name})"
+
+    def get_exam_subjects_display(self) -> str:
+        """4 môn thi: Văn + Toán (bắt buộc) + 2 môn tự chọn."""
+        parts = ['Văn', 'Toán']
+        for subj in (self.elective_subject_1, self.elective_subject_2):
+            if subj:
+                parts.append(subj)
+        return ', '.join(parts)
+
+
+class ExamSort2Venue(models.Model):
+    """Điểm thi — mỗi cơ sở trung tâm có thể là một điểm thi."""
+    code = models.CharField(max_length=20, unique=True, verbose_name="Mã điểm thi")
+    name = models.CharField(max_length=255, verbose_name="Tên điểm thi")
+    sort_order = models.PositiveIntegerField(default=0, verbose_name="STT")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Điểm thi (SXPT II)"
+        verbose_name_plural = "Điểm thi (SXPT II)"
+        ordering = ['sort_order', 'code']
+
+    def __str__(self):
+        return f"{self.code} — {self.name}"
+
+
+class ExamSort2VenueCandidate(models.Model):
+    """Thí sinh đã mang về một điểm thi cụ thể."""
+    venue = models.ForeignKey(ExamSort2Venue, on_delete=models.CASCADE, related_name='venue_candidates')
+    candidate = models.ForeignKey(ExamSort2Candidate, on_delete=models.CASCADE, related_name='venue_links')
+
+    class Meta:
+        unique_together = ('venue', 'candidate')
+        verbose_name = "Thí sinh tại điểm thi"
+        verbose_name_plural = "Thí sinh tại điểm thi"
+
+    def __str__(self):
+        return f"{self.venue.code}: {self.candidate.full_name}"
+
+
+class ExamSort2Room(models.Model):
+    """Phòng thi thuộc một điểm thi."""
+    venue = models.ForeignKey(ExamSort2Venue, on_delete=models.CASCADE, related_name='rooms')
+    name = models.CharField(max_length=100, verbose_name="Tên phòng thi")
+    col_count = models.PositiveIntegerField(verbose_name="Số cột")
+    row_count = models.PositiveIntegerField(verbose_name="Số hàng")
+    target_campus = models.ForeignKey(
+        Campus, on_delete=models.PROTECT, verbose_name="Đối tượng cơ sở",
+        related_name='exam_sort2_target_rooms',
+    )
+    sort_order = models.PositiveIntegerField(default=0, verbose_name="STT")
+    capacity = models.PositiveIntegerField(editable=False, default=0)
+
+    class Meta:
+        verbose_name = "Phòng thi (SXPT II)"
+        verbose_name_plural = "Phòng thi (SXPT II)"
+        unique_together = ('venue', 'name')
+        ordering = ['sort_order', 'name']
+
+    def save(self, *args, **kwargs):
+        self.capacity = self.col_count * self.row_count
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.venue.code} / {self.name}"
+
+
+class ExamSort2SeatAssignment(models.Model):
+    """Gán thí sinh vào ghế trong phòng (số ghế 1..capacity, theo ma trận cột×hàng)."""
+    room = models.ForeignKey(ExamSort2Room, on_delete=models.CASCADE, related_name='seat_assignments')
+    venue_candidate = models.ForeignKey(
+        ExamSort2VenueCandidate, on_delete=models.CASCADE, related_name='seat_assignments',
+    )
+    seat_number = models.PositiveIntegerField(verbose_name="Số ghế")
+
+    class Meta:
+        unique_together = (
+            ('room', 'seat_number'),
+            ('room', 'venue_candidate'),
+        )
+        verbose_name = "Xếp ghế (SXPT II)"
+        verbose_name_plural = "Xếp ghế (SXPT II)"
+        ordering = ['seat_number']
+
+    def __str__(self):
+        return f"{self.room.name} — ghế {self.seat_number}"
+
