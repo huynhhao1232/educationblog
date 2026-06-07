@@ -1,5 +1,5 @@
 from django import forms
-from .models import Student, StudentExamRegistration, SubjectGroup
+from .models import Student, StudentExamRegistration, SubjectGroup, StudentInfoVerification
 
 class StudentCodeForm(forms.Form):
     """Form nhập mã học viên"""
@@ -91,4 +91,126 @@ class StudentExamRegistrationForm(forms.ModelForm):
         if len(exam_subjects) != 2:
             raise forms.ValidationError("Vui lòng chọn đúng 2 môn thi tốt nghiệp")
         return exam_subjects
+
+
+class StudentInfoLookupForm(forms.Form):
+    """Nhập mã học viên 7 số để kiểm tra thông tin."""
+
+    student_code = forms.CharField(
+        max_length=7,
+        min_length=7,
+        label="Mã học viên",
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": "Nhập mã 7 số",
+                "pattern": "[0-9]{7}",
+                "required": True,
+            }
+        ),
+    )
+
+    def clean_student_code(self):
+        code = (self.cleaned_data.get("student_code") or "").strip()
+        if not code.isdigit() or len(code) != 7:
+            raise forms.ValidationError("Mã học viên phải đúng 7 chữ số.")
+        return code
+
+
+# Các trường được học viên xác nhận (value = tên field trên StudentInfoVerification)
+STUDENT_INFO_VERIFIABLE_STATUS_FIELDS = (
+    ("class_name_status", "Lớp"),
+    ("full_name_status", "Họ và tên"),
+    ("birthday_status", "Ngày sinh"),
+    ("birth_place_status", "Nơi sinh"),
+    ("gender_status", "Giới tính"),
+    ("ethnicity_status", "Dân tộc"),
+    ("id_number_status", "Số CCCD"),
+    ("contact_address_status", "Địa chỉ liên hệ"),
+    ("email_status", "Gmail"),
+    ("phone_status", "Số điện thoại"),
+    ("highschool_10_status", "Nơi học THPT lớp 10"),
+    ("highschool_11_status", "Nơi học THPT lớp 11"),
+    ("exam_subjects_status", "Môn thi TN THPT"),
+)
+
+
+class StudentInfoVerificationForm(forms.ModelForm):
+    """Một lần xác nhận tổng thể; nếu có sai thì tick checkbox từng mục."""
+
+    OVERALL_CHOICES = (
+        ("all_ok", "Tất cả thông tin trên là đúng"),
+        ("has_wrong", "Có một hoặc nhiều mục thông tin sai"),
+    )
+
+    overall = forms.ChoiceField(
+        label="Xác nhận của bạn",
+        choices=OVERALL_CHOICES,
+        widget=forms.RadioSelect(attrs={"class": "si-overall-radio"}),
+        required=True,
+    )
+    wrong_fields = forms.MultipleChoiceField(
+        label="Các mục thông tin bị sai (tick để chọn)",
+        required=False,
+        choices=[],  # set in __init__
+        widget=forms.CheckboxSelectMultiple(
+            attrs={"class": "form-check-input si-wrong-checkbox"}
+        ),
+    )
+
+    class Meta:
+        model = StudentInfoVerification
+        fields = ["note"]
+        widgets = {
+            "note": forms.Textarea(
+                attrs={
+                    "class": "form-control",
+                    "rows": 3,
+                    "placeholder": "Ghi chú thêm (khuyến nghị nếu có mục sai)",
+                }
+            ),
+        }
+        labels = {"note": "Ghi chú thêm (nếu có)"}
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["wrong_fields"].choices = list(STUDENT_INFO_VERIFIABLE_STATUS_FIELDS)
+        inst = self.instance
+        if inst.pk:
+            wrong_list = [
+                attr
+                for attr, _ in STUDENT_INFO_VERIFIABLE_STATUS_FIELDS
+                if getattr(inst, attr, "") == "S"
+            ]
+            all_d = all(
+                getattr(inst, attr, "") == "D"
+                for attr, _ in STUDENT_INFO_VERIFIABLE_STATUS_FIELDS
+            )
+            if wrong_list:
+                self.fields["overall"].initial = "has_wrong"
+                self.fields["wrong_fields"].initial = wrong_list
+            elif all_d:
+                self.fields["overall"].initial = "all_ok"
+
+    def clean(self):
+        cleaned = super().clean()
+        overall = cleaned.get("overall")
+        wrong = list(cleaned.get("wrong_fields") or [])
+        if overall == "all_ok":
+            cleaned["wrong_fields"] = []
+        elif overall == "has_wrong" and not wrong:
+            raise forms.ValidationError(
+                "Bạn đã chọn «Có thông tin sai». Vui lòng tick ít nhất một mục bị sai."
+            )
+        return cleaned
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        overall = self.cleaned_data["overall"]
+        wrong = set(self.cleaned_data.get("wrong_fields") or [])
+        for attr, _ in STUDENT_INFO_VERIFIABLE_STATUS_FIELDS:
+            setattr(instance, attr, "S" if attr in wrong else "D")
+        if commit:
+            instance.save()
+        return instance
 

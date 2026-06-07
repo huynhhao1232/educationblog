@@ -1,0 +1,1121 @@
+{
+  "requestId": "bKen5F_k7W6xgucNp9amm",
+  "communes": [
+    {
+      "code": "22918",
+      "name": "Phường Mũi Né",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22924",
+      "name": "Phường Phú Thuỷ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22933",
+      "name": "Phường Hàm Thắng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22945",
+      "name": "Phường Phan Thiết",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22954",
+      "name": "Phường Tiến Thành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22960",
+      "name": "Phường Bình Thuận",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22963",
+      "name": "Xã Tuyên Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22969",
+      "name": "Xã Liên Hương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22972",
+      "name": "Xã Phan Rí Cửa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22978",
+      "name": "Xã Tuy Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22981",
+      "name": "Xã Vĩnh Hảo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23005",
+      "name": "Xã Bắc Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23008",
+      "name": "Xã Phan Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23020",
+      "name": "Xã Hải Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23023",
+      "name": "Xã Sông Lũy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23032",
+      "name": "Xã Lương Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23041",
+      "name": "Xã Hồng Thái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23053",
+      "name": "Xã Hòa Thắng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23059",
+      "name": "Xã Hàm Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23065",
+      "name": "Xã La Dạ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23074",
+      "name": "Xã Đông Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23086",
+      "name": "Xã Hồng Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23089",
+      "name": "Xã Hàm Thuận Bắc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23095",
+      "name": "Xã Hàm Liêm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23110",
+      "name": "Xã Hàm Thuận Nam",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23122",
+      "name": "Xã Hàm Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23128",
+      "name": "Xã Hàm Kiệm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23134",
+      "name": "Xã Tân Lập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23143",
+      "name": "Xã Tân Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23149",
+      "name": "Xã Tánh Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23152",
+      "name": "Xã Bắc Ruộng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23158",
+      "name": "Xã Nghị Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23173",
+      "name": "Xã Đồng Kho",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23188",
+      "name": "Xã Suối Kiết",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23191",
+      "name": "Xã Đức Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23194",
+      "name": "Xã Hoài Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23200",
+      "name": "Xã Nam Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23227",
+      "name": "Xã Trà Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23230",
+      "name": "Xã Tân Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23231",
+      "name": "Phường Phước Hội",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23235",
+      "name": "Phường La Gi",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23236",
+      "name": "Xã Hàm Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23246",
+      "name": "Xã Tân Hải",
+      "englishName": "Tan Tien commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23266",
+      "name": "Xã Sơn Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23272",
+      "name": "Đặc khu Phú Quý",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24611",
+      "name": "Phường Bắc Gia Nghĩa",
+      "englishName": "Nghĩa Đức precinct",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24615",
+      "name": "Phường Nam Gia Nghĩa",
+      "englishName": "Nghia Tan precinct",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24616",
+      "name": "Xã Quảng Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24617",
+      "name": "Phường Đông Gia Nghĩa",
+      "englishName": "Nghia Trung precinct",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24620",
+      "name": "Xã Quảng Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24631",
+      "name": "Xã Quảng Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24637",
+      "name": "Xã Tà Đùng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24640",
+      "name": "Xã Cư Jút",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24646",
+      "name": "Xã Đắk Wil",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24649",
+      "name": "Xã Nam Dong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24664",
+      "name": "Xã Đức Lập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24670",
+      "name": "Xã Đắk Mil",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24678",
+      "name": "Xã Đắk Sắk",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24682",
+      "name": "Xã Thuận An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24688",
+      "name": "Xã Krông Nô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24697",
+      "name": "Xã Nam Đà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24703",
+      "name": "Xã Nâm Nung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24712",
+      "name": "Xã Quảng Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24717",
+      "name": "Xã Đức An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24718",
+      "name": "Xã Đắk Song",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24722",
+      "name": "Xã Thuận Hạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24730",
+      "name": "Xã Trường Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24733",
+      "name": "Xã Kiến Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24736",
+      "name": "Xã Quảng Trực",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24739",
+      "name": "Xã Tuy Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24748",
+      "name": "Xã Quảng Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24751",
+      "name": "Xã Nhân Cơ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24760",
+      "name": "Xã Quảng Tín",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24778",
+      "name": "Phường Lâm Viên - Đà Lạt",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24781",
+      "name": "Phường Xuân Hương - Đà Lạt",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24787",
+      "name": "Phường Cam Ly - Đà Lạt",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24805",
+      "name": "Phường Xuân Trường - Đà Lạt",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24820",
+      "name": "Phường 2 Bảo Lộc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24823",
+      "name": "Phường 1 Bảo Lộc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24829",
+      "name": "Phường B’Lao",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24841",
+      "name": "Phường 3 Bảo Lộc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24846",
+      "name": "Phường Lang Biang - Đà Lạt",
+      "englishName": "Lac Duong Commune",
+      "administrativeLevel": "Phường",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24848",
+      "name": "Xã Lạc Dương",
+      "englishName": "Da Nhim",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24853",
+      "name": "Xã Đam Rông 4",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24868",
+      "name": "Xã Nam Ban Lâm Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24871",
+      "name": "Xã Đinh Văn Lâm Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24875",
+      "name": "Xã Đam Rông 3",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24877",
+      "name": "Xã Đam Rông 2",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24883",
+      "name": "Xã Nam Hà Lâm Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24886",
+      "name": "Xã Đam Rông 1",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24895",
+      "name": "Xã Phú Sơn Lâm Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24907",
+      "name": "Xã Phúc Thọ Lâm Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24916",
+      "name": "Xã Tân Hà Lâm Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24931",
+      "name": "Xã Đơn Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24934",
+      "name": "Xã D’Ran",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24943",
+      "name": "Xã Ka Đô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24955",
+      "name": "Xã Quảng Lập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24958",
+      "name": "Xã Đức Trọng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24967",
+      "name": "Xã Hiệp Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24976",
+      "name": "Xã Tân Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24985",
+      "name": "Xã Ninh Gia",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24988",
+      "name": "Xã Tà Năng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24991",
+      "name": "Xã Tà Hine",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25000",
+      "name": "Xã Di Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25007",
+      "name": "Xã Đinh Trang Thượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25015",
+      "name": "Xã Gia Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25018",
+      "name": "Xã Bảo Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25036",
+      "name": "Xã Hòa Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25042",
+      "name": "Xã Hòa Bắc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25051",
+      "name": "Xã Sơn Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25054",
+      "name": "Xã Bảo Lâm 1",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25057",
+      "name": "Xã Bảo Lâm 5",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25063",
+      "name": "Xã Bảo Lâm 4",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25084",
+      "name": "Xã Bảo Lâm 2",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25093",
+      "name": "Xã Bảo Lâm 3",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25099",
+      "name": "Xã Đạ Huoai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25105",
+      "name": "Xã Đạ Huoai 2",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25114",
+      "name": "Xã Đạ Huoai 3",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25126",
+      "name": "Xã Đạ Tẻh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25135",
+      "name": "Xã Đạ Tẻh 3",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25138",
+      "name": "Xã Đạ Tẻh 2",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25159",
+      "name": "Xã Cát Tiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25162",
+      "name": "Xã Cát Tiên 3",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25180",
+      "name": "Xã Cát Tiên 2",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "68",
+      "provinceName": "Tỉnh Lâm Đồng",
+      "decree": "Số: 1671/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

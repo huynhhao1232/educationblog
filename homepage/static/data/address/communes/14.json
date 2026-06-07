@@ -1,0 +1,680 @@
+{
+  "requestId": "84eGLlk3MYSY22f7l386j",
+  "communes": [
+    {
+      "code": "03646",
+      "name": "Phường Tô Hiệu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03664",
+      "name": "Phường Chiềng An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03670",
+      "name": "Phường Chiềng Cơi",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03679",
+      "name": "Phường Chiềng Sinh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03688",
+      "name": "Xã Mường Chiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03694",
+      "name": "Xã Mường Giôn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03703",
+      "name": "Xã Quỳnh Nhai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03712",
+      "name": "Xã Mường Sại",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03721",
+      "name": "Xã Thuận Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03724",
+      "name": "Xã Bình Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03727",
+      "name": "Xã Mường É",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03754",
+      "name": "Xã Chiềng La",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03757",
+      "name": "Xã Mường Khiêng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03760",
+      "name": "Xã Mường Bám",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03763",
+      "name": "Xã Long Hẹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03781",
+      "name": "Xã Co Mạ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03784",
+      "name": "Xã Nậm Lầu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03799",
+      "name": "Xã Muổi Nọi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03808",
+      "name": "Xã Mường La",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03814",
+      "name": "Xã Chiềng Lao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03820",
+      "name": "Xã Ngọc Chiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03847",
+      "name": "Xã Mường Bú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03850",
+      "name": "Xã Chiềng Hoa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03856",
+      "name": "Xã Bắc Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03862",
+      "name": "Xã Xím Vàng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03868",
+      "name": "Xã Tà Xùa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03871",
+      "name": "Xã Pắc Ngà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03880",
+      "name": "Xã Tạ Khoa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03892",
+      "name": "Xã Chiềng Sại",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03901",
+      "name": "Xã Suối Tọ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03907",
+      "name": "Xã Mường Cơi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03910",
+      "name": "Xã Phù Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03922",
+      "name": "Xã Gia Phù",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03943",
+      "name": "Xã Mường Bang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03958",
+      "name": "Xã Tường Hạ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03961",
+      "name": "Xã Kim Bon",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03970",
+      "name": "Xã Tân Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03979",
+      "name": "Phường Mộc Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03980",
+      "name": "Phường Mộc Châu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03982",
+      "name": "Phường Thảo Nguyên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03985",
+      "name": "Xã Chiềng Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03997",
+      "name": "Xã Tân Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04000",
+      "name": "Xã Đoàn Kết",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04006",
+      "name": "Xã Song Khủa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04018",
+      "name": "Xã Tô Múa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04033",
+      "name": "Phường Vân Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04045",
+      "name": "Xã Lóng Sập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04048",
+      "name": "Xã Vân Hồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04057",
+      "name": "Xã Xuân Nha",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04075",
+      "name": "Xã Yên Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04078",
+      "name": "Xã Chiềng Hặc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04087",
+      "name": "Xã Yên Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04096",
+      "name": "Xã Lóng Phiêng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04099",
+      "name": "Xã Phiêng Khoài",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04105",
+      "name": "Xã Mai Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04108",
+      "name": "Xã Chiềng Sung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04117",
+      "name": "Xã Mường Chanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04123",
+      "name": "Xã Chiềng Mung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04132",
+      "name": "Xã Chiềng Mai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04136",
+      "name": "Xã Tà Hộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04144",
+      "name": "Xã Phiêng Cằm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04159",
+      "name": "Xã Phiêng Pằn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04168",
+      "name": "Xã Sông Mã",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04171",
+      "name": "Xã Bó Sinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04183",
+      "name": "Xã Mường Lầm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04186",
+      "name": "Xã Nậm Ty",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04195",
+      "name": "Xã Chiềng Sơ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04204",
+      "name": "Xã Chiềng Khoong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04210",
+      "name": "Xã Huổi Một",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04219",
+      "name": "Xã Mường Hung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04222",
+      "name": "Xã Chiềng Khương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04228",
+      "name": "Xã Púng Bánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04231",
+      "name": "Xã Sốp Cộp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04240",
+      "name": "Xã Mường Lèo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04246",
+      "name": "Xã Mường Lạn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "14",
+      "provinceName": "Tỉnh Sơn La",
+      "decree": "Số: 1681/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

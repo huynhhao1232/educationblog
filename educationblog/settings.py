@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'educationblog.middleware.SessionInterruptedGuardMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -127,9 +128,9 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
+# Sắp xếp phòng thi II — SBD: 2 chữ số mã thành phố + 6 chữ số STT (VD: 79000001)
+EXAM_SORT2_SBD_CITY_PREFIX = '79'
+EXAM_SORT2_SBD_START_SERIAL = 1
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/'),
@@ -138,10 +139,17 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
-# Email settings
+# Email settings (Gmail SMTP)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'hao123ass@gmail.com'  # Thay thế bằng email của bạn
-EMAIL_HOST_PASSWORD = 'oilb cjft hbva ksid'  # Thay thế bằng mật khẩu ứng dụng
+# Cấu hình qua biến môi trường (không commit mật khẩu vào repo).
+# Gmail App Password: Google Account → Bảo mật → Xác minh 2 bước → Mật khẩu ứng dụng
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '').replace(' ', '')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL') or EMAIL_HOST_USER or 'noreply@localhost'
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
+
+if DEBUG and (not EMAIL_HOST_USER or not EMAIL_HOST_PASSWORD):
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

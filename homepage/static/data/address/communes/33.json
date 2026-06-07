@@ -1,0 +1,941 @@
+{
+  "requestId": "L-5vlK1T3w24I7docPCog",
+  "communes": [
+    {
+      "code": "11953",
+      "name": "Phường Phố Hiến",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11977",
+      "name": "Xã Tân Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11980",
+      "name": "Phường Hồng Châu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11983",
+      "name": "Phường Sơn Nam",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11992",
+      "name": "Xã Lạc Đạo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11995",
+      "name": "Xã Đại Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12004",
+      "name": "Xã Như Quỳnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12019",
+      "name": "Xã Văn Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12025",
+      "name": "Xã Phụng Công",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12031",
+      "name": "Xã Nghĩa Trụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12049",
+      "name": "Xã Mễ Sở",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12064",
+      "name": "Xã Nguyễn Văn Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12070",
+      "name": "Xã Hoàn Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12073",
+      "name": "Xã Yên Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12091",
+      "name": "Xã Việt Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12103",
+      "name": "Phường Mỹ Hào",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12127",
+      "name": "Phường Thượng Hồng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12133",
+      "name": "Phường Đường Hào",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12142",
+      "name": "Xã Ân Thi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12148",
+      "name": "Xã Phạm Ngũ Lão",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12166",
+      "name": "Xã Xuân Trúc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12184",
+      "name": "Xã Nguyễn Trãi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12196",
+      "name": "Xã Hồng Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12205",
+      "name": "Xã Khoái Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12223",
+      "name": "Xã Triệu Việt Vương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12238",
+      "name": "Xã Việt Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12247",
+      "name": "Xã Châu Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12271",
+      "name": "Xã Chí Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12280",
+      "name": "Xã Lương Bằng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12286",
+      "name": "Xã Nghĩa Dân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12313",
+      "name": "Xã Đức Hợp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12322",
+      "name": "Xã Hiệp Cường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12337",
+      "name": "Xã Hoàng Hoa Thám",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12361",
+      "name": "Xã Tiên Hoa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12364",
+      "name": "Xã Tiên Lữ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12391",
+      "name": "Xã Quang Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12406",
+      "name": "Xã Đoàn Đào",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12424",
+      "name": "Xã Tiên Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12427",
+      "name": "Xã Tống Trân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12452",
+      "name": "Phường Trần Hưng Đạo",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12454",
+      "name": "Phường Trần Lãm",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12466",
+      "name": "Phường Vũ Phúc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12472",
+      "name": "Xã Quỳnh Phụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12499",
+      "name": "Xã A Sào",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12511",
+      "name": "Xã Minh Thọ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12517",
+      "name": "Xã Ngọc Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12523",
+      "name": "Xã Phụ Dực",
+      "englishName": "An Bai town",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12526",
+      "name": "Xã Đồng Bằng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12532",
+      "name": "Xã Nguyễn Du",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12577",
+      "name": "Xã Quỳnh An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12583",
+      "name": "Xã Tân Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12586",
+      "name": "Xã Hưng Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12595",
+      "name": "Xã Ngự Thiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12613",
+      "name": "Xã Long Hưng",
+      "englishName": "Hung Nhan town",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12619",
+      "name": "Xã Diên Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12631",
+      "name": "Xã Thần Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12634",
+      "name": "Xã Tiên La",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12676",
+      "name": "Xã Lê Quý Đôn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12685",
+      "name": "Xã Hồng Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12688",
+      "name": "Xã Đông Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12694",
+      "name": "Xã Bắc Đông Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12700",
+      "name": "Xã Bắc Tiên Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12736",
+      "name": "Xã Đông Tiên Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12745",
+      "name": "Xã Bắc Đông Quan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12754",
+      "name": "Xã Tiên Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12763",
+      "name": "Xã Nam Tiên Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12775",
+      "name": "Xã Nam Đông Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12793",
+      "name": "Xã Đông Quan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12817",
+      "name": "Phường Trà Lý",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12826",
+      "name": "Xã Thái Thụy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12850",
+      "name": "Xã Tây Thụy Anh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12859",
+      "name": "Xã Bắc Thụy Anh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12862",
+      "name": "Xã Đông Thụy Anh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12865",
+      "name": "Xã Thụy Anh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12904",
+      "name": "Xã Nam Thụy Anh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12916",
+      "name": "Xã Bắc Thái Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12919",
+      "name": "Xã Tây Thái Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12922",
+      "name": "Xã Thái Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12943",
+      "name": "Xã Đông Thái Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12961",
+      "name": "Xã Nam Thái Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12970",
+      "name": "Xã Tiền Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "12988",
+      "name": "Xã Đông Tiền Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13003",
+      "name": "Xã Đồng Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13021",
+      "name": "Xã Ái Quốc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13039",
+      "name": "Xã Tây Tiền Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13057",
+      "name": "Xã Nam Cường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13063",
+      "name": "Xã Nam Tiền Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13066",
+      "name": "Xã Hưng Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13075",
+      "name": "Xã Kiến Xương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13093",
+      "name": "Xã Trà Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13096",
+      "name": "Xã Bình Nguyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13120",
+      "name": "Xã Lê Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13132",
+      "name": "Xã Quang Lịch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13141",
+      "name": "Xã Vũ Quý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13159",
+      "name": "Xã Hồng Vũ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13183",
+      "name": "Xã Bình Thanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13186",
+      "name": "Xã Bình Định",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13192",
+      "name": "Xã Vũ Thư",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13219",
+      "name": "Xã Vạn Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13222",
+      "name": "Xã Thư Trì",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13225",
+      "name": "Phường Thái Bình",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13246",
+      "name": "Xã Tân Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13264",
+      "name": "Xã Thư Vũ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13279",
+      "name": "Xã Vũ Tiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "33",
+      "provinceName": "Tỉnh Hưng Yên",
+      "decree": "Số: 1666/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

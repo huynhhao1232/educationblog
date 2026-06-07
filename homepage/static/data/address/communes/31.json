@@ -1,0 +1,1031 @@
+{
+  "requestId": "9EtNTHUlbS-WjKamVMRA3",
+  "communes": [
+    {
+      "code": "10507",
+      "name": "Phường Thành Đông",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10525",
+      "name": "Phường Hải Dương",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10532",
+      "name": "Phường Lê Thanh Nghị",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10537",
+      "name": "Phường Tân Hưng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10543",
+      "name": "Phường Việt Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10546",
+      "name": "Phường Chí Linh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10549",
+      "name": "Phường Chu Văn An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10552",
+      "name": "Phường Nguyễn Trãi",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10570",
+      "name": "Phường Trần Hưng Đạo",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10573",
+      "name": "Phường Trần Nhân Tông",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10603",
+      "name": "Phường Lê Đại Hành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10606",
+      "name": "Xã Nam Sách",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10615",
+      "name": "Xã Hợp Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10633",
+      "name": "Xã Trần Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10642",
+      "name": "Xã Thái Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10645",
+      "name": "Xã An Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10660",
+      "name": "Phường Ái Quốc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10675",
+      "name": "Phường Kinh Môn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10678",
+      "name": "Phường Bắc An Phụ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10705",
+      "name": "Xã Nam An Phụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10714",
+      "name": "Phường Nhị Chiểu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10726",
+      "name": "Phường Phạm Sư Mạnh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10729",
+      "name": "Phường Trần Liễu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10744",
+      "name": "Phường Nguyễn Đại Năng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10750",
+      "name": "Xã Phú Thái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10756",
+      "name": "Xã Lai Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10792",
+      "name": "Xã An Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10804",
+      "name": "Xã Kim Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10813",
+      "name": "Xã Thanh Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10816",
+      "name": "Xã Hà Bắc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10837",
+      "name": "Phường Nam Đồng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10843",
+      "name": "Xã Hà Nam",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10846",
+      "name": "Xã Hà Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10882",
+      "name": "Xã Hà Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10888",
+      "name": "Xã Cẩm Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10891",
+      "name": "Phường Tứ Minh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10903",
+      "name": "Xã Cẩm Giàng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10909",
+      "name": "Xã Tuệ Tĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10930",
+      "name": "Xã Mao Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10945",
+      "name": "Xã Kẻ Sặt",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10966",
+      "name": "Xã Bình Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10972",
+      "name": "Xã Đường An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10993",
+      "name": "Xã Thượng Hồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "10999",
+      "name": "Xã Gia Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11002",
+      "name": "Phường Thạch Khôi",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11020",
+      "name": "Xã Yết Kiêu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11050",
+      "name": "Xã Gia Phúc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11065",
+      "name": "Xã Trường Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11074",
+      "name": "Xã Tứ Kỳ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11086",
+      "name": "Xã Đại Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11113",
+      "name": "Xã Tân Kỳ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11131",
+      "name": "Xã Chí Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11140",
+      "name": "Xã Lạc Phượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11146",
+      "name": "Xã Nguyên Giáp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11164",
+      "name": "Xã Vĩnh Lại",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11167",
+      "name": "Xã Tân An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11203",
+      "name": "Xã Ninh Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11218",
+      "name": "Xã Hồng Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11224",
+      "name": "Xã Khúc Thừa Dụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11239",
+      "name": "Xã Thanh Miện",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11242",
+      "name": "Xã Nguyễn Lương Bằng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11254",
+      "name": "Xã Bắc Thanh Miện",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11257",
+      "name": "Xã Hải Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11284",
+      "name": "Xã Nam Thanh Miện",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11311",
+      "name": "Phường Hồng Bàng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11329",
+      "name": "Phường Ngô Quyền",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11359",
+      "name": "Phường Gia Viên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11383",
+      "name": "Phường Lê Chân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11407",
+      "name": "Phường An Biên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11411",
+      "name": "Phường Đông Hải",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11413",
+      "name": "Phường Hải An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11443",
+      "name": "Phường Kiến An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11446",
+      "name": "Phường Phù Liễn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11455",
+      "name": "Phường Đồ Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11473",
+      "name": "Phường Bạch Đằng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11488",
+      "name": "Phường Lưu Kiếm",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11503",
+      "name": "Xã Việt Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11506",
+      "name": "Phường Lê Ích Mộc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11533",
+      "name": "Phường Hòa Bình",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11542",
+      "name": "Phường Nam Triệu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11557",
+      "name": "Phường Thiên Hương",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11560",
+      "name": "Phường Thủy Nguyên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11581",
+      "name": "Phường An Dương",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11593",
+      "name": "Phường An Phong",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11602",
+      "name": "Phường Hồng An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11617",
+      "name": "Phường An Hải",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11629",
+      "name": "Xã An Lão",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11635",
+      "name": "Xã An Trường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11647",
+      "name": "Xã An Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11668",
+      "name": "Xã An Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11674",
+      "name": "Xã An Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11680",
+      "name": "Xã Kiến Thụy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11689",
+      "name": "Phường Hưng Đạo",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11692",
+      "name": "Phường Dương Kinh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11713",
+      "name": "Xã Nghi Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11725",
+      "name": "Xã Kiến Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11728",
+      "name": "Xã Kiến Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11737",
+      "name": "Phường Nam Đồ Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11749",
+      "name": "Xã Kiến Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11755",
+      "name": "Xã Tiên Lãng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11761",
+      "name": "Xã Quyết Thắng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11779",
+      "name": "Xã Tân Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11791",
+      "name": "Xã Tiên Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11806",
+      "name": "Xã Chấn Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11809",
+      "name": "Xã Hùng Thắng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11824",
+      "name": "Xã Vĩnh Bảo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11836",
+      "name": "Xã Vĩnh Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11842",
+      "name": "Xã Vĩnh Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11848",
+      "name": "Xã Vĩnh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11875",
+      "name": "Xã Vĩnh Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11887",
+      "name": "Xã Vĩnh Am",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11911",
+      "name": "Xã Nguyễn Bỉnh Khiêm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11914",
+      "name": "Đặc khu Cát Hải",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "11948",
+      "name": "Đặc khu Bạch Long Vĩ",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "31",
+      "provinceName": "Thành phố Hải Phòng",
+      "decree": "Số: 1669/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

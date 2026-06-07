@@ -1,0 +1,896 @@
+{
+  "requestId": "7oIw0m1uYg6grIvIbtpp3",
+  "communes": [
+    {
+      "code": "07210",
+      "name": "Phường Bắc Giang",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07228",
+      "name": "Phường Đa Mai",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07246",
+      "name": "Xã Xuân Lương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07264",
+      "name": "Xã Tam Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07282",
+      "name": "Xã Đồng Kỳ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07288",
+      "name": "Xã Yên Thế",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07294",
+      "name": "Xã Bố Hạ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07306",
+      "name": "Xã Nhã Nam",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07330",
+      "name": "Xã Phúc Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07333",
+      "name": "Xã Quang Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07339",
+      "name": "Xã Tân Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07351",
+      "name": "Xã Ngọc Thiện",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07375",
+      "name": "Xã Lạng Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07381",
+      "name": "Xã Tiên Lục",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07399",
+      "name": "Xã Kép",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07420",
+      "name": "Xã Mỹ Thái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07432",
+      "name": "Xã Tân Dĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07444",
+      "name": "Xã Lục Nam",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07450",
+      "name": "Xã Đông Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07462",
+      "name": "Xã Bảo Đài",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07486",
+      "name": "Xã Nghĩa Phương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07489",
+      "name": "Xã Trường Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07492",
+      "name": "Xã Lục Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07498",
+      "name": "Xã Bắc Lũng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07519",
+      "name": "Xã Cẩm Lý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07525",
+      "name": "Phường Chũ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07531",
+      "name": "Xã Tân Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07534",
+      "name": "Xã Sa Lý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07537",
+      "name": "Xã Biên Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07543",
+      "name": "Xã Sơn Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07552",
+      "name": "Xã Kiên Lao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07573",
+      "name": "Xã Biển Động",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07582",
+      "name": "Xã Lục Ngạn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07594",
+      "name": "Xã Đèo Gia",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07603",
+      "name": "Xã Nam Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07612",
+      "name": "Phường Phượng Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07615",
+      "name": "Xã Sơn Động",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07616",
+      "name": "Xã Tây Yên Tử",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07621",
+      "name": "Xã Vân Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07627",
+      "name": "Xã Đại Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07642",
+      "name": "Xã Yên Định",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07654",
+      "name": "Xã An Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07663",
+      "name": "Xã Tuấn Đạo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07672",
+      "name": "Xã Dương Hưu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07681",
+      "name": "Phường Yên Dũng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07682",
+      "name": "Phường Tân An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07696",
+      "name": "Phường Tiền Phong",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07699",
+      "name": "Phường Tân Tiến",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07735",
+      "name": "Xã Đồng Việt",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07738",
+      "name": "Phường Cảnh Thụy",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07774",
+      "name": "Phường Tự Lạn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07777",
+      "name": "Phường Việt Yên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07795",
+      "name": "Phường Nếnh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07798",
+      "name": "Phường Vân Hà",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07822",
+      "name": "Xã Hoàng Vân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07840",
+      "name": "Xã Hiệp Hoà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07864",
+      "name": "Xã Hợp Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07870",
+      "name": "Xã Xuân Cẩm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09169",
+      "name": "Phường Vũ Ninh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09187",
+      "name": "Phường Kinh Bắc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09190",
+      "name": "Phường Võ Cường",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09193",
+      "name": "Xã Yên Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09202",
+      "name": "Xã Tam Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09205",
+      "name": "Xã Yên Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09208",
+      "name": "Xã Tam Đa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09238",
+      "name": "Xã Văn Môn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09247",
+      "name": "Phường Quế Võ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09253",
+      "name": "Phường Nhân Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09265",
+      "name": "Phường Phương Liễu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09286",
+      "name": "Phường Nam Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09292",
+      "name": "Xã Phù Lãng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09295",
+      "name": "Phường Bồng Lai",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09301",
+      "name": "Phường Đào Viên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09313",
+      "name": "Xã Chi Lăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09319",
+      "name": "Xã Tiên Du",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09325",
+      "name": "Phường Hạp Lĩnh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09334",
+      "name": "Xã Liên Bão",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09340",
+      "name": "Xã Đại Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09343",
+      "name": "Xã Tân Chi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09349",
+      "name": "Xã Phật Tích",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09367",
+      "name": "Phường Từ Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09370",
+      "name": "Phường Tam Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09379",
+      "name": "Phường Phù Khê",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09385",
+      "name": "Phường Đồng Nguyên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09400",
+      "name": "Phường Thuận Thành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09409",
+      "name": "Phường Mão Điền",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09427",
+      "name": "Phường Trí Quả",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09430",
+      "name": "Phường Trạm Lộ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09433",
+      "name": "Phường Song Liễu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09445",
+      "name": "Phường Ninh Xá",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09454",
+      "name": "Xã Gia Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09466",
+      "name": "Xã Cao Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09469",
+      "name": "Xã Đại Lai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09475",
+      "name": "Xã Nhân Thắng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09487",
+      "name": "Xã Đông Cứu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09496",
+      "name": "Xã Lương Tài",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09499",
+      "name": "Xã Trung Kênh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09523",
+      "name": "Xã Trung Chính",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "09529",
+      "name": "Xã Lâm Thao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "24",
+      "provinceName": "Tỉnh Bắc Ninh",
+      "decree": "Số: 1658/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

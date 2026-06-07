@@ -1,0 +1,626 @@
+{
+  "requestId": "YqavGcDuPI4h-6CF0hTJ7",
+  "communes": [
+    {
+      "code": "18073",
+      "name": "Phường Thành Sen",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18100",
+      "name": "Phường Trần Phú",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18115",
+      "name": "Phường Bắc Hồng Lĩnh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18118",
+      "name": "Phường Nam Hồng Lĩnh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18133",
+      "name": "Xã Hương Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18160",
+      "name": "Xã Sơn Hồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18163",
+      "name": "Xã Sơn Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18172",
+      "name": "Xã Sơn Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18184",
+      "name": "Xã Sơn Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18196",
+      "name": "Xã Sơn Kim 1",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18199",
+      "name": "Xã Sơn Kim 2",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18202",
+      "name": "Xã Tứ Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18223",
+      "name": "Xã Kim Hoa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18229",
+      "name": "Xã Đức Thọ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18244",
+      "name": "Xã Đức Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18262",
+      "name": "Xã Đức Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18277",
+      "name": "Xã Đức Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18304",
+      "name": "Xã Đức Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18313",
+      "name": "Xã Vũ Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18322",
+      "name": "Xã Mai Hoa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18328",
+      "name": "Xã Thượng Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18352",
+      "name": "Xã Nghi Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18364",
+      "name": "Xã Đan Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18373",
+      "name": "Xã Tiên Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18394",
+      "name": "Xã Cổ Đạm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18406",
+      "name": "Xã Can Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18409",
+      "name": "Xã Hồng Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18418",
+      "name": "Xã Tùng Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18436",
+      "name": "Xã Trường Lưu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18466",
+      "name": "Xã Gia Hanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18481",
+      "name": "Xã Xuân Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18484",
+      "name": "Xã Đồng Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18496",
+      "name": "Xã Hương Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18502",
+      "name": "Xã Hà Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18523",
+      "name": "Xã Hương Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18532",
+      "name": "Xã Hương Phố",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18544",
+      "name": "Xã Hương Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18547",
+      "name": "Xã Phúc Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18550",
+      "name": "Xã Hương Đô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18562",
+      "name": "Xã Thạch Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18568",
+      "name": "Xã Lộc Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18583",
+      "name": "Xã Mai Phụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18586",
+      "name": "Xã Đông Kinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18601",
+      "name": "Xã Việt Xuyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18604",
+      "name": "Xã Thạch Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18619",
+      "name": "Xã Đồng Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18628",
+      "name": "Xã Thạch Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18634",
+      "name": "Xã Toàn Lưu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18652",
+      "name": "Phường Hà Huy Tập",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18667",
+      "name": "Xã Thạch Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18673",
+      "name": "Xã Cẩm Xuyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18676",
+      "name": "Xã Thiên Cầm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18682",
+      "name": "Xã Yên Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18685",
+      "name": "Xã Cẩm Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18736",
+      "name": "Xã Cẩm Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18739",
+      "name": "Xã Cẩm Duệ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18742",
+      "name": "Xã Cẩm Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18748",
+      "name": "Xã Cẩm Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18754",
+      "name": "Phường Sông Trí",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18766",
+      "name": "Xã Kỳ Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18775",
+      "name": "Xã Kỳ Anh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18781",
+      "name": "Phường Hải Ninh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18787",
+      "name": "Xã Kỳ Văn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18790",
+      "name": "Xã Kỳ Khang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18814",
+      "name": "Xã Kỳ Hoa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18823",
+      "name": "Phường Vũng Áng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18832",
+      "name": "Phường Hoành Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18838",
+      "name": "Xã Kỳ Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18844",
+      "name": "Xã Kỳ Thượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "42",
+      "provinceName": "Tỉnh Hà Tĩnh",
+      "decree": "Số: 1665/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

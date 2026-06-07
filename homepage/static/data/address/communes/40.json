@@ -1,0 +1,1175 @@
+{
+  "requestId": "4ByolujngEtpxWsr1BLn9",
+  "communes": [
+    {
+      "code": "16681",
+      "name": "Phường Thành Vinh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16690",
+      "name": "Phường Trường Vinh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16702",
+      "name": "Phường Vinh Phú",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16708",
+      "name": "Phường Vinh Lộc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16732",
+      "name": "Phường Cửa Lò",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16738",
+      "name": "Xã Quế Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16744",
+      "name": "Xã Thông Thụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16750",
+      "name": "Xã Tiền Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16756",
+      "name": "Xã Tri Lễ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16774",
+      "name": "Xã Mường Quàng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16777",
+      "name": "Xã Quỳ Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16792",
+      "name": "Xã Châu Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16801",
+      "name": "Xã Hùng Chân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16804",
+      "name": "Xã Châu Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16813",
+      "name": "Xã Mường Xén",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16816",
+      "name": "Xã Mỹ Lý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16819",
+      "name": "Xã Bắc Lý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16822",
+      "name": "Xã Keng Đu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16828",
+      "name": "Xã Huồi Tụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16831",
+      "name": "Xã Mường Lống",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16834",
+      "name": "Xã Na Loi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16837",
+      "name": "Xã Nậm Cắn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16849",
+      "name": "Xã Hữu Kiệm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16855",
+      "name": "Xã Chiêu Lưu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16858",
+      "name": "Xã Mường Típ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16870",
+      "name": "Xã Na Ngoi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16876",
+      "name": "Xã Tương Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16882",
+      "name": "Xã Nhôn Mai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16885",
+      "name": "Xã Hữu Khuông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16903",
+      "name": "Xã Nga My",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16906",
+      "name": "Xã Lượng Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16909",
+      "name": "Xã Yên Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16912",
+      "name": "Xã Yên Na",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16933",
+      "name": "Xã Tam Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16936",
+      "name": "Xã Tam Thái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16939",
+      "name": "Phường Thái Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16941",
+      "name": "Xã Nghĩa Đàn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16951",
+      "name": "Xã Nghĩa Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16969",
+      "name": "Xã Nghĩa Thọ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16972",
+      "name": "Xã Nghĩa Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "16975",
+      "name": "Xã Nghĩa Mai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17011",
+      "name": "Phường Tây Hiếu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17017",
+      "name": "Xã Đông Hiếu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17029",
+      "name": "Xã Nghĩa Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17032",
+      "name": "Xã Nghĩa Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17035",
+      "name": "Xã Quỳ Hợp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17044",
+      "name": "Xã Châu Hồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17056",
+      "name": "Xã Châu Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17059",
+      "name": "Xã Tam Hợp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17071",
+      "name": "Xã Minh Hợp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17077",
+      "name": "Xã Mường Ham",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17089",
+      "name": "Xã Mường Chọng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17110",
+      "name": "Phường Hoàng Mai",
+      "englishName": "Hoang Mai town",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17125",
+      "name": "Phường Quỳnh Mai",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17128",
+      "name": "Phường Tân Mai",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17143",
+      "name": "Xã Quỳnh Văn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17149",
+      "name": "Xã Quỳnh Tam",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17170",
+      "name": "Xã Quỳnh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17176",
+      "name": "Xã Quỳnh Anh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17179",
+      "name": "Xã Quỳnh Lưu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17212",
+      "name": "Xã Quỳnh Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17224",
+      "name": "Xã Quỳnh Thắng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17230",
+      "name": "Xã Bình Chuẩn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17239",
+      "name": "Xã Mậu Thạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17242",
+      "name": "Xã Cam Phục",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17248",
+      "name": "Xã Châu Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17254",
+      "name": "Xã Con Cuông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17263",
+      "name": "Xã Môn Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17266",
+      "name": "Xã Tân Kỳ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17272",
+      "name": "Xã Tân Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17278",
+      "name": "Xã Giai Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17284",
+      "name": "Xã Nghĩa Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17287",
+      "name": "Xã Tiên Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17305",
+      "name": "Xã Tân An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17326",
+      "name": "Xã Nghĩa Hành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17329",
+      "name": "Xã Anh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17335",
+      "name": "Xã Thành Bình Thọ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17344",
+      "name": "Xã Nhân Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17357",
+      "name": "Xã Vĩnh Tường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17365",
+      "name": "Xã Anh Sơn Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17380",
+      "name": "Xã Yên Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17395",
+      "name": "Xã Hùng Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17416",
+      "name": "Xã Đức Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17419",
+      "name": "Xã Hải Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17443",
+      "name": "Xã Quảng Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17464",
+      "name": "Xã Diễn Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17476",
+      "name": "Xã Minh Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17479",
+      "name": "Xã An Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17488",
+      "name": "Xã Tân Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17506",
+      "name": "Xã Yên Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17515",
+      "name": "Xã Bình Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17521",
+      "name": "Xã Quang Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17524",
+      "name": "Xã Giai Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17530",
+      "name": "Xã Đông Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17560",
+      "name": "Xã Vân Du",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17569",
+      "name": "Xã Quan Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17605",
+      "name": "Xã Hợp Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17611",
+      "name": "Xã Vân Tụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17623",
+      "name": "Xã Bạch Ngọc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17641",
+      "name": "Xã Lương Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17662",
+      "name": "Xã Đô Lương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17677",
+      "name": "Xã Văn Hiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17689",
+      "name": "Xã Thuần Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17707",
+      "name": "Xã Bạch Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17713",
+      "name": "Xã Đại Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17722",
+      "name": "Xã Hạnh Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17728",
+      "name": "Xã Cát Ngạn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17743",
+      "name": "Xã Tam Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17759",
+      "name": "Xã Sơn Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17770",
+      "name": "Xã Hoa Quân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17779",
+      "name": "Xã Xuân Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17791",
+      "name": "Xã Kim Bảng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17818",
+      "name": "Xã Bích Hào",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17827",
+      "name": "Xã Nghi Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17833",
+      "name": "Xã Hải Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17842",
+      "name": "Xã Thần Lĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17854",
+      "name": "Xã Văn Kiều",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17857",
+      "name": "Xã Phúc Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17866",
+      "name": "Xã Trung Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17878",
+      "name": "Xã Đông Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17920",
+      "name": "Phường Vinh Hưng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17935",
+      "name": "Xã Nam Đàn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17944",
+      "name": "Xã Đại Huệ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17950",
+      "name": "Xã Vạn An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17971",
+      "name": "Xã Kim Liên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "17989",
+      "name": "Xã Thiên Nhẫn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18001",
+      "name": "Xã Hưng Nguyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18007",
+      "name": "Xã Yên Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18028",
+      "name": "Xã Hưng Nguyên Nam",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18040",
+      "name": "Xã Lam Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "40",
+      "provinceName": "Tỉnh Nghệ An",
+      "decree": "Số: 1678/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

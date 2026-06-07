@@ -1,0 +1,581 @@
+{
+  "requestId": "XhK0JS3cMjmot1HjSPPrD",
+  "communes": [
+    {
+      "code": "31825",
+      "name": "Phường Bạc Liêu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31834",
+      "name": "Phường Vĩnh Trạch",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31840",
+      "name": "Phường Hiệp Thành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31843",
+      "name": "Xã Hồng Dân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31849",
+      "name": "Xã Ninh Quới",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31858",
+      "name": "Xã Vĩnh Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31864",
+      "name": "Xã Ninh Thạnh Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31867",
+      "name": "Xã Phước Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31876",
+      "name": "Xã Vĩnh Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31882",
+      "name": "Xã Vĩnh Thanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31885",
+      "name": "Xã Phong Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31891",
+      "name": "Xã Hòa Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31894",
+      "name": "Xã Châu Thới",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31900",
+      "name": "Xã Vĩnh Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31906",
+      "name": "Xã Hưng Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31918",
+      "name": "Xã Vĩnh Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31927",
+      "name": "Xã Vĩnh Hậu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31942",
+      "name": "Phường Giá Rai",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31951",
+      "name": "Phường Láng Tròn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31957",
+      "name": "Xã Phong Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31972",
+      "name": "Xã Gành Hào",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31975",
+      "name": "Xã Đông Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31985",
+      "name": "Xã Long Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31988",
+      "name": "Xã An Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31993",
+      "name": "Xã Định Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32002",
+      "name": "Phường An Xuyên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32014",
+      "name": "Phường Lý Văn Lâm",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32025",
+      "name": "Phường Tân Thành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32041",
+      "name": "Phường Hòa Thành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32044",
+      "name": "Xã Nguyễn Phích",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32047",
+      "name": "Xã U Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32059",
+      "name": "Xã Khánh An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32062",
+      "name": "Xã Khánh Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32065",
+      "name": "Xã Thới Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32069",
+      "name": "Xã Biển Bạch",
+      "englishName": "Tan Bang commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32071",
+      "name": "Xã Trí Phải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32083",
+      "name": "Xã Tân Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32092",
+      "name": "Xã Hồ Thị Kỷ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32095",
+      "name": "Xã Trần Văn Thời",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32098",
+      "name": "Xã Sông Đốc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32104",
+      "name": "Xã Đá Bạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32110",
+      "name": "Xã Khánh Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32119",
+      "name": "Xã Khánh Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32128",
+      "name": "Xã Cái Nước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32134",
+      "name": "Xã Lương Thế Trân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32137",
+      "name": "Xã Tân Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32140",
+      "name": "Xã Hưng Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32152",
+      "name": "Xã Đầm Dơi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32155",
+      "name": "Xã Tạ An Khương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32161",
+      "name": "Xã Trần Phán",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32167",
+      "name": "Xã Tân Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32182",
+      "name": "Xã Quách Phẩm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32185",
+      "name": "Xã Thanh Tùng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32188",
+      "name": "Xã Tân Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32191",
+      "name": "Xã Năm Căn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32201",
+      "name": "Xã Đất Mới",
+      "englishName": "Lam Hai commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32206",
+      "name": "Xã Tam Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32212",
+      "name": "Xã Cái Đôi Vàm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32214",
+      "name": "Xã Phú Mỹ",
+      "englishName": "Phu Thuan Commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32218",
+      "name": "Xã Phú Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32227",
+      "name": "Xã Nguyễn Việt Khái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32236",
+      "name": "Xã Tân Ân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32244",
+      "name": "Xã Phan Ngọc Hiển",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "32248",
+      "name": "Xã Đất Mũi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "96",
+      "provinceName": "Tỉnh Cà Mau",
+      "decree": "Số: 1655/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

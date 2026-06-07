@@ -1,0 +1,365 @@
+{
+  "requestId": "amlHz6GoC6rPZw2_Y8_-k",
+  "communes": [
+    {
+      "code": "19753",
+      "name": "Phường Phú Xuân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19774",
+      "name": "Phường Kim Long",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19777",
+      "name": "Phường Vỹ Dạ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19789",
+      "name": "Phường Thuận Hóa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19804",
+      "name": "Phường Hương An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19813",
+      "name": "Phường Thủy Xuân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19815",
+      "name": "Phường An Cựu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19819",
+      "name": "Phường Phong Điền",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19828",
+      "name": "Phường Phong Phú",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19831",
+      "name": "Phường Phong Dinh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19858",
+      "name": "Phường Phong Thái",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19867",
+      "name": "Xã Quảng Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19873",
+      "name": "Phường Phong Quảng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19885",
+      "name": "Xã Đan Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19900",
+      "name": "Phường Thuận An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19909",
+      "name": "Phường Dương Nỗ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19918",
+      "name": "Xã Phú Hồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19930",
+      "name": "Phường Mỹ Thượng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19942",
+      "name": "Xã Phú Vang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19945",
+      "name": "Xã Phú Vinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19960",
+      "name": "Phường Phú Bài",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19969",
+      "name": "Phường Thanh Thủy",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19975",
+      "name": "Phường Hương Thủy",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19996",
+      "name": "Phường Hương Trà",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20014",
+      "name": "Phường Hóa Châu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20017",
+      "name": "Phường Kim Trà",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20035",
+      "name": "Xã Bình Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20044",
+      "name": "Xã A Lưới 2",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20050",
+      "name": "Xã A Lưới 5",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20056",
+      "name": "Xã A Lưới 1",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20071",
+      "name": "Xã A Lưới 3",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20101",
+      "name": "Xã A Lưới 4",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20107",
+      "name": "Xã Phú Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20122",
+      "name": "Xã Vinh Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20131",
+      "name": "Xã Hưng Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20137",
+      "name": "Xã Chân Mây - Lăng Cô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20140",
+      "name": "Xã Lộc An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20161",
+      "name": "Xã Khe Tre",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20179",
+      "name": "Xã Nam Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20182",
+      "name": "Xã Long Quảng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "46",
+      "provinceName": "Thành phố Huế",
+      "decree": "Số: 1675/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

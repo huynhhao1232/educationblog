@@ -1,0 +1,869 @@
+{
+  "requestId": "h77FMt-6msMnyizPUVhnu",
+  "communes": [
+    {
+      "code": "21025",
+      "name": "Phường Cẩm Thành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21028",
+      "name": "Phường Nghĩa Lộ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21034",
+      "name": "Xã An Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21040",
+      "name": "Xã Bình Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21061",
+      "name": "Xã Vạn Tường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21085",
+      "name": "Xã Bình Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21100",
+      "name": "Xã Bình Chương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21109",
+      "name": "Xã Đông Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21115",
+      "name": "Xã Trà Bồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21124",
+      "name": "Xã Thanh Bồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21127",
+      "name": "Xã Đông Trà Bồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21136",
+      "name": "Xã Cà Đam",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21154",
+      "name": "Xã Tây Trà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21157",
+      "name": "Xã Tây Trà Bồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21172",
+      "name": "Phường Trương Quang Trọng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21181",
+      "name": "Xã Thọ Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21196",
+      "name": "Xã Trường Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21205",
+      "name": "Xã Ba Gia",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21211",
+      "name": "Xã Tịnh Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21220",
+      "name": "Xã Sơn Tịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21235",
+      "name": "Xã Tư Nghĩa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21238",
+      "name": "Xã Vệ Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21244",
+      "name": "Xã Trà Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21250",
+      "name": "Xã Nghĩa Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21289",
+      "name": "Xã Sơn Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21292",
+      "name": "Xã Sơn Hạ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21307",
+      "name": "Xã Sơn Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21319",
+      "name": "Xã Sơn Thủy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21325",
+      "name": "Xã Sơn Kỳ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21334",
+      "name": "Xã Sơn Tây Thượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21340",
+      "name": "Xã Sơn Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21343",
+      "name": "Xã Sơn Tây Hạ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21349",
+      "name": "Xã Sơn Mai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21361",
+      "name": "Xã Minh Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21364",
+      "name": "Xã Nghĩa Hành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21370",
+      "name": "Xã Phước Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21385",
+      "name": "Xã Đình Cương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21388",
+      "name": "Xã Thiện Tín",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21400",
+      "name": "Xã Mộ Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21409",
+      "name": "Xã Long Phụng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21421",
+      "name": "Xã Mỏ Cày",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21433",
+      "name": "Xã Lân Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21439",
+      "name": "Phường Đức Phổ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21451",
+      "name": "Phường Trà Câu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21457",
+      "name": "Xã Nguyễn Nghiêm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21472",
+      "name": "Xã Khánh Cường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21478",
+      "name": "Phường Sa Huỳnh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21484",
+      "name": "Xã Ba Tơ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21490",
+      "name": "Xã Ba Vinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21496",
+      "name": "Xã Ba Động",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21499",
+      "name": "Xã Ba Dinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21520",
+      "name": "Xã Đặng Thùy Trâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21523",
+      "name": "Xã Ba Tô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21529",
+      "name": "Xã Ba Vì",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21538",
+      "name": "Xã Ba Xa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21548",
+      "name": "Đặc khu Lý Sơn",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23284",
+      "name": "Phường Đăk Cấm",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23293",
+      "name": "Phường Kon Tum",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23302",
+      "name": "Phường Đăk Bla",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23317",
+      "name": "Xã Ngọk Bay",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23326",
+      "name": "Xã Ia Chim",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23332",
+      "name": "Xã Đăk Rơ Wa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23341",
+      "name": "Xã Đăk Pék",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23344",
+      "name": "Xã Đăk Plô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23356",
+      "name": "Xã Xốp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23365",
+      "name": "Xã Ngọc Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23368",
+      "name": "Xã Đăk Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23374",
+      "name": "Xã Đăk Môn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23377",
+      "name": "Xã Bờ Y",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23383",
+      "name": "Xã Dục Nông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23392",
+      "name": "Xã Sa Loong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23401",
+      "name": "Xã Đăk Tô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23416",
+      "name": "Xã Đăk Sao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23419",
+      "name": "Xã Đăk Tờ Kan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23425",
+      "name": "Xã Tu Mơ Rông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23428",
+      "name": "Xã Ngọk Tụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23430",
+      "name": "Xã Kon Đào",
+      "englishName": "Dak Tram commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23446",
+      "name": "Xã Măng Ri",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23455",
+      "name": "Xã Măng Bút",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23473",
+      "name": "Xã Măng Đen",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23476",
+      "name": "Xã Kon Plông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23479",
+      "name": "Xã Đăk Rve",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23485",
+      "name": "Xã Đăk Kôi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23497",
+      "name": "Xã Kon Braih",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23500",
+      "name": "Xã Đăk Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23504",
+      "name": "Xã Đăk Pxi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23510",
+      "name": "Xã Đăk Ui",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23512",
+      "name": "Xã Đăk Mar",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23515",
+      "name": "Xã Ngọk Réo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23527",
+      "name": "Xã Sa Thầy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23530",
+      "name": "Xã Rờ Kơi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23534",
+      "name": "Xã Sa Bình",
+      "englishName": "Ho Moong commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23535",
+      "name": "Xã Ia Đal",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23536",
+      "name": "Xã Mô Rai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23538",
+      "name": "Xã Ia Tơi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23548",
+      "name": "Xã Ya Ly",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "51",
+      "provinceName": "Tỉnh Quảng Ngãi",
+      "decree": "Số: 1677/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

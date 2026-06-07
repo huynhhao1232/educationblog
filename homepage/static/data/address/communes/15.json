@@ -1,0 +1,896 @@
+{
+  "requestId": "cGKfCP6R12Fzey3jb1D1O",
+  "communes": [
+    {
+      "code": "02647",
+      "name": "Phường Lào Cai",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02671",
+      "name": "Phường Cam Đường",
+      "englishName": "Nam Cuong Commune",
+      "administrativeLevel": "Phường",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02680",
+      "name": "Xã Hợp Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02683",
+      "name": "Xã Bát Xát",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02686",
+      "name": "Xã A Mú Sung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02695",
+      "name": "Xã Trịnh Tường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02701",
+      "name": "Xã Y Tý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02707",
+      "name": "Xã Dền Sáng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02725",
+      "name": "Xã Bản Xèo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02728",
+      "name": "Xã Mường Hum",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02746",
+      "name": "Xã Cốc San",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02752",
+      "name": "Xã Pha Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02761",
+      "name": "Xã Mường Khương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02782",
+      "name": "Xã Cao Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02788",
+      "name": "Xã Bản Lầu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02809",
+      "name": "Xã Si Ma Cai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02824",
+      "name": "Xã Sín Chéng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02839",
+      "name": "Xã Bắc Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02842",
+      "name": "Xã Tả Củ Tỷ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02848",
+      "name": "Xã Lùng Phình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02869",
+      "name": "Xã Bản Liền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02890",
+      "name": "Xã Bảo Nhai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02896",
+      "name": "Xã Cốc Lầu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02902",
+      "name": "Xã Phong Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02905",
+      "name": "Xã Bảo Thắng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02908",
+      "name": "Xã Tằng Loỏng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02923",
+      "name": "Xã Gia Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02926",
+      "name": "Xã Xuân Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02947",
+      "name": "Xã Bảo Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02953",
+      "name": "Xã Nghĩa Đô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02962",
+      "name": "Xã Xuân Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02968",
+      "name": "Xã Thượng Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02989",
+      "name": "Xã Bảo Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02998",
+      "name": "Xã Phúc Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03004",
+      "name": "Xã Ngũ Chỉ Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03006",
+      "name": "Phường Sa Pa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03013",
+      "name": "Xã Tả Phìn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03037",
+      "name": "Xã Tả Van",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03043",
+      "name": "Xã Mường Bo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03046",
+      "name": "Xã Bản Hồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03061",
+      "name": "Xã Võ Lao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03076",
+      "name": "Xã Nậm Chày",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03082",
+      "name": "Xã Văn Bàn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03085",
+      "name": "Xã Nậm Xé",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03091",
+      "name": "Xã Chiềng Ken",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03103",
+      "name": "Xã Khánh Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03106",
+      "name": "Xã Dương Quỳ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03121",
+      "name": "Xã Minh Lương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04252",
+      "name": "Phường Yên Bái",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04273",
+      "name": "Phường Nam Cường",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04279",
+      "name": "Phường Văn Phú",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04288",
+      "name": "Phường Nghĩa Lộ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04303",
+      "name": "Xã Lục Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04309",
+      "name": "Xã Lâm Thượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04336",
+      "name": "Xã Tân Lĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04342",
+      "name": "Xã Khánh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04345",
+      "name": "Xã Mường Lai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04363",
+      "name": "Xã Phúc Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04375",
+      "name": "Xã Mậu A",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04381",
+      "name": "Xã Lâm Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04387",
+      "name": "Xã Châu Quế",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04399",
+      "name": "Xã Đông Cuông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04402",
+      "name": "Xã Phong Dụ Hạ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04423",
+      "name": "Xã Phong Dụ Thượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04429",
+      "name": "Xã Tân Hợp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04441",
+      "name": "Xã Xuân Ái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04450",
+      "name": "Xã Mỏ Vàng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04456",
+      "name": "Xã Mù Cang Chải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04462",
+      "name": "Xã Nậm Có",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04465",
+      "name": "Xã Khao Mang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04474",
+      "name": "Xã Lao Chải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04489",
+      "name": "Xã Chế Tạo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04492",
+      "name": "Xã Púng Luông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04498",
+      "name": "Xã Trấn Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04531",
+      "name": "Xã Quy Mông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04537",
+      "name": "Xã Lương Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04543",
+      "name": "Phường Âu Lâu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04564",
+      "name": "Xã Việt Hồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04576",
+      "name": "Xã Hưng Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04585",
+      "name": "Xã Hạnh Phúc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04603",
+      "name": "Xã Tà Xi Láng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04606",
+      "name": "Xã Trạm Tấu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04609",
+      "name": "Xã Phình Hồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04630",
+      "name": "Xã Tú Lệ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04636",
+      "name": "Xã Gia Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04651",
+      "name": "Xã Sơn Lương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04660",
+      "name": "Xã Liên Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04663",
+      "name": "Phường Trung Tâm",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04672",
+      "name": "Xã Văn Chấn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04681",
+      "name": "Phường Cầu Thia",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04693",
+      "name": "Xã Cát Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04699",
+      "name": "Xã Chấn Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04705",
+      "name": "Xã Thượng Bằng La",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04711",
+      "name": "Xã Nghĩa Tâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04714",
+      "name": "Xã Yên Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04717",
+      "name": "Xã Thác Bà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04726",
+      "name": "Xã Cảm Nhân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04744",
+      "name": "Xã Yên Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "04750",
+      "name": "Xã Bảo Ái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "15",
+      "provinceName": "Tỉnh Lào Cai",
+      "decree": "Số: 1673/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

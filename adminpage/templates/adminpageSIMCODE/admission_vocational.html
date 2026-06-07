@@ -1,0 +1,234 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission_vocational %}
+<style>
+    .voc-wrap { margin: 0 30px 30px; }
+    .voc-section {
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 24px;
+    }
+    .voc-section h5 { margin-bottom: 16px; color: #022468; }
+    .trade-tag {
+        display: inline-block;
+        background: #e7f1ff;
+        border: 1px solid #b6d4fe;
+        border-radius: 6px;
+        padding: 4px 10px;
+        margin: 4px 6px 4px 0;
+        font-size: 13px;
+    }
+    .trade-tag form { display: inline; }
+    .trade-tag button { border: none; background: none; color: #dc3545; padding: 0 0 0 6px; cursor: pointer; }
+</style>
+
+<nav aria-label="breadcrumb" class="i-name">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'adminpage:admission' %}">Tuyển sinh</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'adminpage:campus_shift_group_manage' %}">Cấu hình tuyển sinh</a></li>
+        <li class="breadcrumb-item active">Cấu hình dạy nghề</li>
+    </ol>
+</nav>
+
+<div class="voc-wrap">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <p class="text-muted mb-0">Quản lý cơ sở dạy nghề, danh mục nghề và liên kết với cơ sở tuyển sinh GDTX.</p>
+        <button type="button" class="btn btn-primary" onclick="openVcModal()">
+            <i class="fas fa-plus me-1"></i> Thêm cơ sở dạy nghề
+        </button>
+    </div>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} py-2">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="voc-section">
+        <h5><i class="fas fa-school me-2"></i>Cơ sở dạy nghề &amp; danh mục nghề</h5>
+        <div class="board">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Mã</td>
+                        <td>Tên cơ sở</td>
+                        <td>Địa chỉ</td>
+                        <td>Danh mục nghề</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for vc in vocational_campuses %}
+                    <tr>
+                        <td class="people-des"><p>{{ vc.code }}</p></td>
+                        <td class="people-des"><p>{{ vc.name }}</p></td>
+                        <td class="people-des"><p>{{ vc.address|default:"—" }}</p></td>
+                        <td class="people-des">
+                            {% for trade in vc.trades.all %}
+                            <span class="trade-tag">
+                                {{ trade.name }}
+                                <form method="post" style="display:inline;" onsubmit="return confirm('Xóa nghề này?');">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="action" value="delete_trade">
+                                    <input type="hidden" name="trade_id" value="{{ trade.id }}">
+                                    <input type="hidden" name="campus_filter" value="{{ campus_filter }}">
+                                    <button type="submit" title="Xóa nghề">&times;</button>
+                                </form>
+                            </span>
+                            {% empty %}
+                            <span class="text-muted">Chưa có nghề</span>
+                            {% endfor %}
+                            <form method="post" class="d-inline-flex gap-1 mt-2" style="max-width:280px;">
+                                {% csrf_token %}
+                                <input type="hidden" name="action" value="add_trade">
+                                <input type="hidden" name="vc_id" value="{{ vc.id }}">
+                                <input type="hidden" name="campus_filter" value="{{ campus_filter }}">
+                                <input type="text" name="trade_name" class="form-control form-control-sm" placeholder="Thêm nghề..." required>
+                                <button type="submit" class="btn btn-sm btn-outline-primary">Thêm</button>
+                            </form>
+                        </td>
+                        <td class="view">
+                            <i style="cursor:pointer;" class="fa-regular fa-pen-to-square me-2"
+                               onclick="openVcModal({{ vc.id }}, '{{ vc.name|escapejs }}', '{{ vc.code|escapejs }}', '{{ vc.address|escapejs }}')"></i>
+                            <form method="post" style="display:inline;" onsubmit="return confirm('Xóa cơ sở dạy nghề này?');">
+                                {% csrf_token %}
+                                <input type="hidden" name="action" value="delete_vc">
+                                <input type="hidden" name="vc_id" value="{{ vc.id }}">
+                                <input type="hidden" name="campus_filter" value="{{ campus_filter }}">
+                                <button type="submit" class="btn btn-link p-0 text-danger"><i class="fa-regular fa-trash-can"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr><td colspan="5" class="text-center py-4">Chưa có cơ sở dạy nghề nào.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="voc-section">
+        <h5><i class="fas fa-link me-2"></i>Liên kết cơ sở tuyển sinh GDTX → cơ sở dạy nghề</h5>
+        <form method="get" class="row g-3 mb-3">
+            <div class="col-md-4">
+                <label class="form-label">Cơ sở tuyển sinh GDTX</label>
+                <select class="form-control" name="campus" onchange="this.form.submit()">
+                    <option value="">— Chọn cơ sở —</option>
+                    {% for campus in campuses %}
+                    <option value="{{ campus.id }}" {% if campus_filter == campus.id|stringformat:"s" %}selected{% endif %}>{{ campus.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </form>
+
+        {% if campus_filter %}
+        <form method="post" class="row g-3 align-items-end mb-4">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="link">
+            <input type="hidden" name="admission_campus_id" value="{{ campus_filter }}">
+            <input type="hidden" name="campus_filter" value="{{ campus_filter }}">
+            <div class="col-md-6">
+                <label class="form-label">Thêm cơ sở dạy nghề song song</label>
+                <select class="form-control" name="vocational_campus_id" required>
+                    <option value="">— Chọn cơ sở dạy nghề —</option>
+                    {% for vc in vocational_campuses %}
+                    {% if vc.id not in linked_vc_ids %}
+                    <option value="{{ vc.id }}">{{ vc.name }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-success">Liên kết</button>
+            </div>
+        </form>
+
+        <div class="board">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Cơ sở tuyển sinh</td>
+                        <td>Cơ sở dạy nghề liên kết</td>
+                        <td>Nghề có sẵn</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for link in links %}
+                    <tr>
+                        <td class="people-des"><p>{{ link.admission_campus.name }}</p></td>
+                        <td class="people-des"><p>{{ link.vocational_campus.name }}</p></td>
+                        <td class="people-des">
+                            <p>{% for t in link.vocational_campus.trades.all %}{{ t.name }}{% if not forloop.last %}, {% endif %}{% empty %}—{% endfor %}</p>
+                        </td>
+                        <td class="view">
+                            <form method="post" onsubmit="return confirm('Gỡ liên kết này?');">
+                                {% csrf_token %}
+                                <input type="hidden" name="action" value="unlink">
+                                <input type="hidden" name="link_id" value="{{ link.id }}">
+                                <input type="hidden" name="campus_filter" value="{{ campus_filter }}">
+                                <button type="submit" class="btn btn-sm btn-outline-danger">Gỡ liên kết</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr><td colspan="4" class="text-center py-4">Chưa liên kết cơ sở dạy nghề nào.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="text-muted mb-0">Chọn cơ sở tuyển sinh GDTX để quản lý liên kết cơ sở dạy nghề.</p>
+        {% endif %}
+    </div>
+</div>
+
+<form id="vcForm" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="action" id="vcAction" value="add_vc">
+    <input type="hidden" name="vc_id" id="vcId" value="">
+    <input type="hidden" name="campus_filter" value="{{ campus_filter }}">
+    <div class="modal fade" id="vcModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="vcModalTitle">Thêm cơ sở dạy nghề</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Tên cơ sở dạy nghề *</label>
+                        <input type="text" class="form-control" name="vc_name" id="vcName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mã (tùy chọn)</label>
+                        <input type="text" class="form-control" name="vc_code" id="vcCode" placeholder="Tự sinh nếu để trống">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Địa chỉ</label>
+                        <textarea class="form-control" name="vc_address" id="vcAddress" rows="2"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+function openVcModal(id, name, code, address) {
+    document.getElementById('vcAction').value = id ? 'edit_vc' : 'add_vc';
+    document.getElementById('vcId').value = id || '';
+    document.getElementById('vcName').value = name || '';
+    document.getElementById('vcCode').value = code || '';
+    document.getElementById('vcAddress').value = address || '';
+    document.getElementById('vcModalTitle').textContent = id ? 'Sửa cơ sở dạy nghề' : 'Thêm cơ sở dạy nghề';
+    new bootstrap.Modal(document.getElementById('vcModal')).show();
+}
+</script>
+{% endblock %}

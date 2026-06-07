@@ -1,0 +1,491 @@
+{
+  "requestId": "j0oO_wyJz51MI65C0eXhP",
+  "communes": [
+    {
+      "code": "06652",
+      "name": "Phường Hà Tu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06658",
+      "name": "Phường Cao Xanh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06661",
+      "name": "Phường Việt Hưng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06673",
+      "name": "Phường Bãi Cháy",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06676",
+      "name": "Phường Hà Lầm",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06685",
+      "name": "Phường Hồng Gai",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06688",
+      "name": "Phường Hạ Long",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06706",
+      "name": "Phường Tuần Châu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06709",
+      "name": "Phường Móng Cái 2",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06712",
+      "name": "Phường Móng Cái 1",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06724",
+      "name": "Xã Hải Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06733",
+      "name": "Xã Hải Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06736",
+      "name": "Phường Móng Cái 3",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06757",
+      "name": "Xã Vĩnh Thực",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06760",
+      "name": "Phường Mông Dương",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06778",
+      "name": "Phường Quang Hanh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06781",
+      "name": "Phường Cửa Ông",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06793",
+      "name": "Phường Cẩm Phả",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06799",
+      "name": "Xã Hải Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06811",
+      "name": "Phường Uông Bí",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06820",
+      "name": "Phường Vàng Danh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06832",
+      "name": "Phường Yên Tử",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06838",
+      "name": "Xã Bình Liêu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06841",
+      "name": "Xã Hoành Mô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06856",
+      "name": "Xã Lục Hồn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06862",
+      "name": "Xã Tiên Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06874",
+      "name": "Xã Điền Xá",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06877",
+      "name": "Xã Đông Ngũ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06886",
+      "name": "Xã Hải Lạng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06895",
+      "name": "Xã Đầm Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06913",
+      "name": "Xã Quảng Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06922",
+      "name": "Xã Quảng Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06931",
+      "name": "Xã Quảng Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06946",
+      "name": "Xã Đường Hoa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06967",
+      "name": "Xã Cái Chiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06970",
+      "name": "Xã Ba Chẽ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06979",
+      "name": "Xã Kỳ Thượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06985",
+      "name": "Xã Lương Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06994",
+      "name": "Đặc khu Vân Đồn",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07030",
+      "name": "Phường Hoành Bồ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07054",
+      "name": "Xã Quảng La",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07060",
+      "name": "Xã Thống Nhất",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07069",
+      "name": "Phường Mạo Khê",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07081",
+      "name": "Phường Bình Khê",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07090",
+      "name": "Phường An Sinh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07093",
+      "name": "Phường Đông Triều",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07114",
+      "name": "Phường Hoàng Quế",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07132",
+      "name": "Phường Quảng Yên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07135",
+      "name": "Phường Đông Mai",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07147",
+      "name": "Phường Hiệp Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07168",
+      "name": "Phường Hà An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07180",
+      "name": "Phường Liên Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07183",
+      "name": "Phường Phong Cốc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "07192",
+      "name": "Đặc khu Cô Tô",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "22",
+      "provinceName": "Tỉnh Quảng Ninh",
+      "decree": "Số: 1679/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

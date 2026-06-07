@@ -1,0 +1,923 @@
+{
+  "requestId": "7U8QzlFfqWjc1coUNGKqV",
+  "communes": [
+    {
+      "code": "30292",
+      "name": "Phường Bình Đức",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30301",
+      "name": "Phường Mỹ Thới",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30307",
+      "name": "Phường Long Xuyên",
+      "englishName": "My Hoa Ward",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30313",
+      "name": "Xã Mỹ Hòa Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30316",
+      "name": "Phường Châu Đốc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30325",
+      "name": "Phường Vĩnh Tế",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30337",
+      "name": "Xã An Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30341",
+      "name": "Xã Khánh Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30346",
+      "name": "Xã Nhơn Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30352",
+      "name": "Xã Phú Hữu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30367",
+      "name": "Xã Vĩnh Hậu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30376",
+      "name": "Phường Tân Châu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30377",
+      "name": "Phường Long Phú",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30385",
+      "name": "Xã Vĩnh Xương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30388",
+      "name": "Xã Tân An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30403",
+      "name": "Xã Châu Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30406",
+      "name": "Xã Phú Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30409",
+      "name": "Xã Chợ Vàm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30421",
+      "name": "Xã Phú Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30430",
+      "name": "Xã Hòa Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30436",
+      "name": "Xã Phú An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30445",
+      "name": "Xã Bình Thạnh Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30463",
+      "name": "Xã Châu Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30469",
+      "name": "Xã Mỹ Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30478",
+      "name": "Xã Vĩnh Thạnh Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30481",
+      "name": "Xã Thạnh Mỹ Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30487",
+      "name": "Xã Bình Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30502",
+      "name": "Phường Thới Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30505",
+      "name": "Phường Chi Lăng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30520",
+      "name": "Phường Tịnh Biên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30526",
+      "name": "Xã An Cư",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30538",
+      "name": "Xã Núi Cấm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30544",
+      "name": "Xã Tri Tôn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30547",
+      "name": "Xã Ba Chúc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30568",
+      "name": "Xã Vĩnh Gia",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30577",
+      "name": "Xã Ô Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30580",
+      "name": "Xã Cô Tô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30589",
+      "name": "Xã An Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30595",
+      "name": "Xã Cần Đăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30604",
+      "name": "Xã Vĩnh An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30607",
+      "name": "Xã Bình Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30619",
+      "name": "Xã Vĩnh Hanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30628",
+      "name": "Xã Chợ Mới",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30631",
+      "name": "Xã Long Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30643",
+      "name": "Xã Cù Lao Giêng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30658",
+      "name": "Xã Nhơn Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30664",
+      "name": "Xã Long Kiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30673",
+      "name": "Xã Hội An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30682",
+      "name": "Xã Thoại Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30685",
+      "name": "Xã Phú Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30688",
+      "name": "Xã Óc Eo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30691",
+      "name": "Xã Tây Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30697",
+      "name": "Xã Vĩnh Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30709",
+      "name": "Xã Định Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30742",
+      "name": "Phường Rạch Giá",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30760",
+      "name": "Phường Vĩnh Thông",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30766",
+      "name": "Phường Tô Châu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30769",
+      "name": "Phường Hà Tiên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30781",
+      "name": "Xã Tiên Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30787",
+      "name": "Xã Kiên Lương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30790",
+      "name": "Xã Hòa Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30793",
+      "name": "Xã Vĩnh Điều",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30796",
+      "name": "Xã Giang Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30811",
+      "name": "Xã Sơn Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30814",
+      "name": "Xã Hòn Nghệ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30817",
+      "name": "Xã Hòn Đất",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30823",
+      "name": "Xã Bình Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30826",
+      "name": "Xã Bình Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30835",
+      "name": "Xã Sơn Kiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30838",
+      "name": "Xã Mỹ Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30850",
+      "name": "Xã Tân Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30856",
+      "name": "Xã Tân Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30874",
+      "name": "Xã Thạnh Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30880",
+      "name": "Xã Châu Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30886",
+      "name": "Xã Thạnh Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30898",
+      "name": "Xã Bình An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30904",
+      "name": "Xã Giồng Riềng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30910",
+      "name": "Xã Thạnh Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30928",
+      "name": "Xã Ngọc Chúc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30934",
+      "name": "Xã Hòa Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30943",
+      "name": "Xã Long Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30949",
+      "name": "Xã Hòa Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30952",
+      "name": "Xã Gò Quao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30958",
+      "name": "Xã Định Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30970",
+      "name": "Xã Vĩnh Hòa Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30982",
+      "name": "Xã Vĩnh Tuy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30985",
+      "name": "Xã An Biên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30988",
+      "name": "Xã Tây Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31006",
+      "name": "Xã Đông Thái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31012",
+      "name": "Xã Vĩnh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31018",
+      "name": "Xã An Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31024",
+      "name": "Xã Đông Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31027",
+      "name": "Xã U Minh Thượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31031",
+      "name": "Xã Tân Thạnh",
+      "englishName": "Tan Thanh commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31036",
+      "name": "Xã Đông Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31042",
+      "name": "Xã Vân Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31051",
+      "name": "Xã Vĩnh Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31064",
+      "name": "Xã Vĩnh Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31069",
+      "name": "Xã Vĩnh Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31078",
+      "name": "Đặc khu Phú Quốc",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31105",
+      "name": "Đặc khu Thổ Châu",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31108",
+      "name": "Đặc khu Kiên Hải",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "91",
+      "provinceName": "Tỉnh An Giang",
+      "decree": "Số: 1654/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

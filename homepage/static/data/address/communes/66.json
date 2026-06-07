@@ -1,0 +1,923 @@
+{
+  "requestId": "v89g47NPoLDIliHtj1_-Y",
+  "communes": [
+    {
+      "code": "22015",
+      "name": "Phường Tuy Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22045",
+      "name": "Phường Bình Kiến",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22051",
+      "name": "Phường Sông Cầu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22057",
+      "name": "Xã Xuân Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22060",
+      "name": "Xã Xuân Cảnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22075",
+      "name": "Xã Xuân Thọ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22076",
+      "name": "Phường Xuân Đài",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22081",
+      "name": "Xã Đồng Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22090",
+      "name": "Xã Xuân Lãnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22096",
+      "name": "Xã Phú Mỡ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22111",
+      "name": "Xã Xuân Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22114",
+      "name": "Xã Tuy An Bắc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22120",
+      "name": "Xã Tuy An Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22132",
+      "name": "Xã Tuy An Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22147",
+      "name": "Xã Ô Loan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22153",
+      "name": "Xã Tuy An Nam",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22165",
+      "name": "Xã Sơn Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22171",
+      "name": "Xã Tây Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22177",
+      "name": "Xã Vân Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22192",
+      "name": "Xã Suối Trai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22207",
+      "name": "Xã Sông Hinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22222",
+      "name": "Xã Đức Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22225",
+      "name": "Xã Ea Bá",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22237",
+      "name": "Xã Ea Ly",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22240",
+      "name": "Phường Phú Yên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22250",
+      "name": "Xã Sơn Thành",
+      "englishName": "Son Thanh Dong commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22255",
+      "name": "Xã Tây Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22258",
+      "name": "Phường Đông Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22261",
+      "name": "Phường Hòa Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22276",
+      "name": "Xã Hòa Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22285",
+      "name": "Xã Hòa Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22291",
+      "name": "Xã Hòa Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22303",
+      "name": "Xã Phú Hòa 2",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22319",
+      "name": "Xã Phú Hòa 1",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24121",
+      "name": "Phường Tân Lập",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24133",
+      "name": "Phường Buôn Ma Thuột",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24154",
+      "name": "Phường Thành Nhất",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24163",
+      "name": "Phường Tân An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24169",
+      "name": "Phường Ea Kao",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24175",
+      "name": "Xã Hòa Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24181",
+      "name": "Xã Ea Drăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24184",
+      "name": "Xã Ea H’Leo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24187",
+      "name": "Xã Ea Hiao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24193",
+      "name": "Xã Ea Wy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24208",
+      "name": "Xã Ea Khăl",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24211",
+      "name": "Xã Ea Súp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24214",
+      "name": "Xã Ia Lốp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24217",
+      "name": "Xã Ea Rốk",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24221",
+      "name": "Xã Ia Rvê",
+      "englishName": "Ia RVe commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24229",
+      "name": "Xã Ea Bung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24235",
+      "name": "Xã Buôn Đôn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24241",
+      "name": "Xã Ea Wer",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24250",
+      "name": "Xã Ea Nuôl",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24259",
+      "name": "Xã Quảng Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24265",
+      "name": "Xã Ea Kiết",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24277",
+      "name": "Xã Ea Tul",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24280",
+      "name": "Xã Cư M’gar",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24286",
+      "name": "Xã Ea M’Droh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24301",
+      "name": "Xã Cuôr Đăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24305",
+      "name": "Phường Buôn Hồ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24310",
+      "name": "Xã Krông Búk",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24313",
+      "name": "Xã Cư Pơng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24316",
+      "name": "Xã Pơng Drang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24328",
+      "name": "Xã Ea Drông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24340",
+      "name": "Phường Cư Bao",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24343",
+      "name": "Xã Krông Năng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24346",
+      "name": "Xã Dliê Ya",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24352",
+      "name": "Xã Tam Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24364",
+      "name": "Xã Phú Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24373",
+      "name": "Xã Ea Kar",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24376",
+      "name": "Xã Ea Knốp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24400",
+      "name": "Xã Ea Păl",
+      "englishName": "Ea Păl commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24403",
+      "name": "Xã Ea Ô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24406",
+      "name": "Xã Cư Yang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24412",
+      "name": "Xã M’Drắk",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24415",
+      "name": "Xã Cư Prao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24433",
+      "name": "Xã Ea Riêng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24436",
+      "name": "Xã Cư M’ta",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24444",
+      "name": "Xã Krông Á",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24445",
+      "name": "Xã Ea Trang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24448",
+      "name": "Xã Krông Bông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24454",
+      "name": "Xã Dang Kang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24472",
+      "name": "Xã Hòa Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24478",
+      "name": "Xã Cư Pui",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24484",
+      "name": "Xã Yang Mao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24490",
+      "name": "Xã Krông Pắc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24496",
+      "name": "Xã Ea Kly",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24502",
+      "name": "Xã Ea Phê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24505",
+      "name": "Xã Ea Knuếc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24526",
+      "name": "Xã Tân Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24529",
+      "name": "Xã Vụ Bổn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24538",
+      "name": "Xã Krông Ana",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24540",
+      "name": "Xã Ea Ning",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24544",
+      "name": "Xã Ea Ktur",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24559",
+      "name": "Xã Ea Na",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24561",
+      "name": "Xã Dray Bhăng",
+      "englishName": "Dray Bhang Commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24568",
+      "name": "Xã Dur Kmăl",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24580",
+      "name": "Xã Liên Sơn Lắk",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24595",
+      "name": "Xã Đắk Liêng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24598",
+      "name": "Xã Đắk Phơi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24604",
+      "name": "Xã Krông Nô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24607",
+      "name": "Xã Nam Ka",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "66",
+      "provinceName": "Tỉnh Đắk Lắk",
+      "decree": "Số: 1660/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

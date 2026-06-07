@@ -1,0 +1,509 @@
+{
+  "requestId": "w8ZWmsOlowy3H9LPfv4fd",
+  "communes": [
+    {
+      "code": "01273",
+      "name": "Phường Thục Phán",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01279",
+      "name": "Phường Nùng Trí Cao",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01288",
+      "name": "Phường Tân Giang",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01290",
+      "name": "Xã Bảo Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01294",
+      "name": "Xã Lý Bôn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01297",
+      "name": "Xã Nam Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01304",
+      "name": "Xã Quảng Lâm",
+      "englishName": "Thach Lam commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01318",
+      "name": "Xã Yên Thổ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01321",
+      "name": "Xã Bảo Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01324",
+      "name": "Xã Cốc Pàng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01327",
+      "name": "Xã Cô Ba",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01336",
+      "name": "Xã Khánh Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01339",
+      "name": "Xã Xuân Trường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01351",
+      "name": "Xã Hưng Đạo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01354",
+      "name": "Xã Huy Giáp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01360",
+      "name": "Xã Sơn Lộ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01363",
+      "name": "Xã Thông Nông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01366",
+      "name": "Xã Cần Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01387",
+      "name": "Xã Thanh Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01392",
+      "name": "Xã Trường Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01393",
+      "name": "Xã Lũng Nặm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01414",
+      "name": "Xã Tổng Cọt",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01438",
+      "name": "Xã Hà Quảng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01447",
+      "name": "Xã Trà Lĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01456",
+      "name": "Xã Quang Hán",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01465",
+      "name": "Xã Quang Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01477",
+      "name": "Xã Trùng Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01489",
+      "name": "Xã Đình Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01501",
+      "name": "Xã Đàm Thủy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01525",
+      "name": "Xã Đoài Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01537",
+      "name": "Xã Lý Quốc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01552",
+      "name": "Xã Quang Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01558",
+      "name": "Xã Hạ Lang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01561",
+      "name": "Xã Vinh Quý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01576",
+      "name": "Xã Quảng Uyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01594",
+      "name": "Xã Độc Lập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01618",
+      "name": "Xã Hạnh Phúc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01636",
+      "name": "Xã Bế Văn Đàn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01648",
+      "name": "Xã Phục Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01654",
+      "name": "Xã Hòa An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01660",
+      "name": "Xã Nam Tuấn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01699",
+      "name": "Xã Nguyễn Huệ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01708",
+      "name": "Xã Bạch Đằng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01726",
+      "name": "Xã Nguyên Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01729",
+      "name": "Xã Tĩnh Túc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01738",
+      "name": "Xã Ca Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01747",
+      "name": "Xã Minh Tâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01768",
+      "name": "Xã Phan Thanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01774",
+      "name": "Xã Tam Kim",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01777",
+      "name": "Xã Thành Công",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01786",
+      "name": "Xã Đông Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01789",
+      "name": "Xã Canh Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01792",
+      "name": "Xã Kim Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01795",
+      "name": "Xã Minh Khai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01807",
+      "name": "Xã Thạch An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01822",
+      "name": "Xã Đức Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "04",
+      "provinceName": "Tỉnh Cao Bằng",
+      "decree": "Số: 1657/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

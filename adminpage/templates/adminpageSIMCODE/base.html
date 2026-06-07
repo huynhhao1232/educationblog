@@ -53,10 +53,17 @@
                     <li class="active"><i class="fa-solid fa-chart-pie"></i><a href="{% url 'adminpage:adminpagee' %}">Thống kê</a></li>
                     <li><i class="fa-solid fa-chart-pie"></i><a href="{%url 'adminpage:category'%}">Danh mục</a></li>
                     <li><i class="fa-solid fa-chart-pie"></i><a href="{%url 'adminpage:phongban'%}">Cơ cấu tổ chức</a></li>
-                    <li><i class="fa-solid fa-chart-pie"></i><a href="">Diễn đàn</a></li>
+                    <li><i class="fa-solid fa-chart-pie"></i><a href="{% url 'adminpage:forum_manage' %}">Diễn đàn</a></li>
                     <li><i class="fa-solid fa-chart-pie"></i><a href="{%url 'adminpage:admission'%}">Tuyển sinh</a></li>
+                    <li><i class="fa-solid fa-sliders"></i><a href="{% url 'adminpage:campus_shift_group_manage' %}">Cấu hình tuyển sinh</a></li>
+                    <li><i class="fa-solid fa-tools"></i><a href="{% url 'adminpage:admission_vocational_manage' %}">Cấu hình dạy nghề</a></li>
                     <li><i class="fa-solid fa-clipboard-check"></i><a href="{%url 'adminpage:exam_registration'%}">Đăng ký thi tốt nghiệp</a></li>
                     <li><i class="fa-solid fa-file-excel"></i><a href="{%url 'adminpage:import_students_excel'%}">Import đăng ký thi tốt nghiệp</a></li>
+                    <li><i class="fa-solid fa-id-card"></i><a href="{% url 'adminpage:student_info_manage' %}">Kiểm tra thông tin học viên</a></li>
+                    <li><i class="fa-solid fa-door-open"></i><a href="{% url 'adminpage:exam_room_manage' %}">Quản lý phòng thi</a></li>
+                    <li><i class="fa-solid fa-chair"></i><a href="{% url 'adminpage:exam_room_sort_dashboard' %}">Sắp xếp phòng thi</a></li>
+                    <li><i class="fa-solid fa-users"></i><a href="{% url 'adminpage:exam_sort2_candidates' %}">SXPT II — Thí sinh</a></li>
+                    <li><i class="fa-solid fa-location-dot"></i><a href="{% url 'adminpage:exam_sort2_venues' %}">SXPT II — Điểm thi</a></li>
                     <li><i class="fa-solid fa-calendar-check"></i><a href="{% url 'adminpage:attendance_pivot' %}">Chấm công tự động</a></li>
                     <li><i class="fa-solid fa-book-open"></i><a href="{% url 'adminpage:journal_manager_dashboard' %}">Sổ đầu bài số</a></li>
                 </div>
@@ -96,6 +103,8 @@
                 {% block activity %} {%endblock%}
                 {% block class%} {%endblock%}
                 {% block admission%} {%endblock%}
+                {% block campus_shift_group %}{% endblock %}
+                {% block admission_vocational %}{% endblock %}
                 {% block letter%} {%endblock%}
             </section>
         </div>
