@@ -1,0 +1,257 @@
+{% extends 'homepage/template.html' %}
+{% block title %} Xác nhận thông tin thành công {% endblock %}
+{% block admission %}
+{% load static %}
+<style>
+    .success-wrapper {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+    .success-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #fff;
+        padding: 50px 40px;
+        border-radius: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .success-icon {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+        box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+        animation: scaleIn 0.5s ease-out;
+    }
+    @keyframes scaleIn {
+        from { transform: scale(0); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+    .success-icon i {
+        color: white;
+        font-size: 50px;
+    }
+    .success-message {
+        color: #28a745;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .success-subtitle {
+        color: #666;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    .info-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        border: 1px solid #dee2e6;
+        text-align: left;
+    }
+    .info-section h4 {
+        color: #023EB6;
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+    .info-section h4 i {
+        font-size: 24px;
+    }
+    .info-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-bottom: 20px;
+    }
+    .info-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .info-item label {
+        font-weight: 600;
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .info-item span {
+        color: #022468;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 12px;
+        background: white;
+        border-radius: 8px;
+        border-left: 3px solid #023EB6;
+    }
+    .subjects-badge {
+        display: inline-flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .subject-tag {
+        background: linear-gradient(135deg, #023EB6 0%, #022468 100%);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 14px;
+        box-shadow: 0 2px 8px rgba(2, 62, 182, 0.2);
+    }
+    .btn-home {
+        padding: 15px 40px;
+        background: linear-gradient(135deg, #023EB6 0%, #022468 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 4px 15px rgba(2, 62, 182, 0.3);
+    }
+    .btn-home:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(2, 62, 182, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+    .btn-secondary-outline {
+        padding: 15px 32px;
+        margin-left: 12px;
+        border: 2px solid #023EB6;
+        color: #023EB6;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+    }
+    .btn-secondary-outline:hover {
+        background: #f0f5ff;
+        color: #022468;
+        text-decoration: none;
+    }
+    .hint-box {
+        background: #fff8e6;
+        border: 1px solid #ffe082;
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: 24px;
+        color: #5d4e37;
+        font-size: 15px;
+        text-align: left;
+    }
+    @media (max-width: 576px) {
+        .info-row { grid-template-columns: 1fr; }
+        .btn-secondary-outline { margin-left: 0; margin-top: 12px; display: block; }
+    }
+</style>
+
+<div class="success-wrapper">
+    <div class="success-container">
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+
+        <div class="success-message">
+            Xác nhận thông tin thành công!
+        </div>
+        <div class="success-subtitle">
+            Kết quả xác nhận của bạn đã được lưu vào hệ thống.
+        </div>
+
+        {% if remaining_attempts > 0 %}
+        <div class="hint-box">
+            <i class="fas fa-info-circle me-2"></i>
+            Bạn còn <strong>{{ remaining_attempts }}</strong> lần gửi xác nhận. Nếu cần chỉnh sửa, hãy dùng nút bên dưới.
+        </div>
+        {% else %}
+        <div class="hint-box">
+            <i class="fas fa-lock me-2"></i>
+            Bạn đã dùng hết 2 lần gửi. Chỉ có thể xem lại thông tin, không chỉnh sửa thêm.
+        </div>
+        {% endif %}
+
+        <div class="info-section">
+            <h4><i class="fas fa-user-graduate"></i> Thông tin học viên</h4>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>Mã học viên</label>
+                    <span>{{ student.student_code }}</span>
+                </div>
+                <div class="info-item">
+                    <label>Lớp</label>
+                    <span>{{ student.class_name }}</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>Họ và tên</label>
+                    <span>{{ student.full_name|upper }}</span>
+                </div>
+                <div class="info-item">
+                    <label>Lần gửi</label>
+                    <span>{{ verification.submit_count }}/2</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h4><i class="fas fa-clipboard-check"></i> Nội dung xác nhận</h4>
+            {% if all_correct %}
+            <div class="info-item">
+                <label>Kết quả</label>
+                <span>Bạn đã xác nhận <strong>tất cả thông tin là đúng</strong>.</span>
+            </div>
+            {% else %}
+            <div class="info-item" style="margin-bottom: 16px;">
+                <label>Các mục đánh dấu sai</label>
+                <div class="subjects-badge">
+                    {% for lab in wrong_labels %}
+                    <span class="subject-tag">{{ lab }}</span>
+                    {% empty %}
+                    <span>—</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            {% if verification.note %}
+            <div class="info-item" style="margin-top: 12px;">
+                <label>Ghi chú của bạn</label>
+                <span style="white-space: pre-wrap;">{{ verification.note }}</span>
+            </div>
+            {% endif %}
+        </div>
+
+        <div>
+            <a href="{% url 'homepage:Homepage' %}" class="btn-home">
+                <i class="fas fa-home" style="margin-right: 8px;"></i>
+                Về trang chủ
+            </a>
+            <a href="{% url 'homepage:student_info_verify' %}" class="btn-secondary-outline">
+                <i class="fas fa-arrow-left me-1"></i>
+                {% if remaining_attempts > 0 %}Tiếp tục chỉnh sửa{% else %}Xem lại thông tin{% endif %}
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

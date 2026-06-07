@@ -6,6 +6,7 @@ import json
 import os
 from django.conf import settings
 import requests
+import calendar
 
 def save_attendance_cell(request):
     """Lưu ô sửa trực tiếp trên bảng chấm công (teacher, year, month, day, value)."""
@@ -36,6 +37,8 @@ def save_attendance_cell(request):
         day = int(day)
     except (ValueError, TypeError):
         return JsonResponse({'ok': False, 'error': 'Giá trị không hợp lệ'}, status=400)
+    if AttendanceExcludedDay.objects.filter(year=year, month=month, day=day).exists():
+        return JsonResponse({'ok': False, 'error': 'Ngày này đang đặt là không chấm công'}, status=400)
     obj, _ = AttendanceOverride.objects.update_or_create(
         teacher_id=teacher_id, year=year, month=month, day=day,
         defaults={'value': value},
@@ -67,6 +70,9 @@ def save_attendance_cells_bulk(request):
         month = int(month)
     except (ValueError, TypeError):
         return JsonResponse({'ok': False, 'error': 'Năm/tháng không hợp lệ'}, status=400)
+    excluded_days = set(
+        AttendanceExcludedDay.objects.filter(year=year, month=month).values_list('day', flat=True)
+    )
     saved = 0
     for c in cells:
         try:
@@ -75,12 +81,53 @@ def save_attendance_cells_bulk(request):
             val = max(0, int(c.get('value', 0)))
         except (ValueError, TypeError, KeyError):
             continue
+        if day in excluded_days:
+            continue
         AttendanceOverride.objects.update_or_create(
             teacher_id=tid, year=year, month=month, day=day,
             defaults={'value': val},
         )
         saved += 1
     return JsonResponse({'ok': True, 'saved': saved})
+
+
+def save_attendance_excluded_days(request):
+    """Lưu danh sách ngày không chấm công theo tháng/năm."""
+    if not request.user.is_authenticated:
+        return JsonResponse({'ok': False, 'error': 'Chưa đăng nhập'}, status=401)
+    if request.method != 'POST':
+        return JsonResponse({'ok': False, 'error': 'Method not allowed'}, status=405)
+    try:
+        from homepage.models import Account, AccountType
+        account = Account.objects.get(user=request.user)
+        if AccountType.objects.get(accounttype_id=account.accounttype_id).accounttype_role != 'admin':
+            return JsonResponse({'ok': False, 'error': 'Không có quyền'}, status=403)
+    except Exception:
+        return JsonResponse({'ok': False, 'error': 'Không có quyền'}, status=403)
+
+    data = json.loads(request.body) if request.body else {}
+    year = data.get('year')
+    month = data.get('month')
+    days = data.get('days', [])
+    if not all([year, month]) or not isinstance(days, list):
+        return JsonResponse({'ok': False, 'error': 'Thiếu tham số'}, status=400)
+    try:
+        year = int(year)
+        month = int(month)
+    except (ValueError, TypeError):
+        return JsonResponse({'ok': False, 'error': 'Năm/tháng không hợp lệ'}, status=400)
+    _, max_day = calendar.monthrange(year, month)
+    clean_days = sorted({int(d) for d in days if str(d).isdigit() and 1 <= int(d) <= max_day})
+
+    AttendanceExcludedDay.objects.filter(year=year, month=month).exclude(day__in=clean_days).delete()
+    existing = set(
+        AttendanceExcludedDay.objects.filter(year=year, month=month).values_list('day', flat=True)
+    )
+    to_create = [AttendanceExcludedDay(year=year, month=month, day=d) for d in clean_days if d not in existing]
+    if to_create:
+        AttendanceExcludedDay.objects.bulk_create(to_create)
+    AttendanceOverride.objects.filter(year=year, month=month, day__in=clean_days).delete()
+    return JsonResponse({'ok': True, 'days': clean_days})
 
 
 def get_provinces(request):

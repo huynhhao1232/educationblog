@@ -60,6 +60,31 @@
 
     <div class="row mb-3">
         <div class="col-md-12">
+            <div class="journal-card border-success">
+                <h6 class="mb-2"><i class="fa-solid fa-calendar-plus me-1"></i>Thêm tuần mới cho tất cả sổ đầu bài</h6>
+                <p class="text-muted small mb-2">
+                    Tạo thêm <strong>1 tuần</strong> (tuần kế tiếp sau tuần cuối) cho mọi sổ đã có ít nhất một tuần trong năm học đã chọn.
+                    Sổ chưa có tuần nào cần set ngày bắt đầu tuần 1 trước.
+                </p>
+                <form method="post" action="{% url 'adminpage:journal_manager_dashboard' %}" class="row g-2 align-items-end"
+                      onsubmit="return confirm('Thêm 1 tuần mới cho tất cả sổ đầu bài năm học này?');">
+                    {% csrf_token %}
+                    <input type="hidden" name="journal_action" value="add_week_all">
+                    <div class="col-auto">
+                        <label class="form-label">Năm học</label>
+                        <input type="number" class="form-control form-control-sm" name="year" value="{{ current_year }}" min="2020" max="2035">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-sm btn-success mt-2">
+                            <i class="fa-solid fa-plus me-1"></i>Thêm 1 tuần (tất cả sổ)
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-12">
             <div class="journal-card border-primary">
                 <h6 class="mb-2"><i class="fa-solid fa-file-export me-1"></i>Export sổ đầu bài in theo tuần (tất cả môn trong 1 file)</h6>
                 <form method="get" action="{% url 'adminpage:journal_export_excel_all_week' %}" class="row g-2 align-items-end">
@@ -69,7 +94,7 @@
                     </div>
                     <div class="col-auto">
                         <label class="form-label">Tuần</label>
-                        <input type="number" class="form-control form-control-sm" name="week" value="1" min="1" max="13">
+                        <input type="number" class="form-control form-control-sm" name="week" value="1" min="1" max="{{ max_week_number|default:52 }}">
                     </div>
                     <div class="col-auto">
                         <button type="submit" class="btn btn-sm btn-primary mt-2">
@@ -92,7 +117,7 @@
                     </div>
                     <div class="col-4">
                         <label class="form-label">Tuần</label>
-                        <input type="number" class="form-control form-control-sm" name="week" value="1" min="1" max="13">
+                        <input type="number" class="form-control form-control-sm" name="week" value="1" min="1" max="{{ max_week_number|default:52 }}">
                     </div>
                     <div class="col-4">
                         <button type="submit" class="btn btn-sm btn-outline-danger mt-2">
@@ -113,7 +138,7 @@
                     </div>
                     <div class="col-4">
                         <label class="form-label">Tuần</label>
-                        <input type="number" class="form-control form-control-sm" name="week" value="1" min="1" max="13">
+                        <input type="number" class="form-control form-control-sm" name="week" value="1" min="1" max="{{ max_week_number|default:52 }}">
                     </div>
                     <div class="col-4">
                         <button type="submit" class="btn btn-sm btn-outline-success mt-2">

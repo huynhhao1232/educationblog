@@ -34,6 +34,56 @@
         &nbsp;|&nbsp; <strong>Số tiết:</strong> {{ entries|length }}
     </div>
 
+    {% if teacher_limits %}
+    <div class="mt-3">
+        <h5 class="mb-2">Mở giới hạn tiết cho từng giáo viên</h5>
+        <div class="table-responsive mb-3">
+            <table class="journal-table">
+                <thead>
+                    <tr>
+                        <th class="col-stt">STT</th>
+                        <th class="col-gv">Giáo viên</th>
+                        <th class="col-siso">Giới hạn (số hàng)</th>
+                        <th class="col-siso">Đã ghi (số tiết)</th>
+                        <th class="col-thaotac">Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for t in teacher_limits %}
+                    <tr>
+                        <td class="col-stt">{{ forloop.counter }}</td>
+                        <td class="col-gv">
+                            <div><strong>{{ t.teacher_full_name }}</strong></div>
+                            <div><code>{{ t.teacher_access_code }}</code></div>
+                        </td>
+                        <td class="col-siso" style="text-align:center;">{{ t.required }}</td>
+                        <td class="col-siso" style="text-align:center;">{{ t.actual }}</td>
+                        <td>
+                            <form method="post" action="{% url 'adminpage:journal_week_summary' journal.id week_obj.week_number %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="journal_action" value="set_teacher_over_limit">
+                                <input type="hidden" name="teacher_id" value="{{ t.teacher_id }}">
+                                <div class="d-flex align-items-center gap-2">
+                                    <input type="checkbox"
+                                           name="allow_over_limit"
+                                           value="1"
+                                           class="form-check-input"
+                                           {% if t.allow_over_limit %}checked{% endif %}
+                                           onchange="this.form.submit()">
+                                    <button type="submit" class="btn btn-sm btn-primary">
+                                        {% if t.allow_over_limit %}Đang cho phép{% else %}Chưa cho phép{% endif %}
+                                    </button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+
     <div class="table-responsive">
         <table class="journal-table">
             <thead>

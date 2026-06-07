@@ -159,6 +159,19 @@ class AttendanceOverride(models.Model):
     def __str__(self):
         return f"{self.teacher.teacher_code} {self.year}-{self.month:02d}-{self.day:02d}: {self.value}"
 
+class AttendanceExcludedDay(models.Model):
+    """Ngày được đánh dấu không chấm công theo tháng/năm."""
+    year = models.PositiveSmallIntegerField()
+    month = models.PositiveSmallIntegerField()
+    day = models.PositiveSmallIntegerField()
+
+    class Meta:
+        verbose_name = 'Ngày không chấm công'
+        verbose_name_plural = 'Ngày không chấm công'
+        unique_together = ('year', 'month', 'day')
+
+    def __str__(self):
+        return f"{self.year}-{self.month:02d}-{self.day:02d}"
 
 # ---------- Sổ đầu bài số (theo nhóm bộ môn) ----------
 
@@ -258,11 +271,11 @@ class SubjectJournal(models.Model):
 
 
 class JournalWeek(models.Model):
-    """Tuần trong sổ (1-13), có thể khóa."""
+    """Tuần trong sổ đầu bài, có thể khóa."""
     subject_journal = models.ForeignKey(
         SubjectJournal, on_delete=models.CASCADE, related_name='weeks', verbose_name='Sổ đầu bài'
     )
-    week_number = models.PositiveSmallIntegerField(verbose_name='Tuần', help_text='1-13')
+    week_number = models.PositiveSmallIntegerField(verbose_name='Tuần', help_text='Số thứ tự tuần (1, 2, 3, …)')
     start_date = models.DateField(verbose_name='Từ ngày')
     end_date = models.DateField(verbose_name='Đến ngày')
     is_locked = models.BooleanField(default=False, verbose_name='Khóa')
@@ -281,6 +294,40 @@ class JournalWeek(models.Model):
     def __str__(self):
         return f"{self.subject_journal} - Tuần {self.week_number}"
 
+
+
+
+class JournalTeacherWeekLimitOverride(models.Model):
+    """
+    Override giới hạn số tiết tối đa theo số hàng của giáo viên trong 1 tuần.
+    Mặc định hệ thống chặn khi số tiết đã nhập trong tuần >= số hàng của giáo viên.
+    """
+
+    journal_week = models.ForeignKey(
+        JournalWeek,
+        on_delete=models.CASCADE,
+        related_name='teacher_limit_overrides',
+        verbose_name='Tuần sổ đầu bài',
+    )
+    teacher = models.ForeignKey(
+        JournalTeacher,
+        on_delete=models.CASCADE,
+        related_name='week_limit_overrides',
+        verbose_name='Giáo viên',
+    )
+    allow_over_limit = models.BooleanField(
+        default=False,
+        verbose_name='Cho phép vượt giới hạn số tiết',
+        help_text='Bật lên để giáo viên có thể nhập thêm tiết trong tuần (vượt quá số hàng của giáo viên).',
+    )
+
+    class Meta:
+        verbose_name = 'Override giới hạn tiết theo tuần (GV)'
+        verbose_name_plural = 'Override giới hạn tiết theo tuần (GV)'
+        unique_together = ('journal_week', 'teacher')
+
+    def __str__(self):
+        return f"{self.teacher.full_name} - Tuần {self.journal_week.week_number} ({'cho phép' if self.allow_over_limit else 'giới hạn'})"
 
 class JournalRow(models.Model):
     """Một hàng trong sổ đầu bài, gắn với giáo viên."""

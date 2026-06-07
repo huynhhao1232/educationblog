@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, re_path
 from . import views
 from . import ajax
+from . import student_info_check
 from django.views.decorators.csrf import csrf_exempt
 app_name = 'adminpage'
 urlpatterns = [
@@ -12,6 +13,7 @@ urlpatterns = [
 
     path('phongban/', views.get_PB, name="phongban" ),
     path('cctc/<int:pb_id>/', views.get_CCTC, name="CCTC"),
+    path('forum/', views.forum_manage, name='forum_manage'),
     path('admission/', views.get_Admission, name="admission"),
     path('letter/<int:admission_id>/', views.get_Letter, name="letter"),
     path('exam-registration/', views.get_ExamRegistration, name="exam_registration"),
@@ -19,6 +21,22 @@ urlpatterns = [
     path('export-exam-registrations/', views.export_exam_registrations, name='export_exam_registrations'),
     path('import-students/', views.import_students_excel, name="import_students_excel"),
     path('save-imported-students/', views.save_imported_students, name="save_imported_students"),
+    # Kiểm tra thông tin học viên (THPT)
+    path('student-info/', student_info_check.student_info_manage, name='student_info_manage'),
+    path('student-info/import-excel/', student_info_check.student_info_import_excel, name='student_info_import_excel'),
+    path('student-info/import-preview/', student_info_check.student_info_import_preview, name='student_info_import_preview'),
+    path('student-info/save-imported/', student_info_check.student_info_save_imported, name='student_info_save_imported'),
+    path('student-info/export-excel/', student_info_check.student_info_export_excel, name='student_info_export_excel'),
+    path(
+        'student-info/verification/<str:student_code>/',
+        student_info_check.student_info_verification_json,
+        name='student_info_verification_json',
+    ),
+    path(
+        'student-info/history/<str:student_code>/',
+        student_info_check.student_info_verification_history,
+        name='student_info_verification_history',
+    ),
     # path('get_role/', ajax.get_role, name="get_role"),
     # path('course/', views.course, name = "course"),
     # path('get_course/', ajax.get_course, name="get_course"),
@@ -54,10 +72,32 @@ urlpatterns = [
     path('import-dsgv/', views.import_dsgv_excel, name='import_dsgv_excel'),
     path('import-dsl/', views.import_dsl_excel, name='import_dsl_excel'),
     path('import-tkb/', views.import_tkb_excel, name='import_tkb_excel'),
+    path('delete-schedule-version/', views.delete_schedule_version, name='delete_schedule_version'),
     path('clear-attendance-data/', views.clear_attendance_data, name='clear_attendance_data'),
     path('api/save-attendance-cell/', ajax.save_attendance_cell, name='save_attendance_cell'),
     path('api/save-attendance-cells-bulk/', ajax.save_attendance_cells_bulk, name='save_attendance_cells_bulk'),
+    path('api/save-attendance-excluded-days/', ajax.save_attendance_excluded_days, name='save_attendance_excluded_days'),
     path('export-attendance-excel/', views.export_attendance_excel, name='export_attendance_excel'),
+    # Sắp xếp phòng thi (tối giản)
+    path('exam-room/sort/', views.exam_room_sort_dashboard, name='exam_room_sort_dashboard'),
+    path('exam-room/move-students/', views.exam_room_move_students, name='exam_room_move_students'),
+    path('exam-room/export-excel/', views.exam_room_export_excel, name='exam_room_export_excel'),
+    path('exam-room/reassign-sbd/', views.exam_room_reassign_sbd, name='exam_room_reassign_sbd'),
+    path('exam-room/delete-all/', views.exam_room_delete_all_students, name='exam_room_delete_all_students'),
+    path('exam-room/delete-student/<str:student_code>/', views.exam_room_delete_student, name='exam_room_delete_student'),
+    path('exam-room/import-students/', views.exam_room_import_students, name='exam_room_import_students'),
+    path('exam-room/import-phongthi/', views.exam_room_import_phongthi, name='exam_room_import_phongthi'),
+    path('exam-room/save-phongthi-import/', views.exam_room_save_phongthi_import, name='exam_room_save_phongthi_import'),
+    path('exam-room/phongthi-mau.xlsx', views.exam_room_phongthi_template, name='exam_room_phongthi_template'),
+    path('exam-room/save-imported-students/', views.exam_room_save_imported_students, name='exam_room_save_imported_students'),
+    path('exam-room/toggle-integration/<str:student_code>/', views.exam_room_toggle_integration, name='exam_room_toggle_integration'),
+    path('exam-room/manage/', views.exam_room_manage, name='exam_room_manage'),
+    path('exam-room/bulk-export-excel/', views.exam_room_bulk_export_excel, name='exam_room_bulk_export_excel'),
+    path('exam-room/delete-all-rooms/', views.exam_room_delete_all_rooms, name='exam_room_delete_all_rooms'),
+    path('exam-room/delete/<int:room_id>/', views.exam_room_delete, name='exam_room_delete'),
+    path('exam-room/update/<int:room_id>/', views.exam_room_update, name='exam_room_update'),
+    path('exam-room/<int:room_id>/export-excel/', views.exam_room_detail_export_excel, name='exam_room_detail_export_excel'),
+    path('exam-room/<int:room_id>/', views.exam_room_detail, name='exam_room_detail'),
     # Sổ đầu bài số (Quản lý)
     path('so-dau-bai/', views.journal_manager_dashboard, name='journal_manager_dashboard'),
     path('so-dau-bai/mon/<int:journal_id>/', views.journal_subject_detail, name='journal_subject_detail'),

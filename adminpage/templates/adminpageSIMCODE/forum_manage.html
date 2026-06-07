@@ -1,0 +1,69 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block posttype %}
+<nav aria-label="breadcrumb" class="i-name">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Diễn đàn — quản lý bài đăng</li>
+    </ol>
+</nav>
+
+<p class="px-4 text-muted mb-2">
+    Bài mới từ trang công khai mặc định <strong>chưa hiển thị</strong> cho đến khi bạn bật &quot;Đã duyệt&quot;.
+    <a href="{% url 'homepage:forum' %}" target="_blank" rel="noopener">Xem trang diễn đàn</a>
+</p>
+
+<div class="board" style="margin: 0 0 30px 30px;">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>STT</td>
+                <td>Người đăng</td>
+                <td>Tiêu đề</td>
+                <td>Thời gian</td>
+                <td>Trạng thái</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in forum_posts %}
+            <tr>
+                <td class="people">
+                    <div class="people-de"><p>{{ forloop.counter }}</p></div>
+                </td>
+                <td class="people-des"><p>{{ p.name|default:"—" }}</p></td>
+                <td class="people-des" style="max-width: 280px; word-break: break-word;">
+                    <p>{{ p.title|default:"—" }}</p>
+                </td>
+                <td class="people-des"><p>{{ p.createdate|date:"d/m/Y H:i" }}</p></td>
+                <td class="people-des">
+                    {% if p.enable %}
+                    <span class="badge bg-success">Đã duyệt / hiển thị</span>
+                    {% else %}
+                    <span class="badge bg-secondary">Chưa duyệt</span>
+                    {% endif %}
+                </td>
+                <td class="view">
+                    <form method="post" class="d-inline">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" value="toggle">
+                        <input type="hidden" name="post_id" value="{{ p.id }}">
+                        <button type="submit" class="btn btn-sm btn-outline-primary">{% if p.enable %}Ẩn{% else %}Duyệt{% endif %}</button>
+                    </form>
+                    <a href="{% url 'homepage:forumView' forum_id=p.id %}" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener">Xem</a>
+                    <form method="post" class="d-inline" onsubmit="return confirm('Xóa bài viết này?');">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" value="delete">
+                        <input type="hidden" name="post_id" value="{{ p.id }}">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" class="text-center py-4 text-muted">Chưa có bài đăng nào.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

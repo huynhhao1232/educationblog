@@ -1,0 +1,478 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<style>
+  .exam-sort-wrap { margin: 20px 30px; background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .exam-sort-header {margin-top:90px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:14px; padding-bottom:12px; border-bottom: 2px solid #e9ecef; }
+  .exam-sort-header h3 { color:#023EB6; font-size:22px; font-weight:800; margin:0; }
+  .header-actions { display:flex; gap:8px; flex-wrap:wrap; align-items:flex-start; }
+  .header-actions > .btn,
+  .header-actions > a,
+  .header-actions > form { align-self:flex-start; }
+  .card-soft { border:1px solid #dee2e6; border-radius: 10px; padding: 12px; background:#f8f9fa; }
+  .filters-grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:10px; align-items:end; }
+  .fg { grid-column: span 2; }
+  .fg-wide { grid-column: span 3; }
+  .fg-actions { grid-column: span 3; display:flex; gap:8px; justify-content:flex-end; }
+  .filters-grid label { font-size:12px; font-weight:800; color:#495057; margin-bottom:4px; }
+  @media (max-width: 1200px) {
+    .fg, .fg-wide, .fg-actions { grid-column: span 6; }
+    .fg-actions { justify-content:flex-start; }
+  }
+  @media (max-width: 768px) {
+    .fg, .fg-wide, .fg-actions { grid-column: span 12; }
+  }
+  .move-bar { display:flex; flex-wrap:wrap; gap:10px; align-items:end; justify-content:space-between; }
+  .move-bar .left { display:flex; gap:10px; flex-wrap:wrap; align-items:end; }
+  .move-bar label { font-size:12px; font-weight:800; color:#495057; margin-bottom:4px; }
+  .table-wrap { border: 1px solid #dee2e6; border-radius: 10px; overflow: hidden; }
+  table.exam-table { width:100%; border-collapse: collapse; font-size: 13px; }
+  table.exam-table th, table.exam-table td { border:1px solid #dee2e6; padding:8px 10px; vertical-align: middle; }
+  table.exam-table thead th { background:#023EB6; color:#fff; font-weight:700; white-space: nowrap; position: sticky; top: 0; z-index: 2; }
+  table.exam-table tbody tr:hover { background:#f8f9fa; }
+  .badge-soft { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; font-weight:700; }
+  .badge-soft.ok { background:#e7f1ff; color:#023EB6; }
+  .badge-soft.no { background:#f8d7da; color:#842029; }
+</style>
+
+<div class="exam-sort-wrap">
+  <div class="exam-sort-header">
+    <h3><i class="fa-solid fa-chair me-2"></i>Sắp xếp phòng thi</h3>
+    <div class="header-actions">
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#importInfoModal">
+        <i class="fa-solid fa-file-arrow-up me-1"></i>Import từ Excel
+      </button>
+      <a class="btn btn-sm btn-outline-success" title="Xuất toàn bộ học viên đang lọc (không giới hạn 50/trang), đúng thứ tự trên bảng"
+         href="{% url 'adminpage:exam_room_export_excel' %}?campus_id={{ filter_campus }}&grade={{ filter_grade }}&subject_group={{ filter_subject }}&status={{ filter_status }}&student_status={{ filter_student_status }}&class_name={{ filter_class|urlencode }}&full_name={{ filter_name|urlencode }}">
+        <i class="fa-solid fa-file-excel me-1"></i>Export Excel (theo bộ lọc)
+      </a>
+      <form method="post" action="{% url 'adminpage:exam_room_reassign_sbd' %}"
+            onsubmit="return confirm('Đánh lại SBD sẽ thay đổi số báo danh của TOÀN BỘ học viên. Bạn chắc chắn?');">
+        {% csrf_token %}
+        <div class="d-flex align-items-center gap-2 mb-1">
+          <label for="sbdStart" class="mb-0 small text-muted">Bắt đầu từ</label>
+          <input
+            id="sbdStart"
+            type="number"
+            name="sbd_start"
+            class="form-control form-control-sm"
+            min="1"
+            value="1"
+            style="width: 92px;"
+            title="Số thứ tự bắt đầu khi đánh lại SBD trong mỗi cơ sở"
+          >
+        </div>
+        <details class="mb-1">
+          <summary class="small text-muted" style="cursor:pointer;">Nhập số bắt đầu riêng theo từng cơ sở</summary>
+          <div class="mt-2 p-2 border rounded" style="max-width: 560px; background:#f8f9fa;">
+            <div class="row g-2">
+              {% for c in campuses %}
+                <div class="col-6 col-md-4">
+                  <label for="sbdStartCampus{{ c.id }}" class="form-label mb-1 small">{{ c.code }}</label>
+                  <input
+                    id="sbdStartCampus{{ c.id }}"
+                    type="number"
+                    name="sbd_start_campus_{{ c.id }}"
+                    class="form-control form-control-sm"
+                    min="1"
+                    placeholder="Mặc định"
+                    title="Để trống nếu dùng số bắt đầu mặc định"
+                  >
+                </div>
+              {% endfor %}
+            </div>
+            <div class="small text-muted mt-2">
+              Để trống ô nào thì cơ sở đó dùng số mặc định ở trường "Bắt đầu từ".
+            </div>
+          </div>
+        </details>
+        <input type="hidden" name="return_page" value="{{ page }}">
+        <input type="hidden" name="return_campus_id" value="{{ filter_campus }}">
+        <input type="hidden" name="return_grade" value="{{ filter_grade }}">
+        <input type="hidden" name="return_subject_group" value="{{ filter_subject }}">
+        <input type="hidden" name="return_status" value="{{ filter_status }}">
+        <input type="hidden" name="return_student_status" value="{{ filter_student_status }}">
+        <input type="hidden" name="return_class_name" value="{{ filter_class }}">
+        <input type="hidden" name="return_full_name" value="{{ filter_name }}">
+        <button type="submit" class="btn btn-sm btn-outline-secondary" title="Đánh lại số báo danh theo quy tắc hiện tại">
+          <i class="fa-solid fa-rotate me-1"></i>Đánh lại SBD
+        </button>
+      </form>
+      <form method="post" action="{% url 'adminpage:exam_room_delete_all_students' %}"
+            onsubmit="return confirm('Xoá toàn bộ danh sách học viên và dữ liệu xếp phòng thi?');">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-sm btn-outline-danger">
+          <i class="fa-solid fa-trash me-1"></i>Xoá toàn bộ
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal import Excel + giải thích quy tắc mã HV & SBD -->
+  <div class="modal fade" id="importInfoModal" tabindex="-1" aria-labelledby="importInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="importInfoModalLabel">
+            <i class="fa-solid fa-file-import text-primary me-2"></i>Import học viên từ Excel
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="importExcelForm" method="post" enctype="multipart/form-data" action="{% url 'adminpage:exam_room_import_students' %}">
+          {% csrf_token %}
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="excelFile" class="form-label fw-bold">Chọn file Excel</label>
+              <input type="file" class="form-control" id="excelFile" name="excel_file" accept=".xlsx,.xls" required>
+            </div>
+            <div class="alert alert-info small">
+              <p class="mb-1"><strong>1. Mã học viên (7 số) trong file Excel:</strong></p>
+              <ul class="mb-2">
+                <li>2 số đầu: cơ sở (<strong>10</strong>: AT, <strong>11</strong>: BS, <strong>12</strong>: CS, <strong>13</strong>: ĐS, <strong>14</strong>: CN, <strong>15</strong>: VH, <strong>16</strong>: HT, <strong>17</strong>: KT)</li>
+                <li>Số thứ 3: buổi (<strong>0</strong>: buổi sáng, <strong>1</strong>: buổi tối)</li>
+                <li>Số thứ 4: tổ hợp môn (<strong>1</strong>→Tổ hợp 1, <strong>2</strong>→Tổ hợp 2, <strong>3</strong>→Tổ hợp 3, <strong>4</strong>→Tổ hợp 4, <strong>5</strong>→Tổ hợp 5)</li>
+                <li>3 số cuối: số thứ tự học viên</li>
+                <li>Cột <strong>Hoà nhập</strong> (tuỳ chọn): nếu ô có chữ <strong>HN</strong> thì học viên được đánh dấu hoà nhập.</li>
+              </ul>
+              <p class="mb-1"><strong>2. Sau khi import xong, hệ thống sẽ:</strong></p>
+              <ul class="mb-1">
+                <li>Tự động <strong>trộn học viên</strong> theo: cùng cơ sở → cùng buổi → cùng khối (2 số đầu tên lớp) → cùng tổ hợp môn.</li>
+                <li>Đánh <strong>số báo danh 6 số</strong>:
+                  <ul class="mb-0">
+                    <li>Số đầu: mã cơ sở (1: AT, 2: BS, 3: CS, 4: ĐS, 5: CN, 6: VH, 7: HT, 8: KT)</li>
+                    <li>5 số cuối: STT tăng dần 00001 → n trong từng cơ sở, sắp theo: buổi (sáng trước), khối, tổ hợp, họ tên (bỏ dấu, ưu tiên TÊN → TÊN ĐỆM → HỌ)</li>
+                  </ul>
+                </li>
+              </ul>
+              <p class="mb-0"><strong>Lưu ý:</strong> Sau khi upload, hệ thống sẽ hiển thị trang xem trước dữ liệu. Bạn cần bấm "Lưu vào database" để hoàn tất import.</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-upload me-1"></i>Upload & xem trước
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} py-2">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+
+  <div class="card-soft mb-3">
+    <form method="get" class="filters-grid">
+      <div class="fg">
+        <label>Cơ sở</label>
+        <select name="campus_id" class="form-select form-select-sm">
+          <option value="">Tất cả</option>
+          {% for c in campuses %}
+            <option value="{{ c.id }}" {% if filter_campus == c.id|stringformat:"s" %}selected{% endif %}>{{ c.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="fg">
+        <label>Khối</label>
+        <select name="grade" class="form-select form-select-sm">
+          <option value="">Tất cả</option>
+          <option value="10" {% if filter_grade == "10" %}selected{% endif %}>10</option>
+          <option value="11" {% if filter_grade == "11" %}selected{% endif %}>11</option>
+          <option value="12" {% if filter_grade == "12" %}selected{% endif %}>12</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Tổ hợp</label>
+        <select name="subject_group" class="form-select form-select-sm">
+          <option value="">Tất cả</option>
+          {% for sg in subject_group_choices %}
+            <option value="{{ sg.code }}" {% if filter_subject == sg.code %}selected{% endif %}>{{ sg.code }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="fg">
+        <label>Lớp</label>
+        <input type="text" name="class_name" value="{{ filter_class }}" class="form-control form-control-sm" placeholder="VD: 12A1">
+      </div>
+      <div class="fg-wide">
+        <label>Tên học viên</label>
+        <input type="text" name="full_name" value="{{ filter_name }}" class="form-control form-control-sm" placeholder="Nhập tên (không phân biệt hoa/thường)">
+      </div>
+      <div class="fg">
+        <label>Tình trạng</label>
+        <select name="status" class="form-select form-select-sm">
+          <option value="">Tất cả</option>
+          <option value="assigned" {% if filter_status == "assigned" %}selected{% endif %}>Đã có phòng</option>
+          <option value="unassigned" {% if filter_status == "unassigned" %}selected{% endif %}>Chưa có phòng</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Trạng thái HV</label>
+        <select name="student_status" class="form-select form-select-sm">
+          <option value="" {% if not filter_student_status %}selected{% endif %}>Tất cả</option>
+          <option value="normal" {% if filter_student_status == "normal" %}selected{% endif %}>Bình thường</option>
+          <option value="integration" {% if filter_student_status == "integration" %}selected{% endif %}>Hoà nhập</option>
+        </select>
+      </div>
+      <div class="fg-actions">
+        <button type="submit" class="btn btn-sm btn-primary">
+          <i class="fa-solid fa-filter me-1"></i>Lọc
+        </button>
+        <a href="{% url 'adminpage:exam_room_sort_dashboard' %}" class="btn btn-sm btn-outline-secondary">Reset</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Thanh gán vào phòng: submit bằng JS để không bọc bảng (tránh form lồng form khi xoá từng dòng) -->
+  <div class="card-soft mb-2" id="move-bar-wrap">
+    <div class="move-bar">
+      <div class="left">
+        <div>
+          <label>Ca thi</label>
+          <select id="move-shift" class="form-select form-select-sm" style="width:auto;">
+            <option value="sang">Sáng</option>
+            <option value="chieu">Chiều</option>
+            <option value="toi">Tối</option>
+          </select>
+        </div>
+        <div>
+          <label>Phòng thi</label>
+          <select id="move-room" class="form-select form-select-sm" style="min-width:320px;" required>
+            <option value="">-- Chọn phòng --</option>
+            {% for r in rooms %}
+              <option value="{{ r.id }}">{{ r.campus.name }} - {{ r.name }} ({{ r.capacity }} chỗ)</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div>
+        <button type="button" id="btn-move-students" class="btn btn-sm btn-success">
+          <i class="fa-solid fa-arrow-right me-1"></i>Gán vào phòng
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <div class="table-responsive" style="max-height: 70vh;">
+    <table class="exam-table">
+      <thead>
+        <tr>
+          <th style="width:30px;"><input type="checkbox" id="check-all"></th>
+          <th>Số báo danh</th>
+          <th>Họ và tên</th>
+          <th>Lớp</th>
+          <th>Khối</th>
+          <th>Cơ sở</th>
+          <th>Tổ hợp</th>
+          <th>Trạng thái HV</th>
+          <th>Tình trạng</th>
+          <th>Phòng</th>
+          <th style="width:70px;">Xoá</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in sorted_students %}
+        <tr>
+          <td>
+            {% if not row.assignment %}
+              <input type="checkbox" class="cb-student" data-student-code="{{ row.student.student_code }}">
+            {% endif %}
+          </td>
+          <td>{% if row.student.exam_number %}{{ row.student.exam_number }}{% else %}<span class="text-muted">Chưa đánh</span>{% endif %}</td>
+          <td>{{ row.student.full_name }}</td>
+          <td>{{ row.student.class_name }}</td>
+          <td>{{ row.grade }}</td>
+          <td>{{ row.student.campus.name }}</td>
+          <td>{{ row.subject_group_code }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-sm btn-toggle-integration {% if row.student.is_integration %}btn-warning{% else %}btn-outline-secondary{% endif %}"
+              data-url="{% url 'adminpage:exam_room_toggle_integration' row.student.student_code %}"
+            >
+              {% if row.student.is_integration %}Hoà nhập{% endif %}
+            </button>
+          </td>
+          <td>
+            {% if row.assignment %}
+              <span class="badge-soft ok">Đã có phòng</span>
+            {% else %}
+              <span class="badge-soft no">Chưa có phòng</span>
+            {% endif %}
+          </td>
+          <td>
+            {% if row.assignment %}
+              {% if row.assignment.exam_room %}
+                <a href="{% url 'adminpage:exam_room_detail' row.assignment.exam_room.id %}?shift={{ row.assignment.shift }}"
+                   class="link-primary text-decoration-none fw-semibold"
+                   title="Mở chi tiết phòng thi ({{ row.assignment.get_shift_display }})">
+                  {{ row.assignment.exam_room.name }} ({{ row.assignment.get_shift_display }})
+                </a>
+              {% else %}
+                <span class="text-muted">—</span>
+              {% endif %}
+            {% else %}
+              —
+            {% endif %}
+          </td>
+          <td class="text-center">
+            {% if row.assignment %}
+              <span class="text-muted" title="Học viên đã có phòng thi, không thể xoá từ đây. Xoá khỏi phòng thi trước."><i class="fa-solid fa-lock"></i></span>
+            {% else %}
+              <form method="post" action="{% url 'adminpage:exam_room_delete_student' row.student.student_code %}" class="d-inline delete-student-form">
+                {% csrf_token %}
+                <input type="hidden" name="return_page" value="{{ page }}">
+                <input type="hidden" name="return_campus_id" value="{{ filter_campus }}">
+                <input type="hidden" name="return_grade" value="{{ filter_grade }}">
+                <input type="hidden" name="return_subject_group" value="{{ filter_subject }}">
+                <input type="hidden" name="return_status" value="{{ filter_status }}">
+                <input type="hidden" name="return_student_status" value="{{ filter_student_status }}">
+                <input type="hidden" name="return_class_name" value="{{ filter_class }}">
+                <input type="hidden" name="return_full_name" value="{{ filter_name }}">
+                <button type="submit" class="btn btn-sm btn-outline-danger">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </form>
+            {% endif %}
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="11" class="text-center text-muted py-4">Không có học viên nào.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+    <div class="d-flex justify-content-between align-items-center px-3 py-2">
+      {% if total_pages > 1 %}
+      <nav aria-label="Phân trang học viên">
+        <ul class="pagination pagination-sm mb-0">
+          {% if page > 1 %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page|add:'-1' }}&campus_id={{ filter_campus }}&grade={{ filter_grade }}&subject_group={{ filter_subject }}&status={{ filter_status }}&student_status={{ filter_student_status }}&class_name={{ filter_class }}&full_name={{ filter_name }}">«</a>
+            </li>
+          {% endif %}
+          {% for p in range_1_to_total_pages %}
+            <li class="page-item {% if p == page %}active{% endif %}">
+              <a class="page-link" href="?page={{ p }}&campus_id={{ filter_campus }}&grade={{ filter_grade }}&subject_group={{ filter_subject }}&status={{ filter_status }}&student_status={{ filter_student_status }}&class_name={{ filter_class }}&full_name={{ filter_name }}">{{ p }}</a>
+            </li>
+          {% endfor %}
+          {% if page < total_pages %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page|add:'1' }}&campus_id={{ filter_campus }}&grade={{ filter_grade }}&subject_group={{ filter_subject }}&status={{ filter_status }}&student_status={{ filter_student_status }}&class_name={{ filter_class }}&full_name={{ filter_name }}">»</a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const checkAll = document.getElementById('check-all');
+    if (checkAll) {
+      const cbs = document.querySelectorAll('.cb-student');
+      checkAll.addEventListener('change', function() {
+        cbs.forEach(cb => cb.checked = checkAll.checked);
+      });
+    }
+
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+    const csrftoken = getCookie('csrftoken') || (document.querySelector('input[name="csrfmiddlewaretoken"]') && document.querySelector('input[name="csrfmiddlewaretoken"]').value);
+
+    document.querySelectorAll('form.delete-student-form').forEach(function(form) {
+      form.addEventListener('submit', function(ev) {
+        ev.preventDefault();
+        if (!confirm('Bạn có chắc muốn xoá học viên này khỏi danh sách xếp phòng thi?')) return;
+        form.submit();
+      });
+    });
+
+    document.querySelectorAll('.btn-toggle-integration').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const url = btn.getAttribute('data-url');
+        if (!url) return;
+        fetch(url, {
+          method: 'POST',
+          headers: {
+            'X-CSRFToken': csrftoken,
+          },
+        }).then(function() {
+          window.location.reload();
+        }).catch(function() {
+          window.location.reload();
+        });
+      });
+    });
+
+    var btnMove = document.getElementById('btn-move-students');
+    if (btnMove) {
+      btnMove.addEventListener('click', function() {
+        var roomSelect = document.getElementById('move-room');
+        var roomId = roomSelect && roomSelect.value;
+        if (!roomId) {
+          alert('Vui lòng chọn phòng thi.');
+          return;
+        }
+        var codes = [];
+        document.querySelectorAll('.cb-student:checked').forEach(function(cb) {
+          var code = cb.getAttribute('data-student-code');
+          if (code) codes.push(code);
+        });
+        if (codes.length === 0) {
+          alert('Vui lòng chọn ít nhất một học viên (chưa có phòng).');
+          return;
+        }
+        var form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '{% url "adminpage:exam_room_move_students" %}';
+        form.style.display = 'none';
+        var csrfInput = document.createElement('input');
+        csrfInput.type = 'hidden';
+        csrfInput.name = 'csrfmiddlewaretoken';
+        csrfInput.value = csrftoken;
+        form.appendChild(csrfInput);
+        var shiftInput = document.createElement('input');
+        shiftInput.type = 'hidden';
+        shiftInput.name = 'shift';
+        shiftInput.value = (document.getElementById('move-shift') && document.getElementById('move-shift').value) || 'sang';
+        form.appendChild(shiftInput);
+        var roomInput = document.createElement('input');
+        roomInput.type = 'hidden';
+        roomInput.name = 'room_id';
+        roomInput.value = roomId;
+        form.appendChild(roomInput);
+        codes.forEach(function(code) {
+          var inp = document.createElement('input');
+          inp.type = 'hidden';
+          inp.name = 'student_codes';
+          inp.value = code;
+          form.appendChild(inp);
+        });
+        document.body.appendChild(form);
+        form.submit();
+      });
+    }
+  });
+</script>
+{% endblock %}

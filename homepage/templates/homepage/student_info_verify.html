@@ -1,0 +1,416 @@
+{% extends 'homepage/template.html' %}
+{% block title %}Xác nhận thông tin học viên{% endblock %}
+{% block admission %}
+{% load static %}
+<style>
+    .registration-wrapper {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+    .registration-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #fff;
+        padding: 50px 40px;
+        border-radius: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+    .registration-header { text-align: center; margin-bottom: 28px; }
+    .registration-header h2 {
+        color: #023EB6;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .step-indicator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 32px;
+        position: relative;
+        gap: 80px;
+    }
+    .step-indicator::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 3px;
+        background: #023EB6;
+        z-index: 0;
+    }
+    .step-indicator .step {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #023EB6;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        border: 3px solid #023EB6;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 4px 15px rgba(2, 62, 182, 0.3);
+    }
+    .info-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 24px;
+        border: 1px solid #dee2e6;
+    }
+    .info-section h4 {
+        color: #023EB6;
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .info-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+        .info-row { grid-template-columns: 1fr; }
+    }
+    .info-item { display: flex; flex-direction: column; }
+    .info-item label {
+        font-weight: 600;
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .info-item span {
+        color: #022468;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 12px;
+        background: white;
+        border-radius: 8px;
+        border-left: 3px solid #023EB6;
+        word-break: break-word;
+    }
+    .form-section h4 {
+        color: #023EB6;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .si-overall-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 16px 0;
+    }
+    .si-overall-list li { margin-bottom: 12px; }
+    .si-overall-list label {
+        font-weight: 600;
+        color: #333;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .si-overall-list input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        accent-color: #023EB6;
+    }
+    .subjects-container {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 15px;
+        border: 2px solid #e0e0e0;
+        margin-top: 8px;
+    }
+    .subjects-header {
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #dee2e6;
+        font-weight: 600;
+        color: #666;
+    }
+    .si-wrong-list { list-style: none; padding: 0; margin: 0; }
+    .si-wrong-list li { margin-bottom: 0; }
+    .form-check {
+        margin-bottom: 12px;
+        padding: 14px 16px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        transition: all 0.3s;
+        background: white;
+        cursor: pointer;
+    }
+    .form-check:hover {
+        background: #fff5f5;
+        border-color: #dc3545;
+    }
+    .form-check-label {
+        font-weight: 500;
+        color: #333;
+        cursor: pointer;
+        font-size: 15px;
+        margin-left: 8px;
+    }
+    .form-check-input:checked + .form-check-label {
+        color: #c82333;
+        font-weight: 700;
+    }
+    .form-group-note label {
+        font-weight: 600;
+        color: #022468;
+        margin-bottom: 8px;
+        display: block;
+    }
+    .form-group-note textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+    .form-group-note textarea:focus {
+        outline: none;
+        border-color: #023EB6;
+        box-shadow: 0 0 0 3px rgba(2, 62, 182, 0.1);
+    }
+    .btn-submit {
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(135deg, #023EB6 0%, #022468 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(2, 62, 182, 0.3);
+        margin-top: 16px;
+    }
+    .btn-submit:hover { transform: translateY(-2px); }
+    .btn-back-outline {
+        display: inline-block;
+        margin-top: 16px;
+        padding: 12px 24px;
+        border-radius: 10px;
+        border: 2px solid #dee2e6;
+        color: #475569;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .btn-back-outline:hover { background: #f8fafc; color: #334155; }
+    .alert-info-si {
+        background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+        border: 2px solid #bee5eb;
+        color: #0c5460;
+        padding: 16px 20px;
+        border-radius: 15px;
+        margin-bottom: 24px;
+    }
+    .alert-lock-si {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        border: 2px solid #ffc107;
+        color: #856404;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 24px;
+    }
+    .result-card {
+        background: #fff;
+        border: 2px solid #dee2e6;
+        border-radius: 15px;
+        padding: 20px 24px;
+        margin-bottom: 20px;
+    }
+    .result-card h5 { color: #023EB6; font-weight: 700; margin-bottom: 12px; }
+    .wrong-tag {
+        display: inline-block;
+        background: #fde8e8;
+        color: #9b1c1c;
+        padding: 6px 12px;
+        border-radius: 8px;
+        margin: 4px 6px 4px 0;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .ok-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #d4f5e4;
+        color: #065f32;
+        padding: 10px 16px;
+        border-radius: 10px;
+        font-weight: 700;
+    }
+    .errorlist.nonfield { color: #dc3545; list-style: none; padding: 0; margin: 0 0 16px; }
+</style>
+
+<div class="registration-wrapper">
+  <div class="registration-container">
+    <div class="registration-header">
+      <h2><i class="fas fa-clipboard-check me-2"></i>Kiểm tra thông tin học viên</h2>
+    </div>
+
+    <div class="step-indicator">
+      <span class="step">1</span>
+      <span class="step">2</span>
+    </div>
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} mb-3">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+
+    <div class="info-section">
+      <h4><i class="fas fa-user-graduate"></i> Thông tin học viên</h4>
+      {% for pair in info_row_pairs %}
+      <div class="info-row">
+        {% for label, value in pair %}
+        <div class="info-item">
+          <label>{{ label }}</label>
+          <span>{{ value|default:"—" }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if read_only %}
+      {% if verification.submit_count >= 2 %}
+      <div class="alert-lock-si">
+        <h5 class="mb-2"><i class="fas fa-lock me-2"></i>Đã khóa chỉnh sửa</h5>
+        <p class="mb-0">Bạn đã gửi xác nhận <strong>2/2</strong> lần. Chỉ được xem, không chỉnh sửa thêm.</p>
+      </div>
+      {% endif %}
+      <div class="result-card">
+        <h5><i class="fas fa-check-double me-2"></i>Kết quả xác nhận đã gửi</h5>
+        {% if all_marked_ok_readonly %}
+          <p class="ok-tag mb-0"><i class="fas fa-check-circle"></i> Bạn đã xác nhận: <strong>Tất cả thông tin đúng</strong></p>
+        {% else %}
+          <p class="mb-2">Các mục bạn đánh dấu <strong>sai</strong>:</p>
+          <div>
+            {% for w in wrong_labels_readonly %}
+              <span class="wrong-tag">{{ w }}</span>
+            {% empty %}
+              <span class="text-muted">—</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if verification.note %}
+          <hr>
+          <p class="mb-1 small text-muted">Ghi chú đã gửi:</p>
+          <p class="mb-0">{{ verification.note|linebreaksbr }}</p>
+        {% endif %}
+      </div>
+      <a href="{% url 'homepage:student_info_lookup' %}" class="btn-back-outline"><i class="fas fa-arrow-left me-1"></i> Nhập mã khác / Quay lại</a>
+
+    {% else %}
+      <div class="alert-info-si">
+        <strong><i class="fas fa-info-circle me-1"></i> Lưu ý:</strong>
+        Mỗi học viên được gửi xác nhận tối đa <strong>2 lần</strong>.
+        {% if verification.submit_count > 0 %}
+          Đã gửi: <strong>{{ verification.submit_count }}/2</strong>. Còn <strong>{{ remaining_attempts }}</strong> lần.
+        {% else %}
+          Bạn chưa gửi lần nào (còn <strong>2</strong> lần).
+        {% endif %}
+      </div>
+
+      {% if form %}
+      <div class="form-section">
+        <h4><i class="fas fa-edit"></i> Xác nhận thông tin</h4>
+        <p class="text-muted small mb-3">Đối chiếu với giấy tờ của bạn. Chọn một phương án dưới đây; nếu có sai, hãy tick các mục không đúng.</p>
+        <form method="post" action="{% url 'homepage:student_info_verify' %}" id="formSiVerify">
+          {% csrf_token %}
+          {% if form.non_field_errors %}
+            <ul class="errorlist nonfield">
+              {% for err in form.non_field_errors %}<li>{{ err }}</li>{% endfor %}
+            </ul>
+          {% endif %}
+
+          <p class="fw-semibold text-secondary mb-2">{{ form.overall.label }}</p>
+          <ul class="si-overall-list">
+            {% for radio in form.overall %}
+              <li>
+                <label for="{{ radio.id_for_label }}">
+                  {{ radio.tag }}
+                  <span>{{ radio.choice_label }}</span>
+                </label>
+              </li>
+            {% endfor %}
+          </ul>
+          {% if form.overall.errors %}
+            <p class="text-danger small">{{ form.overall.errors.0 }}</p>
+          {% endif %}
+
+          <div id="siWrongFieldsWrap" style="display: none;">
+            <label class="fw-semibold text-danger mb-0">{{ form.wrong_fields.label }}</label>
+            <div class="subjects-container">
+              <div class="subjects-header"><i class="fas fa-highlighter me-1"></i> Tick vào các mục <strong>không khớp</strong> với giấy tờ</div>
+              <ul class="si-wrong-list">
+                {% for cb in form.wrong_fields %}
+                <li>
+                  <div class="form-check">
+                    {{ cb.tag }}
+                    <label class="form-check-label" for="{{ cb.id_for_label }}">{{ cb.choice_label }}</label>
+                  </div>
+                </li>
+                {% endfor %}
+              </ul>
+              {% if form.wrong_fields.errors %}
+                <p class="text-danger small mt-2 mb-0">{{ form.wrong_fields.errors.0 }}</p>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="form-group-note mt-4">
+            <label for="{{ form.note.id_for_label }}">{{ form.note.label }}</label>
+            {{ form.note }}
+            {% if form.note.errors %}<p class="text-danger small mt-1">{{ form.note.errors.0 }}</p>{% endif %}
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-paper-plane me-2"></i>Gửi xác nhận
+          </button>
+        </form>
+      </div>
+      {% endif %}
+      <a href="{% url 'homepage:student_info_lookup' %}" class="btn-back-outline"><i class="fas fa-arrow-left me-1"></i> Quay lại</a>
+    {% endif %}
+  </div>
+</div>
+
+{% if not read_only and form %}
+<script>
+(function() {
+  function siToggleWrongBox() {
+    var sel = document.querySelector('#formSiVerify input[name="overall"]:checked');
+    var box = document.getElementById('siWrongFieldsWrap');
+    if (!box) return;
+    box.style.display = (sel && sel.value === 'has_wrong') ? 'block' : 'none';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('formSiVerify');
+    if (!form) return;
+    form.querySelectorAll('input[name="overall"]').forEach(function(el) {
+      el.addEventListener('change', siToggleWrongBox);
+    });
+    siToggleWrongBox();
+  });
+})();
+</script>
+{% endif %}
+{% endblock %}

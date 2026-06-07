@@ -32,7 +32,9 @@
                           <div class="row">
                             <div class="col-sm-7">
                                 {% with pb_gv.1 as first_gv %}
-                                <img src="{{ first_gv.gv.image_file.url }}" alt="Ảnh giáo viên"  width="100%">
+                                <div class="cctc-staff-photo">
+                                <img src="{{ first_gv.gv.image_file.url }}" alt="Ảnh giáo viên">
+                                </div>
                                 {% endwith %}
 
                               <p class="role">PHÓ BÍ THƯ</p>
@@ -62,7 +64,9 @@
                           <div class="row">
                             <div class="col-sm-7">
                                 {% with pb_gv.3 as first_gv %}
-                                <img src="{{ first_gv.gv.image_file.url }}" alt="Ảnh giáo viên"  width="100%">
+                                <div class="cctc-staff-photo">
+                                <img src="{{ first_gv.gv.image_file.url }}" alt="Ảnh giáo viên">
+                                </div>
                                 {% endwith %}
 
                               <p class="role">CHI UỶ VIÊN</p>
@@ -87,7 +91,9 @@
                           <div class="row">
                             <div class="col-sm-7">
                                 {% with pb_gv.6 as first_gv %}
-                                <img src="{{ first_gv.gv.image_file.url }}" alt="Ảnh giáo viên"  width="95%">
+                                <div class="cctc-staff-photo">
+                                <img src="{{ first_gv.gv.image_file.url }}" alt="Ảnh giáo viên">
+                                </div>
                                 {% endwith %}
 
                               <p class="role">CHI UỶ VIÊN</p>
@@ -120,7 +126,9 @@
                         <div class="col-sm-6">
                           <div class="row">
                             <div class="col-sm-5">
-                              <img src="{{item.gv.image_file.url}}" alt="" width="100%">
+                              <div class="cctc-staff-photo">
+                              <img src="{{item.gv.image_file.url}}" alt="">
+                              </div>
                               <p class="role">{{item.gv.role1}}</p>
                               <p class="role">{{item.gv.role2}}</p>
                             </div>
@@ -153,7 +161,9 @@
                     <div class="col-sm-6">
                       <div class="row">
                         <div class="col-sm-5">
-                          <img src="{{item.gv.image_file.url}}" alt="" width="100%" height="226.07px">
+                          <div class="cctc-staff-photo">
+                          <img src="{{item.gv.image_file.url}}" alt="">
+                          </div>
                           <p class="role">{{item.gv.role2}}</p>
                         </div>
                         <div class="col-sm-7">

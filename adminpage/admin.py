@@ -3,6 +3,7 @@ from .models import (
     Location, Teacher, ClassRoom, ScheduleVersion, Schedule, AttendanceOverride,
     JournalTeacher, SchoolConfig, ClassJournal,
     JournalClass, SubjectJournal, JournalWeek, JournalRow, JournalEntry,
+    JournalTeacherWeekLimitOverride,
 )
 
 
@@ -65,6 +66,10 @@ class JournalWeekAdmin(admin.ModelAdmin):
     list_display = ('subject_journal', 'week_number', 'start_date', 'end_date', 'is_locked')
     list_filter = ('is_locked',)
 
+@admin.register(JournalTeacherWeekLimitOverride)
+class JournalTeacherWeekLimitOverrideAdmin(admin.ModelAdmin):
+    list_display = ('journal_week', 'teacher', 'allow_over_limit')
+    list_filter = ('allow_over_limit', 'journal_week__week_number', 'teacher__full_name')
 
 @admin.register(JournalRow)
 class JournalRowAdmin(admin.ModelAdmin):

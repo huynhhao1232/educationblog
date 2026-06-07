@@ -27,7 +27,38 @@
     .day-cell { min-width: 40px; }
     .day-cell input { width: 36px; text-align: center; padding: 4px; border: 1px solid #dee2e6; border-radius: 4px; }
     .day-cell input:focus { outline: none; border-color: #023EB6; }
+    .day-cell-excluded { background: #fff3cd !important; }
+    .day-cell input.excluded-input { background: #fff3cd; color: #6c757d; cursor: not-allowed; }
     .link-import { margin-left: auto; }
+    .excluded-calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+    .excluded-calendar .cal-head { font-size: 12px; font-weight: 700; color: #495057; text-align: center; padding: 2px 0; }
+    .excluded-calendar .cal-day {
+        user-select: none;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        padding: 8px 0;
+        text-align: center;
+        cursor: pointer;
+        background: #fff;
+        font-weight: 600;
+        color: #212529;
+    }
+    .excluded-calendar .cal-day.is-empty { visibility: hidden; }
+    .excluded-calendar .cal-day.is-excluded { background: #fff3cd; border-color: #ffc107; }
+    .excluded-calendar .cal-day:hover { border-color: #023EB6; }
+    .excluded-summary { font-size: 13px; color: #495057; }
+    .excluded-nav { display: flex; align-items: center; gap: 8px; }
+    .excluded-nav .nav-btn {
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        background: #fff;
+        padding: 6px 10px;
+        cursor: pointer;
+        font-weight: 700;
+        color: #023EB6;
+    }
+    .excluded-nav .nav-btn:hover { border-color: #023EB6; }
+    .excluded-nav .nav-label { font-weight: 700; color: #495057; }
 </style>
 <div class="attendance-container">
     <div class="attendance-header">
@@ -86,6 +117,46 @@
             <button type="submit" class="btn btn-primary btn-apply">Áp dụng</button>
         </div>
     </form>
+    <form method="post" action="{% url 'adminpage:delete_schedule_version' %}" class="mb-3" id="delete-version-form">
+        {% csrf_token %}
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+            <label for="delete_version_id" class="mb-0 fw-semibold">Xóa 1 phiên TKB:</label>
+            <select name="version_id" id="delete_version_id" class="form-control" style="max-width:320px;" required>
+                <option value="">-- Chọn phiên cần xóa --</option>
+                {% for v in versions %}
+                    <option value="{{ v.id }}">{{ v.name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-outline-danger">
+                <i class="fa-solid fa-trash me-1"></i>Xóa phiên đã chọn
+            </button>
+        </div>
+        <small class="text-muted">Chỉ xóa phiên được chọn và các tiết TKB thuộc phiên đó, không ảnh hưởng phiên khác.</small>
+    </form>
+    <div class="card border-warning mb-3">
+        <div class="card-body py-2">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <strong>Ngày không chấm công:</strong>
+                    <div class="excluded-nav">
+                        <button type="button" class="nav-btn" id="btn-excluded-prev" title="Tháng trước">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <span class="nav-label" id="excluded-month-label"></span>
+                        <button type="button" class="nav-btn" id="btn-excluded-next" title="Tháng sau">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <span class="excluded-summary" id="excluded-summary-text"></span>
+                </div>
+                <button type="button" id="btn-save-excluded-days" class="btn btn-outline-warning">
+                    <i class="fa-solid fa-calendar-xmark me-1"></i>Lưu ngày không chấm công
+                </button>
+            </div>
+            <div class="mt-2 excluded-calendar" id="excluded-calendar"></div>
+            <small class="text-muted">Bấm vào ngày để chọn/bỏ chọn. Các ngày được chọn sẽ khóa nhập và không tính tiết.</small>
+        </div>
+    </div>
 
     <div class="d-flex justify-content-between align-items-center mb-2">
         <button type="button" id="btn-save-attendance" class="btn btn-success"><i class="fa-solid fa-save me-1"></i>Lưu thay đổi</button>
@@ -112,8 +183,8 @@
                     <td class="td-fixed-left td-fixed-name">{{ row.teacher.full_name }}</td>
                     <td class="td-fixed-left td-fixed-mon">{{ row.subject_display }}</td>
                     {% for item in row.days_list %}
-                        <td class="day-cell">
-                            <input type="number" min="0" value="{{ item.val }}" data-day="{{ item.day }}" data-original="{{ item.val }}" class="attendance-cell">
+                        <td class="day-cell{% if item.excluded %} day-cell-excluded{% endif %}">
+                            <input type="number" min="0" value="{{ item.val }}" data-day="{{ item.day }}" data-original="{{ item.val }}" class="attendance-cell{% if item.excluded %} excluded-input{% endif %}" {% if item.excluded %}disabled{% endif %}>
                         </td>
                     {% endfor %}
                     <td class="td-total row-so-tiet">{{ row.so_tiet_lam_ho_so }}</td>
@@ -131,15 +202,83 @@
     var year = {{ year }};
     var month = {{ month }};
     var saveBulkUrl = "{% url 'adminpage:save_attendance_cells_bulk' %}";
+    var saveExcludedDaysUrl = "{% url 'adminpage:save_attendance_excluded_days' %}";
     var exportBase = "{% url 'adminpage:export_attendance_excel' %}";
+    var excludedDaysInit = {{ excluded_days|default:"[]" }};
     function getCookie(n){var c=document.cookie.split(';');for(var i=0;i<c.length;i++){var p=c[i].trim();if(p.indexOf(n+'=')===0)return decodeURIComponent(p.substring(n.length+1));}return null;}
     var csrf = getCookie('csrftoken');
+
+    // Calendar UI for excluded days
+    var excludedSet = new Set((excludedDaysInit || []).map(function(d){ return parseInt(d, 10); }).filter(function(x){ return !isNaN(x); }));
+    var calEl = document.getElementById('excluded-calendar');
+    var summaryEl = document.getElementById('excluded-summary-text');
+    function weekdayLabelVi(jsDay){ // 0=Sun..6=Sat
+        return ['CN','T2','T3','T4','T5','T6','T7'][jsDay];
+    }
+    function pad2(n){ return String(n).padStart(2, '0'); }
+    function updateMonthLabel(){
+        var lbl = document.getElementById('excluded-month-label');
+        if(lbl){ lbl.textContent = pad2(month) + '/' + year; }
+    }
+    function navigateMonth(delta){
+        var y = year, m = month + delta;
+        if(m <= 0){ m = 12; y -= 1; }
+        if(m >= 13){ m = 1; y += 1; }
+        var params = new URLSearchParams(window.location.search || '');
+        params.set('month', String(m));
+        params.set('year', String(y));
+        window.location.search = '?' + params.toString();
+    }
+    function updateSummary(){
+        var arr = Array.from(excludedSet).sort(function(a,b){return a-b;});
+        summaryEl.textContent = arr.length ? ('Đã chọn ' + arr.length + ' ngày: ' + arr.join(', ')) : 'Chưa chọn ngày nào';
+    }
+    function buildCalendar(){
+        if(!calEl) return;
+        calEl.innerHTML = '';
+        // Headers
+        for(var h=0; h<7; h++){
+            var head = document.createElement('div');
+            head.className = 'cal-head';
+            head.textContent = weekdayLabelVi((h+1)%7); // start Monday
+            calEl.appendChild(head);
+        }
+        var first = new Date(year, month-1, 1);
+        var daysInMonth = new Date(year, month, 0).getDate();
+        var firstDowMon0 = (first.getDay() + 6) % 7; // Monday=0..Sunday=6
+        for(var i=0; i<firstDowMon0; i++){
+            var empty = document.createElement('div');
+            empty.className = 'cal-day is-empty';
+            empty.textContent = '';
+            calEl.appendChild(empty);
+        }
+        for(var d=1; d<=daysInMonth; d++){
+            (function(day){
+                var cell = document.createElement('div');
+                cell.className = 'cal-day' + (excludedSet.has(day) ? ' is-excluded' : '');
+                cell.textContent = day;
+                cell.dataset.day = String(day);
+                cell.addEventListener('click', function(){
+                    if(excludedSet.has(day)){ excludedSet.delete(day); }
+                    else { excludedSet.add(day); }
+                    cell.classList.toggle('is-excluded');
+                    updateSummary();
+                });
+                calEl.appendChild(cell);
+            })(d);
+        }
+        updateSummary();
+    }
+    updateMonthLabel();
+    document.getElementById('btn-excluded-prev')?.addEventListener('click', function(){ navigateMonth(-1); });
+    document.getElementById('btn-excluded-next')?.addEventListener('click', function(){ navigateMonth(1); });
+    buildCalendar();
     function recalcRow(tr){
         var inputs = tr.querySelectorAll('.attendance-cell');
         var sum = 0;
         for(var i=0;i<inputs.length;i++){sum += parseInt(inputs[i].value||0,10);}
-        tr.querySelector('.row-so-tiet').textContent = sum;
-        tr.querySelector('.row-tong').textContent = sum;
+        var soTietHoSo = parseInt(tr.querySelector('.row-so-tiet').textContent||0,10);
+        tr.querySelector('.row-tong').textContent = sum + (isNaN(soTietHoSo) ? 0 : soTietHoSo);
     }
     document.querySelectorAll('.attendance-cell').forEach(function(inp){
         inp.addEventListener('change', function(){
@@ -183,6 +322,46 @@
     });
     var qs = window.location.search || '';
     document.getElementById('link-export-excel').href = exportBase + (qs ? qs : '?year='+year+'&month='+month);
+    document.getElementById('btn-save-excluded-days')?.addEventListener('click', function(){
+        var days = Array.from(excludedSet).sort(function(a,b){return a-b;});
+        var btn = this;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-1"></i>Đang lưu...';
+        fetch(saveExcludedDaysUrl, {
+            method:'POST',
+            headers:{'Content-Type':'application/json','X-CSRFToken':csrf},
+            body:JSON.stringify({year:year, month:month, days:days}),
+            credentials:'same-origin'
+        }).then(function(r){return r.json();}).then(function(d){
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-calendar-xmark me-1"></i>Lưu ngày không chấm công';
+            if(d.ok){
+                alert('Đã lưu ngày không chấm công. Trang sẽ tải lại để cập nhật bảng.');
+                window.location.reload();
+            } else {
+                alert('Lỗi: ' + (d.error || 'Không xác định'));
+            }
+        }).catch(function(){
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-calendar-xmark me-1"></i>Lưu ngày không chấm công';
+        });
+    });
+
+    var deleteForm = document.getElementById('delete-version-form');
+    if (deleteForm) {
+        deleteForm.addEventListener('submit', function(e){
+            var select = document.getElementById('delete_version_id');
+            var label = select && select.options[select.selectedIndex] ? select.options[select.selectedIndex].text : '';
+            if (!select || !select.value) {
+                e.preventDefault();
+                alert('Vui lòng chọn phiên bản TKB cần xóa.');
+                return;
+            }
+            if (!confirm('Bạn chắc chắn muốn xóa phiên "' + label + '"?')) {
+                e.preventDefault();
+            }
+        });
+    }
 })();
 </script>
 {% endblock %}

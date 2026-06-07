@@ -20,11 +20,18 @@
             <a href="{% url 'adminpage:journal_manager_dashboard' %}" class="btn btn-outline-secondary">Quay lại danh sách</a>
         </div>
     </div>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} py-2">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
     <div class="info">
         <strong>Môn:</strong> {{ journal.get_subject_display|default:journal.subject }} &nbsp;|&nbsp;
         <strong>Năm học:</strong> {{ journal.year }} &nbsp;|&nbsp;
         <strong>Ngày bắt đầu tuần 1:</strong> {{ journal.week1_start_date|date:"d/m/Y"|default:"—" }} &nbsp;|&nbsp;
-        <strong>Số hàng:</strong> {{ rows|length }}
+        <strong>Số hàng:</strong> {{ rows|length }} &nbsp;|&nbsp;
+        <strong>Số tuần:</strong> {{ weeks|length }}
     </div>
 
     <h5 class="mt-4 mb-3">Danh sách hàng (giáo viên)</h5>
@@ -51,7 +58,17 @@
         </table>
     </div>
 
-    <h5 class="mb-3">Quản lý tuần (khóa / mở lại)</h5>
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <h5 class="mb-0">Quản lý tuần (khóa / mở lại)</h5>
+        <form method="post" action="{% url 'adminpage:journal_subject_detail' journal.id %}"
+              onsubmit="return confirm('Thêm tuần mới (tuần kế tiếp) cho sổ này?');">
+            {% csrf_token %}
+            <input type="hidden" name="journal_action" value="add_week">
+            <button type="submit" class="btn btn-sm btn-success">
+                <i class="fa-solid fa-calendar-plus me-1"></i>Thêm 1 tuần
+            </button>
+        </form>
+    </div>
     <div class="table-responsive">
         <table class="journal-table">
             <thead>

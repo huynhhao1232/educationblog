@@ -1,0 +1,21 @@
+{% comment %}Recursive: comment (PostForumComment), depth (int px indent){% endcomment %}
+<div class="forum-comment-node" style="margin-left: {{ depth }}px;">
+    <div class="comment border-bottom py-2">
+        <span class="name">{{ comment.author_name }}</span>
+        <span class="date text-muted small">— {{ comment.createdate|date:"d/m/Y H:i" }}</span>
+        <p class="mb-1 mt-1">{{ comment.body|linebreaksbr }}</p>
+        <button type="button" class="btn btn-link btn-sm p-0 forum-reply-btn" data-bs-toggle="collapse" data-bs-target="#reply-wrap-{{ comment.id }}" aria-expanded="false">Trả lời</button>
+        <div class="collapse mt-2" id="reply-wrap-{{ comment.id }}">
+            <form method="post" class="reply-form card card-body py-2">
+                {% csrf_token %}
+                <input type="hidden" name="parent_id" value="{{ comment.id }}">
+                <input type="text" name="author_name" class="form-control form-control-sm mb-1" placeholder="Tên hiển thị" maxlength="100" required>
+                <textarea name="body" class="form-control form-control-sm mb-1" rows="2" placeholder="Viết phản hồi..." maxlength="2000" required></textarea>
+                <button type="submit" class="btn btn-sm btn-success">Gửi</button>
+            </form>
+        </div>
+    </div>
+    {% for child in comment.replies.all %}
+        {% include 'homepage/forum_comment_node.html' with comment=child depth=depth|add:24 %}
+    {% endfor %}
+</div>

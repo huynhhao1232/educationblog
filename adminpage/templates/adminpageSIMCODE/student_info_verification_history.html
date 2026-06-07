@@ -1,0 +1,68 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% block admission %}
+<div style="margin: 20px 30px;">
+  <h3 class="i-name"><i class="fa-solid fa-clock-rotate-left me-2"></i>Lịch sử gửi xác nhận</h3>
+  <p class="text-muted">
+    <strong>{{ record.student_code }}</strong> — {{ record.full_name }}
+    {% if record.class_name %}<span class="badge bg-secondary ms-1">{{ record.class_name }}</span>{% endif %}
+    · Đã gửi: <strong>{{ submit_count }}/2</strong> lần
+  </p>
+  <div class="mb-3">
+    <a class="btn btn-outline-secondary btn-sm" href="{% url 'adminpage:student_info_manage' %}">← Quay lại quản lý</a>
+  </div>
+
+  {% if not history_blocks %}
+    <div class="alert alert-info">Chưa có lần gửi xác nhận nào được lưu (hoặc học viên chưa từng gửi).</div>
+  {% else %}
+    {% for block in history_blocks %}
+    <div class="card border-0 shadow-sm mb-4">
+      <div class="card-header bg-light d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <span class="fw-semibold"><i class="fa-solid fa-paper-plane me-2 text-primary"></i>Lần gửi thứ {{ block.submit_index }}</span>
+        <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i>{{ block.created_at|date:"d/m/Y H:i" }}</span>
+      </div>
+      <div class="card-body p-0">
+        {% if block.all_correct is not None %}
+        <div class="px-3 pt-3 pb-0">
+          {% if block.all_correct %}
+            <span class="badge bg-success mb-2">Tóm tắt: Học viên xác nhận tất cả thông tin đúng</span>
+          {% elif block.wrong_field_labels %}
+            <div class="small mb-2"><strong class="text-danger">Mục đánh dấu sai:</strong>
+              {% for lb in block.wrong_field_labels %}<span class="badge bg-danger me-1">{{ lb }}</span>{% endfor %}
+            </div>
+          {% endif %}
+        </div>
+        {% endif %}
+        <div class="table-responsive">
+          <table class="table table-sm table-hover mb-0">
+            <thead class="table-light">
+              <tr><th>Trường</th><th style="width:160px;">Xác nhận</th></tr>
+            </thead>
+            <tbody>
+              {% for r in block.rows %}
+              <tr>
+                <td>{{ r.label }}</td>
+                <td>
+                  {% if r.display == "Đúng" %}
+                    <span class="badge bg-success">{{ r.display }}</span>
+                  {% elif r.display == "Sai" %}
+                    <span class="badge bg-danger">{{ r.display }}</span>
+                  {% else %}
+                    <span class="badge bg-secondary">{{ r.display }}</span>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% if block.note %}
+        <div class="border-top p-3 bg-light small">
+          <strong>Ghi chú:</strong> {{ block.note|linebreaksbr }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  {% endif %}
+</div>
+{% endblock %}

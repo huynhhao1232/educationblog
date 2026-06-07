@@ -143,21 +143,11 @@
 
 
                                                 <td class="view">
-                                                    {%if pb.enable == True%}
-                                                    {%if gv.gv.sex == 1%}
-                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditGVModal({{gv.gv.id}}, '{{gv.gv.name}}', '{{gv.gv.role1}}', '{{gv.gv.role2}}', '{{gv.gv.namsinh}}', '{{gv.gv.chuyenmon}}', 1, {{gv.gv.bac}}, 1, '{{gv.gv.image_file.url}}')"></i>
-                                                    {%else%}
-                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditGVModal({{gv.gv.id}}, '{{gv.gv.name}}', '{{gv.gv.role1}}', '{{gv.gv.role2}}', '{{gv.gv.namsinh}}', '{{gv.gv.chuyenmon}}', 0, {{gv.gv.bac}}, 1, '{{gv.gv.image_file.url}}')"></i>
-                                                    {%endif%}
-                                                    {%else%}
-
-                                                    {%if gv.gv.sex == 1%}
-                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditGVModal({{gv.gv.id}}, '{{gv.gv.name}}', '{{gv.gv.role1}}', '{{gv.gv.role2}}', '{{gv.gv.namsinh}}', '{{gv.gv.chuyenmon}}', 1, {{gv.gv.bac}}, 0, '{{gv.gv.image_file.url}}')"></i>
-                                                    {%else%}
-                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditGVModal({{gv.gv.id}}, '{{gv.gv.name}}', '{{gv.gv.role1}}', '{{gv.gv.role2}}', '{{gv.gv.namsinh}}', '{{gv.gv.chuyenmon}}', 0, {{gv.gv.bac}}, 0, '{{gv.gv.image_file.url}}')"></i>
-
-                                                    {%endif%}
-                                                    {%endif%}
+                                                    {% if gv.gv.sex %}
+                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditGVModal({{gv.gv.id}}, '{{gv.gv.name|escapejs}}', '{{gv.gv.role1|escapejs}}', '{{gv.gv.role2|escapejs}}', '{{gv.gv.namsinh|escapejs}}', '{{gv.gv.chuyenmon|escapejs}}', 1, {{gv.gv.bac}}, {% if gv.gv.enable %}1{% else %}0{% endif %}, '{{gv.gv.image_file.url|escapejs}}')"></i>
+                                                    {% else %}
+                                                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square update-course" onclick="openEditGVModal({{gv.gv.id}}, '{{gv.gv.name|escapejs}}', '{{gv.gv.role1|escapejs}}', '{{gv.gv.role2|escapejs}}', '{{gv.gv.namsinh|escapejs}}', '{{gv.gv.chuyenmon|escapejs}}', 0, {{gv.gv.bac}}, {% if gv.gv.enable %}1{% else %}0{% endif %}, '{{gv.gv.image_file.url|escapejs}}')"></i>
+                                                    {% endif %}
                                                 </td>
                                             </tr>
                                             {% endfor %}

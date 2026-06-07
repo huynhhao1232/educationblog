@@ -1,0 +1,409 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block admission %}
+<style>
+  .room-manage-wrap { margin: 90px 30px 20px 30px; }
+  .room-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:16px;
+  }
+  .room-header h3 { color:#023EB6; font-weight:800; margin:0; }
+  .filter-bar { border:1px solid #dee2e6; border-radius:10px; padding:12px 14px; background:#f8f9fa; margin-bottom:14px; }
+  .table-wrap { border:1px solid #dee2e6; border-radius:10px; overflow:hidden; background:#fff; }
+  table.room-table { width:100%; border-collapse:collapse; font-size:13px; }
+  table.room-table th, table.room-table td { border:1px solid #dee2e6; padding:8px 10px; vertical-align:middle; }
+  table.room-table thead th { background:#023EB6; color:#fff; font-weight:700; }
+  .room-add-fab {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1050;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 999px;
+  }
+</style>
+
+<div class="room-manage-wrap">
+  <div class="room-header">
+    <h3><i class="fa-solid fa-door-open me-2"></i>Quản lý phòng thi</h3>
+    <div class="d-flex gap-2 flex-wrap align-items-center">
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#importPhongThiModal">
+        <i class="fa-solid fa-file-arrow-up me-1"></i>Import phòng thi (Excel)
+      </button>
+      <a class="btn btn-sm btn-outline-secondary" href="{% url 'adminpage:exam_room_phongthi_template' %}" title="File mẫu trong project hoặc mẫu tối thiểu">
+        <i class="fa-solid fa-download me-1"></i>Mẫu phongthi.xlsx
+      </a>
+      <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createRoomModal">
+        <i class="fa-solid fa-plus me-1"></i>Thêm phòng thi
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteAllRoomsModal"
+              {% if not rooms %}disabled title="Không có phòng để xoá"{% endif %}>
+        <i class="fa-solid fa-triangle-exclamation me-1"></i>Xoá toàn bộ phòng thi
+      </button>
+      <button type="submit" form="bulkExportRoomsForm" class="btn btn-sm btn-outline-success"
+              {% if not rooms %}disabled title="Không có phòng"{% endif %}
+              onclick="return examRoomBulkExportSubmit();">
+        <i class="fa-solid fa-file-excel me-1"></i>Export phòng đã chọn (1 phòng = 1 file; nhiều phòng = 1 file gộp, danh sách theo cơ sở + ca)
+      </button>
+    </div>
+  </div>
+
+  <form id="bulkExportRoomsForm" method="post" action="{% url 'adminpage:exam_room_bulk_export_excel' %}" class="d-none">
+    {% csrf_token %}
+    {% if filter_campus %}
+    <input type="hidden" name="return_campus_id" value="{{ filter_campus }}">
+    {% endif %}
+  </form>
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} py-2">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+
+  <div class="filter-bar">
+    <form method="get" class="row g-2 align-items-end flex-wrap">
+      <div class="col-auto">
+        <label class="form-label form-label-sm mb-1 d-block fw-bold text-secondary">Lọc theo cơ sở</label>
+        <select name="campus_id" class="form-select form-select-sm" style="min-width:240px;" aria-label="Cơ sở">
+          <option value="">Tất cả cơ sở</option>
+          {% for c in campuses %}
+            <option value="{{ c.id }}" {% if filter_campus == c.id|stringformat:"s" %}selected{% endif %}>{{ c.code }} — {{ c.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-auto d-flex gap-2">
+        <button type="submit" class="btn btn-sm btn-primary">
+          <i class="fa-solid fa-filter me-1"></i>Lọc
+        </button>
+        {% if filter_campus %}
+        <a href="{% url 'adminpage:exam_room_manage' %}" class="btn btn-sm btn-outline-secondary">Xoá lọc</a>
+        {% endif %}
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal tạo phòng thi -->
+  <div class="modal fade" id="createRoomModal" tabindex="-1" aria-labelledby="createRoomModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createRoomModalLabel">
+            <i class="fa-solid fa-plus-circle text-primary me-1"></i>Thêm phòng thi mới
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form method="post">
+          {% csrf_token %}
+          {% if filter_campus %}
+          <input type="hidden" name="return_campus_id" value="{{ filter_campus }}">
+          {% endif %}
+          <div class="modal-body">
+            <div class="mb-2">
+              <label class="form-label form-label-sm">Cơ sở</label>
+              <select name="campus_id" class="form-select form-select-sm" required>
+                <option value="">-- Chọn cơ sở --</option>
+                {% for c in campuses %}
+                  <option value="{{ c.id }}" {% if filter_campus == c.id|stringformat:"s" %}selected{% endif %}>{{ c.code }} - {{ c.name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="mb-2">
+              <label class="form-label form-label-sm">Tên phòng</label>
+              <input type="text" name="name" class="form-control form-control-sm" placeholder="VD: P101" required>
+            </div>
+            <div class="row g-2">
+              <div class="col-6">
+                <label class="form-label form-label-sm">Số cột (mỗi hàng)</label>
+                <input type="number" name="row_count" min="1" class="form-control form-control-sm" placeholder="VD: 3" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label form-label-sm">Số hàng</label>
+                <input type="number" name="col_count" min="1" class="form-control form-control-sm" placeholder="VD: 4" required>
+              </div>
+            </div>
+            <small class="text-muted d-block mt-2">
+              Kích thước phòng: <strong>số cột x số hàng</strong>. Ví dụ 3 x 4 = 3 cột ngang, 4 hàng dọc, tổng <strong>12 chỗ ngồi</strong>.
+            </small>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-save me-1"></i>Lưu phòng thi
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal import phòng thi + lấy HV (xem trước rồi mới ghi DB) -->
+  <div class="modal fade" id="importPhongThiModal" tabindex="-1" aria-labelledby="importPhongThiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="importPhongThiModalLabel">
+            <i class="fa-solid fa-file-import text-primary me-2"></i>Import Excel: tạo phòng thi &amp; lấy học viên
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form method="post" enctype="multipart/form-data" action="{% url 'adminpage:exam_room_import_phongthi' %}">
+          {% csrf_token %}
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="phongThiExcelFile" class="form-label fw-bold">Chọn file Excel</label>
+              <input type="file" class="form-control" id="phongThiExcelFile" name="excel_file" accept=".xlsx,.xls" required>
+            </div>
+            <p class="small text-muted mb-2">
+              <strong>Dòng 1</strong> là hàng tiêu đề (bắt buộc, không import). Từ <strong>dòng 2</strong> là dữ liệu — đúng 11 cột A→K như file của bạn.
+              <a href="{% url 'adminpage:exam_room_phongthi_template' %}">Tải file mẫu</a>.
+            </p>
+            <div class="alert alert-info small mb-0">
+              <p class="mb-1"><strong>Cột A→K:</strong> Cơ sở · Tên phòng · Cột (ghế/hàng ngang) · Hàng (số dãy) · Ca thi (sáng/chiều/tối) · Học viên buổi (0/1) · Khối · Tổ hợp môn · Số lượng HV · Môn thi · Hoà nhập.</p>
+              <p class="mb-1">Upload → <strong>xem trước</strong> → <strong>Xác nhận import</strong> mới ghi DB.</p>
+              <p class="mb-0 small">Cần đã import danh sách học viên (Sắp xếp phòng thi) trước.</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-upload me-1"></i>Upload &amp; xem trước
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal xoá toàn bộ phòng thi -->
+  <div class="modal fade" id="deleteAllRoomsModal" tabindex="-1" aria-labelledby="deleteAllRoomsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-danger">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="deleteAllRoomsModalLabel">
+            <i class="fa-solid fa-triangle-exclamation me-2"></i>Xoá toàn bộ phòng thi
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-2">Thao tác này sẽ <strong>xoá vĩnh viễn</strong>:</p>
+          <ul class="mb-2 small">
+            <li>Tất cả phòng thi đã tạo{% if filter_campus %} (theo lựa chọn bên dưới){% endif %};</li>
+            <li>Dữ liệu xếp phòng: gán học viên vào phòng, sơ đồ ghế theo môn, môn thi trong phòng.</li>
+          </ul>
+          <p class="mb-0 small text-success"><strong>Không</strong> xoá danh sách học viên trên trang &quot;Sắp xếp phòng thi&quot;.</p>
+        </div>
+        <div class="modal-footer flex-wrap gap-2 justify-content-between">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+          <div class="d-flex flex-wrap gap-2 justify-content-end">
+            {% if filter_campus %}
+            <form method="post" action="{% url 'adminpage:exam_room_delete_all_rooms' %}" class="d-inline"
+                  onsubmit="return confirm('Chỉ xoá các phòng thi tại cơ sở đang lọc?');">
+              {% csrf_token %}
+              <input type="hidden" name="scope" value="campus">
+              <input type="hidden" name="campus_id" value="{{ filter_campus }}">
+              <input type="hidden" name="return_campus_id" value="{{ filter_campus }}">
+              <button type="submit" class="btn btn-outline-danger btn-sm">
+                Chỉ xoá phòng tại cơ sở đang lọc
+              </button>
+            </form>
+            {% endif %}
+            <form method="post" action="{% url 'adminpage:exam_room_delete_all_rooms' %}" class="d-inline"
+                  onsubmit="return confirm('Xoá MỌI phòng thi tại MỌI cơ sở? Hành động không hoàn tác.');">
+              {% csrf_token %}
+              <input type="hidden" name="scope" value="all">
+              {% if filter_campus %}
+              <input type="hidden" name="return_campus_id" value="{{ filter_campus }}">
+              {% endif %}
+              <button type="submit" class="btn btn-danger btn-sm">
+                Xoá mọi phòng (mọi cơ sở)
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table class="room-table" id="roomTableManage">
+      <thead>
+        <tr>
+          <th style="width:36px;" title="Chọn để export gộp">
+            <input type="checkbox" id="check-all-rooms-export" aria-label="Chọn tất cả phòng">
+          </th>
+          <th>#</th>
+          <th>Cơ sở</th>
+          <th>Tên phòng</th>
+          <th>Số cột</th>
+          <th>Số hàng</th>
+          <th>Sức chứa</th>
+          <th class="text-center" title="Số học viên đã xếp vào phòng, ca sáng">HV ca sáng</th>
+          <th class="text-center" title="Số học viên đã xếp vào phòng, ca chiều">HV ca chiều</th>
+          <th class="text-center" title="Số học viên đã xếp vào phòng, ca tối">HV ca tối</th>
+          <th>Sửa</th>
+          <th>Xoá</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in rooms %}
+        <tr>
+          <td class="text-center">
+            <input type="checkbox" class="cb-room-export" name="room_ids" value="{{ r.id }}" form="bulkExportRoomsForm" aria-label="Chọn phòng {{ r.name }}">
+          </td>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ r.campus.code }} - {{ r.campus.name }}</td>
+          <td>
+            <a href="{% url 'adminpage:exam_room_detail' r.id %}" class="text-decoration-none">
+              {{ r.name }}
+            </a>
+          </td>
+          <td>{{ r.col_count }}</td>
+          <td>{{ r.row_count }}</td>
+          <td>{{ r.capacity }}</td>
+          <td class="text-center">{{ r.hv_sang }}</td>
+          <td class="text-center">{{ r.hv_chieu }}</td>
+          <td class="text-center">{{ r.hv_toi }}</td>
+          <td class="text-center">
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-primary btn-edit-room"
+              data-bs-toggle="modal"
+              data-bs-target="#editRoomModal"
+              data-room-id="{{ r.id }}"
+              data-campus-id="{{ r.campus.id }}"
+              data-room-name="{{ r.name }}"
+              data-row-count="{{ r.row_count }}"
+              data-col-count="{{ r.col_count }}"
+            >
+              <i class="fa-solid fa-pen"></i>
+            </button>
+          </td>
+          <td class="text-center">
+            <form method="post" action="{% url 'adminpage:exam_room_delete' r.id %}"
+                  onsubmit="return confirm('Xoá phòng {{ r.name }}? Chỉ xoá khi chưa có dữ liệu xếp phòng.');">
+              {% csrf_token %}
+              {% if filter_campus %}
+              <input type="hidden" name="return_campus_id" value="{{ filter_campus }}">
+              {% endif %}
+              <button type="submit" class="btn btn-sm btn-outline-danger">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </form>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="12" class="text-center text-muted py-3">Chưa có phòng thi nào.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary room-add-fab" data-bs-toggle="modal" data-bs-target="#createRoomModal">
+  <i class="fa-solid fa-plus me-1"></i>Phòng thi
+</button>
+
+<!-- Modal sửa phòng thi -->
+<div class="modal fade" id="editRoomModal" tabindex="-1" aria-labelledby="editRoomModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editRoomModalLabel">
+          <i class="fa-solid fa-pen-to-square text-primary me-1"></i>Sửa phòng thi
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="editRoomForm" method="post" action="#">
+        {% csrf_token %}
+        {% if filter_campus %}
+        <input type="hidden" name="return_campus_id" value="{{ filter_campus }}">
+        {% endif %}
+        <div class="modal-body">
+          <div class="mb-2">
+            <label class="form-label form-label-sm">Cơ sở</label>
+            <select id="editCampusId" name="campus_id" class="form-select form-select-sm" required>
+              <option value="">-- Chọn cơ sở --</option>
+              {% for c in campuses %}
+                <option value="{{ c.id }}">{{ c.code }} - {{ c.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="mb-2">
+            <label class="form-label form-label-sm">Tên phòng</label>
+            <input id="editRoomName" type="text" name="name" class="form-control form-control-sm" required>
+          </div>
+          <div class="row g-2">
+            <div class="col-6">
+              <label class="form-label form-label-sm">Số cột (mỗi hàng)</label>
+              <input id="editRowCount" type="number" name="row_count" min="1" class="form-control form-control-sm" required>
+            </div>
+            <div class="col-6">
+              <label class="form-label form-label-sm">Số hàng</label>
+              <input id="editColCount" type="number" name="col_count" min="1" class="form-control form-control-sm" required>
+            </div>
+          </div>
+          <small class="text-muted d-block mt-2">
+            Kích thước phòng: <strong>số cột x số hàng</strong>. Ví dụ 3 x 4 = 12 chỗ ngồi.
+          </small>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Huỷ</button>
+          <button type="submit" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-save me-1"></i>Lưu thay đổi
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  function examRoomBulkExportSubmit() {
+    var n = document.querySelectorAll('.cb-room-export:checked').length;
+    if (!n) {
+      alert('Vui lòng chọn ít nhất một phòng thi.');
+      return false;
+    }
+    return confirm('Xuất cho ' + n + ' phòng đã chọn?\n• 1 phòng: một file Excel (mỗi ca có HV: danh sách + sơ đồ).\n• Nhiều phòng: một file Excel gộp (mỗi cơ sở + ca một sheet danh sách đúng mẫu EXPORT_TEMPLATE, STT 1..n theo từng phòng, cột TỔ HỢP ở cột B; sơ đồ mỗi phòng một sheet).');
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var checkAll = document.getElementById('check-all-rooms-export');
+    if (checkAll) {
+      checkAll.addEventListener('change', function() {
+        document.querySelectorAll('.cb-room-export').forEach(function(cb) {
+          cb.checked = checkAll.checked;
+        });
+      });
+    }
+    const editForm = document.getElementById('editRoomForm');
+    const campusSel = document.getElementById('editCampusId');
+    const nameInp = document.getElementById('editRoomName');
+    const rowInp = document.getElementById('editRowCount');
+    const colInp = document.getElementById('editColCount');
+
+    document.querySelectorAll('.btn-edit-room').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const roomId = btn.getAttribute('data-room-id');
+        const campusId = btn.getAttribute('data-campus-id');
+        const roomName = btn.getAttribute('data-room-name');
+        const rowCount = btn.getAttribute('data-row-count');
+        const colCount = btn.getAttribute('data-col-count');
+
+        editForm.action = "{% url 'adminpage:exam_room_update' 0 %}".replace('/0/', '/' + roomId + '/');
+        campusSel.value = campusId || "";
+        nameInp.value = roomName || "";
+        rowInp.value = rowCount || "";
+        colInp.value = colCount || "";
+      });
+    });
+  });
+</script>
+
+{% endblock %}
+

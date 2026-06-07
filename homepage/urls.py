@@ -25,4 +25,8 @@ urlpatterns = [
     path('so-dau-bai/ca-nhan/', views.journal_personal, name='journal_personal'),
     path('so-dau-bai/ca-nhan/sua/<int:entry_id>/', views.journal_entry_edit, name='journal_entry_edit'),
     path('so-dau-bai/thoat/', views.journal_logout, name='journal_logout'),
+    # Kiểm tra thông tin học viên (THPT)
+    path('kiem-tra-thong-tin/', views.student_info_lookup, name='student_info_lookup'),
+    path('kiem-tra-thong-tin/xac-nhan/', views.student_info_verify, name='student_info_verify'),
+    path('kiem-tra-thong-tin/da-xac-nhan/', views.student_info_verify_success, name='student_info_verify_success'),
 ]

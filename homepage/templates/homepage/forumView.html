@@ -25,18 +25,8 @@
         margin-bottom: 20px;
     }
 
-    /* Bình luận */
     .comments-section {
         margin-top: 30px;
-    }
-
-    .comment {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .comment:last-child {
-        border-bottom: none;
     }
 
     .comment .name {
@@ -44,83 +34,79 @@
         color: #007bff;
     }
 
-    .comment .date {
-        font-size: 12px;
-        color: gray;
-        margin-left: 5px;
-    }
-
-    .comment p {
-        margin: 5px 0 0;
-    }
-
-    /* Ô nhập bình luận */
     .comment-box {
         display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
         margin-top: 20px;
+        align-items: flex-start;
     }
 
     .comment-box textarea {
         flex: 1;
+        min-width: 200px;
         padding: 10px;
         border: 1px solid #ddd;
         border-radius: 5px;
-        resize: none;
+        resize: vertical;
     }
 
-    .comment-box button {
-        margin-left: 10px;
+    .comment-box .main-comment-fields {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 200px;
+    }
+
+    .comment-box button[type="submit"] {
         padding: 10px 15px;
         background-color: #28a745;
         color: white;
         border: none;
         cursor: pointer;
         border-radius: 5px;
+        align-self: flex-end;
     }
 
-    .comment-box button:hover {
+    .comment-box button[type="submit"]:hover {
         background-color: #218838;
+    }
+
+    .forum-comment-node .comment {
+        padding-left: 0.25rem;
     }
 </style>
 
 <div class="col-sm-9">
     <div class="containerr">
-        <!-- Tiêu đề bài viết -->
-        <h1>{{post.title}}</h1>
+        <h1>{{ post.title }}</h1>
 
-        <!-- Nội dung bài viết -->
         <div class="content">
-            <p>
-                {{post.content}}
-            </p>
+            {{ post.content|linebreaksbr }}
         </div>
 
-        <!-- Phần bình luận -->
         <div class="comments-section">
-            <h2>Bình luận</h2>
+            <h2 class="h4">Bình luận</h2>
 
-            <div class="comment">
-                <span class="name">Người dùng A</span>
-                <span class="date">- 10 phút trước</span>
-                <p>Bài viết rất hay! Cảm ơn bạn đã chia sẻ.</p>
-            </div>
+            {% for c in top_comments %}
+                {% include 'homepage/forum_comment_node.html' with comment=c depth=0 %}
+            {% empty %}
+            <p class="text-muted small">Chưa có bình luận. Hãy là người đầu tiên!</p>
+            {% endfor %}
 
-            <div class="comment">
-                <span class="name">Người dùng B</span>
-                <span class="date">- 20 phút trước</span>
-                <p>Mình rất thích nội dung này.</p>
-            </div>
-
-            <!-- Ô nhập bình luận -->
-            <div class="comment-box">
-                <textarea id="commentInput" placeholder="Viết bình luận..."></textarea>
-                <button onclick="submitComment()">Gửi</button>
-            </div>
+            <form method="post" class="comment-box">
+                {% csrf_token %}
+                <input type="hidden" name="parent_id" value="">
+                <div class="main-comment-fields">
+                    <input type="text" name="author_name" class="form-control" placeholder="Tên hiển thị" maxlength="100" required value="">
+                    <textarea name="body" rows="3" placeholder="Viết bình luận..." maxlength="2000" required></textarea>
+                </div>
+                <button type="submit">Gửi</button>
+            </form>
         </div>
     </div>
 </div>
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
 integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="

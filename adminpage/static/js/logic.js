@@ -147,27 +147,30 @@ function openAddGVModal()
     $modal.find('.role2').val('')
     $modal.find('.chuyenmon').val('')
     $modal.find('.namsinh').val('')
-    $modal.find('#image-preview').html('');
+    $modal.find('.post-id').val('0')
+    $modal.find('.action').val('0')
+    $modal.find('#topic-image').val('')
+    $modal.find('#image-preview').html('')
+    $modal.find('.toggle').addClass('active')
+    $modal.find('.toggle-hidden .enableHidden').val(1)
+    $modal.find('.toggle-hidden .text').text('Công khai')
     $modal.modal('show');
 }
 
 function openEditGVModal(gv_id, name, role1, role2, date, chuyenmon, sex, bac, enable, image_file) {
-    // Lấy các input field trong form
-    const $postInput = $('#exampleModal .post-id');
-    const $actionInput = $('#exampleModal .action');
-    const $nameInput = $('#exampleModal .chapterName');
-    const $role1Input = $('#exampleModal .role1');
-    const $role2Input = $('#exampleModal .role2');
-    const $dateInput = $('#exampleModal .namsinh');
-    const $chuyenmonInput = $('#exampleModal .chuyenmon');
-    const $sexSelect = $('#exampleModal #sex');
-    const $bacSelect = $('#exampleModal #bac');
-    const $enableInput = $('#exampleModal .enableHidden');
-    const $imageInput = $('#exampleModal #topic-image');
+    const $modal = $('#exampleModal');
+    const $postInput = $modal.find('.post-id');
+    const $actionInput = $modal.find('.action');
+    const $nameInput = $modal.find('.chapterName');
+    const $role1Input = $modal.find('.role1');
+    const $role2Input = $modal.find('.role2');
+    const $dateInput = $modal.find('.namsinh');
+    const $chuyenmonInput = $modal.find('.chuyenmon');
+    const $sexSelect = $modal.find('#sex');
+    const $bacSelect = $modal.find('#bac');
 
-    // Điền các giá trị vào các input field
-    $postInput.val(gv_id)
-    $actionInput.val(1)
+    $postInput.val(gv_id);
+    $actionInput.val(1);
     $nameInput.val(name);
     $role1Input.val(role1);
     $role2Input.val(role2);
@@ -175,33 +178,27 @@ function openEditGVModal(gv_id, name, role1, role2, date, chuyenmon, sex, bac, e
     $chuyenmonInput.val(chuyenmon);
     $sexSelect.val(sex);
     $bacSelect.val(bac);
-    $enableInput.val(enable);
+    $modal.find('#topic-image').val('');
 
-    if(enable == 1)
-    {
-        $('.toggle').addClass('active')
-        $('.toggle-hidden').find('.enableHidden').val(1);
-        $('.toggle-hidden').find('.text').text('Công khai')
-    }
-    else
-    {
-        $('.toggle').removeClass('active')
-        $('.toggle-hidden').find('.enableHidden').val(0);
-        $('.toggle-hidden').find('.text').text('Riêng tư')
-    }
-
-    // Xử lý hình ảnh
-    // Ví dụ: hiển thị hình ảnh trong preview
-    const imagePreview = $('#exampleModal #image-preview');
-    if (image_file) {
-      imagePreview.html(`<img src="${image_file}" alt="Preview" class="img-fluid">`);
+    const on = enable == 1 || enable === '1';
+    $modal.find('.toggle-hidden .enableHidden').val(on ? 1 : 0);
+    if (on) {
+        $modal.find('.toggle').addClass('active');
+        $modal.find('.toggle-hidden .text').text('Công khai');
     } else {
-      imagePreview.html('');
+        $modal.find('.toggle').removeClass('active');
+        $modal.find('.toggle-hidden .text').text('Riêng tư');
     }
 
-    const $modal = $('#exampleModal')
-    $modal.modal('show')
-  }
+    const imagePreview = $modal.find('#image-preview');
+    if (image_file) {
+        imagePreview.html(`<img src="${image_file}" alt="Preview" class="img-fluid">`);
+    } else {
+        imagePreview.html('');
+    }
+
+    $modal.modal('show');
+}
 
 $('#topic-files').on('change', function() {
     if (this.files.length > 0) {
