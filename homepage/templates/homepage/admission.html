@@ -29,6 +29,7 @@
         display: flex;
         gap: 40px;
         margin-bottom: 20px;
+        align-items: flex-start;
     }
 
     .step4-style .form-row>.form-col {
@@ -36,7 +37,22 @@
         min-width: 280px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        position: relative;
+        padding-bottom: 22px;
+    }
+
+    .step4-style .form-row.form-row-4 {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .step4-style .form-row.form-row-4 > .form-col {
+        flex: 1 1 calc(25% - 12px);
+        min-width: 0;
+    }
+
+    .step4-style .form-row.form-row-4 select {
+        min-width: 0;
     }
 
     .step4-style label {
@@ -47,6 +63,7 @@
     }
 
     .step4-style input[type="text"],
+    .step4-style input[type="tel"],
     .step4-style input[type="date"],
     .step4-style select,
     .step4-style textarea {
@@ -63,11 +80,36 @@
     }
 
     .step4-style input[type="text"]:focus,
+    .step4-style input[type="tel"]:focus,
     .step4-style input[type="date"]:focus,
     .step4-style select:focus,
     .step4-style textarea:focus {
         border-bottom: 2px solid #007bff;
         background: #f3f7fd;
+    }
+
+    .step4-style input.input-invalid {
+        border-bottom: 2px solid #e53935 !important;
+        background: #fff5f5 !important;
+    }
+
+    .step4-style input.input-valid {
+        border-bottom: 2px solid #43a047 !important;
+        background: #f1f8f2 !important;
+    }
+
+    .step4-style .field-error-msg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        color: #e53935;
+        font-size: 13px;
+        min-height: 18px;
+        line-height: 1.3;
+        font-weight: 500;
+        margin: 0;
     }
 
     .step4-style select {
@@ -125,6 +167,18 @@
         .step4-style .form-row>.form-col {
             min-width: 100%;
             margin-bottom: 10px;
+        }
+
+        .step4-style .form-row.form-row-4 {
+            flex-direction: row;
+            gap: 12px 8px;
+        }
+
+        .step4-style .form-row.form-row-4 > .form-col {
+            flex: 1 1 calc(50% - 8px);
+            min-width: calc(50% - 8px);
+            max-width: calc(50% - 8px);
+            margin-bottom: 0;
         }
     }
 
@@ -292,18 +346,35 @@
                 <form method="post" action="{%url 'homepage:admission' %}" id="admissionForm" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="text-center">
+                        <p><strong>SỞ GIÁO DỤC VÀ ĐÀO TẠO THÀNH PHỐ HỒ CHÍ MINH</strong></p>
                         <p><strong>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</strong><br>
                             <span class="underline">Độc lập – Tự do – Hạnh phúc</span>
                         </p>
-                        <h4><strong>ĐƠN XIN NHẬP HỌC</strong></h4>
-                        <p>(<span id="selected-shift"></span> – <span id="selected-campus"></span>)</p>
+                        <p><strong>TRUNG TÂM GDNN-GDTX THÀNH PHỐ THỦ ĐỨC</strong></p>
+                        <h4><strong>ĐƠN XIN XÉT TUYỂN HỌC CHƯƠNG TRÌNH GDTX</strong></h4>
+                        <p><strong>LỚP 10 – NĂM HỌC 2026-2027</strong></p>
+                        <p>TẠI CƠ SỞ: <span id="selected-campus"></span></p>
+                        <p class="mt-2"><em>Kính gửi: Giám đốc Trung tâm GDNN-GDTX thành phố Thủ Đức.</em></p>
                     </div>
 
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="full_name">Họ và tên <span style="color:red">*</span></label>
-                            <input type="text" name="full_name" id="full_name" required>
+                            <label for="full_name">Họ và tên học viên (in hoa) <span style="color:red">*</span></label>
+                            <input type="text" name="full_name" id="full_name" required style="text-transform: uppercase;">
                         </div>
+                        <div class="form-col">
+                            <label for="phone">Số điện thoại <span style="color:red">*</span></label>
+                            <input type="tel" name="phone" id="phone" required
+                                   maxlength="10" minlength="10"
+                                   pattern="0[0-9]{9}"
+                                   inputmode="numeric"
+                                   placeholder="0xxxxxxxxx"
+                                   title="10 chữ số, bắt đầu bằng 0">
+                            <small class="field-error-msg" id="phone_error"></small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
                         <div class="form-col">
                             <label for="gender">Giới tính <span style="color:red">*</span></label>
                             <select name="gender" id="gender" required>
@@ -312,104 +383,84 @@
                                 <option value="Nữ">Nữ</option>
                             </select>
                         </div>
-                    </div>
-
-                    <div class="form-row">
                         <div class="form-col">
-                            <label for="ethnicity">Dân tộc <span style="color:red">*</span></label>
-                            <select name="ethnicity" id="ethnicity" required>
-                                <option value="">-- Chọn dân tộc --</option>
-                                <option value="Bana">Người Bana</option>
-                                <option value="Bố Y">Người Bố Y</option>
-                                <option value="Brâu">Người Brâu</option>
-                                <option value="Bru-Vân Kiều">Người Bru-Vân Kiều</option>
-                                <option value="Chăm">Người Chăm</option>
-                                <option value="Chơ Ro">Người Chơ Ro</option>
-                                <option value="Chu-Ru">Người Chu-Ru</option>
-                                <option value="Chứt">Người Chứt</option>
-                                <option value="Co">Người Co</option>
-                                <option value="Cơ Ho">Người Cơ Ho</option>
-                                <option value="Cờ Lao">Người Cờ Lao</option>
-                                <option value="Cơ Tu">Người Cơ Tu</option>
-                                <option value="Cống">Người Cống</option>
-                                <option value="Dao">Người Dao</option>
-                                <option value="Ê-Đê">Người Ê-Đê</option>
-                                <option value="Gia Rai">Người Gia Rai</option>
-                                <option value="Giáy">Người Giáy</option>
-                                <option value="Gié-Triêng">Người Gié-Triêng</option>
-                                <option value="Hà Nhì">Người Hà Nhì</option>
-                                <option value="Hoa">Người Hoa</option>
-                                <option value="Hrê">Người Hrê</option>
-                                <option value="Kháng">Người Kháng</option>
-                                <option value="Khmer">Người Khmer</option>
-                                <option value="Khơ Mú">Người Khơ Mú</option>
-                                <option value="Kinh">Người Kinh</option>
-                                <option value="La Chí">Người La Chí</option>
-                                <option value="La Ha">Người La Ha</option>
-                                <option value="La Hủ">Người La Hủ</option>
-                                <option value="Lào">Người Lào</option>
-                                <option value="Lô Lô">Người Lô Lô</option>
-                                <option value="Lự">Người Lự</option>
-                                <option value="Mạ">Người Mạ</option>
-                                <option value="Mảng">Người Mảng</option>
-                                <option value="Mnông">Người Mnông</option>
-                                <option value="Mông">Người Mông</option>
-                                <option value="Mường">Người Mường</option>
-                                <option value="Ngái">Người Ngái</option>
-                                <option value="Nùng">Người Nùng</option>
-                                <option value="Ơ Đu">Người Ơ Đu</option>
-                                <option value="Pà Thẻn">Người Pà Thẻn</option>
-                                <option value="Phù Lá">Người Phù Lá</option>
-                                <option value="Pu Péo">Người Pu Péo</option>
-                                <option value="Ra Glay">Người Ra Glay</option>
-                                <option value="Rơ Măm">Người Rơ Măm</option>
-                                <option value="Sán Chay">Người Sán Chay</option>
-                                <option value="Sán Dìu">Người Sán Dìu</option>
-                                <option value="Si La">Người Si La</option>
-                                <option value="Tà Ôi">Người Tà Ôi</option>
-                                <option value="Tày">Người Tày</option>
-                                <option value="Thái">Người Thái</option>
-                                <option value="Thổ">Người Thổ</option>
-                                <option value="Xinh Mun">Người Xinh Mun</option>
-                                <option value="Xơ Đăng">Người Xơ Đăng</option>
-                                <option value="Xtiêng">Người Xtiêng</option>
-                            </select>
-                        </div>
-                        <div class="form-col">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="example@email.com" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="phone">Số điện thoại <span style="color:red">*</span></label>
-                            <input type="text" name="phone" id="phone" required>
-                        </div>
-                        <div class="form-col">
-                            <label for="birthday">Ngày, tháng, năm sinh <span style="color:red">*</span></label>
+                            <label for="birthday">Ngày sinh <span style="color:red">*</span></label>
                             <input type="date" name="birthday" id="birthday" required>
                         </div>
                     </div>
 
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="birth_place">Nơi sinh (theo giấy khai sinh) <span style="color:red">*</span></label>
+                            <input type="text" name="birth_place" id="birth_place" placeholder="Ví dụ: Bệnh viện..., phường..., thành phố..." required>
+                        </div>
+                        <div class="form-col">
+                            <label for="ethnicity">Dân tộc <span style="color:red">*</span></label>
+                            <select name="ethnicity" id="ethnicity" required>
+                                <option value="">-- Chọn dân tộc --</option>
+                                <option value="Kinh">Người Kinh</option>
+                                <option value="Hoa">Người Hoa</option>
+                                <option value="Khmer">Người Khmer</option>
+                                <option value="Tày">Người Tày</option>
+                                <option value="Thái">Người Thái</option>
+                                <option value="Mường">Người Mường</option>
+                                <option value="Nùng">Người Nùng</option>
+                                <option value="H'Mông">Người H'Mông</option>
+                                <option value="Dao">Người Dao</option>
+                                <option value="Gia Rai">Người Gia Rai</option>
+                                <option value="Ê-Đê">Người Ê-Đê</option>
+                                <option value="Ba Na">Người Ba Na</option>
+                                <option value="Xơ Đăng">Người Xơ Đăng</option>
+                                <option value="Sán Chay">Người Sán Chay</option>
+                                <option value="Cơ Ho">Người Cơ Ho</option>
+                                <option value="Chăm">Người Chăm</option>
+                                <option value="Sán Dìu">Người Sán Dìu</option>
+                                <option value="Hrê">Người Hrê</option>
+                                <option value="Ra Glai">Người Ra Glai</option>
+                                <option value="Mnông">Người Mnông</option>
+                                <option value="Thổ">Người Thổ</option>
+                                <option value="Xtiêng">Người Xtiêng</option>
+                                <option value="Khơ Mú">Người Khơ Mú</option>
+                                <option value="Brâu">Người Brâu</option>
+                                <option value="Cơ Tu">Người Cơ Tu</option>
+                                <option value="Giáy">Người Giáy</option>
+                                <option value="Gié-Triêng">Người Gié-Triêng</option>
+                                <option value="La Chí">Người La Chí</option>
+                                <option value="La Ha">Người La Ha</option>
+                                <option value="Phù Lá">Người Phù Lá</option>
+                                <option value="La Hủ">Người La Hủ</option>
+                                <option value="Lự">Người Lự</option>
+                                <option value="Lào">Người Lào</option>
+                                <option value="Ngái">Người Ngái</option>
+                                <option value="Chứt">Người Chứt</option>
+                                <option value="Lô Lô">Người Lô Lô</option>
+                                <option value="Mạ">Người Mạ</option>
+                                <option value="Pà Thẻn">Người Pà Thẻn</option>
+                                <option value="Chu-Ru">Người Chu-Ru</option>
+                                <option value="Ơ Đu">Người Ơ Đu</option>
+                                <option value="Rơ Măm">Người Rơ Măm</option>
+                                <option value="Bố Y">Người Bố Y</option>
+                                <option value="Cống">Người Cống</option>
+                                <option value="Si La">Người Si La</option>
+                                <option value="Pu Péo">Người Pu Péo</option>
+                            </select>
+                        </div>
+                    </div>
 
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="religion">Tôn giáo</label>
-                            <select name="religion" id="religion" required>
-                                <option value="">-- Chọn tôn giáo --</option>
-                                <option value="Không">Không</option>
-                                <option value="Phật giáo">Phật giáo</option>
-                                <option value="Công giáo">Công giáo</option>
-                                <option value="Tin Lành">Tin Lành</option>
-                                <option value="Hồi giáo">Hồi giáo</option>
-                                <option value="Cao Đài">Cao Đài</option>
-                                <option value="Hoà Hảo">Hoà Hảo</option>
-                            </select>
+                            <label for="id_number">Số Căn cước công dân <span style="color:red">*</span></label>
+                            <input type="text" name="id_number" id="id_number" required
+                                   maxlength="12" minlength="12"
+                                   pattern="0[0-9]{11}"
+                                   inputmode="numeric"
+                                   placeholder="0xxxxxxxxxxx"
+                                   title="12 chữ số, bắt đầu bằng 0">
+                            <small class="field-error-msg" id="id_number_error"></small>
                         </div>
                         <div class="form-col">
-                            <label for="id_number">Số Căn cước công dân <span style="color:red">*</span></label>
-                            <input type="text" name="id_number" id="id_number" required>
+                            <label for="id_issued_date">Ngày cấp <span style="color:red">*</span></label>
+                            <input type="date" name="id_issued_date" id="id_issued_date" required>
                         </div>
                         <div class="form-col">
                             <label for="cccd_image">Ảnh CCCD <span style="color:red">*</span></label>
@@ -417,258 +468,293 @@
                         </div>
                     </div>
 
-
-
+                    <p class="mt-3 mb-1"><strong>Địa chỉ thường trú (theo VNeID)</strong></p>
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="id_issued_date">Ngày cấp</label>
-                            <input type="date" name="id_issued_date" id="id_issued_date" required>
+                            <label for="permanent_house_number">Số nhà <span style="color:red">*</span></label>
+                            <input type="text" name="permanent_house_number" id="permanent_house_number" required>
                         </div>
                         <div class="form-col">
-                            <label for="id_issued_place">Nơi cấp</label>
-                            <input type="text" name="id_issued_place" id="id_issued_place"
-                                value="Cục trưởng cục cảnh sát QLHC về TTXH" readonly>
-                        </div>
-                    </div>
-
-                    <!-- Địa chỉ thường trú -->
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="cccd_province">Tỉnh/Thành phố (Đ/c thường trú)</label>
-                            <select name="cccd_province" class="Province address-group-1" id="cccd_province" required></select>
-                        </div>
-                        <div class="form-col">
-                            <label for="cccd_district">Quận/Huyện (Đ/c thường trú)</label>
-                            <select name="cccd_district" class="District address-group-1" id="cccd_district" required></select>
+                            <label for="permanent_street">Đường <span style="color:red">*</span></label>
+                            <input type="text" name="permanent_street" id="permanent_street" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="cccd_ward">Phường/Xã (Đ/c thường trú)</label>
-                            <select name="cccd_ward" class="Ward address-group-1" id="cccd_ward" required></select>
-                        </div>
-                        <div class="form-col">
-                            <label for="cccd_town">Tổ/Thôn/Xóm (Đ/c thường trú)</label>
-                            <input type="text" name="cccd_town" id="cccd_town" required>
-                        </div>
-                    </div>
-
-                    <!-- Quê quán -->
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="hometown_province">Tỉnh/Thành phố (Đ/c quê quán)</label>
-                            <select name="hometown_province" class="Province address-group-2"
-                                id="hometown_province" required></select>
-                        </div>
-                        <div class="form-col"></div>
-                    </div>
-
-                    <!-- Nơi đăng ký khai sinh -->
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="birth_reg_province">Tỉnh/Thành phố (Nơi Đ/ký khai sinh)</label>
-                            <select name="birth_reg_province" class="Province address-group-3"
-                                id="birth_reg_province" required></select>
-                        </div>
-                        <div class="form-col">
-                            <label for="birth_reg_district">Quận/Huyện (Nơi Đ/ký khai sinh)</label>
-                            <select name="birth_reg_district" class="District address-group-3"
-                                id="birth_reg_district" required></select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="birth_reg_ward">Phường/Xã (Nơi Đ/ký khai sinh)</label>
-                            <select name="birth_reg_ward" class="Ward address-group-3" id="birth_reg_ward" required></select>
-                        </div>
-                        <div class="form-col">
-                            <label for="birth_reg_town">Tổ/Thôn/Xóm (Nơi Đ/ký khai sinh)</label>
-                            <input type="text" name="birth_reg_town" id="birth_reg_town" required>
-                        </div>
-                    </div>
-
-                    <!-- Nơi sinh -->
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="birth_place_province">Tỉnh/Thành phố (Nơi sinh)</label>
-                            <select name="birth_place_province" class="Province address-group-4"
-                                id="birth_place_province" required></select>
-                        </div>
-                        <div class="form-col">
-                            <label for="birth_place_district">Quận/Huyện (Nơi sinh)</label>
-                            <select name="birth_place_district" class="District address-group-4"
-                                id="birth_place_district" required></select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="birth_place_ward">Phường/Xã (Nơi sinh)</label>
-                            <select name="birth_place_ward" class="Ward address-group-4" id="birth_place_ward" required></select>
-                        </div>
-                        <div class="form-col">
-                            <label for="birth_place_facility">Bệnh viện hoặc trạm xã nào?</label>
-                            <input type="text" name="birth_place_facility" id="birth_place_facility" required>
-                        </div>
-                    </div>
-
-                    <!-- Nơi ở hiện tại -->
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="current_province">Tỉnh/Thành phố (theo chỗ ở hiện tại)</label>
-                            <select name="current_province" class="Province address-group-5"
-                                id="current_province" required></select>
-                        </div>
-                        <div class="form-col">
-                            <label for="current_district">Quận/Huyện (theo chỗ ở hiện tại)</label>
-                            <select name="current_district" class="District address-group-5"
-                                id="current_district" required></select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="current_ward">Phường/Xã (theo chỗ ở hiện tại)</label>
-                            <select name="current_ward" class="Ward address-group-5" id="current_ward" required></select>
-                        </div>
-                        <div class="form-col"></div>
-                    </div>
-
-                    <!-- Học vấn -->
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="graduationYear">Đã tốt nghiệp THCS năm học</label>
-                            <select id="graduationYear" name="graduation_year" onchange="handleGraduationChange()" required>
-                                <option value="">-- Chọn năm --</option>
-                                <option value="2025">2025</option>
-                                <option value="before">Trước 2025 hoặc không có điểm chuyển cấp</option>
+                            <label for="permanent_province">Thành phố (Tỉnh) <span style="color:red">*</span></label>
+                            <select name="permanent_province" id="permanent_province" required>
+                                <option value="">-- Chọn tỉnh/thành phố --</option>
                             </select>
                         </div>
                         <div class="form-col">
-                            <label for="graduation_rank">Xếp loại (học lực lớp 9)</label>
-                            <input type="text" name="graduation_rank" id="graduation_rank" required>
+                            <label for="permanent_ward">Phường (xã) <span style="color:red">*</span></label>
+                            <select name="permanent_ward" id="permanent_ward" required disabled>
+                                <option value="">-- Chọn phường/xã --</option>
+                            </select>
                         </div>
+                    </div>
 
+                    <p class="mt-3 mb-1"><strong>Địa chỉ hiện tại (theo VNeID)</strong></p>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="current_house_number">Số nhà <span style="color:red">*</span></label>
+                            <input type="text" name="current_house_number" id="current_house_number" required>
+                        </div>
+                        <div class="form-col">
+                            <label for="current_street">Đường <span style="color:red">*</span></label>
+                            <input type="text" name="current_street" id="current_street" required>
+                        </div>
                     </div>
                     <div class="form-row">
+                        <div class="form-col">
+                            <label for="current_province">Thành phố (Tỉnh) <span style="color:red">*</span></label>
+                            <select name="current_province" id="current_province" required>
+                                <option value="">-- Chọn tỉnh/thành phố --</option>
+                            </select>
+                        </div>
+                        <div class="form-col">
+                            <label for="current_ward">Phường (xã) <span style="color:red">*</span></label>
+                            <select name="current_ward" id="current_ward" required disabled>
+                                <option value="">-- Chọn phường/xã --</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="graduationYear">Đã tốt nghiệp THCS năm học <span style="color:red">*</span></label>
+                            <select id="graduationYear" name="graduation_year" required onchange="handleGraduationChange()">
+                                <option value="">-- Chọn --</option>
+                                <option value="current">Tốt nghiệp năm nay</option>
+                                <option value="before">Tốt nghiệp những năm trước</option>
+                            </select>
+                        </div>
                         <div class="form-col">
                             <label for="graduation_school">Trường <span style="color:red">*</span></label>
                             <input type="text" name="graduation_school" id="graduation_school" required>
                         </div>
+                    </div>
+
+                    <div id="graduationScoreCurrent" class="d-none">
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="graduation_total_score">Tổng điểm tốt nghiệp (≤ 30.0) <span style="color:red">*</span></label>
+                                <input type="text" name="graduation_total_score" id="graduation_total_score"
+                                    inputmode="decimal" placeholder="VD: 24.5" data-max="30"
+                                    oninput="limitScoreInput(this, 30)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="graduationScoreBefore" class="d-none">
+                        <p class="mb-1"><strong>Điểm Toán, Văn các lớp THCS</strong> <small>(mỗi môn ≤ 10.0)</small></p>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="math_score_6">Điểm Toán lớp 6 <span style="color:red">*</span></label>
+                                <input type="text" name="math_score_6" id="math_score_6" inputmode="decimal" data-max="10"
+                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
+                            </div>
+                            <div class="form-col">
+                                <label for="literature_score_6">Điểm Văn lớp 6 <span style="color:red">*</span></label>
+                                <input type="text" name="literature_score_6" id="literature_score_6" inputmode="decimal" data-max="10"
+                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="math_score_7">Điểm Toán lớp 7 <span style="color:red">*</span></label>
+                                <input type="text" name="math_score_7" id="math_score_7" inputmode="decimal" data-max="10"
+                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
+                            </div>
+                            <div class="form-col">
+                                <label for="literature_score_7">Điểm Văn lớp 7 <span style="color:red">*</span></label>
+                                <input type="text" name="literature_score_7" id="literature_score_7" inputmode="decimal" data-max="10"
+                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="math_score_8">Điểm Toán lớp 8 <span style="color:red">*</span></label>
+                                <input type="text" name="math_score_8" id="math_score_8" inputmode="decimal" data-max="10"
+                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
+                            </div>
+                            <div class="form-col">
+                                <label for="literature_score_8">Điểm Văn lớp 8 <span style="color:red">*</span></label>
+                                <input type="text" name="literature_score_8" id="literature_score_8" inputmode="decimal" data-max="10"
+                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="math_score_9">Điểm Toán lớp 9 <span style="color:red">*</span></label>
+                                <input type="text" name="math_score_9" id="math_score_9" inputmode="decimal" data-max="10"
+                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
+                            </div>
+                            <div class="form-col">
+                                <label for="literature_score_9">Điểm Văn lớp 9 <span style="color:red">*</span></label>
+                                <input type="text" name="literature_score_9" id="literature_score_9" inputmode="decimal" data-max="10"
+                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="avgScore">Điểm trung bình</label>
+                                <input type="text" name="avg_score" id="avgScore" readonly tabindex="-1"
+                                    style="background:#eee; cursor:not-allowed;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mt-3 mb-1"><strong>Kết quả rèn luyện cả năm THCS</strong></p>
+                    <div class="form-row form-row-4">
+                        <div class="form-col">
+                            <label for="conduct_6">Lớp 6 <span style="color:red">*</span></label>
+                            <select name="conduct_6" id="conduct_6" required>
+                                <option value="">-- Chọn --</option>
+                                <option value="Tốt">Tốt</option>
+                                <option value="Khá">Khá</option>
+                                <option value="Đạt">Đạt</option>
+                                <option value="Chưa Đạt">Chưa Đạt</option>
+                            </select>
+                        </div>
+                        <div class="form-col">
+                            <label for="conduct_7">Lớp 7 <span style="color:red">*</span></label>
+                            <select name="conduct_7" id="conduct_7" required>
+                                <option value="">-- Chọn --</option>
+                                <option value="Tốt">Tốt</option>
+                                <option value="Khá">Khá</option>
+                                <option value="Đạt">Đạt</option>
+                                <option value="Chưa Đạt">Chưa Đạt</option>
+                            </select>
+                        </div>
+                        <div class="form-col">
+                            <label for="conduct_8">Lớp 8 <span style="color:red">*</span></label>
+                            <select name="conduct_8" id="conduct_8" required>
+                                <option value="">-- Chọn --</option>
+                                <option value="Tốt">Tốt</option>
+                                <option value="Khá">Khá</option>
+                                <option value="Đạt">Đạt</option>
+                                <option value="Chưa Đạt">Chưa Đạt</option>
+                            </select>
+                        </div>
+                        <div class="form-col">
+                            <label for="conduct_9">Lớp 9 <span style="color:red">*</span></label>
+                            <select name="conduct_9" id="conduct_9" required>
+                                <option value="">-- Chọn --</option>
+                                <option value="Tốt">Tốt</option>
+                                <option value="Khá">Khá</option>
+                                <option value="Đạt">Đạt</option>
+                                <option value="Chưa Đạt">Chưa Đạt</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
                         <div class="form-col">
                             <label for="school_record_image">Ảnh học bạ (trang số 1) <span style="color:red">*</span></label>
                             <input type="file" name="school_record_image" id="school_record_image" accept="image/*" required>
                         </div>
-                    </div>
-                    <div id="graduationDetails"></div>
-
-                    <!-- Điểm các lớp THCS -->
-                    <div id="thcsScores" style="display: none;">
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="math_score_6">Điểm Toán lớp 6</label>
-                                <input type="number" name="math_score_6" id="math_score_6" min="0" max="10" step="0.01" oninput="calcAvgScore()" required>
-                            </div>
-                            <div class="form-col">
-                                <label for="literature_score_6">Điểm Văn lớp 6</label>
-                                <input type="number" name="literature_score_6" id="literature_score_6" min="0" max="10" step="0.01" oninput="calcAvgScore()" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="math_score_7">Điểm Toán lớp 7</label>
-                                <input type="number" name="math_score_7" id="math_score_7" min="0" max="10" step="0.01" oninput="calcAvgScore()" required>
-                            </div>
-                            <div class="form-col">
-                                <label for="literature_score_7">Điểm Văn lớp 7</label>
-                                <input type="number" name="literature_score_7" id="literature_score_7" min="0" max="10" step="0.01" oninput="calcAvgScore()" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="math_score_8">Điểm Toán lớp 8</label>
-                                <input type="number" name="math_score_8" id="math_score_8" min="0" max="10" step="0.01" oninput="calcAvgScore()" required>
-                            </div>
-                            <div class="form-col">
-                                <label for="literature_score_8">Điểm Văn lớp 8</label>
-                                <input type="number" name="literature_score_8" id="literature_score_8" min="0" max="10" step="0.01" oninput="calcAvgScore()" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="math_score_9">Điểm Toán lớp 9</label>
-                                <input type="number" name="math_score_9" id="math_score_9" min="0" max="10" step="0.01" oninput="calcAvgScore()" required>
-                            </div>
-                            <div class="form-col">
-                                <label for="literature_score_9">Điểm Văn lớp 9</label>
-                                <input type="number" name="literature_score_9" id="literature_score_9" min="0" max="10" step="0.01" oninput="calcAvgScore()" required>
-                            </div>
+                        <div class="form-col">
+                            <label for="email">Email <span style="color:red">*</span></label>
+                            <input type="email" name="email" id="email" placeholder="example@email.com" required>
                         </div>
                     </div>
 
-                    <!-- Công việc hiện tại -->
+                    <p class="mt-3 mb-1"><strong>Đăng ký học nghề song song</strong></p>
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="current_job">Công việc hiện nay</label>
-                            <input type="text" name="current_job" id="current_job" required>
+                            <label for="study_vocational">Học nghề <span style="color:red">*</span></label>
+                            <select name="study_vocational" id="study_vocational" required onchange="handleStudyVocationalChange()">
+                                <option value="">-- Chọn --</option>
+                                <option value="no">Không học nghề</option>
+                                <option value="yes">Có học nghề</option>
+                            </select>
                         </div>
-                        <div class="form-col"></div>
+                    </div>
+                    <div id="vocationalFields" class="d-none">
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="vocational_campus_id">Cơ sở dạy nghề <span style="color:red">*</span></label>
+                                <select name="vocational_campus_id" id="vocational_campus_id" onchange="handleVocationalCampusChange()">
+                                    <option value="">-- Chọn cơ sở --</option>
+                                </select>
+                            </div>
+                            <div class="form-col">
+                                <label for="vocational_trade_id">Nghề đăng ký <span style="color:red">*</span></label>
+                                <select name="vocational_trade_id" id="vocational_trade_id">
+                                    <option value="">-- Chọn nghề --</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Thông tin cha mẹ -->
+                    <p class="mt-3 mb-1"><strong>Thông tin cha</strong></p>
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="father_name">Họ và tên cha</label>
+                            <label for="father_name">Họ và tên cha <span style="color:red">*</span></label>
                             <input type="text" name="father_name" id="father_name" required>
                         </div>
                         <div class="form-col">
-                            <label for="father_job">Nghề nghiệp của cha</label>
+                            <label for="father_birth">Năm sinh <span style="color:red">*</span></label>
+                            <input type="text" name="father_birth" id="father_birth" placeholder="VD: 1980" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="father_job">Nghề nghiệp cha <span style="color:red">*</span></label>
                             <input type="text" name="father_job" id="father_job" required>
                         </div>
+                        <div class="form-col">
+                            <label for="father_phone">Điện thoại <span style="color:red">*</span></label>
+                            <input type="tel" name="father_phone" id="father_phone" required
+                                   maxlength="10" minlength="10"
+                                   pattern="0[0-9]{9}"
+                                   inputmode="numeric"
+                                   placeholder="0xxxxxxxxx"
+                                   title="10 chữ số, bắt đầu bằng 0">
+                            <small class="field-error-msg" id="father_phone_error"></small>
+                        </div>
                     </div>
+
+                    <p class="mt-3 mb-1"><strong>Thông tin mẹ</strong></p>
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="father_birth">Năm sinh của cha</label>
-                            <input type="text" name="father_birth" id="father_birth" required>
-                        </div>
-                        <div class="form-col">
-                            <label for="father_phone">Điện thoại của cha</label>
-                            <input type="text" name="father_phone" id="father_phone" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="mother_name">Họ và tên mẹ</label>
+                            <label for="mother_name">Họ và tên mẹ <span style="color:red">*</span></label>
                             <input type="text" name="mother_name" id="mother_name" required>
                         </div>
                         <div class="form-col">
-                            <label for="mother_job">Nghề nghiệp của mẹ</label>
-                            <input type="text" name="mother_job" id="mother_job" required>
+                            <label for="mother_birth">Năm sinh <span style="color:red">*</span></label>
+                            <input type="text" name="mother_birth" id="mother_birth" placeholder="VD: 1982" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="mother_birth">Năm sinh của mẹ</label>
-                            <input type="text" name="mother_birth" id="mother_birth" required>
+                            <label for="mother_job">Nghề nghiệp mẹ <span style="color:red">*</span></label>
+                            <input type="text" name="mother_job" id="mother_job" required>
                         </div>
                         <div class="form-col">
-                            <label for="mother_phone">Điện thoại của mẹ</label>
-                            <input type="text" name="mother_phone" id="mother_phone" required>
+                            <label for="mother_phone">Điện thoại <span style="color:red">*</span></label>
+                            <input type="tel" name="mother_phone" id="mother_phone" required
+                                   maxlength="10" minlength="10"
+                                   pattern="0[0-9]{9}"
+                                   inputmode="numeric"
+                                   placeholder="0xxxxxxxxx"
+                                   title="10 chữ số, bắt đầu bằng 0">
+                            <small class="field-error-msg" id="mother_phone_error"></small>
                         </div>
                     </div>
 
-
-                    <p><strong>Năm học 2025-2026</strong>, tôi chọn học tổ hợp <strong
-                            id="selected-combination"></strong>
-                        để học lớp 10 đến hết năm lớp 12, gồm các môn sau đây:
+                    <p class="mt-3">
+                        Sau khi tìm hiểu tổ hợp môn chương trình GDTX của trung tâm năm học 2026-2027,
+                        phụ huynh và học viên chọn tổ hợp <strong id="selected-combination"></strong>
+                        (<span id="selected-shift"></span>) để học hết năm đến lớp 12.
                     </p>
                     <table class="table table-bordered" id="subject-table">
                         <thead>
                             <tr>
                                 <th>Tổ hợp</th>
-                                <th>Môn 1</th>
-                                <th>Môn 2</th>
+                                <th>Môn bắt buộc 1</th>
+                                <th>Môn bắt buộc 2</th>
                                 <th>Môn 3</th>
                                 <th>Môn 4</th>
                                 <th>Môn 5</th>
@@ -680,12 +766,32 @@
                             <tr id="subject-row"></tr>
                         </tbody>
                     </table>
+
+                    <p class="mt-3">
+                        Nếu được vào học, phụ huynh và học viên cam kết chấp hành nghiêm túc nội quy và các quy định khác của Trung tâm.
+                    </p>
+
+                    <div class="note">
+                        <p><strong>Lưu ý:</strong> Học viên xin nhập học phải khai đầy đủ những yêu cầu trên để đảm bảo thông tin chính xác cho hồ sơ học viên sau này.</p>
+                        <p><strong>Hồ sơ đính kèm:</strong></p>
+                        <ul>
+                            <li>01 Bản sao giấy khai sinh có công chứng</li>
+                            <li>01 Bản sao CCCD có công chứng</li>
+                            <li>01 Bản sao giấy CNTNTHCS tạm thời có công chứng</li>
+                            <li>01 Bản sao giấy CN Khuyết tật có công chứng (nếu có)</li>
+                            <li>Bằng tốt nghiệp THCS (nếu có)</li>
+                            <li>01 Bản sao giấy tờ UT, KK có công chứng (nếu có)</li>
+                        </ul>
+                    </div>
+
                     <input type="hidden" name="campus_id" id="campus_id">
                     <input type="hidden" name="shift_id" id="shift_id">
                     <input type="hidden" name="subject_group_id" id="subject_group_id">
 
+                    <div id="formServerError" class="alert alert-danger d-none" role="alert"></div>
+
                     <div class="text-center mt-4">
-                        <button type="submit" class="btn btn-success btn-lg">Đăng ký</button>
+                        <button type="submit" class="btn btn-success btn-lg">Gửi đơn đăng ký</button>
                     </div>
                 </form>
             </div>
@@ -694,272 +800,469 @@
 </div>
 
 <script>
+    const PHONE_REGEX = /^0\d{9}$/;
+    const CCCD_REGEX = /^0\d{11}$/;
+
+    function setFieldError(input, message) {
+        const errorEl = document.getElementById(`${input.id}_error`);
+        input.classList.remove('input-valid');
+        input.classList.add('input-invalid');
+        if (errorEl) errorEl.textContent = message;
+    }
+
+    function setFieldValid(input) {
+        const errorEl = document.getElementById(`${input.id}_error`);
+        input.classList.remove('input-invalid');
+        input.classList.add('input-valid');
+        if (errorEl) errorEl.textContent = '';
+    }
+
+    function clearFieldState(input) {
+        const errorEl = document.getElementById(`${input.id}_error`);
+        input.classList.remove('input-invalid', 'input-valid');
+        if (errorEl) errorEl.textContent = '';
+    }
+
+    function validatePhoneValue(value, requiredLabel) {
+        if (!value) {
+            return requiredLabel ? `Vui lòng nhập ${requiredLabel}` : null;
+        }
+        if (value[0] !== '0') {
+            return 'Phải bắt đầu bằng số 0';
+        }
+        if (value.length < 10) {
+            return `Còn thiếu ${10 - value.length} chữ số (cần đủ 10 chữ số)`;
+        }
+        if (!PHONE_REGEX.test(value)) {
+            return 'Số điện thoại phải gồm đúng 10 chữ số và bắt đầu bằng số 0';
+        }
+        return null;
+    }
+
+    function validateCccdValue(value) {
+        if (!value) {
+            return 'Vui lòng nhập số CCCD';
+        }
+        if (value[0] !== '0') {
+            return 'Phải bắt đầu bằng số 0';
+        }
+        if (value.length < 12) {
+            return `Còn thiếu ${12 - value.length} chữ số (cần đủ 12 chữ số)`;
+        }
+        if (!CCCD_REGEX.test(value)) {
+            return 'Số CCCD phải gồm đúng 12 chữ số và bắt đầu bằng số 0';
+        }
+        return null;
+    }
+
+    function validateFormatField(inputId, type, requiredLabel, forceShow) {
+        const input = document.getElementById(inputId);
+        if (!input) return true;
+
+        const value = input.value.trim();
+        const error = type === 'phone'
+            ? validatePhoneValue(value, requiredLabel)
+            : validateCccdValue(value);
+
+        if (error) {
+            if (forceShow || value.length > 0) {
+                setFieldError(input, error);
+                return false;
+            }
+            clearFieldState(input);
+            return true;
+        }
+
+        if (value) {
+            setFieldValid(input);
+        } else {
+            clearFieldState(input);
+        }
+        return true;
+    }
+
+    function setupFormatField(inputId, type, requiredLabel) {
+        const input = document.getElementById(inputId);
+        if (!input) return;
+
+        const maxLen = type === 'phone' ? 10 : 12;
+
+        input.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '').slice(0, maxLen);
+            const value = this.value.trim();
+
+            if (!value) {
+                clearFieldState(this);
+                return;
+            }
+
+            if (value[0] !== '0') {
+                setFieldError(this, 'Phải bắt đầu bằng số 0');
+                return;
+            }
+
+            if (value.length === maxLen) {
+                const error = type === 'phone'
+                    ? validatePhoneValue(value, requiredLabel)
+                    : validateCccdValue(value);
+                if (error) {
+                    setFieldError(this, error);
+                } else {
+                    setFieldValid(this);
+                }
+                return;
+            }
+
+            clearFieldState(this);
+        });
+
+        input.addEventListener('blur', function() {
+            validateFormatField(inputId, type, requiredLabel, true);
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         const url = new URL(window.location.href);
         if (url.searchParams.get("success") === "1") {
-            alert("Đã đăng kí thành công! Hãy kiểm tra email");
+            alert("Đăng ký thành công! Trung tâm sẽ liên hệ với bạn sớm nhất.");
         }
 
-        // Initialize required attributes for score fields based on current graduation year
-        const graduationYear = document.getElementById('graduationYear');
-        if (graduationYear) {
-            const selected = graduationYear.value;
-            const scoreFields = [
+        setupFormatField('phone', 'phone', 'số điện thoại học viên');
+        setupFormatField('id_number', 'cccd');
+        setupFormatField('father_phone', 'phone', 'số điện thoại của cha');
+        setupFormatField('mother_phone', 'phone', 'số điện thoại của mẹ');
+    });
+
+    function showFormServerError(message) {
+        const el = document.getElementById('formServerError');
+        if (!el) {
+            alert(message);
+            return;
+        }
+        el.textContent = message;
+        el.classList.remove('d-none');
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function clearFormServerError() {
+        const el = document.getElementById('formServerError');
+        if (el) {
+            el.textContent = '';
+            el.classList.add('d-none');
+        }
+    }
+
+    document.getElementById('admissionForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        clearFormServerError();
+
+        const formatChecks = [
+            ['phone', 'phone', 'số điện thoại học viên'],
+            ['id_number', 'cccd', null],
+            ['father_phone', 'phone', 'số điện thoại của cha'],
+            ['mother_phone', 'phone', 'số điện thoại của mẹ'],
+        ];
+
+        let firstInvalid = null;
+        for (const [id, type, label] of formatChecks) {
+            if (!validateFormatField(id, type, label, true)) {
+                if (!firstInvalid) firstInvalid = document.getElementById(id);
+            }
+        }
+        if (firstInvalid) {
+            firstInvalid.focus();
+            firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return false;
+        }
+
+        const idNumber = document.getElementById('id_number').value.trim();
+
+        try {
+            const response = await fetch(`/api/check-cccd/${idNumber}/`);
+            const data = await response.json();
+            if (data.error) {
+                setFieldError(document.getElementById('id_number'), data.error);
+                document.getElementById('id_number').focus();
+                return false;
+            }
+            if (data.exists) {
+                setFieldError(document.getElementById('id_number'), 'Số CCCD này đã được đăng ký');
+                document.getElementById('id_number').focus();
+                return false;
+            }
+        } catch (error) {
+            console.error('Error checking CCCD:', error);
+            setFieldError(document.getElementById('id_number'), 'Không kiểm tra được CCCD. Vui lòng thử lại.');
+            return false;
+        }
+
+        const email = document.getElementById('email').value.trim();
+        if (!email) {
+            alert("Email là bắt buộc!");
+            document.getElementById('email').style.borderBottom = "2px solid red";
+            return false;
+        }
+        document.getElementById('email').style.borderBottom = "";
+
+        const studyVocational = document.getElementById('study_vocational').value;
+        if (studyVocational === 'yes') {
+            const vcSel = document.getElementById('vocational_campus_id');
+            const vtSel = document.getElementById('vocational_trade_id');
+            if (!vcSel.value) {
+                alert("Vui lòng chọn cơ sở dạy nghề!");
+                vcSel.style.borderBottom = "2px solid red";
+                return false;
+            }
+            if (!vtSel.value) {
+                alert("Vui lòng chọn nghề đăng ký!");
+                vtSel.style.borderBottom = "2px solid red";
+                return false;
+            }
+            vcSel.style.borderBottom = "";
+            vtSel.style.borderBottom = "";
+        }
+
+        const graduationYear = document.getElementById('graduationYear').value;
+        if (graduationYear === 'current') {
+            const totalScore = document.getElementById('graduation_total_score');
+            const value = parseFloat((totalScore.value || '').replace(',', '.'));
+            if (isNaN(value) || value < 0 || value > 30) {
+                alert("Tổng điểm tốt nghiệp phải từ 0 đến 30.0!");
+                totalScore.style.borderBottom = "2px solid red";
+                return false;
+            }
+            totalScore.style.borderBottom = "";
+        } else if (graduationYear === 'before') {
+            const scoreIds = [
                 'math_score_6', 'literature_score_6',
                 'math_score_7', 'literature_score_7',
                 'math_score_8', 'literature_score_8',
                 'math_score_9', 'literature_score_9'
             ];
-
-            // If graduation year is not "before", remove required from score fields
-            if (selected !== "before") {
-                scoreFields.forEach(fieldId => {
-                    const field = document.getElementById(fieldId);
-                    if (field) {
-                        field.removeAttribute('required');
-                    }
-                });
-            }
-        }
-    });
-
-    // Add form submission handler for loading overlay
-    document.getElementById('admissionForm').addEventListener('submit', async function(e) {
-        e.preventDefault(); // Prevent form submission until we complete all checks
-
-        // Validate form first
-        let valid = true;
-        const requiredFields = ['avgScore'];
-        const optionalScoreFields = ['math_score_6', 'literature_score_6', 'math_score_7', 'literature_score_7', 'math_score_8', 'literature_score_8', 'math_score_9', 'literature_score_9'];
-
-        // Validate required fields
-        requiredFields.forEach(function(id) {
-            const el = document.getElementById(id);
-            if (el) {
-                let value = parseFloat(el.value);
+            for (const id of scoreIds) {
+                const el = document.getElementById(id);
+                const value = parseFloat((el.value || '').replace(',', '.'));
                 if (isNaN(value) || value < 0 || value > 10) {
-                    valid = false;
+                    alert("Điểm Toán, Văn mỗi môn phải từ 0 đến 10.0!");
                     el.style.borderBottom = "2px solid red";
-                } else {
-                    el.style.borderBottom = "";
-                }
-            }
-        });
-
-        // Validate optional score fields (only if they have values)
-        optionalScoreFields.forEach(function(id) {
-            const el = document.getElementById(id);
-            if (el && el.value.trim() !== '') {
-                let value = parseFloat(el.value);
-                if (isNaN(value) || value < 0 || value > 10) {
-                    valid = false;
-                    el.style.borderBottom = "2px solid red";
-                } else {
-                    el.style.borderBottom = "";
-                }
-            }
-        });
-
-        // Validate CCCD
-        const idNumber = document.getElementById('id_number').value.trim();
-        const cccdRegex = /^0\d{11}$/;
-
-        if (!cccdRegex.test(idNumber)) {
-            alert("Số căn cước công dân phải gồm 12 số và bắt đầu bằng số 0!");
-            document.getElementById('id_number').style.borderBottom = "2px solid red";
-            return false;
-        } else {
-            document.getElementById('id_number').style.borderBottom = "";
-
-            // Check if CCCD already exists
-            try {
-                const response = await fetch(`/api/check-cccd/${idNumber}/`);
-                const data = await response.json();
-
-                if (data.exists) {
-                    alert("Số căn cước công dân này đã được đăng ký!");
-                    document.getElementById('id_number').style.borderBottom = "2px solid red";
                     return false;
                 }
-            } catch (error) {
-                console.error('Error checking CCCD:', error);
-                alert("Có lỗi xảy ra khi kiểm tra CCCD. Vui lòng thử lại!");
-                return false;
+                el.style.borderBottom = "";
             }
         }
 
-        // Validate phone numbers
-        const fatherPhone = document.getElementById('father_phone').value.trim();
-        const motherPhone = document.getElementById('mother_phone').value.trim();
-        const phoneRegex = /^0\d{9}$/;
-
-        if (!phoneRegex.test(fatherPhone)) {
-            alert("Số điện thoại của cha phải gồm 10 số và bắt đầu bằng số 0!");
-            document.getElementById('father_phone').style.borderBottom = "2px solid red";
-            return false;
-        } else {
-            document.getElementById('father_phone').style.borderBottom = "";
+        const addressGroups = [
+            ['permanent_province', 'permanent_ward', 'địa chỉ thường trú'],
+            ['current_province', 'current_ward', 'địa chỉ hiện tại'],
+        ];
+        for (const [provId, wardId, label] of addressGroups) {
+            const prov = document.getElementById(provId);
+            const ward = document.getElementById(wardId);
+            if (!prov.value) {
+                alert(`Vui lòng chọn tỉnh/thành phố cho ${label}!`);
+                prov.style.borderBottom = "2px solid red";
+                return false;
+            }
+            prov.style.borderBottom = "";
+            if (!ward.value) {
+                alert(`Vui lòng chọn phường/xã cho ${label}!`);
+                ward.style.borderBottom = "2px solid red";
+                return false;
+            }
+            ward.style.borderBottom = "";
+            ward.disabled = false;
         }
 
-        if (!phoneRegex.test(motherPhone)) {
-            alert("Số điện thoại của mẹ phải gồm 10 số và bắt đầu bằng số 0!");
-            document.getElementById('mother_phone').style.borderBottom = "2px solid red";
-            return false;
-        } else {
-            document.getElementById('mother_phone').style.borderBottom = "";
-        }
-
-        if (!valid) {
-            alert("Điểm các môn phải nằm trong khoảng từ 0 đến 10!");
-            return false;
-        }
-
-        // If all validation passes, show loading overlay and submit form
         document.getElementById('loadingOverlay').style.display = 'flex';
-        this.submit();
+
+        const form = this;
+        const formData = new FormData(form);
+        const csrfToken = form.querySelector('[name=csrfmiddlewaretoken]').value;
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRFToken': csrfToken,
+                },
+            });
+
+            let payload = null;
+            const contentType = response.headers.get('content-type') || '';
+            if (contentType.includes('application/json')) {
+                payload = await response.json();
+            }
+
+            if (!response.ok || (payload && payload.error)) {
+                document.getElementById('loadingOverlay').style.display = 'none';
+                const message = (payload && payload.error) || 'Có lỗi xảy ra khi gửi đơn đăng ký. Vui lòng thử lại.';
+                showFormServerError(message);
+                return false;
+            }
+
+            if (payload && payload.redirect) {
+                window.location.href = payload.redirect;
+                return false;
+            }
+
+            window.location.href = '/admission/?success=1';
+        } catch (error) {
+            console.error('Error submitting admission form:', error);
+            document.getElementById('loadingOverlay').style.display = 'none';
+            showFormServerError('Không gửi được đơn đăng ký. Vui lòng kiểm tra kết nối và thử lại.');
+        }
+        return false;
     });
 
-    // Hide loading overlay when page loads (in case of error)
     window.addEventListener('load', function() {
         document.getElementById('loadingOverlay').style.display = 'none';
     });
-</script>
 
-<script>
-    function handleGraduationChange() {
-        const container = document.getElementById("graduationDetails");
-        const thcsScores = document.getElementById("thcsScores");
-        const selected = document.getElementById("graduationYear").value;
+    const THCS_SCORE_FIELDS = [
+        'math_score_6', 'literature_score_6',
+        'math_score_7', 'literature_score_7',
+        'math_score_8', 'literature_score_8',
+        'math_score_9', 'literature_score_9'
+    ];
 
-        // Reset tất cả các trường điểm
-        function resetScoreFields() {
-            // Reset các trường điểm THCS
-            const scoreFields = [
-                'math_score_6', 'literature_score_6',
-                'math_score_7', 'literature_score_7',
-                'math_score_8', 'literature_score_8',
-                'math_score_9', 'literature_score_9'
-            ];
-
-            scoreFields.forEach(fieldId => {
-                const field = document.getElementById(fieldId);
-                if (field) {
-                    field.value = '';
-                }
-            });
-
-            // Reset điểm trung bình
-            const avgScoreField = document.getElementById('avgScore');
-            if (avgScoreField) {
-                avgScoreField.value = '';
-            }
+    function limitScoreInput(el, maxValue) {
+        const raw = el.value.replace(',', '.').trim();
+        if (raw === '' || raw === '.' || raw === '-') return;
+        const value = parseFloat(raw);
+        if (isNaN(value)) return;
+        if (value < 0) {
+            el.value = '0';
+            el.style.borderBottom = '';
+            return;
         }
-
-        // Function to manage required attributes for score fields
-        function manageScoreFieldsRequired(show) {
-            const scoreFields = [
-                'math_score_6', 'literature_score_6',
-                'math_score_7', 'literature_score_7',
-                'math_score_8', 'literature_score_8',
-                'math_score_9', 'literature_score_9'
-            ];
-
-            scoreFields.forEach(fieldId => {
-                const field = document.getElementById(fieldId);
-                if (field) {
-                    if (show) {
-                        field.setAttribute('required', 'required');
-                    } else {
-                        field.removeAttribute('required');
-                    }
-                }
-            });
+        if (value > maxValue) {
+            el.value = String(maxValue);
+            el.style.borderBottom = "2px solid red";
+            return;
         }
+        el.style.borderBottom = '';
+    }
 
-        if (selected === "2025") {
-            // Reset các trường điểm trước khi hiển thị form 2025
-            resetScoreFields();
-            // Remove required from score fields when hiding them
-            manageScoreFieldsRequired(false);
-
-            container.innerHTML = `
-                <div class="form-row">
-                    <div class="form-col">
-                        <label for="examScore">Điểm thi tuyển lớp 10 (tổng toán, văn, anh)</label>
-                        <input type="number" name="examScore" id="examScore" min="0" max="30" step="0.01" required>
-                    </div>
-                    <div class="form-col">
-                        <label for="conduct2025">Kết quả rèn luyện lớp 9</label>
-                        <select name="conduct2025" id="conduct2025" required>
-                            <option value="">-- Chọn --</option>
-                            <option value="Tốt">Tốt</option>
-                            <option value="Khá">Khá</option>
-                            <option value="Trung bình">Trung bình</option>
-                            <option value="Yếu">Yếu</option>
-                        </select>
-                    </div>
-                </div>
-            `;
-            thcsScores.style.display = "none";
-        } else if (selected === "before") {
-            // Reset các trường điểm 2025 trước khi hiển thị form trước 2025
-            const examScoreField = document.getElementById('examScore');
-            const conduct2025Field = document.getElementById('conduct2025');
-            if (examScoreField) examScoreField.value = '';
-            if (conduct2025Field) conduct2025Field.value = '';
-
-            container.innerHTML = `
-                <div class="form-row">
-                    <div class="form-col">
-                        <label for="conductBefore">Kết quả rèn luyện lớp 9</label>
-                        <select name="conductBefore" id="conductBefore" required>
-                            <option value="">-- Chọn --</option>
-                            <option value="Tốt">Tốt</option>
-                            <option value="Khá">Khá</option>
-                            <option value="Trung bình">Trung bình</option>
-                            <option value="Yếu">Yếu</option>
-                        </select>
-                    </div>
-                    <div class="form-col">
-                        <label for="avgScore">Điểm trung bình</label>
-                        <input type="number" name="avg_score" id="avgScore" step="0.01" readonly>
-                    </div>
-                </div>
-            `;
-            thcsScores.style.display = "block";
-            // Add required to score fields when showing them
-            manageScoreFieldsRequired(true);
+    function setFieldRequired(id, required) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (required) {
+            el.setAttribute('required', 'required');
         } else {
-            // Reset tất cả khi chưa chọn
-            resetScoreFields();
-            const examScoreField = document.getElementById('examScore');
-            const conduct2025Field = document.getElementById('conduct2025');
-            if (examScoreField) examScoreField.value = '';
-            if (conduct2025Field) conduct2025Field.value = '';
+            el.removeAttribute('required');
+            el.value = '';
+            el.style.borderBottom = '';
+        }
+    }
 
-            container.innerHTML = "";
-            thcsScores.style.display = "none";
-            // Remove required from score fields when hiding them
-            manageScoreFieldsRequired(false);
+    function handleGraduationChange() {
+        const selected = document.getElementById('graduationYear').value;
+        const currentBlock = document.getElementById('graduationScoreCurrent');
+        const beforeBlock = document.getElementById('graduationScoreBefore');
+
+        currentBlock.classList.add('d-none');
+        beforeBlock.classList.add('d-none');
+        setFieldRequired('graduation_total_score', false);
+        THCS_SCORE_FIELDS.forEach(id => setFieldRequired(id, false));
+        document.getElementById('avgScore').value = '';
+
+        if (selected === 'current') {
+            currentBlock.classList.remove('d-none');
+            setFieldRequired('graduation_total_score', true);
+        } else if (selected === 'before') {
+            beforeBlock.classList.remove('d-none');
+            THCS_SCORE_FIELDS.forEach(id => setFieldRequired(id, true));
         }
     }
 
     function calcAvgScore() {
-        const math6 = parseFloat(document.getElementById("math_score_6").value) || 0;
-        const literature6 = parseFloat(document.getElementById("literature_score_6").value) || 0;
-        const math7 = parseFloat(document.getElementById("math_score_7").value) || 0;
-        const literature7 = parseFloat(document.getElementById("literature_score_7").value) || 0;
-        const math8 = parseFloat(document.getElementById("math_score_8").value) || 0;
-        const literature8 = parseFloat(document.getElementById("literature_score_8").value) || 0;
-        const math9 = parseFloat(document.getElementById("math_score_9").value) || 0;
-        const literature9 = parseFloat(document.getElementById("literature_score_9").value) || 0;
+        let total = 0;
+        let count = 0;
+        THCS_SCORE_FIELDS.forEach(id => {
+            const raw = document.getElementById(id).value.replace(',', '.').trim();
+            if (raw !== '') {
+                const value = parseFloat(raw);
+                if (!isNaN(value)) {
+                    total += value;
+                    count += 1;
+                }
+            }
+        });
+        document.getElementById('avgScore').value = count === 8 ? (total / 8).toFixed(2) : '';
+    }
 
-        // Tính tổng tất cả điểm
-        const totalScore = math6 + literature6 + math7 + literature7 + math8 + literature8 + math9 + literature9;
+    function handleStudyVocationalChange() {
+        const selected = document.getElementById('study_vocational').value;
+        const block = document.getElementById('vocationalFields');
+        const vcSel = document.getElementById('vocational_campus_id');
+        const vtSel = document.getElementById('vocational_trade_id');
 
-        // Tính trung bình (chia cho 8 vì có 8 điểm)
-        const avg = (totalScore / 8).toFixed(2);
-        document.getElementById("avgScore").value = avg;
+        if (selected === 'yes') {
+            block.classList.remove('d-none');
+            vcSel.setAttribute('required', 'required');
+            vtSel.setAttribute('required', 'required');
+            loadVocationalCampuses();
+        } else {
+            block.classList.add('d-none');
+            vcSel.removeAttribute('required');
+            vtSel.removeAttribute('required');
+            vcSel.innerHTML = '<option value="">-- Chọn cơ sở --</option>';
+            vtSel.innerHTML = '<option value="">-- Chọn nghề --</option>';
+        }
+    }
+
+    function loadVocationalCampuses() {
+        const campusId = document.getElementById('campus_id').value;
+        const vcSel = document.getElementById('vocational_campus_id');
+        const vtSel = document.getElementById('vocational_trade_id');
+        vcSel.innerHTML = '<option value="">-- Chọn cơ sở --</option>';
+        vtSel.innerHTML = '<option value="">-- Chọn nghề --</option>';
+        if (!campusId) return;
+
+        fetch(`/api/vocational-campuses/${campusId}/`)
+            .then(res => res.json())
+            .then(data => {
+                if (!data.campuses || data.campuses.length === 0) {
+                    const opt = document.createElement('option');
+                    opt.value = '';
+                    opt.textContent = '— Chưa có cơ sở dạy nghề —';
+                    vcSel.appendChild(opt);
+                    return;
+                }
+                data.campuses.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c.id;
+                    opt.textContent = c.name;
+                    vcSel.appendChild(opt);
+                });
+            });
+    }
+
+    function handleVocationalCampusChange() {
+        const vcId = document.getElementById('vocational_campus_id').value;
+        const vtSel = document.getElementById('vocational_trade_id');
+        vtSel.innerHTML = '<option value="">-- Chọn nghề --</option>';
+        if (!vcId) return;
+
+        fetch(`/api/vocational-trades/${vcId}/`)
+            .then(res => res.json())
+            .then(data => {
+                if (!data.trades || data.trades.length === 0) {
+                    const opt = document.createElement('option');
+                    opt.value = '';
+                    opt.textContent = '— Chưa có nghề —';
+                    vtSel.appendChild(opt);
+                    return;
+                }
+                data.trades.forEach(t => {
+                    const opt = document.createElement('option');
+                    opt.value = t.id;
+                    opt.textContent = t.name;
+                    vtSel.appendChild(opt);
+                });
+            });
     }
 </script>
 
@@ -1112,6 +1415,9 @@ function nextStep(current) {
         document.getElementById("campus_id").value = selectedCampusId;
         document.getElementById("shift_id").value = selectedShiftId;
         document.getElementById("subject_group_id").value = selectedSubjectGroupId;
+
+        document.getElementById('study_vocational').value = '';
+        handleStudyVocationalChange();
     }
 }
 
@@ -1121,66 +1427,85 @@ function nextStep(current) {
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const provinceUrl = "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json";
-        let provinceData = [];
+        let provincesPromise = null;
 
-        // Hàm fetch dữ liệu
-        function fetchAPI(url) {
-            return fetch(url).then(res => res.json());
-        }
-
-        // Populate combobox
-        function populateSelect(select, data, textKey = "Name", valueKey = "Id") {
-            select.innerHTML = '<option value="">-- Chọn --</option>';
-            data.forEach(item => {
-                const opt = document.createElement("option");
-                opt.value = item[valueKey];
-                opt.textContent = item[textKey];
-                select.appendChild(opt);
-            });
-        }
-
-        // Setup logic chọn tỉnh/huyện/xã cho 1 group (nâng lên cho tất cả group address)
-        function setupProvinceDistrictWard(groupId) {
-            const provinceSelect = document.querySelector(`.Province.address-group-${groupId}`);
-            const districtSelect = document.querySelector(`.District.address-group-${groupId}`);
-            const wardSelect = document.querySelector(`.Ward.address-group-${groupId}`);
-
-            if (!provinceSelect || !districtSelect || !wardSelect) return;
-
-            // Khi chọn tỉnh
-            provinceSelect.addEventListener("change", () => {
-                const selectedProvince = provinceData.find(p => p.Id === provinceSelect.value);
-                const districts = selectedProvince ? selectedProvince.Districts : [];
-                populateSelect(districtSelect, districts, "Name", "Id");
-                populateSelect(wardSelect, [], "Name", "Id"); // reset xã
-            });
-
-            // Khi chọn quận/huyện
-            districtSelect.addEventListener("change", () => {
-                const selectedProvince = provinceData.find(p => p.Id === provinceSelect.value);
-                const districts = selectedProvince ? selectedProvince.Districts : [];
-                const selectedDistrict = districts.find(d => d.Id === districtSelect.value);
-                const wards = selectedDistrict ? selectedDistrict.Wards : [];
-                populateSelect(wardSelect, wards, "Name", "Id");
-            });
-        }
-
-        // Gọi API và setup cho các group
-        fetchAPI(provinceUrl).then((data) => {
-            provinceData = data;
-
-            for (let i = 1; i <= 5; i++) {
-                const provinceSelect = document.querySelector(`.Province.address-group-${i}`);
-                if (provinceSelect) {
-                    populateSelect(provinceSelect, provinceData, "Name", "Id");
-                    setupProvinceDistrictWard(i);
-                }
+        function fetchProvinces() {
+            if (!provincesPromise) {
+                provincesPromise = fetch('/api/address/provinces/')
+                    .then(res => {
+                        if (!res.ok) throw new Error('fail');
+                        return res.json();
+                    });
             }
-        });
-    });
+            return provincesPromise;
+        }
 
-    </script>
+        function setupAddressGroup(prefix) {
+            const provinceSelect = document.getElementById(`${prefix}_province`);
+            const wardSelect = document.getElementById(`${prefix}_ward`);
+            if (!provinceSelect || !wardSelect) return;
+
+            function resetWardSelect() {
+                wardSelect.innerHTML = '<option value="">-- Chọn phường/xã --</option>';
+                wardSelect.value = '';
+                wardSelect.disabled = true;
+            }
+
+            function loadCommunes(provinceCode) {
+                resetWardSelect();
+                if (!provinceCode) return;
+
+                wardSelect.disabled = true;
+                wardSelect.innerHTML = '<option value="">Đang tải...</option>';
+
+                fetch(`/api/address/provinces/${encodeURIComponent(provinceCode)}/communes/`)
+                    .then(res => {
+                        if (!res.ok) throw new Error('fail');
+                        return res.json();
+                    })
+                    .then(data => {
+                        wardSelect.innerHTML = '<option value="">-- Chọn phường/xã --</option>';
+                        (data.communes || []).forEach(item => {
+                            const opt = document.createElement('option');
+                            opt.value = item.name;
+                            opt.textContent = item.name;
+                            wardSelect.appendChild(opt);
+                        });
+                        wardSelect.disabled = false;
+                    })
+                    .catch(() => {
+                        wardSelect.innerHTML = '<option value="">Không tải được phường/xã</option>';
+                        wardSelect.disabled = true;
+                    });
+            }
+
+            provinceSelect.addEventListener('change', function() {
+                const selected = this.options[this.selectedIndex];
+                loadCommunes(selected ? selected.dataset.code : '');
+            });
+
+            fetchProvinces()
+                .then(data => {
+                    provinceSelect.innerHTML = '<option value="">-- Chọn tỉnh/thành phố --</option>';
+                    (data.provinces || []).forEach(item => {
+                        const opt = document.createElement('option');
+                        opt.value = item.name;
+                        opt.textContent = item.name;
+                        opt.dataset.code = item.code;
+                        provinceSelect.appendChild(opt);
+                    });
+                })
+                .catch(() => {
+                    provinceSelect.innerHTML = '<option value="">Không tải được tỉnh/thành phố</option>';
+                });
+
+            resetWardSelect();
+        }
+
+        setupAddressGroup('permanent');
+        setupAddressGroup('current');
+    });
+</script>
 
 
 

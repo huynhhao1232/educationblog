@@ -18,6 +18,9 @@ admin.site.register(Campus)
 admin.site.register(Shift)
 admin.site.register(SubjectGroup)
 admin.site.register(CampusShiftGroup)
+admin.site.register(VocationalCampus)
+admin.site.register(CampusVocationalLink)
+admin.site.register(VocationalTrade)
 admin.site.register(AdmissionForm)
 
 

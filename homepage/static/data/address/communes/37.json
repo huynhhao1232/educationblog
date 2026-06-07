@@ -1,0 +1,1166 @@
+{
+  "requestId": "CGSyPxmxVAn6cAMSejTvo",
+  "communes": [
+    {
+      "code": "13285",
+      "name": "Phường Phủ Lý",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13291",
+      "name": "Phường Phù Vân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13318",
+      "name": "Phường Châu Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13324",
+      "name": "Phường Duy Tiên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13330",
+      "name": "Phường Duy Tân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13336",
+      "name": "Phường Duy Hà",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13348",
+      "name": "Phường Đồng Văn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13363",
+      "name": "Phường Tiên Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13366",
+      "name": "Phường Hà Nam",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13384",
+      "name": "Phường Kim Bảng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13393",
+      "name": "Phường Lê Hồ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13396",
+      "name": "Phường Nguyễn Uý",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13402",
+      "name": "Phường Kim Thanh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13420",
+      "name": "Phường Tam Chúc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13435",
+      "name": "Phường Lý Thường Kiệt",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13444",
+      "name": "Phường Liêm Tuyền",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13456",
+      "name": "Xã Liêm Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13474",
+      "name": "Xã Tân Thanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13483",
+      "name": "Xã Thanh Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13489",
+      "name": "Xã Thanh Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13495",
+      "name": "Xã Thanh Liêm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13501",
+      "name": "Xã Bình Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13504",
+      "name": "Xã Bình Lục",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13531",
+      "name": "Xã Bình Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13540",
+      "name": "Xã Bình An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13558",
+      "name": "Xã Bình Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13573",
+      "name": "Xã Lý Nhân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13579",
+      "name": "Xã Bắc Lý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13591",
+      "name": "Xã Nam Xang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13594",
+      "name": "Xã Trần Thương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13597",
+      "name": "Xã Vĩnh Trụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13609",
+      "name": "Xã Nhân Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13627",
+      "name": "Xã Nam Lý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13669",
+      "name": "Phường Nam Định",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13684",
+      "name": "Phường Thiên Trường",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13693",
+      "name": "Phường Đông A",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13699",
+      "name": "Phường Thành Nam",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13708",
+      "name": "Phường Mỹ Lộc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13741",
+      "name": "Xã Vụ Bản",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13750",
+      "name": "Xã Minh Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13753",
+      "name": "Xã Hiển Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13777",
+      "name": "Phường Trường Thi",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13786",
+      "name": "Xã Liên Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13795",
+      "name": "Xã Ý Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13807",
+      "name": "Xã Tân Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13822",
+      "name": "Xã Phong Doanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13834",
+      "name": "Xã Vũ Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13864",
+      "name": "Xã Vạn Thắng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13870",
+      "name": "Xã Yên Cường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13879",
+      "name": "Xã Yên Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13891",
+      "name": "Xã Nghĩa Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13894",
+      "name": "Xã Rạng Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13900",
+      "name": "Xã Đồng Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13918",
+      "name": "Xã Nghĩa Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13927",
+      "name": "Xã Hồng Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13939",
+      "name": "Xã Quỹ Nhất",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13957",
+      "name": "Xã Nghĩa Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13966",
+      "name": "Xã Nam Trực",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13972",
+      "name": "Phường Vị Khê",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13984",
+      "name": "Phường Hồng Quang",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "13987",
+      "name": "Xã Nam Hồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14005",
+      "name": "Xã Nam Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14011",
+      "name": "Xã Nam Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14014",
+      "name": "Xã Nam Đồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14026",
+      "name": "Xã Cổ Lễ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14038",
+      "name": "Xã Ninh Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14053",
+      "name": "Xã Trực Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14056",
+      "name": "Xã Cát Thành",
+      "englishName": "Cat Thanh town",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14062",
+      "name": "Xã Quang Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14071",
+      "name": "Xã Minh Thái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14077",
+      "name": "Xã Ninh Cường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14089",
+      "name": "Xã Xuân Trường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14095",
+      "name": "Xã Xuân Hồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14104",
+      "name": "Xã Xuân Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14122",
+      "name": "Xã Xuân Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14161",
+      "name": "Xã Giao Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14167",
+      "name": "Xã Giao Thuỷ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14179",
+      "name": "Xã Giao Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14182",
+      "name": "Xã Giao Hoà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14194",
+      "name": "Xã Giao Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14203",
+      "name": "Xã Giao Phúc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14212",
+      "name": "Xã Giao Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14215",
+      "name": "Xã Hải Hậu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14218",
+      "name": "Xã Hải Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14221",
+      "name": "Xã Hải Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14236",
+      "name": "Xã Hải Anh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14248",
+      "name": "Xã Hải Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14281",
+      "name": "Xã Hải An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14287",
+      "name": "Xã Hải Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14308",
+      "name": "Xã Hải Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14329",
+      "name": "Phường Hoa Lư",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14359",
+      "name": "Phường Nam Hoa Lư",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14362",
+      "name": "Phường Tam Điệp",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14365",
+      "name": "Phường Trung Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14371",
+      "name": "Phường Yên Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14389",
+      "name": "Xã Gia Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14401",
+      "name": "Xã Gia Tường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14404",
+      "name": "Xã Cúc Phương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14407",
+      "name": "Xã Phú Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14428",
+      "name": "Xã Nho Quan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14434",
+      "name": "Xã Thanh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14452",
+      "name": "Xã Quỳnh Lưu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14458",
+      "name": "Xã Phú Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14464",
+      "name": "Xã Gia Viễn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14482",
+      "name": "Xã Gia Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14488",
+      "name": "Xã Gia Vân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14494",
+      "name": "Xã Gia Trấn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14500",
+      "name": "Xã Đại Hoàng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14524",
+      "name": "Xã Gia Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14533",
+      "name": "Phường Tây Hoa Lư",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14560",
+      "name": "Xã Yên Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14563",
+      "name": "Xã Khánh Thiện",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14566",
+      "name": "Phường Đông Hoa Lư",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14608",
+      "name": "Xã Khánh Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14611",
+      "name": "Xã Khánh Nhạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14614",
+      "name": "Xã Khánh Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14620",
+      "name": "Xã Phát Diệm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14623",
+      "name": "Xã Bình Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14638",
+      "name": "Xã Kim Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14647",
+      "name": "Xã Quang Thiện",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14653",
+      "name": "Xã Chất Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14674",
+      "name": "Xã Lai Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14677",
+      "name": "Xã Định Hóa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14698",
+      "name": "Xã Kim Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14701",
+      "name": "Xã Yên Mô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14725",
+      "name": "Phường Yên Thắng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14728",
+      "name": "Xã Yên Từ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14743",
+      "name": "Xã Yên Mạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "14746",
+      "name": "Xã Đồng Thái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "37",
+      "provinceName": "Tỉnh Ninh Bình",
+      "decree": "Số: 1674/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

@@ -55,6 +55,8 @@
                     <li><i class="fa-solid fa-chart-pie"></i><a href="{%url 'adminpage:phongban'%}">Cơ cấu tổ chức</a></li>
                     <li><i class="fa-solid fa-chart-pie"></i><a href="{% url 'adminpage:forum_manage' %}">Diễn đàn</a></li>
                     <li><i class="fa-solid fa-chart-pie"></i><a href="{%url 'adminpage:admission'%}">Tuyển sinh</a></li>
+                    <li><i class="fa-solid fa-sliders"></i><a href="{% url 'adminpage:campus_shift_group_manage' %}">Cấu hình tuyển sinh</a></li>
+                    <li><i class="fa-solid fa-tools"></i><a href="{% url 'adminpage:admission_vocational_manage' %}">Cấu hình dạy nghề</a></li>
                     <li><i class="fa-solid fa-clipboard-check"></i><a href="{%url 'adminpage:exam_registration'%}">Đăng ký thi tốt nghiệp</a></li>
                     <li><i class="fa-solid fa-id-card"></i><a href="{% url 'adminpage:student_info_manage' %}">Kiểm tra thông tin học viên</a></li>
                     <li><i class="fa-solid fa-file-excel"></i><a href="{%url 'adminpage:import_students_excel'%}">Import đăng ký thi tốt nghiệp</a></li>
@@ -99,6 +101,8 @@
                 {% block activity %} {%endblock%}
                 {% block class%} {%endblock%}
                 {% block admission%} {%endblock%}
+                {% block campus_shift_group %}{% endblock %}
+                {% block admission_vocational %}{% endblock %}
                 {% block letter%} {%endblock%}
             </section>
         </div>

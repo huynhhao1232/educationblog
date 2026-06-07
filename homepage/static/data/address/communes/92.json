@@ -1,0 +1,932 @@
+{
+  "requestId": "8sircFXJ4uAkmumsSkey_",
+  "communes": [
+    {
+      "code": "31120",
+      "name": "Phường Cái Khế",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31135",
+      "name": "Phường Ninh Kiều",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31147",
+      "name": "Phường Tân An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31150",
+      "name": "Phường An Bình",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31153",
+      "name": "Phường Ô Môn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31157",
+      "name": "Phường Thới Long",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31162",
+      "name": "Phường Phước Thới",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31168",
+      "name": "Phường Bình Thủy",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31174",
+      "name": "Phường Thới An Đông",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31183",
+      "name": "Phường Long Tuyền",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31186",
+      "name": "Phường Cái Răng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31201",
+      "name": "Phường Hưng Phú",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31207",
+      "name": "Phường Thốt Nốt",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31213",
+      "name": "Phường Tân Lộc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31217",
+      "name": "Phường Trung Nhứt",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31228",
+      "name": "Phường Thuận Hưng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31231",
+      "name": "Xã Thạnh An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31232",
+      "name": "Xã Vĩnh Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31237",
+      "name": "Xã Vĩnh Trinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31246",
+      "name": "Xã Thạnh Quới",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31249",
+      "name": "Xã Thạnh Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31255",
+      "name": "Xã Trung Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31258",
+      "name": "Xã Thới Lai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31261",
+      "name": "Xã Cờ Đỏ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31264",
+      "name": "Xã Thới Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31273",
+      "name": "Xã Đông Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31282",
+      "name": "Xã Đông Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31288",
+      "name": "Xã Trường Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31294",
+      "name": "Xã Trường Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31299",
+      "name": "Xã Phong Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31309",
+      "name": "Xã Trường Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31315",
+      "name": "Xã Nhơn Ái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31321",
+      "name": "Phường Vị Thanh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31333",
+      "name": "Phường Vị Tân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31338",
+      "name": "Xã Hỏa Lựu",
+      "englishName": "Tân Tiến Commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31340",
+      "name": "Phường Ngã Bảy",
+      "englishName": "Nga Bay precinct",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31342",
+      "name": "Xã Tân Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31348",
+      "name": "Xã Trường Long Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31360",
+      "name": "Xã Thạnh Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31366",
+      "name": "Xã Châu Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31369",
+      "name": "Xã Đông Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31378",
+      "name": "Xã Phú Hữu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31393",
+      "name": "Xã Hòa An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31396",
+      "name": "Xã Hiệp Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31399",
+      "name": "Xã Tân Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31408",
+      "name": "Xã Thạnh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31411",
+      "name": "Phường Đại Thành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31420",
+      "name": "Xã Phụng Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31426",
+      "name": "Xã Phương Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31432",
+      "name": "Xã Tân Phước Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31441",
+      "name": "Xã Vị Thủy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31453",
+      "name": "Xã Vĩnh Thuận Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31459",
+      "name": "Xã  Vĩnh Tường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31465",
+      "name": "Xã Vị Thanh 1",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31471",
+      "name": "Phường Long Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31473",
+      "name": "Phường Long Bình",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31480",
+      "name": "Phường Long Phú 1",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31489",
+      "name": "Xã Vĩnh Viễn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31492",
+      "name": "Xã Lương Tâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31495",
+      "name": "Xã Xà Phiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31507",
+      "name": "Phường Sóc Trăng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31510",
+      "name": "Phường Phú Lợi",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31528",
+      "name": "Xã Kế Sách",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31531",
+      "name": "Xã An Lạc Thôn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31537",
+      "name": "Xã Phong Nẫm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31540",
+      "name": "Xã Thới An Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31552",
+      "name": "Xã Nhơn Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31561",
+      "name": "Xã Đại Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31567",
+      "name": "Xã Mỹ Tú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31569",
+      "name": "Xã Phú Tâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31570",
+      "name": "Xã Hồ Đắc Kiện",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31579",
+      "name": "Xã Long Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31582",
+      "name": "Xã Thuận Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31591",
+      "name": "Xã Mỹ Hương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31594",
+      "name": "Xã An Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31603",
+      "name": "Xã Mỹ Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31615",
+      "name": "Xã An Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31633",
+      "name": "Xã Cù Lao Dung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31639",
+      "name": "Xã Long Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31645",
+      "name": "Xã Đại Ngãi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31654",
+      "name": "Xã Trường Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31666",
+      "name": "Xã Tân Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31673",
+      "name": "Xã Trần Đề",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31675",
+      "name": "Xã Liêu Tú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31679",
+      "name": "Xã Lịch Hội Thượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31684",
+      "name": "Phường Mỹ Xuyên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31687",
+      "name": "Xã Tài Văn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31699",
+      "name": "Xã Thạnh Thới An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31708",
+      "name": "Xã Nhu Gia",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31717",
+      "name": "Xã Hòa Tú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31723",
+      "name": "Xã Ngọc Tố",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31726",
+      "name": "Xã Gia Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31732",
+      "name": "Phường Ngã Năm",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31741",
+      "name": "Xã Tân Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31753",
+      "name": "Phường Mỹ Quới",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31756",
+      "name": "Xã Phú Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31759",
+      "name": "Xã Lâm Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31777",
+      "name": "Xã Vĩnh Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31783",
+      "name": "Phường Vĩnh Châu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31789",
+      "name": "Phường Khánh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31795",
+      "name": "Xã Vĩnh Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31804",
+      "name": "Phường Vĩnh Phước",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "31810",
+      "name": "Xã Lai Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "92",
+      "provinceName": "Thành phố Cần Thơ",
+      "decree": "Số: 1668/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

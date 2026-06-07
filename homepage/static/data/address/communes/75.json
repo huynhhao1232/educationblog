@@ -1,0 +1,860 @@
+{
+  "requestId": "l9Aa53wCcG1fqaQEWGhnk",
+  "communes": [
+    {
+      "code": "25195",
+      "name": "Phường Bình Phước",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25210",
+      "name": "Phường Đồng Xoài",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25217",
+      "name": "Phường Phước Long",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25220",
+      "name": "Phường Phước Bình",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25222",
+      "name": "Xã Bù Gia Mập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25225",
+      "name": "Xã Đăk Ơ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25231",
+      "name": "Xã Đa Kia",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25246",
+      "name": "Xã Bình Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25252",
+      "name": "Xã Phú Riềng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25255",
+      "name": "Xã Long Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25261",
+      "name": "Xã Phú Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25267",
+      "name": "Xã Phú Nghĩa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25270",
+      "name": "Xã Lộc Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25279",
+      "name": "Xã Lộc Tấn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25280",
+      "name": "Xã Lộc Thạnh",
+      "englishName": "Loc Thanh commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25292",
+      "name": "Xã Lộc Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25294",
+      "name": "Xã Lộc Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25303",
+      "name": "Xã Lộc Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25308",
+      "name": "Xã Thiện Hưng",
+      "englishName": "Thanh Binh town",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25309",
+      "name": "Xã Hưng Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25318",
+      "name": "Xã Tân Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25326",
+      "name": "Phường Bình Long",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25333",
+      "name": "Phường An Lộc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25345",
+      "name": "Xã Tân Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25349",
+      "name": "Xã Minh Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25351",
+      "name": "Xã Tân Quan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25357",
+      "name": "Xã Tân Khai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25363",
+      "name": "Xã Đồng Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25378",
+      "name": "Xã Tân Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25387",
+      "name": "Xã Thuận Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25390",
+      "name": "Xã Đồng Tâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25396",
+      "name": "Xã Bù Đăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25399",
+      "name": "Xã Đak Nhau",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25402",
+      "name": "Xã Thọ Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25405",
+      "name": "Xã Bom Bo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25417",
+      "name": "Xã Nghĩa Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25420",
+      "name": "Xã Phước Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25432",
+      "name": "Phường Chơn Thành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25441",
+      "name": "Phường Minh Hưng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25450",
+      "name": "Xã Nha Bích",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "25993",
+      "name": "Phường Trảng Dài",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26005",
+      "name": "Phường Hố Nai",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26017",
+      "name": "Phường Tam Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26020",
+      "name": "Phường Long Bình",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26041",
+      "name": "Phường Trấn Biên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26068",
+      "name": "Phường Biên Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26080",
+      "name": "Phường Long Khánh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26089",
+      "name": "Phường Bình Lộc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26098",
+      "name": "Phường Bảo Vinh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26104",
+      "name": "Phường Xuân Lập",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26113",
+      "name": "Phường Hàng Gòn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26116",
+      "name": "Xã Tân Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26119",
+      "name": "Xã Đak Lua",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26122",
+      "name": "Xã Nam Cát Tiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26134",
+      "name": "Xã Tà Lài",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26158",
+      "name": "Xã Phú Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26170",
+      "name": "Xã Trị An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26173",
+      "name": "Xã Phú Lý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26179",
+      "name": "Xã Tân An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26188",
+      "name": "Phường Tân Triều",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26206",
+      "name": "Xã Định Quán",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26209",
+      "name": "Xã Thanh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26215",
+      "name": "Xã Phú Vinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26221",
+      "name": "Xã Phú Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26227",
+      "name": "Xã La Ngà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26248",
+      "name": "Xã Trảng Bom",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26254",
+      "name": "Xã Bàu Hàm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26278",
+      "name": "Xã Bình Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26281",
+      "name": "Xã Hưng Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26296",
+      "name": "Xã An Viễn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26299",
+      "name": "Xã Thống Nhất",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26311",
+      "name": "Xã Gia Kiệm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26326",
+      "name": "Xã Dầu Giây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26332",
+      "name": "Xã Xuân Quế",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26341",
+      "name": "Xã Cẩm Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26347",
+      "name": "Xã Xuân Đường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26359",
+      "name": "Xã Xuân Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26362",
+      "name": "Xã Sông Ray",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26368",
+      "name": "Xã Long Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26374",
+      "name": "Phường Tam Phước",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26377",
+      "name": "Phường Phước Tân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26380",
+      "name": "Phường Long Hưng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26383",
+      "name": "Xã An Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26389",
+      "name": "Xã Bình An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26413",
+      "name": "Xã Long Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26422",
+      "name": "Xã Phước Thái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26425",
+      "name": "Xã Xuân Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26428",
+      "name": "Xã Xuân Bắc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26434",
+      "name": "Xã Xuân Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26446",
+      "name": "Xã Xuân Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26458",
+      "name": "Xã Xuân Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26461",
+      "name": "Xã Xuân Định",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26485",
+      "name": "Xã Nhơn Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26491",
+      "name": "Xã Đại Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "26503",
+      "name": "Xã Phước An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "75",
+      "provinceName": "Tỉnh Đồng Nai",
+      "decree": "Số: 1662/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

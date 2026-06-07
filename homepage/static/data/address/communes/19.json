@@ -1,0 +1,833 @@
+{
+  "requestId": "PQGMeivrmuiWIbRotNLXd",
+  "communes": [
+    {
+      "code": "01840",
+      "name": "Phường Đức Xuân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01843",
+      "name": "Phường Bắc Kạn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01849",
+      "name": "Xã Phong Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01864",
+      "name": "Xã Bằng Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01879",
+      "name": "Xã Cao Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01882",
+      "name": "Xã Nghiên Loan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01894",
+      "name": "Xã Phúc Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01906",
+      "name": "Xã Ba Bể",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01912",
+      "name": "Xã Chợ Rã",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01921",
+      "name": "Xã Thượng Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01933",
+      "name": "Xã Đồng Phúc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01936",
+      "name": "Xã Nà Phặc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01942",
+      "name": "Xã Bằng Vân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01954",
+      "name": "Xã Ngân Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01957",
+      "name": "Xã Thượng Quan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01960",
+      "name": "Xã Hiệp Lực",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01969",
+      "name": "Xã Phủ Thông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01981",
+      "name": "Xã Vĩnh Thông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02008",
+      "name": "Xã Cẩm Giàng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02014",
+      "name": "Xã Bạch Thông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02020",
+      "name": "Xã Chợ Đồn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02026",
+      "name": "Xã Nam Cường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02038",
+      "name": "Xã Quảng Bạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02044",
+      "name": "Xã Yên Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02071",
+      "name": "Xã Nghĩa Tá",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02083",
+      "name": "Xã Yên Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02086",
+      "name": "Xã Chợ Mới",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02101",
+      "name": "Xã Thanh Mai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02104",
+      "name": "Xã Tân Kỳ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02107",
+      "name": "Xã Thanh Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02116",
+      "name": "Xã Yên Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02143",
+      "name": "Xã Văn Lang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02152",
+      "name": "Xã Cường Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02155",
+      "name": "Xã Na Rì",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02176",
+      "name": "Xã Trần Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02185",
+      "name": "Xã Côn Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02191",
+      "name": "Xã Xuân Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05443",
+      "name": "Phường Phan Đình Phùng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05455",
+      "name": "Phường Quyết Thắng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05467",
+      "name": "Phường Gia Sàng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05482",
+      "name": "Phường Quan Triều",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05488",
+      "name": "Xã Đại Phúc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05500",
+      "name": "Phường Tích Lương",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05503",
+      "name": "Xã Tân Cương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05518",
+      "name": "Phường Sông Công",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05528",
+      "name": "Phường Bách Quang",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05533",
+      "name": "Phường Bá Xuyên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05542",
+      "name": "Xã Lam Vỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05551",
+      "name": "Xã Kim Phượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05563",
+      "name": "Xã Phượng Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05569",
+      "name": "Xã Định Hóa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05581",
+      "name": "Xã Trung Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05587",
+      "name": "Xã Bình Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05602",
+      "name": "Xã Phú Đình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05605",
+      "name": "Xã Bình Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05611",
+      "name": "Xã Phú Lương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05620",
+      "name": "Xã Yên Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05632",
+      "name": "Xã Hợp Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05641",
+      "name": "Xã Vô Tranh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05662",
+      "name": "Xã Trại Cau",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05665",
+      "name": "Xã Văn Lăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05674",
+      "name": "Xã Quang Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05680",
+      "name": "Xã Văn Hán",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05692",
+      "name": "Xã Đồng Hỷ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05707",
+      "name": "Xã Nam Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05710",
+      "name": "Phường Linh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05716",
+      "name": "Xã Võ Nhai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05719",
+      "name": "Xã Sảng Mộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05722",
+      "name": "Xã Nghinh Tường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05725",
+      "name": "Xã Thần Sa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05740",
+      "name": "Xã La Hiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05746",
+      "name": "Xã Tràng Xá",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05755",
+      "name": "Xã Dân Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05773",
+      "name": "Xã Phú Xuyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05776",
+      "name": "Xã Đức Lương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05788",
+      "name": "Xã Phú Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05800",
+      "name": "Xã Phú Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05809",
+      "name": "Xã An Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05818",
+      "name": "Xã La Bằng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05830",
+      "name": "Xã Đại Từ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05845",
+      "name": "Xã Vạn Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05851",
+      "name": "Xã Quân Chu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05857",
+      "name": "Phường Phúc Thuận",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05860",
+      "name": "Phường Phổ Yên",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05881",
+      "name": "Xã Thành Công",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05890",
+      "name": "Phường Vạn Xuân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05899",
+      "name": "Phường Trung Thành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05908",
+      "name": "Xã Phú Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05917",
+      "name": "Xã Tân Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05923",
+      "name": "Xã Tân Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05941",
+      "name": "Xã Điềm Thụy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05953",
+      "name": "Xã Kha Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "19",
+      "provinceName": "Tỉnh Thái Nguyên",
+      "decree": "Số: 1683/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

@@ -1,0 +1,1121 @@
+{
+  "requestId": "O291EmI2JmcUNNBglb-6n",
+  "communes": [
+    {
+      "code": "00691",
+      "name": "Phường Hà Giang 2",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00694",
+      "name": "Phường Hà Giang 1",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00700",
+      "name": "Xã Ngọc Đường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00706",
+      "name": "Xã Phú Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00715",
+      "name": "Xã Lũng Cú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00721",
+      "name": "Xã Đồng Văn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00733",
+      "name": "Xã Sà Phìn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00745",
+      "name": "Xã Phố Bảng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00763",
+      "name": "Xã Lũng Phìn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00769",
+      "name": "Xã Mèo Vạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00778",
+      "name": "Xã Sơn Vĩ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00787",
+      "name": "Xã Sủng Máng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00802",
+      "name": "Xã Khâu Vai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00808",
+      "name": "Xã Tát Ngà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00817",
+      "name": "Xã Niêm Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00820",
+      "name": "Xã Yên Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00829",
+      "name": "Xã Thắng Mố",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00832",
+      "name": "Xã Bạch Đích",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00847",
+      "name": "Xã Mậu Duệ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00859",
+      "name": "Xã Ngọc Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00865",
+      "name": "Xã Đường Thượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00871",
+      "name": "Xã Du Già",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00874",
+      "name": "Xã Quản Bạ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00883",
+      "name": "Xã Cán Tỷ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00889",
+      "name": "Xã Nghĩa Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00892",
+      "name": "Xã Tùng Vài",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00901",
+      "name": "Xã Lùng Tám",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00913",
+      "name": "Xã Vị Xuyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00919",
+      "name": "Xã Minh Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00922",
+      "name": "Xã Thuận Hoà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00925",
+      "name": "Xã Tùng Bá",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00928",
+      "name": "Xã Thanh Thủy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00937",
+      "name": "Xã Lao Chải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00952",
+      "name": "Xã Cao Bồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00958",
+      "name": "Xã Thượng Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00967",
+      "name": "Xã Việt Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00970",
+      "name": "Xã Linh Hồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00976",
+      "name": "Xã Bạch Ngọc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00982",
+      "name": "Xã Minh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00985",
+      "name": "Xã Giáp Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00991",
+      "name": "Xã Bắc Mê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "00994",
+      "name": "Xã Minh Ngọc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01006",
+      "name": "Xã Yên Cường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01012",
+      "name": "Xã Đường Hồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01021",
+      "name": "Xã Hoàng Su Phì",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01024",
+      "name": "Xã Bản Máy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01033",
+      "name": "Xã Thàng Tín",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01051",
+      "name": "Xã Tân Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01057",
+      "name": "Xã Pờ Ly Ngài",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01075",
+      "name": "Xã Nậm Dịch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01084",
+      "name": "Xã Hồ Thầu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01090",
+      "name": "Xã Thông Nguyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01096",
+      "name": "Xã Pà Vầy Sủ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01108",
+      "name": "Xã Xín Mần",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01117",
+      "name": "Xã Trung Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01141",
+      "name": "Xã Nấm Dẩn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01144",
+      "name": "Xã Quảng Nguyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01147",
+      "name": "Xã Khuôn Lùng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01153",
+      "name": "Xã Bắc Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01156",
+      "name": "Xã Vĩnh Tuy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01165",
+      "name": "Xã Đồng Tâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01171",
+      "name": "Xã Tân Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01180",
+      "name": "Xã Bằng Hành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01192",
+      "name": "Xã Liên Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01201",
+      "name": "Xã Hùng An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01216",
+      "name": "Xã Đồng Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01225",
+      "name": "Xã Tiên Nguyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01234",
+      "name": "Xã Yên Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01237",
+      "name": "Xã Quang Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01243",
+      "name": "Xã Tân Trịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01246",
+      "name": "Xã Bằng Lang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01255",
+      "name": "Xã Xuân Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "01261",
+      "name": "Xã Tiên Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02212",
+      "name": "Phường Nông Tiến",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02215",
+      "name": "Phường Minh Xuân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02221",
+      "name": "Xã Nà Hang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02239",
+      "name": "Xã Thượng Nông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02245",
+      "name": "Xã Côn Lôn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02248",
+      "name": "Xã Yên Hoa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02260",
+      "name": "Xã Hồng Thái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02266",
+      "name": "Xã Lâm Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02269",
+      "name": "Xã Thượng Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02287",
+      "name": "Xã Chiêm Hoá",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02296",
+      "name": "Xã Bình An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02302",
+      "name": "Xã Minh Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02305",
+      "name": "Xã Trung Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02308",
+      "name": "Xã Tân Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02317",
+      "name": "Xã Yên Lập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02320",
+      "name": "Xã Tân An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02332",
+      "name": "Xã Kiên Đài",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02350",
+      "name": "Xã Kim Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02353",
+      "name": "Xã Hoà An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02359",
+      "name": "Xã Tri Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02365",
+      "name": "Xã Yên Nguyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02374",
+      "name": "Xã Hàm Yên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02380",
+      "name": "Xã Bạch Xa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02392",
+      "name": "Xã Phù Lưu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02398",
+      "name": "Xã Yên Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02404",
+      "name": "Xã Bình Xa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02407",
+      "name": "Xã Thái Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02419",
+      "name": "Xã Thái Hoà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02425",
+      "name": "Xã Hùng Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02434",
+      "name": "Xã Lực Hành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02437",
+      "name": "Xã Kiến Thiết",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02449",
+      "name": "Xã Xuân Vân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02455",
+      "name": "Xã Hùng Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02458",
+      "name": "Xã Trung Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02470",
+      "name": "Xã Tân Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02473",
+      "name": "Xã Yên Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02494",
+      "name": "Xã Thái Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02509",
+      "name": "Phường Mỹ Lâm",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02512",
+      "name": "Phường An Tường",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02524",
+      "name": "Phường Bình Thuận",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02530",
+      "name": "Xã Nhữ Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02536",
+      "name": "Xã Sơn Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02545",
+      "name": "Xã Tân Trào",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02548",
+      "name": "Xã Bình Ca",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02554",
+      "name": "Xã Minh Thanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02572",
+      "name": "Xã Đông Thọ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02578",
+      "name": "Xã Tân Thanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02608",
+      "name": "Xã Hồng Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02611",
+      "name": "Xã Phú Lương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02620",
+      "name": "Xã Sơn Thuỷ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "02623",
+      "name": "Xã Trường Sinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "08",
+      "provinceName": "Tỉnh Tuyên Quang",
+      "decree": "Số: 1684/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

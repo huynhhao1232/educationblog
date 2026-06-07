@@ -1,0 +1,707 @@
+{
+  "requestId": "PDY6oBYsqNHKKFUxyqttg",
+  "communes": [
+    {
+      "code": "18859",
+      "name": "Phường Đồng Thuận",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18871",
+      "name": "Phường Đồng Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18880",
+      "name": "Phường Đồng Hới",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18901",
+      "name": "Xã Minh Hóa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18904",
+      "name": "Xã Dân Hóa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18919",
+      "name": "Xã Tân Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18922",
+      "name": "Xã Kim Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18943",
+      "name": "Xã Kim Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18949",
+      "name": "Xã Đồng Lê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18952",
+      "name": "Xã Tuyên Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18958",
+      "name": "Xã Tuyên Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18985",
+      "name": "Xã Tuyên Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18991",
+      "name": "Xã Tuyên Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "18997",
+      "name": "Xã Tuyên Hóa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19009",
+      "name": "Phường Ba Đồn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19021",
+      "name": "Xã Phú Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19030",
+      "name": "Xã Trung Thuần",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19033",
+      "name": "Xã Hòa Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19051",
+      "name": "Xã Tân Gianh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19057",
+      "name": "Xã Quảng Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19066",
+      "name": "Phường Bắc Gianh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19075",
+      "name": "Xã Nam Ba Đồn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19093",
+      "name": "Xã Nam Gianh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19111",
+      "name": "Xã Hoàn Lão",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19126",
+      "name": "Xã Bắc Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19138",
+      "name": "Xã Phong Nha",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19141",
+      "name": "Xã Bố Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19147",
+      "name": "Xã Thượng Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19159",
+      "name": "Xã Đông Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19198",
+      "name": "Xã Nam Trạch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19204",
+      "name": "Xã Trường Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19207",
+      "name": "Xã Quảng Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19225",
+      "name": "Xã Ninh Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19237",
+      "name": "Xã Trường Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19246",
+      "name": "Xã Lệ Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19249",
+      "name": "Xã Lệ Thủy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19255",
+      "name": "Xã Cam Hồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19288",
+      "name": "Xã Sen Ngư",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19291",
+      "name": "Xã Tân Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19309",
+      "name": "Xã Trường Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19318",
+      "name": "Xã Kim Ngân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19333",
+      "name": "Phường Đông Hà",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19351",
+      "name": "Phường Nam Đông Hà",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19360",
+      "name": "Phường Quảng Trị",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19363",
+      "name": "Xã Vĩnh Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19366",
+      "name": "Xã Bến Quan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19372",
+      "name": "Xã Vĩnh Hoàng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19405",
+      "name": "Xã Vĩnh Thủy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19414",
+      "name": "Xã Cửa Tùng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19429",
+      "name": "Xã Khe Sanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19432",
+      "name": "Xã Lao Bảo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19435",
+      "name": "Xã Hướng Lập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19441",
+      "name": "Xã Hướng Phùng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19462",
+      "name": "Xã Tân Lập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19483",
+      "name": "Xã A Dơi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19489",
+      "name": "Xã Lìa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19495",
+      "name": "Xã Gio Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19496",
+      "name": "Xã Cửa Việt",
+      "englishName": "Cua Viet town",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19501",
+      "name": "Xã Bến Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19537",
+      "name": "Xã Cồn Tiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19555",
+      "name": "Xã Hướng Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19564",
+      "name": "Xã Đakrông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19567",
+      "name": "Xã Ba Lòng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19588",
+      "name": "Xã Tà Rụt",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19594",
+      "name": "Xã La Lay",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19597",
+      "name": "Xã Cam Lộ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19603",
+      "name": "Xã Hiếu Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19624",
+      "name": "Xã Triệu Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19639",
+      "name": "Xã Nam Cửa Việt",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19645",
+      "name": "Xã Triệu Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19654",
+      "name": "Xã Triệu Cơ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19669",
+      "name": "Xã Ái Tử",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19681",
+      "name": "Xã Diên Sanh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19699",
+      "name": "Xã Vĩnh Định",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19702",
+      "name": "Xã Hải Lăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19735",
+      "name": "Xã Nam Hải Lăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19741",
+      "name": "Xã Mỹ Thủy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "19742",
+      "name": "Đặc khu Cồn Cỏ",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "44",
+      "provinceName": "Tỉnh Quảng Trị",
+      "decree": "Số: 1680/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

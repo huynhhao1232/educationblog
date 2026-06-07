@@ -1,0 +1,1220 @@
+{
+  "requestId": "XyM1lj1lCnz1sjWt5-xU1",
+  "communes": [
+    {
+      "code": "21553",
+      "name": "Phường Quy Nhơn Bắc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21583",
+      "name": "Phường Quy Nhơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21589",
+      "name": "Phường Quy Nhơn Tây",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21592",
+      "name": "Phường Quy Nhơn Nam",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21601",
+      "name": "Phường Quy Nhơn Đông",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21607",
+      "name": "Xã Nhơn Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21609",
+      "name": "Xã An Lão",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21616",
+      "name": "Xã An Vinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21622",
+      "name": "Xã An Toàn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21628",
+      "name": "Xã An Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21637",
+      "name": "Phường Tam Quan",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21640",
+      "name": "Phường Bồng Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21655",
+      "name": "Phường Hoài Nhơn Bắc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21661",
+      "name": "Phường Hoài Nhơn Tây",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21664",
+      "name": "Phường Hoài Nhơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21670",
+      "name": "Phường Hoài Nhơn Đông",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21673",
+      "name": "Phường Hoài Nhơn Nam",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21688",
+      "name": "Xã Hoài Ân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21697",
+      "name": "Xã Ân Hảo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21703",
+      "name": "Xã Vạn Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21715",
+      "name": "Xã Ân Tường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21727",
+      "name": "Xã Kim Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21730",
+      "name": "Xã Phù Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21733",
+      "name": "Xã Bình Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21739",
+      "name": "Xã Phù Mỹ Bắc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21751",
+      "name": "Xã Phù Mỹ Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21757",
+      "name": "Xã Phù Mỹ Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21769",
+      "name": "Xã An Lương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21775",
+      "name": "Xã Phù Mỹ Nam",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21786",
+      "name": "Xã Vĩnh Thạnh",
+      "englishName": "Vinh Thanh commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21787",
+      "name": "Xã Vĩnh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21796",
+      "name": "Xã Vĩnh Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21805",
+      "name": "Xã Vĩnh Quang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21808",
+      "name": "Xã Tây Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21817",
+      "name": "Xã Bình Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21820",
+      "name": "Xã Bình Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21829",
+      "name": "Xã Bình An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21835",
+      "name": "Xã Bình Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21853",
+      "name": "Xã Phù Cát",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21859",
+      "name": "Xã Đề Gi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21868",
+      "name": "Xã Hội Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21871",
+      "name": "Xã Hòa Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21880",
+      "name": "Xã Cát Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21892",
+      "name": "Xã Xuân An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21901",
+      "name": "Xã Ngô Mây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21907",
+      "name": "Phường Bình Định",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21910",
+      "name": "Phường An Nhơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21925",
+      "name": "Phường An Nhơn Bắc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21934",
+      "name": "Phường An Nhơn Đông",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21940",
+      "name": "Xã An Nhơn Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21943",
+      "name": "Phường An Nhơn Nam",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21952",
+      "name": "Xã Tuy Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21964",
+      "name": "Xã Tuy Phước Bắc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21970",
+      "name": "Xã Tuy Phước Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21985",
+      "name": "Xã Tuy Phước Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21994",
+      "name": "Xã Vân Canh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21997",
+      "name": "Xã Canh Liên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22006",
+      "name": "Xã Canh Vinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23563",
+      "name": "Phường Diên Hồng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23575",
+      "name": "Phường Pleiku",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23584",
+      "name": "Phường Thống Nhất",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23586",
+      "name": "Phường Hội Phú",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23590",
+      "name": "Xã Biển Hồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23602",
+      "name": "Phường An Phú",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23611",
+      "name": "Xã Gào",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23614",
+      "name": "Phường An Bình",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23617",
+      "name": "Phường An Khê",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23629",
+      "name": "Xã Cửu An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23638",
+      "name": "Xã Kbang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23644",
+      "name": "Xã Đak Rong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23647",
+      "name": "Xã Sơn Lang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23650",
+      "name": "Xã Krong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23668",
+      "name": "Xã Tơ Tung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23674",
+      "name": "Xã Kông Bơ La",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23677",
+      "name": "Xã Đak Đoa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23683",
+      "name": "Xã Đak Sơmei",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23701",
+      "name": "Xã Kon Gang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23710",
+      "name": "Xã Ia Băng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23714",
+      "name": "Xã KDang",
+      "englishName": "Hnol commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23722",
+      "name": "Xã Chư Păh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23728",
+      "name": "Xã Ia Khươl",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23734",
+      "name": "Xã Ia Ly",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23749",
+      "name": "Xã Ia Phí",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23764",
+      "name": "Xã Ia Grai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23767",
+      "name": "Xã Ia Hrung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23776",
+      "name": "Xã Ia Krái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23782",
+      "name": "Xã Ia O",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23788",
+      "name": "Xã Ia Chia",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23794",
+      "name": "Xã Mang Yang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23798",
+      "name": "Xã Ayun",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23799",
+      "name": "Xã Hra",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23812",
+      "name": "Xã Lơ Pang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23818",
+      "name": "Xã Kon Chiêng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23824",
+      "name": "Xã Kông Chro",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23830",
+      "name": "Xã Chư Krey",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23833",
+      "name": "Xã Ya Ma",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23839",
+      "name": "Xã SRó",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23842",
+      "name": "Xã Đăk Song",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23851",
+      "name": "Xã Chơ Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23857",
+      "name": "Xã Đức Cơ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23866",
+      "name": "Xã Ia Krêl",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23869",
+      "name": "Xã Ia Dơk",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23872",
+      "name": "Xã Ia Dom",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23881",
+      "name": "Xã Ia Pnôn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23884",
+      "name": "Xã Ia Nan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23887",
+      "name": "Xã Chư Prông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23896",
+      "name": "Xã Bàu Cạn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23908",
+      "name": "Xã Ia Tôr",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23911",
+      "name": "Xã Ia Boòng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23917",
+      "name": "Xã Ia Púch",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23926",
+      "name": "Xã Ia Pia",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23935",
+      "name": "Xã Ia Lâu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23938",
+      "name": "Xã Ia Mơ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23941",
+      "name": "Xã Chư Sê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23942",
+      "name": "Xã Chư Pưh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23947",
+      "name": "Xã Bờ Ngoong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23954",
+      "name": "Xã Al Bá",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23971",
+      "name": "Xã Ia Hrú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23977",
+      "name": "Xã Ia Ko",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23986",
+      "name": "Xã Ia Le",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "23995",
+      "name": "Xã Đak Pơ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24007",
+      "name": "Xã Ya Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24013",
+      "name": "Xã Pờ Tó",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24022",
+      "name": "Xã Ia Pa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24028",
+      "name": "Xã Ia Tul",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24043",
+      "name": "Xã Phú Thiện",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24044",
+      "name": "Phường Ayun Pa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24049",
+      "name": "Xã Chư A Thai",
+      "englishName": "Ia Ake Commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24061",
+      "name": "Xã Ia Hiao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24065",
+      "name": "Xã Ia Rbol",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24073",
+      "name": "Xã Ia Sao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24076",
+      "name": "Xã Phú Túc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24100",
+      "name": "Xã Ia Dreh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24109",
+      "name": "Xã Uar",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "24112",
+      "name": "Xã Ia Rsai",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "52",
+      "provinceName": "Tỉnh Gia Lai",
+      "decree": "Số: 1664/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

@@ -116,6 +116,7 @@ class StudentInfoLookupForm(forms.Form):
         return code
 
 
+# Các trường được học viên xác nhận (value = tên field trên StudentInfoVerification)
 STUDENT_INFO_VERIFIABLE_STATUS_FIELDS = (
     ("class_name_status", "Lớp"),
     ("full_name_status", "Họ và tên"),

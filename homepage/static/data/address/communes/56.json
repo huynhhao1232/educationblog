@@ -1,0 +1,590 @@
+{
+  "requestId": "uCShmaVQ7nW98Ckntw0Oj",
+  "communes": [
+    {
+      "code": "22333",
+      "name": "Phường Bắc Nha Trang",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22366",
+      "name": "Phường Nha Trang",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22390",
+      "name": "Phường Tây Nha Trang",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22402",
+      "name": "Phường Nam Nha Trang",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22411",
+      "name": "Phường Bắc Cam Ranh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22420",
+      "name": "Phường Cam Ranh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22423",
+      "name": "Phường Ba Ngòi",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22432",
+      "name": "Phường Cam Linh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22435",
+      "name": "Xã Cam Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22453",
+      "name": "Xã Cam Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22465",
+      "name": "Xã Cam An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22480",
+      "name": "Xã Nam Cam Ranh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22489",
+      "name": "Xã Vạn Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22498",
+      "name": "Xã Tu Bông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22504",
+      "name": "Xã Đại Lãnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22516",
+      "name": "Xã Vạn Thắng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22525",
+      "name": "Xã Vạn Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22528",
+      "name": "Phường Ninh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22546",
+      "name": "Xã Bắc Ninh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22552",
+      "name": "Xã Tây Ninh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22558",
+      "name": "Xã Hòa Trí",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22561",
+      "name": "Phường Đông Ninh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22576",
+      "name": "Xã Tân Định",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22591",
+      "name": "Phường Hòa Thắng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22597",
+      "name": "Xã Nam Ninh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22609",
+      "name": "Xã Khánh Vĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22612",
+      "name": "Xã Trung Khánh Vĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22615",
+      "name": "Xã Bắc Khánh Vĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22624",
+      "name": "Xã Tây Khánh Vĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22648",
+      "name": "Xã Nam Khánh Vĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22651",
+      "name": "Xã Diên Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22657",
+      "name": "Xã Diên Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22660",
+      "name": "Xã Diên Lâm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22672",
+      "name": "Xã Diên Thọ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22678",
+      "name": "Xã Diên Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22702",
+      "name": "Xã Suối Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22708",
+      "name": "Xã Suối Dầu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22714",
+      "name": "Xã Khánh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22720",
+      "name": "Xã Tây Khánh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22732",
+      "name": "Xã Đông Khánh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22736",
+      "name": "Đặc khu Trường Sa",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22738",
+      "name": "Phường Đô Vinh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22741",
+      "name": "Phường Bảo An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22759",
+      "name": "Phường Phan Rang",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22780",
+      "name": "Phường Đông Hải",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22786",
+      "name": "Xã Bác Ái Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22795",
+      "name": "Xã Bác Ái",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22801",
+      "name": "Xã Bác Ái Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22810",
+      "name": "Xã Ninh Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22813",
+      "name": "Xã Lâm Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22822",
+      "name": "Xã Mỹ Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22828",
+      "name": "Xã Anh Dũng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22834",
+      "name": "Phường Ninh Chử",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22840",
+      "name": "Xã Công Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22846",
+      "name": "Xã Vĩnh Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22849",
+      "name": "Xã Thuận Bắc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22852",
+      "name": "Xã Ninh Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22861",
+      "name": "Xã Xuân Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22870",
+      "name": "Xã Ninh Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22873",
+      "name": "Xã Phước Hậu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22888",
+      "name": "Xã Phước Dinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22891",
+      "name": "Xã Phước Hữu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22897",
+      "name": "Xã Thuận Nam",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22900",
+      "name": "Xã Phước Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "22909",
+      "name": "Xã Cà Ná",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "56",
+      "provinceName": "Tỉnh Khánh Hòa",
+      "decree": "Số: 1667/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

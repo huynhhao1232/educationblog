@@ -1,0 +1,1121 @@
+{
+  "requestId": "Aic3C1gFbhF4vC7g18eAo",
+  "communes": [
+    {
+      "code": "28756",
+      "name": "Phường Phú Khương",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28777",
+      "name": "Phường An Hội",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28783",
+      "name": "Phường Sơn Đông",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28789",
+      "name": "Phường Bến Tre",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28807",
+      "name": "Xã Giao Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28810",
+      "name": "Xã Phú Túc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28840",
+      "name": "Xã Tân Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28858",
+      "name": "Phường Phú Tân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28861",
+      "name": "Xã Tiên Thủy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28870",
+      "name": "Xã Chợ Lách",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28879",
+      "name": "Xã Phú Phụng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28894",
+      "name": "Xã Vĩnh Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28901",
+      "name": "Xã Hưng Khánh Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28903",
+      "name": "Xã Mỏ Cày",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28915",
+      "name": "Xã Phước Mỹ Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28921",
+      "name": "Xã Tân Thành Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28945",
+      "name": "Xã Đồng Khởi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28948",
+      "name": "Xã Nhuận Phú Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28957",
+      "name": "Xã An Định",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28969",
+      "name": "Xã Thành Thới",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28981",
+      "name": "Xã Hương Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28984",
+      "name": "Xã Giồng Trôm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28987",
+      "name": "Xã Lương Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28993",
+      "name": "Xã Lương Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28996",
+      "name": "Xã Châu Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29020",
+      "name": "Xã Phước Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29029",
+      "name": "Xã Tân Hào",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29044",
+      "name": "Xã Hưng Nhượng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29050",
+      "name": "Xã Bình Đại",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29062",
+      "name": "Xã Phú Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29077",
+      "name": "Xã Lộc Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29083",
+      "name": "Xã Châu Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29089",
+      "name": "Xã Thạnh Trị",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29104",
+      "name": "Xã Thạnh Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29107",
+      "name": "Xã Thới Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29110",
+      "name": "Xã Ba Tri",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29122",
+      "name": "Xã Mỹ Chánh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29125",
+      "name": "Xã Bảo Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29137",
+      "name": "Xã Tân Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29143",
+      "name": "Xã An Ngãi Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29158",
+      "name": "Xã An Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29167",
+      "name": "Xã Tân Thủy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29182",
+      "name": "Xã Thạnh Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29191",
+      "name": "Xã Quới Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29194",
+      "name": "Xã Đại Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29221",
+      "name": "Xã Thạnh Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29224",
+      "name": "Xã An Qui",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29227",
+      "name": "Xã Thạnh Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29242",
+      "name": "Phường Trà Vinh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29254",
+      "name": "Phường Nguyệt Hóa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29263",
+      "name": "Phường Long Đức",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29266",
+      "name": "Xã Càng Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29275",
+      "name": "Xã An Trường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29278",
+      "name": "Xã Tân An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29287",
+      "name": "Xã Bình Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29302",
+      "name": "Xã Nhị Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29308",
+      "name": "Xã Cầu Kè",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29317",
+      "name": "Xã An Phú Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29329",
+      "name": "Xã Phong Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29335",
+      "name": "Xã Tam Ngãi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29341",
+      "name": "Xã Tiểu Cần",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29362",
+      "name": "Xã Hùng Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29365",
+      "name": "Xã Tập Ngãi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29371",
+      "name": "Xã Tân Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29374",
+      "name": "Xã Châu Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29386",
+      "name": "Xã Song Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29398",
+      "name": "Phường Hòa Thuận",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29407",
+      "name": "Xã Hưng Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29410",
+      "name": "Xã Hòa Minh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29413",
+      "name": "Xã Long Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29416",
+      "name": "Xã Cầu Ngang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29419",
+      "name": "Xã Mỹ Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29431",
+      "name": "Xã Vinh Kim",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29446",
+      "name": "Xã Nhị Trường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29455",
+      "name": "Xã Hiệp Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29461",
+      "name": "Xã Trà Cú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29467",
+      "name": "Xã Tập Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29476",
+      "name": "Xã Lưu Nghiệp Anh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29489",
+      "name": "Xã Hàm Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29491",
+      "name": "Xã Đại An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29497",
+      "name": "Xã Đôn Châu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29506",
+      "name": "Xã Long Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29512",
+      "name": "Phường Duyên Hải",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29513",
+      "name": "Xã Long Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29516",
+      "name": "Phường Trường Long Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29518",
+      "name": "Xã Long Hữu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29530",
+      "name": "Xã Ngũ Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29533",
+      "name": "Xã Long Vĩnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29536",
+      "name": "Xã Đông Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29551",
+      "name": "Phường Long Châu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29557",
+      "name": "Phường Phước Hậu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29566",
+      "name": "Phường Tân Ngãi",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29584",
+      "name": "Xã An Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29590",
+      "name": "Phường Thanh Đức",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29593",
+      "name": "Phường Tân Hạnh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29602",
+      "name": "Xã Long Hồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29611",
+      "name": "Xã Phú Quới",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29623",
+      "name": "Xã Nhơn Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29638",
+      "name": "Xã Bình Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29641",
+      "name": "Xã Cái Nhum",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29653",
+      "name": "Xã Tân Long Hội",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29659",
+      "name": "Xã Trung Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29668",
+      "name": "Xã Quới An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29677",
+      "name": "Xã Quới Thiện",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29683",
+      "name": "Xã Trung Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29698",
+      "name": "Xã Trung Ngãi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29701",
+      "name": "Xã Hiếu Phụng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29713",
+      "name": "Xã Hiếu Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29719",
+      "name": "Xã Tam Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29728",
+      "name": "Xã Cái Ngang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29734",
+      "name": "Xã Hòa Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29740",
+      "name": "Xã Song Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29767",
+      "name": "Xã Ngãi Tứ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29770",
+      "name": "Phường Cái Vồn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29771",
+      "name": "Phường Bình Minh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29785",
+      "name": "Xã Tân Lược",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29788",
+      "name": "Xã Mỹ Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29800",
+      "name": "Xã Tân Quới",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29812",
+      "name": "Phường Đông Thành",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29821",
+      "name": "Xã Trà Ôn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29830",
+      "name": "Xã Hòa Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29836",
+      "name": "Xã Trà Côn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29845",
+      "name": "Xã Vĩnh Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29857",
+      "name": "Xã Lục Sĩ Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "86",
+      "provinceName": "Tỉnh Vĩnh Long",
+      "decree": "Số: 1687/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

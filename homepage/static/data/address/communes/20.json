@@ -1,0 +1,590 @@
+{
+  "requestId": "RQ0vbMQo5jYumN_XbgLbp",
+  "communes": [
+    {
+      "code": "05977",
+      "name": "Phường Đông Kinh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05983",
+      "name": "Phường Lương Văn Tri",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "05986",
+      "name": "Phường Tam Thanh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06001",
+      "name": "Xã Đoàn Kết",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06004",
+      "name": "Xã Quốc Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06019",
+      "name": "Xã Tân Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06037",
+      "name": "Xã Kháng Chiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06040",
+      "name": "Xã Thất Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06046",
+      "name": "Xã Tràng Định",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06058",
+      "name": "Xã Quốc Việt",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06073",
+      "name": "Xã Hoa Thám",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06076",
+      "name": "Xã Quý Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06079",
+      "name": "Xã Hồng Phong",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06085",
+      "name": "Xã Thiện Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06091",
+      "name": "Xã Thiện Thuật",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06103",
+      "name": "Xã Thiện Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06112",
+      "name": "Xã Bình Gia",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06115",
+      "name": "Xã Tân Văn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06124",
+      "name": "Xã Na Sầm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06148",
+      "name": "Xã Thụy Hùng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06151",
+      "name": "Xã Hội Hoan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06154",
+      "name": "Xã Văn Lãng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06172",
+      "name": "Xã Hoàng Văn Thụ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06184",
+      "name": "Xã Đồng Đăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06187",
+      "name": "Phường Kỳ Lừa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06196",
+      "name": "Xã Ba Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06211",
+      "name": "Xã Cao Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06220",
+      "name": "Xã Công Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06253",
+      "name": "Xã Văn Quan",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06280",
+      "name": "Xã Điềm He",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06286",
+      "name": "Xã Khánh Khê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06298",
+      "name": "Xã Yên Phúc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06313",
+      "name": "Xã Tri Lễ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06316",
+      "name": "Xã Tân Đoàn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06325",
+      "name": "xã Bắc Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06337",
+      "name": "Xã Tân Tri",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06349",
+      "name": "Xã Hưng Vũ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06364",
+      "name": "Xã Vũ Lễ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06367",
+      "name": "Xã Vũ Lăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06376",
+      "name": "Xã Nhất Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06385",
+      "name": "Xã Hữu Lũng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06391",
+      "name": "Xã Yên Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06400",
+      "name": "Xã Hữu Liên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06415",
+      "name": "Xã Vân Nham",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06427",
+      "name": "Xã Cai Kinh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06436",
+      "name": "Xã Thiện Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06445",
+      "name": "Xã Tân Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06457",
+      "name": "Xã Tuấn Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06463",
+      "name": "Xã Chi Lăng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06475",
+      "name": "Xã Bằng Mạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06481",
+      "name": "Xã Chiến Thắng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06496",
+      "name": "Xã Nhân Lý",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06505",
+      "name": "Xã Vạn Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06517",
+      "name": "Xã Quan Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06526",
+      "name": "Xã Na Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06529",
+      "name": "Xã Lộc Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06541",
+      "name": "Xã Mẫu Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06565",
+      "name": "Xã Khuất Xá",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06577",
+      "name": "Xã Thống Nhất",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06601",
+      "name": "Xã Lợi Bác",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06607",
+      "name": "Xã Xuân Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06613",
+      "name": "Xã Đình Lập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06616",
+      "name": "Xã Thái Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06625",
+      "name": "Xã Kiên Mộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "06637",
+      "name": "Xã Châu Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "20",
+      "provinceName": "Tỉnh Lạng Sơn",
+      "decree": "Số: 1672/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

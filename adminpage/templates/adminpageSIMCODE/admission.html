@@ -57,6 +57,40 @@
         background: white;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
+    .filter-actions {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 8px;
+        padding-top: 8px;
+    }
+    .filter-actions .btn-search {
+        background: #fff;
+        color: #5a67d8;
+        border: none;
+        font-weight: 700;
+        padding: 10px 28px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    .filter-actions .btn-search:hover {
+        background: #f0f4ff;
+        transform: translateY(-1px);
+    }
+    .filter-actions .btn-reset {
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        font-weight: 600;
+        padding: 10px 24px;
+        border-radius: 8px;
+    }
+    .filter-actions .btn-reset:hover {
+        background: rgba(255, 255, 255, 0.35);
+        color: #fff;
+    }
     @media (max-width: 1200px) {
         .filter-col { max-width: 48%; min-width: 180px; }
         .filter-fields { gap: 20px 16px; }
@@ -70,6 +104,38 @@
 <h3 class="i-name">
     Tuyển sinh
 </h3>
+
+<div style="margin: 0 30px 10px;">
+    <a href="{% url 'adminpage:campus_shift_group_manage' %}" class="btn btn-outline-primary btn-sm">
+        <i class="fas fa-sliders me-1"></i> Quản lý cấu hình cơ sở - ca - tổ hợp
+    </a>
+    <a href="{% url 'adminpage:admission_vocational_manage' %}" class="btn btn-outline-secondary btn-sm ms-2">
+        <i class="fas fa-tools me-1"></i> Cấu hình dạy nghề
+    </a>
+</div>
+
+{% if messages %}
+<div style="margin: 0 30px 16px;">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} py-2 mb-2">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="import-section" style="margin: 20px 30px; padding: 20px; border: 2px solid #b71c1c; border-radius: 10px; background: #fff5f5;">
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <div>
+            <strong style="color: #b71c1c;">Xoá toàn bộ danh sách đăng ký tuyển sinh</strong>
+            <p class="mb-0 small text-muted">
+                Hiện có <strong>{{ total_admissions }}</strong> hồ sơ. Thao tác không thể hoàn tác; chỗ đăng ký sẽ được hoàn trả theo cấu hình tuyển sinh.
+            </p>
+        </div>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAllAdmissionsModal"
+                {% if total_admissions == 0 %}disabled{% endif %}>
+            <i class="fas fa-trash me-1"></i> Xoá tất cả
+        </button>
+    </div>
+</div>
 
 <div class="values">
     <div class="val-box">
@@ -160,6 +226,11 @@
             <input type="text" class="form-control" id="nameFilter" placeholder="Nhập tên..." value="{{ name_filter }}">
         </div>
         <div class="filter-col">
+            <label for="cccdFilter"><i class="fas fa-id-card me-1"></i> Số CCCD</label>
+            <input type="text" class="form-control" id="cccdFilter" placeholder="Nhập số CCCD..." value="{{ id_number_filter }}"
+                   maxlength="12" inputmode="numeric">
+        </div>
+        <div class="filter-col">
             <label for="graduationYearFilter"><i class="fas fa-calendar-alt me-1"></i> Năm tốt nghiệp</label>
             <select class="form-control" id="graduationYearFilter">
                 <option value="">Tất cả</option>
@@ -238,6 +309,14 @@
             <label for="toDateFilter"><i class="fas fa-calendar-day me-1"></i> Đến ngày</label>
             <input type="date" class="form-control" id="toDateFilter" value="{{ to_date_filter }}">
         </div>
+        <div class="filter-actions">
+            <button type="button" class="btn btn-search" id="searchFilterBtn">
+                <i class="fas fa-search me-1"></i> Tìm kiếm
+            </button>
+            <button type="button" class="btn btn-reset" id="resetFilterBtn">
+                <i class="fas fa-undo me-1"></i> Xóa bộ lọc
+            </button>
+        </div>
     </div>
 </div>
 
@@ -248,6 +327,7 @@
         </div>
         <form method="GET" action="{% url 'adminpage:export_approved_admissions' %}" id="exportForm" style="display: inline;">
             <input type="hidden" name="name" id="exportName" value="{{ name_filter }}">
+            <input type="hidden" name="id_number" id="exportIdNumber" value="{{ id_number_filter }}">
             <input type="hidden" name="graduation_year" id="exportGraduationYear" value="{{ graduation_year_filter }}">
             <input type="hidden" name="status" id="exportStatus" value="{{ status_filter }}">
             <input type="hidden" name="campus" id="exportCampus" value="{{ campus_filter }}">
@@ -312,7 +392,10 @@
                 {% else %}
                 <td class="active" ><p style="background: red; color: white">Chưa duyệt</p></td>
                 {% endif %}
-                <td class="view"><a href="{% url 'adminpage:letter' admission_id=a.id %}"><i class="fa-regular fa-eye me-3"></i></a></td>
+                <td class="view">
+                    <a href="{% url 'adminpage:letter' admission_id=a.id %}" title="Xem hồ sơ"><i class="fa-regular fa-eye me-2"></i></a>
+                    <a href="{% url 'adminpage:download_admission_docx' admission_id=a.id %}" title="Tải đơn Word"><i class="fas fa-file-word"></i></a>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
@@ -320,42 +403,36 @@
 </div>
 <div class="pagination d-flex justify-content-center mt-4">
     {% if ad.has_previous %}
-        <a href="?page=1{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">&laquo; Đầu</a>
-        <a href="?page={{ ad.previous_page_number }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">Trước</a>
+        <a href="?page=1{% if name_filter %}&name={{ name_filter }}{% endif %}{% if id_number_filter %}&id_number={{ id_number_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">&laquo; Đầu</a>
+        <a href="?page={{ ad.previous_page_number }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if id_number_filter %}&id_number={{ id_number_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">Trước</a>
     {% endif %}
 
     {% for num in ad.paginator.page_range %}
         {% if ad.number == num %}
-            <a href="?page={{ num }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-primary mx-1">{{ num }}</a>
+            <a href="?page={{ num }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if id_number_filter %}&id_number={{ id_number_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-primary mx-1">{{ num }}</a>
         {% elif num > ad.number|add:'-3' and num < ad.number|add:'3' %}
-            <a href="?page={{ num }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">{{ num }}</a>
+            <a href="?page={{ num }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if id_number_filter %}&id_number={{ id_number_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">{{ num }}</a>
         {% endif %}
     {% endfor %}
 
     {% if ad.has_next %}
-        <a href="?page={{ ad.next_page_number }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">Tiếp</a>
-        <a href="?page={{ ad.paginator.num_pages }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">Cuối &raquo;</a>
+        <a href="?page={{ ad.next_page_number }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if id_number_filter %}&id_number={{ id_number_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">Tiếp</a>
+        <a href="?page={{ ad.paginator.num_pages }}{% if name_filter %}&name={{ name_filter }}{% endif %}{% if id_number_filter %}&id_number={{ id_number_filter }}{% endif %}{% if gender_filter %}&gender={{ gender_filter }}{% endif %}{% if status_filter %}&status={{ status_filter }}{% endif %}{% if campus_filter %}&campus={{ campus_filter }}{% endif %}{% if shift_filter %}&shift={{ shift_filter }}{% endif %}{% if subject_group_filter %}&subject_group={{ subject_group_filter }}{% endif %}{% if exam_score_order %}&exam_score={{ exam_score_order }}{% endif %}{% if avg_score_order %}&avg_score={{ avg_score_order }}{% endif %}{% if conduct_filter %}&conduct={{ conduct_filter }}{% endif %}{% if from_date_filter %}&from_date={{ from_date_filter }}{% endif %}{% if to_date_filter %}&to_date={{ to_date_filter }}{% endif %}" class="btn btn-outline-primary mx-1">Cuối &raquo;</a>
     {% endif %}
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Debounce function to limit how often a function can fire
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
+    const cccdInput = document.getElementById('cccdFilter');
+    if (cccdInput) {
+        cccdInput.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '').slice(0, 12);
+        });
     }
 
-    // Function to update URL and reload page with filters
     function applyFilters() {
-        const name = document.getElementById('nameFilter')?.value || '';
+        const name = document.getElementById('nameFilter')?.value.trim() || '';
+        const idNumber = document.getElementById('cccdFilter')?.value.trim() || '';
         const graduationYear = document.getElementById('graduationYearFilter')?.value || '';
         const status = document.getElementById('statusFilter')?.value || '';
         const campus = document.getElementById('campusFilter')?.value || '';
@@ -367,73 +444,94 @@ document.addEventListener('DOMContentLoaded', function() {
         const fromDate = document.getElementById('fromDateFilter')?.value || '';
         const toDate = document.getElementById('toDateFilter')?.value || '';
 
-        // Update export form hidden inputs
-        if(document.getElementById('exportName')) document.getElementById('exportName').value = name;
-        if(document.getElementById('exportGraduationYear')) document.getElementById('exportGraduationYear').value = graduationYear;
-        if(document.getElementById('exportStatus')) document.getElementById('exportStatus').value = status;
-        if(document.getElementById('exportCampus')) document.getElementById('exportCampus').value = campus;
-        if(document.getElementById('exportShift')) document.getElementById('exportShift').value = shift;
-        if(document.getElementById('exportSubjectGroup')) document.getElementById('exportSubjectGroup').value = subjectGroup;
-        if(document.getElementById('exportExamScore')) document.getElementById('exportExamScore').value = examScore;
-        if(document.getElementById('exportAvgScore')) document.getElementById('exportAvgScore').value = avgScore;
-        if(document.getElementById('exportConduct')) document.getElementById('exportConduct').value = conduct;
-        if(document.getElementById('exportFromDate')) document.getElementById('exportFromDate').value = fromDate;
-        if(document.getElementById('exportToDate')) document.getElementById('exportToDate').value = toDate;
+        if (document.getElementById('exportName')) document.getElementById('exportName').value = name;
+        if (document.getElementById('exportIdNumber')) document.getElementById('exportIdNumber').value = idNumber;
+        if (document.getElementById('exportGraduationYear')) document.getElementById('exportGraduationYear').value = graduationYear;
+        if (document.getElementById('exportStatus')) document.getElementById('exportStatus').value = status;
+        if (document.getElementById('exportCampus')) document.getElementById('exportCampus').value = campus;
+        if (document.getElementById('exportShift')) document.getElementById('exportShift').value = shift;
+        if (document.getElementById('exportSubjectGroup')) document.getElementById('exportSubjectGroup').value = subjectGroup;
+        if (document.getElementById('exportExamScore')) document.getElementById('exportExamScore').value = examScore;
+        if (document.getElementById('exportAvgScore')) document.getElementById('exportAvgScore').value = avgScore;
+        if (document.getElementById('exportConduct')) document.getElementById('exportConduct').value = conduct;
+        if (document.getElementById('exportFromDate')) document.getElementById('exportFromDate').value = fromDate;
+        if (document.getElementById('exportToDate')) document.getElementById('exportToDate').value = toDate;
 
-        const params = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams();
 
-        // Update or remove parameters based on filter values
         if (name) params.set('name', name);
-        else params.delete('name');
-
+        if (idNumber) params.set('id_number', idNumber);
         if (graduationYear) params.set('graduation_year', graduationYear);
-        else params.delete('graduation_year');
-
         if (status) params.set('status', status);
-        else params.delete('status');
-
         if (campus) params.set('campus', campus);
-        else params.delete('campus');
-
         if (shift) params.set('shift', shift);
-        else params.delete('shift');
-
         if (subjectGroup) params.set('subject_group', subjectGroup);
-        else params.delete('subject_group');
-
         if (examScore) params.set('exam_score', examScore);
-        else params.delete('exam_score');
-
         if (avgScore) params.set('avg_score', avgScore);
-        else params.delete('avg_score');
+        if (conduct) params.set('conduct', conduct);
+        if (fromDate) params.set('from_date', fromDate);
+        if (toDate) params.set('to_date', toDate);
 
-        if (conduct) params.set('conduct', conduct); else params.delete('conduct');
-        if (fromDate) params.set('from_date', fromDate); else params.delete('from_date');
-        if (toDate) params.set('to_date', toDate); else params.delete('to_date');
-
-        // Remove page parameter when filters change
-        params.delete('page');
-
-        // Reload page with new filters
-        window.location.href = `${window.location.pathname}?${params.toString()}`;
+        const query = params.toString();
+        window.location.href = query
+            ? `${window.location.pathname}?${query}`
+            : window.location.pathname;
     }
 
-    // Debounced version for text input
-    const debouncedApplyFilters = debounce(applyFilters, 500);
+    document.getElementById('searchFilterBtn')?.addEventListener('click', applyFilters);
+    document.getElementById('resetFilterBtn')?.addEventListener('click', function() {
+        window.location.href = window.location.pathname;
+    });
 
-    // Add event listeners to all filters
-    if(document.getElementById('nameFilter')) document.getElementById('nameFilter').addEventListener('input', debouncedApplyFilters);
-    if(document.getElementById('graduationYearFilter')) document.getElementById('graduationYearFilter').addEventListener('change', applyFilters);
-    if(document.getElementById('statusFilter')) document.getElementById('statusFilter').addEventListener('change', applyFilters);
-    if(document.getElementById('campusFilter')) document.getElementById('campusFilter').addEventListener('change', applyFilters);
-    if(document.getElementById('shiftFilter')) document.getElementById('shiftFilter').addEventListener('change', applyFilters);
-    if(document.getElementById('subjectGroupFilter')) document.getElementById('subjectGroupFilter').addEventListener('change', applyFilters);
-    if(document.getElementById('examScoreFilter')) document.getElementById('examScoreFilter').addEventListener('change', applyFilters);
-    if(document.getElementById('avgScoreFilter')) document.getElementById('avgScoreFilter').addEventListener('change', applyFilters);
-    if(document.getElementById('conductFilter')) document.getElementById('conductFilter').addEventListener('change', applyFilters);
-    if(document.getElementById('fromDateFilter')) document.getElementById('fromDateFilter').addEventListener('change', applyFilters);
-    if(document.getElementById('toDateFilter')) document.getElementById('toDateFilter').addEventListener('change', applyFilters);
+    const filterIds = [
+        'nameFilter', 'cccdFilter', 'graduationYearFilter', 'statusFilter',
+        'campusFilter', 'shiftFilter', 'subjectGroupFilter', 'examScoreFilter',
+        'avgScoreFilter', 'conductFilter', 'fromDateFilter', 'toDateFilter',
+    ];
+    filterIds.forEach(function(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                applyFilters();
+            }
+        });
+    });
 });
 </script>
+
+<div class="modal fade" id="deleteAllAdmissionsModal" tabindex="-1" aria-labelledby="deleteAllAdmissionsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-danger">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="deleteAllAdmissionsModalLabel">
+                    <i class="fa-solid fa-triangle-exclamation me-2"></i>Xoá toàn bộ đăng ký tuyển sinh
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <form method="post" action="{% url 'adminpage:delete_all_admissions' %}">
+                {% csrf_token %}
+                <div class="modal-body">
+                    <p class="mb-2">Bạn sắp xoá <strong>{{ total_admissions }}</strong> hồ sơ đăng ký, bao gồm:</p>
+                    <ul class="small mb-3">
+                        <li>Thông tin cá nhân, ảnh CCCD và học bạ;</li>
+                        <li>Cả hồ sơ đã duyệt và chưa duyệt.</li>
+                    </ul>
+                    <p class="small text-muted mb-3">Chỗ đăng ký (<code>registration_count</code>) sẽ được hoàn trả theo từng cơ sở — ca — tổ hợp môn.</p>
+                    <label for="deleteAllConfirmText" class="form-label">
+                        Nhập <strong>XOA TAT CA</strong> để xác nhận:
+                    </label>
+                    <input type="text" class="form-control" id="deleteAllConfirmText" name="confirm_text"
+                           autocomplete="off" placeholder="XOA TAT CA" required>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+                    <button type="submit" class="btn btn-danger">Xoá vĩnh viễn</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

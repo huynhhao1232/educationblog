@@ -1,0 +1,851 @@
+{
+  "requestId": "kC_8lNkQqT3Ma54wjfrJN",
+  "communes": [
+    {
+      "code": "20194",
+      "name": "Phường Hải Vân",
+      "englishName": "Hoa Hiep Bac Commune",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20197",
+      "name": "Phường Liên Chiểu",
+      "englishName": "Hoa Khanh Bac Commune",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20200",
+      "name": "Phường Hòa Khánh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20209",
+      "name": "Phường Thanh Khê",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20242",
+      "name": "Phường Hải Châu",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20257",
+      "name": "Phường Hòa Cường",
+      "englishName": "Hoa Cuong Bac Commune",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20260",
+      "name": "Phường Cẩm Lệ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20263",
+      "name": "Phường Sơn Trà",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20275",
+      "name": "Phường An Hải",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20285",
+      "name": "Phường Ngũ Hành Sơn",
+      "englishName": "Khue My Commune",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20305",
+      "name": "Phường An Khê",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20308",
+      "name": "Xã Bà Nà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20314",
+      "name": "Phường Hòa Xuân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20320",
+      "name": "Xã Hòa Vang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20332",
+      "name": "Xã Hòa Tiến",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20333",
+      "name": "Đặc khu Hoàng Sa",
+      "englishName": "",
+      "administrativeLevel": "Đặc khu",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20335",
+      "name": "Phường Bàn Thạch",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20341",
+      "name": "Phường Tam Kỳ",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20350",
+      "name": "Phường Hương Trà",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20356",
+      "name": "Phường Quảng Phú",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20364",
+      "name": "Xã Chiên Đàn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20380",
+      "name": "Xã Tây Hồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20392",
+      "name": "Xã Phú Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20401",
+      "name": "Phường Hội An Tây",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20410",
+      "name": "Phường Hội An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20413",
+      "name": "Phường Hội An Đông",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20434",
+      "name": "Xã Tân Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20443",
+      "name": "Xã Hùng Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20455",
+      "name": "Xã Tây Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20458",
+      "name": "Xã Avương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20467",
+      "name": "Xã Đông Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20476",
+      "name": "Xã Sông Kôn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20485",
+      "name": "Xã Sông Vàng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20494",
+      "name": "Xã Bến Hiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20500",
+      "name": "Xã Đại Lộc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20506",
+      "name": "Xã Thượng Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20515",
+      "name": "Xã Hà Nha",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20539",
+      "name": "Xã Vu Gia",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20542",
+      "name": "Xã Phú Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20551",
+      "name": "Phường Điện Bàn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20557",
+      "name": "Phường Điện Bàn Bắc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20569",
+      "name": "Xã Điện Bàn Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20575",
+      "name": "Phường An Thắng",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20579",
+      "name": "Phường Điện Bàn Đông",
+      "englishName": "Dien Nam Trung commune",
+      "administrativeLevel": "Phường",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20587",
+      "name": "Xã Gò Nổi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20599",
+      "name": "Xã Nam Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20611",
+      "name": "Xã Thu Bồn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20623",
+      "name": "Xã Duy Xuyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20635",
+      "name": "Xã Duy Nghĩa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20641",
+      "name": "Xã Quế Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20650",
+      "name": "Xã Xuân Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20656",
+      "name": "Xã Nông Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20662",
+      "name": "Xã Quế Sơn Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20669",
+      "name": "Xã Quế Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20695",
+      "name": "Xã Thạnh Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20698",
+      "name": "Xã La Êê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20704",
+      "name": "Xã La Dêê",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20707",
+      "name": "Xã Nam Giang",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20710",
+      "name": "Xã Bến Giằng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20716",
+      "name": "Xã Đắc Pring",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20722",
+      "name": "Xã Khâm Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20728",
+      "name": "Xã Phước Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20734",
+      "name": "Xã Phước Năng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20740",
+      "name": "Xã Phước Chánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20752",
+      "name": "Xã Phước Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20767",
+      "name": "Xã Việt An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20770",
+      "name": "Xã Phước Trà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20779",
+      "name": "Xã Hiệp Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20791",
+      "name": "Xã Thăng Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20794",
+      "name": "Xã Thăng An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20818",
+      "name": "Xã Đồng Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20827",
+      "name": "Xã Thăng Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20836",
+      "name": "Xã Thăng Trường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20848",
+      "name": "Xã Thăng Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20854",
+      "name": "Xã Tiên Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20857",
+      "name": "Xã Sơn Cẩm Hà",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20875",
+      "name": "Xã Lãnh Ngọc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20878",
+      "name": "Xã Thạnh Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20900",
+      "name": "Xã Trà My",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20908",
+      "name": "Xã Trà Liên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20920",
+      "name": "Xã Trà Đốc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20923",
+      "name": "Xã Trà Tân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20929",
+      "name": "Xã Trà Giáp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20938",
+      "name": "Xã Trà Leng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20941",
+      "name": "Xã Trà Tập",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20944",
+      "name": "Xã Nam Trà My",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20950",
+      "name": "Xã Trà Linh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20959",
+      "name": "Xã Trà Vân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20965",
+      "name": "Xã Núi Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20971",
+      "name": "Xã Tam Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20977",
+      "name": "Xã Đức Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20984",
+      "name": "Xã Tam Anh",
+      "englishName": "Tam Anh Nam commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "20992",
+      "name": "Xã Tam Hải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "21004",
+      "name": "Xã Tam Mỹ",
+      "englishName": "Tam My Tay commune",
+      "administrativeLevel": "Xã",
+      "provinceCode": "48",
+      "provinceName": "Thành phố Đà Nẵng",
+      "decree": "Số: 1659/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

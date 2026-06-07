@@ -1,0 +1,261 @@
+{% extends 'adminpageSIMCODE/base.html' %}
+{% load static %}
+{% block campus_shift_group %}
+<style>
+    .csg-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 0 30px 16px;
+    }
+    .csg-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: 0 30px 20px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        border: 1px solid #dee2e6;
+    }
+    .csg-filter .filter-item {
+        min-width: 200px;
+    }
+    .csg-table-wrap {
+        margin: 0 30px 30px;
+    }
+    .badge-full { background: #dc3545; color: #fff; padding: 4px 8px; border-radius: 6px; font-size: 12px; }
+    .badge-open { background: #28a745; color: #fff; padding: 4px 8px; border-radius: 6px; font-size: 12px; }
+    .badge-low { background: #ffc107; color: #212529; padding: 4px 8px; border-radius: 6px; font-size: 12px; }
+</style>
+
+<nav aria-label="breadcrumb" class="i-name">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'adminpage:admission' %}">Tuyển sinh</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cấu hình cơ sở - ca - tổ hợp</li>
+    </ol>
+</nav>
+
+<div class="csg-header">
+    <p class="mb-0 text-muted" style="margin-left: 30px;">
+        Quản lý chỉ tiêu tuyển sinh theo cơ sở, ca học và tổ hợp môn.
+    </p>
+    <button type="button" class="btn btn-primary me-4" onclick="openCsgModal()">
+        <i class="fas fa-plus me-1"></i> Thêm cấu hình
+    </button>
+    <a href="{% url 'adminpage:admission_vocational_manage' %}" class="btn btn-outline-secondary me-4">
+        <i class="fas fa-tools me-1"></i> Cấu hình dạy nghề
+    </a>
+</div>
+
+{% if messages %}
+<div style="margin: 0 30px 16px;">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} py-2 mb-2">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<form method="get" class="csg-filter">
+    <div class="filter-item">
+        <label for="campusFilter" class="form-label">Cơ sở</label>
+        <select class="form-control" id="campusFilter" name="campus" onchange="this.form.submit()">
+            <option value="">Tất cả</option>
+            {% for campus in campuses %}
+            <option value="{{ campus.id }}" {% if campus_filter == campus.id|stringformat:"s" %}selected{% endif %}>{{ campus.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="filter-item">
+        <label for="shiftFilter" class="form-label">Ca học</label>
+        <select class="form-control" id="shiftFilter" name="shift" onchange="this.form.submit()">
+            <option value="">Tất cả</option>
+            {% for shift in shifts %}
+            <option value="{{ shift.id }}" {% if shift_filter == shift.id|stringformat:"s" %}selected{% endif %}>{{ shift.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="filter-item d-flex align-items-end">
+        <a href="{% url 'adminpage:campus_shift_group_manage' %}" class="btn btn-outline-secondary">Xóa bộ lọc</a>
+    </div>
+</form>
+
+<div class="board csg-table-wrap">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>Cơ sở</td>
+                <td>Ca học</td>
+                <td>Tổ hợp môn</td>
+                <td>Số lớp</td>
+                <td>Sức chứa tối đa</td>
+                <td>Đã đăng ký</td>
+                <td>Chỗ còn lại</td>
+                <td>Trạng thái</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            {% with csg=row.obj %}
+            <tr>
+                <td class="people-des"><p>{{ csg.campus.name }}</p></td>
+                <td class="people-des"><p>{{ csg.shift.name }}</p></td>
+                <td class="people-des">
+                    <p><strong>Tổ hợp {{ csg.subject_group.code }}</strong></p>
+                    <small class="text-muted">{{ csg.subject_group.subjects|truncatechars:60 }}</small>
+                </td>
+                <td class="people-des"><p>{{ csg.number_of_classes }}</p></td>
+                <td class="people-des"><p>{{ row.max_capacity }}</p></td>
+                <td class="people-des"><p>{{ row.registered }}</p></td>
+                <td class="people-des"><p>{{ csg.registration_count }}</p></td>
+                <td>
+                    {% if csg.registration_count <= 0 %}
+                    <span class="badge-full">Hết chỗ</span>
+                    {% elif csg.registration_count <= 10 %}
+                    <span class="badge-low">Sắp hết</span>
+                    {% else %}
+                    <span class="badge-open">Còn chỗ</span>
+                    {% endif %}
+                </td>
+                <td class="view">
+                    <i style="cursor: pointer;" class="fa-regular fa-pen-to-square me-2"
+                       onclick="openCsgModal({{ csg.id }}, {{ csg.campus.id }}, {{ csg.shift.id }}, {{ csg.subject_group.id }}, {{ csg.number_of_classes }}, {{ csg.registration_count }})"></i>
+                    <form method="post" style="display:inline;" onsubmit="return confirm('Xóa cấu hình này?');">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" value="2">
+                        <input type="hidden" name="csg_id" value="{{ csg.id }}">
+                        <button type="submit" class="btn btn-link p-0 text-danger" title="Xóa">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            {% endwith %}
+            {% empty %}
+            <tr>
+                <td colspan="9" class="text-center py-4">Chưa có cấu hình nào.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<form id="csgForm" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="action" id="csgAction" value="0">
+    <input type="hidden" name="csg_id" id="csgId" value="">
+    <div class="modal fade" id="csgModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="csgModalTitle">Thêm cấu hình tuyển sinh</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Cơ sở</label>
+                            <select class="form-control" name="campus_id" id="csgCampus" required>
+                                <option value="">-- Chọn cơ sở --</option>
+                                {% for campus in campuses %}
+                                <option value="{{ campus.id }}">{{ campus.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Ca học</label>
+                            <select class="form-control" name="shift_id" id="csgShift" required>
+                                <option value="">-- Chọn ca --</option>
+                                {% for shift in shifts %}
+                                <option value="{{ shift.id }}">{{ shift.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Tổ hợp môn</label>
+                            <select class="form-control" name="subject_group_id" id="csgSubjectGroup" required>
+                                <option value="">-- Chọn tổ hợp --</option>
+                                {% for group in subject_groups %}
+                                <option value="{{ group.id }}">Tổ hợp {{ group.code }} — {{ group.description }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Số lớp</label>
+                            <input type="number" class="form-control" name="number_of_classes" id="csgClasses" min="0" value="1" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Chỗ còn lại (registration_count)</label>
+                            <input type="number" class="form-control" name="registration_count" id="csgRegistration" min="0" value="60">
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="auto_calc" id="csgAutoCalc" value="1" checked>
+                                <label class="form-check-label" for="csgAutoCalc">
+                                    Tự động tính chỗ còn lại = số lớp × 50 × 1.2
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+function calcCapacity(classes) {
+    return Math.floor(classes * 50 * 1.2);
+}
+
+function toggleRegistrationField() {
+    const autoCalc = document.getElementById('csgAutoCalc').checked;
+    const regInput = document.getElementById('csgRegistration');
+    regInput.disabled = autoCalc;
+    if (autoCalc) {
+        const classes = parseInt(document.getElementById('csgClasses').value || '0', 10);
+        regInput.value = calcCapacity(classes);
+    }
+}
+
+function openCsgModal(id, campusId, shiftId, subjectGroupId, classes, registration) {
+    const isEdit = typeof id !== 'undefined';
+    document.getElementById('csgModalTitle').textContent = isEdit ? 'Cập nhật cấu hình tuyển sinh' : 'Thêm cấu hình tuyển sinh';
+    document.getElementById('csgAction').value = isEdit ? '1' : '0';
+    document.getElementById('csgId').value = isEdit ? id : '';
+
+    const campus = document.getElementById('csgCampus');
+    const shift = document.getElementById('csgShift');
+    const subjectGroup = document.getElementById('csgSubjectGroup');
+    campus.value = isEdit ? campusId : '';
+    shift.value = isEdit ? shiftId : '';
+    subjectGroup.value = isEdit ? subjectGroupId : '';
+    campus.disabled = isEdit;
+    shift.disabled = isEdit;
+    subjectGroup.disabled = isEdit;
+
+    document.getElementById('csgClasses').value = isEdit ? classes : 1;
+    document.getElementById('csgRegistration').value = isEdit ? registration : calcCapacity(1);
+    document.getElementById('csgAutoCalc').checked = false;
+    toggleRegistrationField();
+
+    new bootstrap.Modal(document.getElementById('csgModal')).show();
+}
+
+document.getElementById('csgAutoCalc').addEventListener('change', toggleRegistrationField);
+document.getElementById('csgClasses').addEventListener('input', toggleRegistrationField);
+
+document.getElementById('csgForm').addEventListener('submit', function() {
+    ['csgCampus', 'csgShift', 'csgSubjectGroup'].forEach(function(id) {
+        document.getElementById(id).disabled = false;
+    });
+});
+</script>
+{% endblock %}

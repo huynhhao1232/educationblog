@@ -226,6 +226,55 @@ class CampusShiftGroup(models.Model):
     def __str__(self):
         return f"{self.campus.name} - {self.shift.name} - Tổ hợp {self.subject_group.code}"
 
+
+class VocationalCampus(models.Model):
+    """Cơ sở dạy nghề (GDNN)"""
+    name = models.CharField(max_length=255)
+    code = models.CharField(max_length=20, unique=True, blank=True)
+    address = models.TextField(blank=True)
+
+    class Meta:
+        verbose_name = 'Cơ sở dạy nghề'
+        verbose_name_plural = 'Cơ sở dạy nghề'
+
+    def __str__(self):
+        return self.name
+
+
+class CampusVocationalLink(models.Model):
+    """Liên kết cơ sở tuyển sinh GDTX với cơ sở dạy nghề"""
+    admission_campus = models.ForeignKey(
+        Campus, on_delete=models.CASCADE, related_name='vocational_links'
+    )
+    vocational_campus = models.ForeignKey(
+        VocationalCampus, on_delete=models.CASCADE, related_name='admission_links'
+    )
+
+    class Meta:
+        unique_together = ('admission_campus', 'vocational_campus')
+        verbose_name = 'Liên kết cơ sở dạy nghề'
+        verbose_name_plural = 'Liên kết cơ sở dạy nghề'
+
+    def __str__(self):
+        return f'{self.admission_campus.name} → {self.vocational_campus.name}'
+
+
+class VocationalTrade(models.Model):
+    """Nghề đào tạo tại cơ sở dạy nghề"""
+    vocational_campus = models.ForeignKey(
+        VocationalCampus, on_delete=models.CASCADE, related_name='trades'
+    )
+    name = models.CharField(max_length=255)
+
+    class Meta:
+        unique_together = ('vocational_campus', 'name')
+        verbose_name = 'Nghề'
+        verbose_name_plural = 'Nghề'
+
+    def __str__(self):
+        return f'{self.vocational_campus.name} - {self.name}'
+
+
 class AdmissionForm(models.Model):
     full_name = models.CharField(max_length=255)
     gender = models.CharField(max_length=10)
@@ -268,7 +317,7 @@ class AdmissionForm(models.Model):
     current_ward = models.CharField(max_length=100)
 
     # CCCD
-    id_number = models.CharField(max_length=20)
+    id_number = models.CharField(max_length=20, unique=True)
     id_issued_date = models.DateField()
     id_issued_place = models.CharField(max_length=100, default="Cục trưởng cục cảnh sát QLHC về TTXH")
 
@@ -278,6 +327,10 @@ class AdmissionForm(models.Model):
     graduation_rank = models.CharField(max_length=50)
     exam_score = models.DecimalField(max_digits=4, decimal_places=2, null=True, blank=True, validators=[MinValueValidator(0), MaxValueValidator(30)])
     conduct = models.CharField(max_length=50, null=True, blank=True)
+    conduct_6 = models.CharField(max_length=20, null=True, blank=True, verbose_name="KQRL lớp 6")
+    conduct_7 = models.CharField(max_length=20, null=True, blank=True, verbose_name="KQRL lớp 7")
+    conduct_8 = models.CharField(max_length=20, null=True, blank=True, verbose_name="KQRL lớp 8")
+    conduct_9 = models.CharField(max_length=20, null=True, blank=True, verbose_name="KQRL lớp 9")
     avg_score = models.DecimalField(max_digits=4, decimal_places=2, null=True, blank=True, validators=[MinValueValidator(0), MaxValueValidator(10)])
     math_score = models.DecimalField(max_digits=4, decimal_places=2, null=True, blank=True, validators=[MinValueValidator(0), MaxValueValidator(10)])  # Thêm điểm toán
     literature_score = models.DecimalField(max_digits=4, decimal_places=2, null=True, blank=True, validators=[MinValueValidator(0), MaxValueValidator(10)])
@@ -305,6 +358,20 @@ class AdmissionForm(models.Model):
     mother_birth = models.CharField(max_length=10)
     mother_phone = models.CharField(max_length=20)
     enable = models.BooleanField(default=False, null=False, blank=False)
+
+    study_vocational = models.CharField(
+        max_length=3, default='no',
+        choices=[('no', 'Không học nghề'), ('yes', 'Học nghề')]
+    )
+    vocational_campus = models.ForeignKey(
+        VocationalCampus, on_delete=models.SET_NULL, null=True, blank=True,
+        related_name='admissions'
+    )
+    vocational_trade = models.ForeignKey(
+        VocationalTrade, on_delete=models.SET_NULL, null=True, blank=True,
+        related_name='admissions'
+    )
+
     # Liên kết cơ sở - ca học - tổ hợp
     campus = models.ForeignKey(Campus, on_delete=models.PROTECT)
     shift = models.ForeignKey(Shift, on_delete=models.PROTECT)

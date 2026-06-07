@@ -9,10 +9,43 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.conf import settings
 from django.contrib import messages
-from django.core.mail import send_mail
 from django.utils import timezone
 import json
+from django.db import transaction
+from django.db.utils import IntegrityError
+from django.core.cache import cache
+import logging
+from .address_data import (
+    data_is_available,
+    is_valid_province_code,
+    load_communes,
+    load_provinces,
+)
+from .validators import validate_vn_cccd, validate_vn_phone
+from .admission_validation import validate_admission_post
 # Create your views here.
+logger = logging.getLogger(__name__)
+
+
+def _send_admission_confirmation_email(email, full_name):
+    if not email:
+        return
+    try:
+        send_mail(
+            subject='Xác nhận đăng ký nhập học',
+            message=(
+                f'Cảm ơn {full_name} đã đăng ký nhập học tại Trung tâm GDNN-GDTX Thủ Đức. '
+                'Chúng tôi đã nhận được đơn đăng ký của bạn và sẽ liên hệ lại trong thời gian sớm nhất. '
+                'Mọi thắc mắc xin liên hệ SĐT: 0338968006 (thầy Hào)'
+            ),
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[email],
+            fail_silently=False,
+        )
+    except Exception:
+        logger.exception('Không gửi được email xác nhận đăng ký tới %s', email)
+
+
 def group_list(lst, n):
     return [lst[i:i + n] for i in range(0, len(lst), n)]
 
@@ -184,216 +217,169 @@ def getAdmission(request):
         data = request.POST
         files = request.FILES
 
-        # Xử lý điểm dựa vào năm tốt nghiệp
-        graduation_year = data.get('graduation_year')
-        exam_score = None
-        avg_score = None
+        validation_err, scores = validate_admission_post(data, files)
+        if validation_err:
+            return JsonResponse({'error': validation_err}, status=400)
 
-        # Xử lý điểm các lớp THCS
-        math_score_6 = data.get('math_score_6')
-        literature_score_6 = data.get('literature_score_6')
-        math_score_7 = data.get('math_score_7')
-        literature_score_7 = data.get('literature_score_7')
-        math_score_8 = data.get('math_score_8')
-        literature_score_8 = data.get('literature_score_8')
-        math_score_9 = data.get('math_score_9')
-        literature_score_9 = data.get('literature_score_9')
+        graduation_year = data.get('graduation_year', '')
+        email = (data.get('email') or '').strip()
+        phone = (data.get('phone') or '').strip()
+        id_number = (data.get('id_number') or '').strip()
+        father_phone = (data.get('father_phone') or '').strip()
+        mother_phone = (data.get('mother_phone') or '').strip()
 
-        if graduation_year == '2025':
-            exam_score = data.get('examScore')
-            if exam_score and exam_score.strip():  # Check if not empty
-                try:
-                    exam_score = Decimal(exam_score)
-                except (ValueError, InvalidOperation):
-                    exam_score = None
-        else:
-            avg_score = data.get('avg_score')
-            if avg_score and avg_score.strip():  # Check if not empty
-                try:
-                    avg_score = Decimal(avg_score)
-                except (ValueError, InvalidOperation):
-                    avg_score = None
+        cccd_town = data.get('permanent_house_number', '')
+        cccd_district = data.get('permanent_street', '')
+        cccd_ward = data.get('permanent_ward', '')
+        cccd_province = data.get('permanent_province', '')
 
-        # Chuyển đổi điểm các lớp THCS sang Decimal
-        if math_score_6 and math_score_6.strip():
-            try:
-                math_score_6 = Decimal(math_score_6)
-            except (ValueError, InvalidOperation):
-                math_score_6 = None
-        else:
-            math_score_6 = None
+        current_house = data.get('current_house_number', '')
+        current_district = data.get('current_street', '')
+        current_ward = data.get('current_ward', '')
+        current_province = data.get('current_province', '')
 
-        if literature_score_6 and literature_score_6.strip():
-            try:
-                literature_score_6 = Decimal(literature_score_6)
-            except (ValueError, InvalidOperation):
-                literature_score_6 = None
-        else:
-            literature_score_6 = None
-
-        if math_score_7 and math_score_7.strip():
-            try:
-                math_score_7 = Decimal(math_score_7)
-            except (ValueError, InvalidOperation):
-                math_score_7 = None
-        else:
-            math_score_7 = None
-
-        if literature_score_7 and literature_score_7.strip():
-            try:
-                literature_score_7 = Decimal(literature_score_7)
-            except (ValueError, InvalidOperation):
-                literature_score_7 = None
-        else:
-            literature_score_7 = None
-
-        if math_score_8 and math_score_8.strip():
-            try:
-                math_score_8 = Decimal(math_score_8)
-            except (ValueError, InvalidOperation):
-                math_score_8 = None
-        else:
-            math_score_8 = None
-
-        if literature_score_8 and literature_score_8.strip():
-            try:
-                literature_score_8 = Decimal(literature_score_8)
-            except (ValueError, InvalidOperation):
-                literature_score_8 = None
-        else:
-            literature_score_8 = None
-
-        if math_score_9 and math_score_9.strip():
-            try:
-                math_score_9 = Decimal(math_score_9)
-            except (ValueError, InvalidOperation):
-                math_score_9 = None
-        else:
-            math_score_9 = None
-
-        if literature_score_9 and literature_score_9.strip():
-            try:
-                literature_score_9 = Decimal(literature_score_9)
-            except (ValueError, InvalidOperation):
-                literature_score_9 = None
-        else:
-            literature_score_9 = None
+        conduct_6 = data.get('conduct_6', '')
+        conduct_7 = data.get('conduct_7', '')
+        conduct_8 = data.get('conduct_8', '')
+        conduct_9 = data.get('conduct_9', '')
 
         try:
-            # Lấy các ForeignKey từ form
             campus = Campus.objects.get(id=data['campus_id'])
             shift = Shift.objects.get(id=data['shift_id'])
             subject_group = SubjectGroup.objects.get(id=data['subject_group_id'])
+        except (Campus.DoesNotExist, Shift.DoesNotExist, SubjectGroup.DoesNotExist, KeyError):
+            return JsonResponse({
+                'error': 'Thông tin cơ sở/ca/tổ hợp môn không hợp lệ'
+            }, status=400)
 
-            # Kiểm tra và cập nhật số lượng đăng ký
-            campus_shift_group = CampusShiftGroup.objects.get(
-                campus=campus,
-                shift=shift,
-                subject_group=subject_group
-            )
-
-            # Kiểm tra nếu còn chỗ
-            if campus_shift_group.registration_count <= 0:
-                return JsonResponse({
-                    'error': 'Tổ hợp môn này đã hết chỗ'
-                }, status=400)
-
-            # Giảm số lượng đăng ký đi 1
-            campus_shift_group.registration_count -= 1
-            campus_shift_group.save()
-
-            # Tạo bản ghi mới
-            obj = AdmissionForm.objects.create(
-                full_name = data.get('full_name', ''),
-                gender = data.get('gender', ''),
-                ethnicity = data.get('ethnicity', ''),
-                birthday = data.get('birthday', ''),
-                religion = data.get('religion', ''),
-                email = data.get('email', ''),
-                phone = data.get('phone', ''),
-
-                cccd_province = data.get('cccd_province', ''),
-                cccd_district = data.get('cccd_district', ''),
-                cccd_ward = data.get('cccd_ward', ''),
-                cccd_town = data.get('cccd_town', ''),
-
-                hometown_province = data.get('hometown_province', ''),
-
-                birth_reg_province = data.get('birth_reg_province', ''),
-                birth_reg_district = data.get('birth_reg_district', ''),
-                birth_reg_ward = data.get('birth_reg_ward', ''),
-                birth_reg_town = data.get('birth_reg_town', ''),
-
-                birth_place_province = data.get('birth_place_province', ''),
-                birth_place_district = data.get('birth_place_district', ''),
-                birth_place_ward = data.get('birth_place_ward', ''),
-                birth_place_facility = data.get('birth_place_facility', ''),
-
-                current_province = data.get('current_province', ''),
-                current_district = data.get('current_district', ''),
-                current_ward = data.get('current_ward', ''),
-
-                id_number = data.get('id_number', ''),
-                id_issued_date = data.get('id_issued_date', ''),
-                id_issued_place = data.get('id_issued_place', ''),
-
-                graduation_year = graduation_year,
-                graduation_school = data.get('graduation_school', ''),
-                graduation_rank = data.get('graduation_rank', ''),
-                exam_score = exam_score,
-                conduct = data.get('conduct2025') or data.get('conductBefore') or '',
-                avg_score = avg_score,
-
-                # Điểm các lớp THCS
-                math_score_6 = math_score_6,
-                literature_score_6 = literature_score_6,
-                math_score_7 = math_score_7,
-                literature_score_7 = literature_score_7,
-                math_score_8 = math_score_8,
-                literature_score_8 = literature_score_8,
-                math_score_9 = math_score_9,
-                literature_score_9 = literature_score_9,
-
-                current_job = data.get('current_job', ''),
-
-                father_name = data.get('father_name', ''),
-                father_job = data.get('father_job', ''),
-                father_birth = data.get('father_birth', ''),
-                father_phone = data.get('father_phone', ''),
-
-                mother_name = data.get('mother_name', ''),
-                mother_job = data.get('mother_job', ''),
-                mother_birth = data.get('mother_birth', ''),
-                mother_phone = data.get('mother_phone', ''),
-
-                campus = campus,
-                shift = shift,
-                subject_group = subject_group,
-
-                # Add file uploads
-                cccd_image = files.get('cccd_image'),
-                school_record_image = files.get('school_record_image')
-            )
-            # Gửi email xác nhận nếu có email
-            if obj.email:
-                send_mail(
-                    subject='Xác nhận đăng ký nhập học',
-                    message=f'Cảm ơn {obj.full_name} đã đăng ký nhập học tại Trung tâm GDNN-GDTX Thủ Đức. Chúng tôi đã nhận được đơn đăng ký của bạn và sẽ liên hệ lại trong thời gian sớm nhất. Mọi thắc mắc xin liên hệ SĐT: 0338968006 (thầy Hào)',
-                    from_email=settings.EMAIL_HOST_USER,  # Sử dụng DEFAULT_FROM_EMAIL trong settings
-                    recipient_list=[obj.email],
-                    fail_silently=True,
+        study_vocational = data.get('study_vocational', 'no')
+        vocational_campus_obj = None
+        vocational_trade_obj = None
+        if study_vocational == 'yes':
+            vc_id = data.get('vocational_campus_id')
+            vt_id = data.get('vocational_trade_id')
+            if not CampusVocationalLink.objects.filter(
+                admission_campus=campus,
+                vocational_campus_id=vc_id,
+            ).exists():
+                return JsonResponse({'error': 'Cơ sở dạy nghề không hợp lệ với cơ sở tuyển sinh'}, status=400)
+            try:
+                vocational_trade_obj = VocationalTrade.objects.get(
+                    id=vt_id, vocational_campus_id=vc_id
                 )
-            return redirect('/admission/?success=1')
+                vocational_campus_obj = vocational_trade_obj.vocational_campus
+            except VocationalTrade.DoesNotExist:
+                return JsonResponse({'error': 'Nghề đăng ký không hợp lệ'}, status=400)
 
+        try:
+            with transaction.atomic():
+                campus_shift_group = CampusShiftGroup.objects.select_for_update().get(
+                    campus=campus,
+                    shift=shift,
+                    subject_group=subject_group,
+                )
+
+                if campus_shift_group.registration_count <= 0:
+                    return JsonResponse({
+                        'error': 'Tổ hợp môn này đã hết chỗ'
+                    }, status=400)
+
+                campus_shift_group.registration_count -= 1
+                campus_shift_group.save(update_fields=['registration_count'])
+
+                obj = AdmissionForm.objects.create(
+                    full_name=(data.get('full_name') or '').strip().upper(),
+                    gender=data.get('gender', ''),
+                    ethnicity=data.get('ethnicity', ''),
+                    birthday=data.get('birthday', ''),
+                    religion='Không',
+                    email=email,
+                    phone=phone,
+
+                    cccd_province=cccd_province,
+                    cccd_district=cccd_district,
+                    cccd_ward=cccd_ward,
+                    cccd_town=cccd_town,
+
+                    hometown_province='',
+
+                    birth_reg_province='',
+                    birth_reg_district='',
+                    birth_reg_ward='',
+                    birth_reg_town=current_house,
+
+                    birth_place_province='',
+                    birth_place_district='',
+                    birth_place_ward='',
+                    birth_place_facility=data.get('birth_place', ''),
+
+                    current_province=current_province,
+                    current_district=current_district,
+                    current_ward=current_ward,
+
+                    id_number=id_number,
+                    id_issued_date=data.get('id_issued_date', ''),
+
+                    graduation_year=graduation_year,
+                    graduation_school=data.get('graduation_school', ''),
+                    graduation_rank='',
+
+                    exam_score=scores['exam_score'],
+                    avg_score=scores['avg_score'],
+                    math_score_6=scores['math_score_6'],
+                    literature_score_6=scores['literature_score_6'],
+                    math_score_7=scores['math_score_7'],
+                    literature_score_7=scores['literature_score_7'],
+                    math_score_8=scores['math_score_8'],
+                    literature_score_8=scores['literature_score_8'],
+                    math_score_9=scores['math_score_9'],
+                    literature_score_9=scores['literature_score_9'],
+
+                    conduct=conduct_9,
+                    conduct_6=conduct_6,
+                    conduct_7=conduct_7,
+                    conduct_8=conduct_8,
+                    conduct_9=conduct_9,
+
+                    current_job='',
+
+                    father_name=data.get('father_name', ''),
+                    father_job=data.get('father_job', ''),
+                    father_birth=data.get('father_birth', ''),
+                    father_phone=father_phone,
+
+                    mother_name=data.get('mother_name', ''),
+                    mother_job=data.get('mother_job', ''),
+                    mother_birth=data.get('mother_birth', ''),
+                    mother_phone=mother_phone,
+
+                    study_vocational=study_vocational,
+                    vocational_campus=vocational_campus_obj,
+                    vocational_trade=vocational_trade_obj,
+
+                    campus=campus,
+                    shift=shift,
+                    subject_group=subject_group,
+
+                    cccd_image=files.get('cccd_image'),
+                    school_record_image=files.get('school_record_image'),
+                )
         except CampusShiftGroup.DoesNotExist:
             return JsonResponse({
                 'error': 'Không tìm thấy tổ hợp môn này'
             }, status=404)
-        except Exception as e:
-            print(f"Error in admission: {str(e)}")
+        except IntegrityError:
+            return JsonResponse({
+                'error': 'Số CCCD này đã được đăng ký'
+            }, status=400)
+        except Exception:
+            logger.exception('Error creating admission form')
             return JsonResponse({
                 'error': 'Có lỗi xảy ra khi xử lý đơn đăng ký'
             }, status=500)
+
+        _send_admission_confirmation_email(obj.email, obj.full_name)
+        return JsonResponse({'success': True, 'redirect': '/admission/?success=1'})
 
     campuses = Campus.objects.all()
     subject_groups = SubjectGroup.objects.all()
@@ -461,8 +447,67 @@ def get_subjectgroups_by_campus_shift(request, campus_id, shift_id):
         return JsonResponse({'error': 'Internal server error'}, status=500)
 
 def check_cccd_exists(request, cccd):
-    exists = AdmissionForm.objects.filter(id_number=cccd).exists()
+    ip = request.META.get('REMOTE_ADDR', 'unknown')
+    cache_key = f'cccd_check:{ip}'
+    attempts = cache.get(cache_key, 0)
+    if attempts >= 30:
+        return JsonResponse({
+            'error': 'Bạn đã kiểm tra quá nhiều lần. Vui lòng thử lại sau.',
+            'exists': False,
+        }, status=429)
+    cache.set(cache_key, attempts + 1, 60)
+
+    cccd_err = validate_vn_cccd(cccd)
+    if cccd_err:
+        return JsonResponse({'error': cccd_err, 'exists': False}, status=400)
+    exists = AdmissionForm.objects.filter(id_number=cccd.strip()).exists()
     return JsonResponse({'exists': exists})
+
+
+def get_vocational_campuses_by_admission_campus(request, campus_id):
+    link_ids = CampusVocationalLink.objects.filter(
+        admission_campus_id=campus_id
+    ).values_list('vocational_campus_id', flat=True)
+    campuses = VocationalCampus.objects.filter(id__in=link_ids).order_by('name')
+    data = [{'id': c.id, 'name': c.name} for c in campuses]
+    return JsonResponse({'campuses': data})
+
+
+def get_vocational_trades_by_campus(request, vocational_campus_id):
+    trades = VocationalTrade.objects.filter(
+        vocational_campus_id=vocational_campus_id
+    ).order_by('name')
+    data = [{'id': t.id, 'name': t.name} for t in trades]
+    return JsonResponse({'trades': data})
+
+
+def get_address_provinces(request):
+    if not data_is_available():
+        return JsonResponse(
+            {'error': 'Dữ liệu địa chỉ chưa được cài đặt. Chạy: python manage.py sync_address_data'},
+            status=503,
+        )
+    try:
+        return JsonResponse(load_provinces())
+    except Exception:
+        return JsonResponse({'error': 'Không thể tải dữ liệu tỉnh/thành phố'}, status=502)
+
+
+def get_address_communes(request, province_code):
+    if not is_valid_province_code(province_code):
+        return JsonResponse({'error': 'Mã tỉnh/thành phố không hợp lệ'}, status=400)
+    if not data_is_available():
+        return JsonResponse(
+            {'error': 'Dữ liệu địa chỉ chưa được cài đặt. Chạy: python manage.py sync_address_data'},
+            status=503,
+        )
+    try:
+        return JsonResponse(load_communes(province_code))
+    except FileNotFoundError:
+        return JsonResponse({'error': 'Không tìm thấy dữ liệu xã/phường'}, status=404)
+    except Exception:
+        return JsonResponse({'error': 'Không thể tải dữ liệu xã/phường'}, status=502)
+
 
 def login_view(request):
     # Redirect if user is already logged in

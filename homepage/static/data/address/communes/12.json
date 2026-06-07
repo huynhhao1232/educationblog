@@ -1,0 +1,347 @@
+{
+  "requestId": "wJ7BfdwknafIpTshU1Dpn",
+  "communes": [
+    {
+      "code": "03388",
+      "name": "Phường Đoàn Kết",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03390",
+      "name": "Xã Bình Lư",
+      "englishName": "Tam Đường town",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03394",
+      "name": "Xã Sin Suối Hồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03405",
+      "name": "Xã Tả Lèng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03408",
+      "name": "Phường Tân Phong",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03424",
+      "name": "Xã Bản Bo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03430",
+      "name": "Xã Khun Há",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03433",
+      "name": "Xã Bum Tở",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03434",
+      "name": "Xã Nậm Hàng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03439",
+      "name": "Xã Thu Lũm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03442",
+      "name": "Xã Pa Ủ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03445",
+      "name": "Xã Mường Tè",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03451",
+      "name": "Xã Mù Cả",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03460",
+      "name": "Xã Hua Bum",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03463",
+      "name": "Xã Tà Tổng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03466",
+      "name": "Xã Bum Nưa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03472",
+      "name": "Xã Mường Mô",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03478",
+      "name": "Xã Sìn Hồ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03487",
+      "name": "Xã Lê Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03503",
+      "name": "Xã Pa Tần",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03508",
+      "name": "Xã Hồng Thu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03517",
+      "name": "Xã Nậm Tăm",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03529",
+      "name": "Xã Tủa Sín Chải",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03532",
+      "name": "Xã Pu Sam Cáp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03538",
+      "name": "Xã Nậm Mạ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03544",
+      "name": "Xã Nậm Cuổi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03549",
+      "name": "Xã Phong Thổ",
+      "englishName": "Phong Thổ town",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03562",
+      "name": "Xã Sì Lở Lầu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03571",
+      "name": "Xã Dào San",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03583",
+      "name": "Xã Khổng Lào",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03595",
+      "name": "Xã Than Uyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03598",
+      "name": "Xã Tân Uyên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03601",
+      "name": "Xã Mường Khoa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03613",
+      "name": "Xã Nậm Sỏ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03616",
+      "name": "Xã Pắc Ta",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03618",
+      "name": "Xã Mường Than",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03637",
+      "name": "Xã Mường Kim",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "03640",
+      "name": "Xã Khoen On",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "12",
+      "provinceName": "Tỉnh Lai Châu",
+      "decree": "Số: 1670/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}

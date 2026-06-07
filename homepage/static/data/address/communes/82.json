@@ -1,0 +1,923 @@
+{
+  "requestId": "iT093Z4NSBoIE_tzdthvd",
+  "communes": [
+    {
+      "code": "28249",
+      "name": "Phường Đạo Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28261",
+      "name": "Phường Mỹ Tho",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28270",
+      "name": "Phường Thới Sơn",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28273",
+      "name": "Phường Mỹ Phong",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28285",
+      "name": "Phường Trung An",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28297",
+      "name": "Phường Long Thuận",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28306",
+      "name": "Phường Gò Công",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28315",
+      "name": "Phường Bình Xuân",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28321",
+      "name": "Xã Tân Phước 1",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28327",
+      "name": "Xã Tân Phước 2",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28336",
+      "name": "Xã Hưng Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28345",
+      "name": "Xã Tân Phước 3",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28360",
+      "name": "Xã Cái Bè",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28366",
+      "name": "Xã Hậu Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28378",
+      "name": "Xã Mỹ Thiện",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28393",
+      "name": "Xã Hội Cư",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28405",
+      "name": "Xã Mỹ Đức Tây",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28414",
+      "name": "Xã Mỹ Lợi",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28426",
+      "name": "Xã Thanh Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28429",
+      "name": "Xã An Hữu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28435",
+      "name": "Phường Mỹ Phước Tây",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28436",
+      "name": "Phường Thanh Hòa",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28439",
+      "name": "Phường Cai Lậy",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28444",
+      "name": "Xã Thạnh Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28456",
+      "name": "Xã Mỹ Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28468",
+      "name": "Xã Tân Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28471",
+      "name": "Xã Bình Phú",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28477",
+      "name": "Phường Nhị Quý",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28501",
+      "name": "Xã Hiệp Đức",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28504",
+      "name": "Xã Long Tiên",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28516",
+      "name": "Xã Ngũ Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28519",
+      "name": "Xã Châu Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28525",
+      "name": "Xã Tân Hương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28537",
+      "name": "Xã Long Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28543",
+      "name": "Xã Long Định",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28564",
+      "name": "Xã Bình Trưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28576",
+      "name": "Xã Vĩnh Kim",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28582",
+      "name": "Xã Kim Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28594",
+      "name": "Xã Chợ Gạo",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28603",
+      "name": "Xã Mỹ Tịnh An",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28615",
+      "name": "Xã Lương Hòa Lạc",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28627",
+      "name": "Xã Tân Thuận Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28633",
+      "name": "Xã An Thạnh Thủy",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28648",
+      "name": "Xã Bình Ninh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28651",
+      "name": "Xã Vĩnh Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28660",
+      "name": "Xã Đồng Sơn",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28663",
+      "name": "Xã Phú Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28678",
+      "name": "Xã Vĩnh Hựu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28687",
+      "name": "Xã Long Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28693",
+      "name": "Xã Tân Thới",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28696",
+      "name": "Xã Tân Phú Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28702",
+      "name": "Xã Tân Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28720",
+      "name": "Xã Gia Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28723",
+      "name": "Xã Tân Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28729",
+      "name": "Phường Sơn Qui",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28738",
+      "name": "Xã Tân Điền",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "28747",
+      "name": "Xã Gò Công Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29869",
+      "name": "Phường Cao Lãnh",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29884",
+      "name": "Phường Mỹ Ngãi",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29888",
+      "name": "Phường Mỹ Trà",
+      "englishName": "My Phu Commune",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29905",
+      "name": "Phường Sa Đéc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29926",
+      "name": "Xã Tân Hồng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29929",
+      "name": "Xã Tân Hộ Cơ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29938",
+      "name": "Xã Tân Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29944",
+      "name": "Xã An Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29954",
+      "name": "Phường An Bình",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29955",
+      "name": "Phường Hồng Ngự",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29971",
+      "name": "Xã Thường Phước",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29978",
+      "name": "Phường Thường Lạc",
+      "englishName": "",
+      "administrativeLevel": "Phường",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29983",
+      "name": "Xã Long Khánh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "29992",
+      "name": "Xã Long Phú Thuận",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30001",
+      "name": "Xã Tràm Chim",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30010",
+      "name": "Xã Tam Nông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30019",
+      "name": "Xã An Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30025",
+      "name": "Xã Phú Cường",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30028",
+      "name": "Xã An Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30034",
+      "name": "Xã Phú Thọ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30037",
+      "name": "Xã Tháp Mười",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30043",
+      "name": "Xã Phương Thịnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30046",
+      "name": "Xã Trường Xuân",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30055",
+      "name": "Xã Mỹ Quí",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30061",
+      "name": "Xã Đốc Binh Kiều",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30073",
+      "name": "Xã Thanh Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30076",
+      "name": "Xã Mỹ Thọ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30085",
+      "name": "Xã Ba Sao",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30088",
+      "name": "Xã Phong Mỹ",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30112",
+      "name": "Xã Mỹ Hiệp",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30118",
+      "name": "Xã Bình Hàng Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30130",
+      "name": "Xã Thanh Bình",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30154",
+      "name": "Xã Tân Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30157",
+      "name": "Xã Tân Thạnh",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30163",
+      "name": "Xã Bình Thành",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30169",
+      "name": "Xã Lấp Vò",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30178",
+      "name": "Xã Mỹ An Hưng",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30184",
+      "name": "Xã Tân Khánh Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30208",
+      "name": "Xã Hòa Long",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30214",
+      "name": "Xã Tân Dương",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30226",
+      "name": "Xã Lai Vung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30235",
+      "name": "Xã Phong Hòa",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30244",
+      "name": "Xã Phú Hựu",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30253",
+      "name": "Xã Tân Nhuận Đông",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    },
+    {
+      "code": "30259",
+      "name": "Xã Tân Phú Trung",
+      "englishName": "",
+      "administrativeLevel": "Xã",
+      "provinceCode": "82",
+      "provinceName": "Tỉnh Đồng Tháp",
+      "decree": "Số: 1663/NQ-UBTVQH15; Ngày: 16/06/2025"
+    }
+  ]
+}
