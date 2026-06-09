@@ -215,9 +215,8 @@ def getActivity(request):
 def getAdmission(request):
     if request.method == 'POST':
         data = request.POST
-        files = request.FILES
 
-        validation_err, scores = validate_admission_post(data, files)
+        validation_err, scores = validate_admission_post(data)
         if validation_err:
             return JsonResponse({'error': validation_err}, status=400)
 
@@ -360,9 +359,6 @@ def getAdmission(request):
                     campus=campus,
                     shift=shift,
                     subject_group=subject_group,
-
-                    cccd_image=files.get('cccd_image'),
-                    school_record_image=files.get('school_record_image'),
                 )
         except CampusShiftGroup.DoesNotExist:
             return JsonResponse({

@@ -247,45 +247,6 @@
         z-index: 1000;
     }
 
-    /* File upload styles */
-    .step4-style input[type="file"] {
-        border: 2px dashed #ccc;
-        border-radius: 8px;
-        padding: 10px;
-        background-color: #fafafa;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-
-    .step4-style input[type="file"]:hover {
-        border-color: #007bff;
-        background-color: #f0f8ff;
-    }
-
-    .step4-style input[type="file"]:focus {
-        border-color: #007bff;
-        background-color: #f0f8ff;
-        outline: none;
-    }
-
-    .step4-style input[type="file"].error {
-        border-color: #dc3545;
-        background-color: #fff5f5;
-    }
-
-    .step4-style input[type="file"].success {
-        border-color: #28a745;
-        background-color: #f8fff8;
-    }
-
-    .file-info {
-        margin-top: 5px;
-        padding: 8px;
-        border-radius: 4px;
-        font-size: 12px;
-        animation: fadeIn 0.3s ease;
-    }
-
     @keyframes fadeIn {
         from { opacity: 0; transform: translateY(-10px); }
         to { opacity: 1; transform: translateY(0); }
@@ -343,13 +304,14 @@
             </div>
 
             <div id="step4" class="step d-none step4-style">
-                <form method="post" action="{%url 'homepage:admission' %}" id="admissionForm" enctype="multipart/form-data">
+                <form method="post" action="{%url 'homepage:admission' %}" id="admissionForm">
                     {% csrf_token %}
                     <div class="text-center">
-                        <p><strong>SỞ GIÁO DỤC VÀ ĐÀO TẠO THÀNH PHỐ HỒ CHÍ MINH</strong></p>
+
                         <p><strong>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</strong><br>
                             <span class="underline">Độc lập – Tự do – Hạnh phúc</span>
                         </p>
+                        <p><strong>SỞ GIÁO DỤC VÀ ĐÀO TẠO THÀNH PHỐ HỒ CHÍ MINH</strong></p>
                         <p><strong>TRUNG TÂM GDNN-GDTX THÀNH PHỐ THỦ ĐỨC</strong></p>
                         <h4><strong>ĐƠN XIN XÉT TUYỂN HỌC CHƯƠNG TRÌNH GDTX</strong></h4>
                         <p><strong>LỚP 10 – NĂM HỌC 2026-2027</strong></p>
@@ -461,10 +423,6 @@
                         <div class="form-col">
                             <label for="id_issued_date">Ngày cấp <span style="color:red">*</span></label>
                             <input type="date" name="id_issued_date" id="id_issued_date" required>
-                        </div>
-                        <div class="form-col">
-                            <label for="cccd_image">Ảnh CCCD <span style="color:red">*</span></label>
-                            <input type="file" name="cccd_image" id="cccd_image" accept="image/*" required>
                         </div>
                     </div>
 
@@ -651,40 +609,8 @@
 
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="school_record_image">Ảnh học bạ (trang số 1) <span style="color:red">*</span></label>
-                            <input type="file" name="school_record_image" id="school_record_image" accept="image/*" required>
-                        </div>
-                        <div class="form-col">
                             <label for="email">Email <span style="color:red">*</span></label>
                             <input type="email" name="email" id="email" placeholder="example@email.com" required>
-                        </div>
-                    </div>
-
-                    <p class="mt-3 mb-1"><strong>Đăng ký học nghề song song</strong></p>
-                    <div class="form-row">
-                        <div class="form-col">
-                            <label for="study_vocational">Học nghề <span style="color:red">*</span></label>
-                            <select name="study_vocational" id="study_vocational" required onchange="handleStudyVocationalChange()">
-                                <option value="">-- Chọn --</option>
-                                <option value="no">Không học nghề</option>
-                                <option value="yes">Có học nghề</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div id="vocationalFields" class="d-none">
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="vocational_campus_id">Cơ sở dạy nghề <span style="color:red">*</span></label>
-                                <select name="vocational_campus_id" id="vocational_campus_id" onchange="handleVocationalCampusChange()">
-                                    <option value="">-- Chọn cơ sở --</option>
-                                </select>
-                            </div>
-                            <div class="form-col">
-                                <label for="vocational_trade_id">Nghề đăng ký <span style="color:red">*</span></label>
-                                <select name="vocational_trade_id" id="vocational_trade_id">
-                                    <option value="">-- Chọn nghề --</option>
-                                </select>
-                            </div>
                         </div>
                     </div>
 
@@ -782,6 +708,35 @@
                             <li>Bằng tốt nghiệp THCS (nếu có)</li>
                             <li>01 Bản sao giấy tờ UT, KK có công chứng (nếu có)</li>
                         </ul>
+                    </div>
+
+                    <p class="mt-3 mb-1"><strong>Đăng ký học trung cấp nghề song song chương trình GDTX</strong></p>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="study_vocational">Học nghề <span style="color:red">*</span></label>
+                            <select name="study_vocational" id="study_vocational" required onchange="handleStudyVocationalChange()">
+                                <option value="">-- Chọn --</option>
+                                <option value="no">Không học nghề</option>
+                                <option value="yes">Có học nghề</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="vocationalFields" class="d-none">
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="vocational_campus_id">Cơ sở dạy nghề <span style="color:red">*</span></label>
+                                <select name="vocational_campus_id" id="vocational_campus_id" onchange="handleVocationalCampusChange()">
+                                    <option value="">-- Chọn cơ sở --</option>
+                                </select>
+                            </div>
+                            <div class="form-col">
+                                <label for="vocational_trade_id">Nghề đăng ký <span style="color:red">*</span></label>
+                                <select name="vocational_trade_id" id="vocational_trade_id">
+                                    <option value="">-- Chọn nghề --</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
                     <input type="hidden" name="campus_id" id="campus_id">

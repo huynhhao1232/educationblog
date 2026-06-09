@@ -130,13 +130,11 @@ def validate_study_vocational(data):
     return None
 
 
-def validate_admission_post(data, files=None):
+def validate_admission_post(data):
     """
     Validate toàn bộ POST đăng ký tuyển sinh.
     Trả về (error_message, parsed_scores_dict).
     """
-    files = files or {}
-
     email_err = validate_admission_email(data.get('email'))
     if email_err:
         return email_err, None
@@ -225,13 +223,5 @@ def validate_admission_post(data, files=None):
     scores, score_err = parse_graduation_scores(data, graduation_year)
     if score_err:
         return score_err, None
-
-    for label, file_key in [
-        ('Ảnh CCCD', 'cccd_image'),
-        ('Ảnh học bạ', 'school_record_image'),
-    ]:
-        img_err = validate_admission_image(files.get(file_key), label)
-        if img_err:
-            return img_err, None
 
     return None, scores
