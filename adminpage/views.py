@@ -7072,6 +7072,61 @@ def journal_subject_detail(request, journal_id):
     context = {'journal': journal, 'rows': rows, 'weeks': weeks, 'today': date.today()}
     return render(request, 'adminpageSIMCODE/journal_subject_detail.html', context)
 
+def _journal_collect_teacher_week_stats(year, week_number):
+    """
+    Thống kê theo (môn/sổ, GV) trong tuần: giới hạn (số hàng), đã ghi, thiếu, tiết dư, mở giới hạn.
+    """
+    stats = []
+    journals = SubjectJournal.objects.filter(year=year).prefetch_related('weeks')
+    for journal in journals:
+        week_obj = next((w for w in journal.weeks.all() if w.week_number == week_number), None)
+        if not week_obj:
+            continue
+
+        subject_label = (
+            journal.get_subject_display()
+            if hasattr(journal, 'get_subject_display') and callable(getattr(journal, 'get_subject_display'))
+            else journal.subject
+        )
+
+        override_map = {
+            o['teacher_id']: o['allow_over_limit']
+            for o in JournalTeacherWeekLimitOverride.objects.filter(
+                journal_week=week_obj
+            ).values('teacher_id', 'allow_over_limit')
+        }
+
+        required_qs = JournalRow.objects.filter(subject_journal=journal).values(
+            'teacher_id',
+            'teacher__access_code',
+            'teacher__full_name',
+        ).annotate(required=django_models.Count('id')).order_by('teacher__access_code')
+
+        actual_qs = JournalEntry.objects.filter(
+            journal_row__subject_journal=journal,
+            week_number=week_number,
+        ).values('journal_row__teacher_id').annotate(actual=django_models.Count('id'))
+        actual_map = {row['journal_row__teacher_id']: row['actual'] for row in actual_qs}
+
+        for rec in required_qs:
+            tid = rec['teacher_id']
+            required = rec['required']
+            actual = actual_map.get(tid, 0)
+            stats.append({
+                'subject': subject_label,
+                'teacher_code': rec['teacher__access_code'],
+                'teacher_name': rec['teacher__full_name'],
+                'required': required,
+                'actual': actual,
+                'missing': max(required - actual, 0),
+                'surplus': max(actual - required, 0),
+                'allow_over_limit': bool(override_map.get(tid, False)),
+            })
+
+    stats.sort(key=lambda r: (str(r['subject']), str(r['teacher_code'])))
+    return stats
+
+
 def journal_thong_ke_export(request):
     """Export Excel thống kê GV ghi sổ đầu bài theo mẫu thong-ke.xlsx: Môn | Họ tên GV | Ngày dạy | Các tiết."""
     err = _require_journal_admin(request)
@@ -7101,7 +7156,7 @@ def journal_thong_ke_export(request):
         'period',
     )
 
-    # Gom theo (môn, giáo viên, ngày) -> danh sách tiết
+    # Gom theo (môn, giáo viên, ngày) -> danh sách tiết (giữ đủ số tiết, kể cả vượt giới hạn)
     group = defaultdict(list)
     for e in entries:
         sj = e.journal_row.subject_journal
@@ -7111,14 +7166,17 @@ def journal_thong_ke_export(request):
 
     # Mỗi dòng: (subject_display, teacher_name, lesson_date, periods_str) — sort tiết
     rows_data = []
-    for (sj_id, subject_label, _tid, teacher_name, lesson_date), periods in group.items():
-        periods_str = ','.join(str(p) for p in sorted(set(periods)))
+    for (_sj_id, subject_label, _tid, teacher_name, lesson_date), periods in group.items():
+        periods_str = ','.join(str(p) for p in sorted(periods))
         rows_data.append((subject_label, teacher_name, lesson_date, periods_str))
     rows_data.sort(key=lambda r: (r[0], r[1], r[2]))
 
+    teacher_stats = _journal_collect_teacher_week_stats(year, week_number)
+    surplus_stats = [s for s in teacher_stats if s['surplus'] > 0]
+
     wb = Workbook()
     ws = wb.active
-    ws.title = f'Tuan {week_number}'
+    ws.title = f'Chi tiet tuan {week_number}'
     title = f'THỐNG KÊ GIÁO VIÊN GHI SỔ ĐẦU BÀI TUẦN {week_number} NĂM HỌC {year}'
     ws.cell(row=1, column=1, value=title)
     ws.cell(row=2, column=1, value=None)
@@ -7131,6 +7189,38 @@ def journal_thong_ke_export(request):
         ws.cell(row=idx, column=2, value=teacher_name or '')
         ws.cell(row=idx, column=3, value=lesson_date)
         ws.cell(row=idx, column=4, value=periods_str)
+
+    # Sheet tổng hợp: giới hạn / đã ghi / thiếu / tiết dư (khi admin mở giới hạn)
+    ws_sum = wb.create_sheet(title=f'Tong hop tuan {week_number}')
+    ws_sum.cell(row=1, column=1, value=f'TỔNG HỢP TUẦN {week_number} NĂM HỌC {year}')
+    header_font = Font(bold=True)
+    summary_headers = [
+        'STT', 'Môn', 'Mã GV', 'Họ và tên giáo viên',
+        'Giới hạn (số hàng)', 'Số tiết đã ghi', 'Số tiết còn thiếu', 'Tiết dư',
+        'Đã mở giới hạn',
+    ]
+    for col, h in enumerate(summary_headers, start=1):
+        cell = ws_sum.cell(row=3, column=col, value=h)
+        cell.font = header_font
+
+    for idx, row in enumerate(teacher_stats, start=1):
+        ws_sum.cell(row=idx + 3, column=1, value=idx)
+        ws_sum.cell(row=idx + 3, column=2, value=row['subject'])
+        ws_sum.cell(row=idx + 3, column=3, value=row['teacher_code'])
+        ws_sum.cell(row=idx + 3, column=4, value=row['teacher_name'])
+        ws_sum.cell(row=idx + 3, column=5, value=row['required'])
+        ws_sum.cell(row=idx + 3, column=6, value=row['actual'])
+        ws_sum.cell(row=idx + 3, column=7, value=row['missing'])
+        ws_sum.cell(row=idx + 3, column=8, value=row['surplus'])
+        ws_sum.cell(row=idx + 3, column=9, value='Có' if row['allow_over_limit'] else '')
+
+    if surplus_stats:
+        note_row = len(teacher_stats) + 5
+        ws_sum.cell(
+            row=note_row,
+            column=1,
+            value=f'Có {len(surplus_stats)} giáo viên ghi vượt giới hạn (tiết dư > 0).',
+        )
 
     buffer = BytesIO()
     wb.save(buffer)
