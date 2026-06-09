@@ -268,16 +268,8 @@ def campus_shift_group_manage(request):
                     registration_count = csg.registration_count
             csg.number_of_classes = number_of_classes
             csg.registration_count = registration_count
-            registered = _count_registered(csg.campus, csg.shift, csg.subject_group)
-            if registration_count < registered:
-                messages.error(
-                    request,
-                    f'Chỗ đăng ký ({registration_count}) không thể nhỏ hơn '
-                    f'số học viên đã đăng ký ({registered}).',
-                )
-            else:
-                csg.save()
-                messages.success(request, 'Đã cập nhật cấu hình tuyển sinh.')
+            csg.save()
+            messages.success(request, 'Đã cập nhật cấu hình tuyển sinh.')
         elif action == '2':
             csg = get_object_or_404(CampusShiftGroup, id=request.POST.get('csg_id'))
             if AdmissionForm.objects.filter(
