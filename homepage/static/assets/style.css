@@ -30,15 +30,21 @@ a{
 }
 
 
-.navbar {
+.navbar:not(.fixed-top) {
     position: relative;
     top: 0;
     left: 0;
     z-index: 10;
-
     min-height: 70px;
+}
 
-
+.navbar.fixed-top {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    min-height: 56px;
 }
 
 .navbar ul li a{
