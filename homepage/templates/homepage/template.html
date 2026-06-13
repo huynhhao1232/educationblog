@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1200, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% block extra_head %}{% endblock %}
 
   <title>{%block title%%} Trung tâm GDNN-GDTX Thủ Đức {%endblock%}</title>{%load static%}
   <link rel="stylesheet" href="{%static 'assets/style.css' %}">
