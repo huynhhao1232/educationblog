@@ -8,7 +8,9 @@ from .validators import validate_vn_cccd, validate_vn_phone
 
 VALID_GENDERS = {'Nam', 'Nữ'}
 VALID_CONDUCT = {'Tốt', 'Khá', 'Đạt', 'Chưa Đạt'}
-VALID_GRADUATION_YEARS = {'current', 'before', ''}
+VALID_ADMISSION_METHODS = {'transcript', 'exam'}
+LEGACY_GRADUATION_YEARS = {'current', 'before'}
+GRADUATION_YEAR_MIN = 1985
 ALLOWED_IMAGE_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
 ALLOWED_IMAGE_CONTENT_TYPES = {
     'image/jpeg', 'image/png', 'image/webp', 'image/gif',
@@ -68,7 +70,67 @@ def _parse_decimal(raw, min_val, max_val, max_label=None, required=True):
     return value, None
 
 
-def parse_graduation_scores(data, graduation_year):
+def infer_admission_method_from_admission(admission):
+    """Suy ra phương thức xét tuyển từ hồ sơ đã lưu."""
+    if admission.exam_score is not None:
+        return 'exam'
+    grade_fields = (
+        'avg_score', 'math_score_6', 'literature_score_6',
+        'math_score_7', 'literature_score_7',
+        'math_score_8', 'literature_score_8',
+        'math_score_9', 'literature_score_9',
+    )
+    if any(getattr(admission, f) is not None for f in grade_fields):
+        return 'transcript'
+    if admission.graduation_year == 'before':
+        return 'transcript'
+    if admission.graduation_year == 'current':
+        return 'exam'
+    return 'exam'
+
+
+def graduation_year_label(raw):
+    if raw == 'current':
+        return 'Tốt nghiệp năm nay (dữ liệu cũ)'
+    if raw == 'before':
+        return 'Tốt nghiệp những năm trước (dữ liệu cũ)'
+    return str(raw)
+
+
+def _resolve_admission_method(data, graduation_year=None):
+    """Xác định phương thức xét tuyển từ form hoặc dữ liệu cũ."""
+    method = (data.get('admission_method') or '').strip()
+    if method in VALID_ADMISSION_METHODS:
+        return method
+    if graduation_year == 'current':
+        return 'exam'
+    if graduation_year == 'before':
+        return 'transcript'
+    if data.get('graduation_total_score') or data.get('exam_score'):
+        return 'exam'
+    if data.get('math_score_6') or data.get('avg_score'):
+        return 'transcript'
+    return ''
+
+
+def validate_graduation_year(raw):
+    raw = (raw or '').strip()
+    if not raw:
+        return None, 'Năm tốt nghiệp THCS không được để trống'
+    if raw in LEGACY_GRADUATION_YEARS:
+        return raw, None
+    try:
+        year = int(raw)
+    except (ValueError, TypeError):
+        return None, 'Năm tốt nghiệp THCS không hợp lệ'
+    from django.utils import timezone
+    current = timezone.now().year
+    if year < GRADUATION_YEAR_MIN or year > current:
+        return None, 'Năm tốt nghiệp THCS không hợp lệ'
+    return str(year), None
+
+
+def parse_graduation_scores(data, graduation_year=None):
     """Trả về dict điểm hoặc (None, error_message)."""
     result = {
         'exam_score': None,
@@ -83,7 +145,11 @@ def parse_graduation_scores(data, graduation_year):
         'literature_score_9': None,
     }
 
-    if graduation_year == 'current':
+    admission_method = _resolve_admission_method(data, graduation_year)
+    if not admission_method:
+        return None, 'Vui lòng chọn phương thức xét tuyển'
+
+    if admission_method == 'exam':
         value, err = _parse_decimal(
             data.get('graduation_total_score') or data.get('exam_score'),
             0, 30, max_label='30.0',
@@ -93,7 +159,7 @@ def parse_graduation_scores(data, graduation_year):
         result['exam_score'] = value
         return result, None
 
-    if graduation_year == 'before':
+    if admission_method == 'transcript':
         score_map = [
             ('Điểm Toán lớp 6', 'math_score_6'),
             ('Điểm Văn lớp 6', 'literature_score_6'),
@@ -115,9 +181,7 @@ def parse_graduation_scores(data, graduation_year):
         result['avg_score'] = avg
         return result, None
 
-    if graduation_year:
-        return None, 'Loại tốt nghiệp không hợp lệ'
-    return result, None
+    return None, 'Phương thức xét tuyển không hợp lệ'
 
 
 def validate_study_vocational(data):
@@ -206,6 +270,14 @@ def validate_admission_post(data):
         if not (data.get(field) or '').strip():
             return f'{label} không được để trống', None
 
+    graduation_year, year_err = validate_graduation_year(data.get('graduation_year'))
+    if year_err:
+        return year_err, None
+
+    admission_method = _resolve_admission_method(data, graduation_year)
+    if admission_method not in VALID_ADMISSION_METHODS:
+        return 'Vui lòng chọn phương thức xét tuyển', None
+
     conduct_err = validate_admission_conduct(
         data.get('conduct_6', ''),
         data.get('conduct_7', ''),
@@ -219,7 +291,6 @@ def validate_admission_post(data):
     if vocational_err:
         return vocational_err, None
 
-    graduation_year = data.get('graduation_year', '')
     scores, score_err = parse_graduation_scores(data, graduation_year)
     if score_err:
         return score_err, None

@@ -17,21 +17,64 @@
 {% load static %}
 <style>
     .step4-style {
-        font-family: "Times New Roman", Times, serif;
+        font-family: Roboto, "Segoe UI", Arial, sans-serif;
         background: #fff;
-        padding: 24px 32px;
-        border-radius: 16px;
-        max-width: 900px;
-        margin: 32px auto;
-        box-shadow: 0 4px 24px 0 #d3e1ff33;
+        padding: 8px 4px 24px;
+        max-width: none;
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        color: #222;
     }
 
-    .step4-style .text-center {
+    .step4-style .form-intro {
         text-align: center;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #e5e7eb;
     }
 
-    .step4-style .underline {
-        text-decoration: underline;
+    .step4-style .form-intro h2 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #023EB6;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        margin-bottom: 8px;
+        line-height: 1.35;
+    }
+
+    .step4-style .form-intro .form-intro-meta {
+        font-size: 14px;
+        color: #555;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .step4-style .form-section-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #111;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin: 24px 0 14px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #023EB6;
+    }
+
+    .step4-style .form-section-hint {
+        font-size: 13px;
+        color: #666;
+        margin: 0 0 12px;
+        line-height: 1.45;
+    }
+
+    .step4-style .form-section-hint.after-section-title {
+        margin-top: -6px;
+    }
+
+    .step4-style .req {
+        color: #dc2626;
     }
 
     .step4-style form {
@@ -40,77 +83,240 @@
 
     .step4-style .form-row {
         display: flex;
-        gap: 40px;
-        margin-bottom: 20px;
-        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+        align-items: stretch;
     }
 
     .step4-style .form-row>.form-col {
-        flex: 1 1 45%;
-        min-width: 280px;
+        flex: 1 1 100%;
+        width: 100%;
+        min-width: 0;
         display: flex;
         flex-direction: column;
         position: relative;
-        padding-bottom: 22px;
+        padding-bottom: 20px;
+        margin-bottom: 2px;
     }
 
     .step4-style .form-row.form-row-4 {
-        gap: 12px;
+        flex-direction: row;
         flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
     }
 
     .step4-style .form-row.form-row-4 > .form-col {
-        flex: 1 1 calc(25% - 12px);
-        min-width: 0;
+        flex: 1 1 calc(50% - 10px);
+        min-width: calc(50% - 10px);
+        padding-bottom: 20px;
     }
 
-    .step4-style .form-row.form-row-4 select {
+    @media (min-width: 576px) {
+        .step4-style .form-row.form-row-4 > .form-col {
+            flex: 1 1 calc(25% - 10px);
+            min-width: 140px;
+        }
+    }
+
+    /* Desktop — 2 cột như form VETC, full width cột nội dung */
+    @media (min-width: 992px) {
+        .admission-page {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+
+        .admission-page .admission-panel > .list-group-item {
+            padding-left: 28px !important;
+            padding-right: 28px !important;
+        }
+
+        .step4-style {
+            padding: 12px 8px 40px;
+        }
+
+        .step4-style .form-intro h2 {
+            font-size: 1.35rem;
+        }
+
+        .step4-style .form-row:not(.form-row-4) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px 20px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+
+        .step4-style .form-row:not(.form-row-4) > .form-col {
+            flex: 1 1 calc(50% - 10px);
+            width: auto;
+            max-width: calc(50% - 10px);
+            margin-bottom: 0;
+        }
+
+        .step4-style .form-row:not(.form-row-4) > .form-col:only-child {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+
+        .step4-style .form-row.form-row-4 {
+            gap: 14px;
+        }
+
+        .step4-style .form-row.form-row-4 > .form-col {
+            flex: 1 1 calc(25% - 11px);
+            min-width: 0;
+            max-width: none;
+        }
+
+        .step4-style .form-field-pill {
+            min-height: 50px;
+            padding: 8px 18px;
+        }
+
+        .step4-style .form-field-pill label {
+            max-width: 40%;
+            font-size: 14px;
+        }
+
+        .step4-style .form-field-pill input,
+        .step4-style .form-field-pill select {
+            font-size: 15px;
+        }
+
+        .admission-method-body .form-row:not(.form-row-4) > .form-col {
+            flex: 1 1 calc(50% - 10px);
+            max-width: calc(50% - 10px);
+        }
+
+        .admission-method-body .form-row:not(.form-row-4) > .form-col:only-child {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+    }
+
+    /* Label nằm trong khung input — kiểu VETC */
+    .step4-style .form-field-pill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        min-height: 48px;
+        padding: 6px 16px;
+        border: 1px solid #d1d5db;
+        border-radius: 999px;
+        background: #fff;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        box-sizing: border-box;
+    }
+
+    .step4-style .form-field-pill:focus-within {
+        border-color: #3380d4;
+        box-shadow: 0 0 0 3px rgba(51, 128, 212, 0.15);
+    }
+
+    .step4-style .form-field-pill.is-invalid {
+        border-color: #dc2626 !important;
+        box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.12) !important;
+    }
+
+    .step4-style .form-field-pill.is-valid {
+        border-color: #16a34a !important;
+    }
+
+    .step4-style .form-field-pill.form-field-pill-readonly {
+        background: #f9fafb;
+    }
+
+    .step4-style .form-field-pill label {
+        flex: 0 0 auto;
+        max-width: 46%;
+        font-weight: 600;
+        font-size: 14px;
+        margin: 0;
+        color: #111;
+        line-height: 1.25;
+        white-space: normal;
+    }
+
+    .step4-style .form-field-pill label .req {
+        color: #dc2626;
+        font-weight: 700;
+    }
+
+    .step4-style .form-field-pill input,
+    .step4-style .form-field-pill select,
+    .step4-style .form-field-pill textarea {
+        flex: 1 1 auto;
         min-width: 0;
+        border: none !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 6px 0 6px 4px;
+        margin: 0;
+        min-height: 34px;
+        font-size: 15px;
+        color: #222;
+        text-align: left;
+        outline: none;
+        width: auto;
+    }
+
+    .step4-style .form-field-pill select {
+        appearance: auto;
+        cursor: pointer;
+        padding-right: 4px;
+        text-align-last: left;
+    }
+
+    .step4-style .form-field-pill input::placeholder {
+        color: #9ca3af;
+        text-align: left;
+    }
+
+    .step4-style .form-field-pill input[type="date"] {
+        text-align: left;
+    }
+
+    .step4-style .form-field-pill textarea {
+        text-align: left;
+        min-height: 60px;
+        resize: vertical;
+    }
+
+    .step4-style .form-field-pill-readonly input {
+        color: #555;
+        text-align: left;
     }
 
     .step4-style label {
         font-weight: 600;
-        font-size: 16px;
-        margin-bottom: 2px;
-        color: #022468;
+        font-size: 14px;
+        color: #111;
+        line-height: 1.3;
     }
 
-    .step4-style input[type="text"],
-    .step4-style input[type="tel"],
-    .step4-style input[type="email"],
-    .step4-style input[type="date"],
-    .step4-style select,
-    .step4-style textarea {
-        border: none;
-        border-bottom: 1.2px dotted #444;
-        font-size: 16px;
-        background: #fafbff;
-        padding: 5px 7px;
-        margin-bottom: 3px;
+    /* Fallback nếu chưa bọc pill */
+    .step4-style input[type="text"]:not(.form-field-pill input),
+    .step4-style input[type="tel"]:not(.form-field-pill input),
+    .step4-style input[type="email"]:not(.form-field-pill input),
+    .step4-style input[type="date"]:not(.form-field-pill input),
+    .step4-style select:not(.form-field-pill select),
+    .step4-style textarea:not(.form-field-pill textarea) {
+        border: 1px solid #d1d5db;
+        border-radius: 999px;
+        font-size: 15px;
+        background: #fff;
+        padding: 10px 16px;
+        margin-bottom: 0;
         outline: none;
-        transition: border-bottom 0.2s;
+        transition: border-color 0.2s, box-shadow 0.2s;
         width: 100%;
         box-sizing: border-box;
-    }
-
-    .step4-style input[type="text"]:focus,
-    .step4-style input[type="tel"]:focus,
-    .step4-style input[type="email"]:focus,
-    .step4-style input[type="date"]:focus,
-    .step4-style select:focus,
-    .step4-style textarea:focus {
-        border-bottom: 2px solid #007bff;
-        background: #f3f7fd;
-    }
-
-    .step4-style input.input-invalid {
-        border-bottom: 2px solid #e53935 !important;
-        background: #fff5f5 !important;
-    }
-
-    .step4-style input.input-valid {
-        border-bottom: 2px solid #43a047 !important;
-        background: #f1f8f2 !important;
+        min-height: 44px;
+        color: #222;
     }
 
     .step4-style .field-error-msg {
@@ -119,24 +325,17 @@
         right: 0;
         bottom: 0;
         display: block;
-        color: #e53935;
-        font-size: 13px;
-        min-height: 18px;
+        color: #dc2626;
+        font-size: 12px;
+        min-height: 16px;
         line-height: 1.3;
         font-weight: 500;
         margin: 0;
     }
 
     .step4-style select {
-        height: 33px;
-        min-width: 170px;
-        color: #222;
-    }
-
-    .step4-style textarea {
-        min-height: 35px;
-        max-height: 80px;
-        resize: vertical;
+        appearance: auto;
+        cursor: pointer;
     }
 
     .step4-style table,
@@ -152,11 +351,6 @@
         margin-top: 20px;
         width: 100%;
         background: #f8fafb;
-    }
-
-    .step4-style .note {
-        font-size: 14px;
-        margin-top: 20px;
     }
 
     .step4-style ul {
@@ -287,10 +481,198 @@
         margin-top: 6px;
     }
 
+    /* Phương thức xét tuyển — kiểu VETC */
+    .admission-method-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 16px 0 8px;
+    }
+
+    .admission-method-item {
+        border-radius: 999px;
+    }
+
+    .admission-method-header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border: none;
+        background: #3380d4;
+        color: #fff;
+        padding: 14px 18px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        text-align: left;
+        border-radius: 999px;
+        gap: 12px;
+        transition: background 0.2s;
+    }
+
+    .admission-method-header:hover {
+        background: #2b6cb8;
+    }
+
+    .admission-method-item.is-selected .admission-method-header {
+        background: #2563ab;
+    }
+
+    .admission-method-item.is-expanded .admission-method-header {
+        border-radius: 24px 24px 0 0;
+    }
+
+    .method-check {
+        width: 18px;
+        height: 18px;
+        border: 2px solid #fff;
+        border-radius: 3px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+    }
+
+    .admission-method-item.is-selected .method-check {
+        background: #fff;
+    }
+
+    .admission-method-item.is-selected .method-check::after {
+        content: '✓';
+        color: #3380d4;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .method-title {
+        flex: 1;
+        line-height: 1.35;
+    }
+
+    .method-title small {
+        display: inline;
+        text-transform: none;
+        font-weight: 500;
+        font-size: 11px;
+        opacity: 0.95;
+        margin-left: 6px;
+        white-space: nowrap;
+    }
+
+    .method-toggle {
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1;
+        flex-shrink: 0;
+        width: 24px;
+        text-align: center;
+    }
+
+    .admission-method-body {
+        background: #f8fafc;
+        border: 2px solid #3380d4;
+        border-top: none;
+        border-radius: 0 0 20px 20px;
+        padding: 16px 14px 8px;
+        margin-top: -4px;
+    }
+
+    .admission-method-body .form-row:last-child {
+        margin-bottom: 8px;
+    }
+
+    .step4-style .note {
+        font-size: 13px;
+        margin-top: 16px;
+        margin-bottom: 20px;
+        padding: 12px 14px;
+        background: #f9fafb;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        line-height: 1.5;
+        position: relative;
+        z-index: 0;
+    }
+
+    .step4-style .commitment-text {
+        font-size: 14px;
+        line-height: 1.55;
+        color: #444;
+    }
+
+    .admission-submit-bar .btn-submit-admission {
+        width: 100%;
+        min-height: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        border-radius: 999px;
+        background: #023EB6;
+        border-color: #023EB6;
+    }
+
+    .admission-submit-bar .btn-submit-admission:hover {
+        background: #022d88;
+        border-color: #022d88;
+    }
+
+    .admission-page .admission-panel > .list-group-item:last-child {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+
     .admission-table-scroll {
         overflow-x: auto;
+        overflow-y: visible;
         -webkit-overflow-scrolling: touch;
-        margin: 12px -4px;
+        width: 100%;
+        max-width: 100%;
+        margin: 12px 0 4px;
+        padding-bottom: 6px;
+        scrollbar-width: thin;
+    }
+
+    .step4-style #subject-table {
+        width: max-content;
+        min-width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .step4-style #subject-table th,
+    .step4-style #subject-table td {
+        min-width: 76px;
+        white-space: nowrap;
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .step4-style #subject-table th:first-child,
+    .step4-style #subject-table td:first-child {
+        min-width: 56px;
+        position: sticky;
+        left: 0;
+        z-index: 1;
+        background: #f8fafb;
+        box-shadow: 2px 0 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .table-scroll-hint {
+        display: none;
+        font-size: 12px;
+        color: #64748b;
+        text-align: center;
+        margin: 0 0 12px;
+        line-height: 1.4;
+    }
+
+    .step4-style .vocational-section-title {
+        margin-top: 8px;
     }
 
     .admission-submit-bar {
@@ -315,21 +697,17 @@
         }
 
         .step4-style {
-            padding: 14px 12px;
-            margin: 12px 0;
+            padding: 4px 0 16px;
             max-width: 100%;
-            border-radius: 10px;
-            box-shadow: none;
         }
 
-        .step4-style .text-center p,
-        .step4-style .text-center h4 {
+        .step4-style .form-intro h2 {
+            font-size: 1.05rem;
+        }
+
+        .step4-style .form-section-title {
             font-size: 14px;
-            line-height: 1.45;
-        }
-
-        .step4-style .text-center h4 {
-            font-size: 16px;
+            margin-top: 20px;
         }
 
         .step4-style .form-row {
@@ -341,22 +719,38 @@
             min-width: 100%;
             flex: 1 1 100%;
             margin-bottom: 4px;
-            padding-bottom: 26px;
+            padding-bottom: 22px;
         }
 
         .step4-style .form-row.form-row-4 {
-            flex-direction: column;
-            gap: 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
         .step4-style .form-row.form-row-4 > .form-col {
-            flex: 1 1 100%;
-            min-width: 100%;
-            max-width: 100%;
+            flex: 1 1 calc(50% - 8px);
+            min-width: calc(50% - 8px);
+            max-width: calc(50% - 8px);
+        }
+
+        .step4-style .form-field-pill {
+            min-height: 46px;
+            padding: 5px 12px;
+        }
+
+        .step4-style .form-field-pill label {
+            max-width: 44%;
+            font-size: 13px;
+        }
+
+        .step4-style .form-field-pill input,
+        .step4-style .form-field-pill select {
+            font-size: 14px;
         }
 
         .step4-style label {
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .step4-style input[type="text"],
@@ -366,7 +760,12 @@
         .step4-style select,
         .step4-style textarea {
             font-size: 16px;
-            min-height: 40px;
+            min-height: 46px;
+        }
+
+        .admission-method-header {
+            font-size: 11px;
+            padding: 12px 14px;
         }
 
         .step4-style select {
@@ -374,15 +773,18 @@
             width: 100%;
         }
 
+        .table-scroll-hint {
+            display: block;
+        }
+
         .step4-style #subject-table {
-            font-size: 12px;
-            min-width: 520px;
+            min-width: 640px;
         }
 
         .step4-style #subject-table th,
         .step4-style #subject-table td {
-            padding: 6px 4px;
-            white-space: nowrap;
+            padding: 8px 8px;
+            font-size: 12px;
         }
 
         .loading-text {
@@ -530,22 +932,18 @@
                 <span class="admission-step-badge">Bước 4 / 4</span>
                 <form method="post" action="{%url 'homepage:admission' %}" id="admissionForm">
                     {% csrf_token %}
-                    <div class="text-center">
-
-                        <p><strong>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</strong><br>
-                            <span class="underline">Độc lập – Tự do – Hạnh phúc</span>
+                    <div class="form-intro">
+                        <h2>Đăng ký xét tuyển GDTX lớp 10</h2>
+                        <p class="form-intro-meta">
+                            Năm học 2026–2027 · Cơ sở: <strong id="selected-campus"></strong>
                         </p>
-                        <p><strong>SỞ GIÁO DỤC VÀ ĐÀO TẠO THÀNH PHỐ HỒ CHÍ MINH</strong></p>
-                        <p><strong>TRUNG TÂM GDNN-GDTX THÀNH PHỐ THỦ ĐỨC</strong></p>
-                        <h4><strong>ĐƠN XIN XÉT TUYỂN HỌC CHƯƠNG TRÌNH GDTX</strong></h4>
-                        <p><strong>LỚP 10 – NĂM HỌC 2026-2027</strong></p>
-                        <p>TẠI CƠ SỞ: <span id="selected-campus"></span></p>
-                        <p class="mt-2"><em>Kính gửi: Giám đốc Trung tâm GDNN-GDTX thành phố Thủ Đức.</em></p>
                     </div>
+
+                    <h3 class="form-section-title">1. Thông tin cá nhân</h3>
 
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="full_name">Họ và tên học viên (in hoa) <span style="color:red">*</span></label>
+                            <label for="full_name">Họ và tên học viên (in hoa) <span class="req">*</span></label>
                             <input type="text" name="full_name" id="full_name" required style="text-transform: uppercase;">
                         </div>
                         <div class="form-col">
@@ -577,8 +975,8 @@
 
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="birth_place">Nơi sinh (theo giấy khai sinh) <span style="color:red">*</span></label>
-                            <input type="text" name="birth_place" id="birth_place" placeholder="Ví dụ: Bệnh viện..., phường..., thành phố..." required>
+                            <label for="birth_place">Nơi sinh<span style="color:red">*</span></label>
+                            <input type="text" name="birth_place" id="birth_place" placeholder="Ví dụ: Bệnh viện...(theo giấy khai sinh)" required>
                         </div>
                         <div class="form-col">
                             <label for="ethnicity">Dân tộc <span style="color:red">*</span></label>
@@ -650,7 +1048,10 @@
                         </div>
                     </div>
 
-                    <p class="mt-3 mb-1"><strong>Địa chỉ thường trú (theo VNeID)</strong></p>
+                    <h3 class="form-section-title">2. Địa chỉ</h3>
+                    <p class="form-section-hint after-section-title">Địa chỉ thường trú và địa chỉ hiện tại theo VNeID</p>
+
+                    <p class="mb-1 mt-2"><strong>Địa chỉ thường trú</strong></p>
                     <div class="form-row">
                         <div class="form-col">
                             <label for="permanent_house_number">Số nhà <span style="color:red">*</span></label>
@@ -676,7 +1077,7 @@
                         </div>
                     </div>
 
-                    <p class="mt-3 mb-1"><strong>Địa chỉ hiện tại (theo VNeID)</strong></p>
+                    <p class="mb-1 mt-3"><strong>Địa chỉ hiện tại</strong></p>
                     <div class="form-row">
                         <div class="form-col">
                             <label for="current_house_number">Số nhà <span style="color:red">*</span></label>
@@ -702,92 +1103,117 @@
                         </div>
                     </div>
 
+                    <h3 class="form-section-title">3. Thông tin xét tuyển THCS</h3>
+                    <p class="form-section-hint after-section-title">Nơi học THCS (ghi tên trường và chọn năm tốt nghiệp)</p>
+
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="graduationYear">Đã tốt nghiệp THCS năm học <span style="color:red">*</span></label>
-                            <select id="graduationYear" name="graduation_year" required onchange="handleGraduationChange()">
-                                <option value="">-- Chọn --</option>
-                                <option value="current">Tốt nghiệp năm nay</option>
-                                <option value="before">Tốt nghiệp những năm trước</option>
+                            <label for="graduationYear">Năm tốt nghiệp THCS <span class="req">*</span></label>
+                            <select id="graduationYear" name="graduation_year" required>
+                                <option value="">-- Chọn năm --</option>
+                                {% for y in graduation_year_options %}
+                                <option value="{{ y }}">{{ y }}</option>
+                                {% endfor %}
                             </select>
                         </div>
                         <div class="form-col">
-                            <label for="graduation_school">Trường <span style="color:red">*</span></label>
+                            <label for="graduation_school">Trường THCS <span style="color:red">*</span></label>
                             <input type="text" name="graduation_school" id="graduation_school" required>
                         </div>
                     </div>
 
-                    <div id="graduationScoreCurrent" class="d-none">
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="graduation_total_score">Tổng điểm tốt nghiệp (≤ 30.0) <span style="color:red">*</span></label>
-                                <input type="text" name="graduation_total_score" id="graduation_total_score"
-                                    inputmode="decimal" placeholder="VD: 24.5" data-max="30"
-                                    oninput="limitScoreInput(this, 30)">
+                    <input type="hidden" name="admission_method" id="admission_method" value="">
+
+                    <div class="admission-method-list">
+                        <div class="admission-method-item" data-method="transcript">
+                            <button type="button" class="admission-method-header" data-method="transcript" aria-expanded="false">
+                                <span class="method-check" aria-hidden="true"></span>
+                                <span class="method-title">XÉT TUYỂN THEO ĐIỂM HỌC BẠ</span>
+                                <span class="method-toggle" aria-hidden="true">+</span>
+                            </button>
+                            <div class="admission-method-body d-none" id="methodBodyTranscript">
+                                <p class="mb-2"><strong>Điểm Toán, Văn các lớp THCS</strong> <small>(mỗi môn ≤ 10.0)</small></p>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label for="math_score_6">Điểm Toán lớp 6 <span style="color:red">*</span></label>
+                                        <input type="text" name="math_score_6" id="math_score_6" inputmode="decimal" data-max="10"
+                                            oninput="limitScoreInput(this, 10); calcAvgScore()">
+                                    </div>
+                                    <div class="form-col">
+                                        <label for="literature_score_6">Điểm Văn lớp 6 <span style="color:red">*</span></label>
+                                        <input type="text" name="literature_score_6" id="literature_score_6" inputmode="decimal" data-max="10"
+                                            oninput="limitScoreInput(this, 10); calcAvgScore()">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label for="math_score_7">Điểm Toán lớp 7 <span style="color:red">*</span></label>
+                                        <input type="text" name="math_score_7" id="math_score_7" inputmode="decimal" data-max="10"
+                                            oninput="limitScoreInput(this, 10); calcAvgScore()">
+                                    </div>
+                                    <div class="form-col">
+                                        <label for="literature_score_7">Điểm Văn lớp 7 <span style="color:red">*</span></label>
+                                        <input type="text" name="literature_score_7" id="literature_score_7" inputmode="decimal" data-max="10"
+                                            oninput="limitScoreInput(this, 10); calcAvgScore()">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label for="math_score_8">Điểm Toán lớp 8 <span style="color:red">*</span></label>
+                                        <input type="text" name="math_score_8" id="math_score_8" inputmode="decimal" data-max="10"
+                                            oninput="limitScoreInput(this, 10); calcAvgScore()">
+                                    </div>
+                                    <div class="form-col">
+                                        <label for="literature_score_8">Điểm Văn lớp 8 <span style="color:red">*</span></label>
+                                        <input type="text" name="literature_score_8" id="literature_score_8" inputmode="decimal" data-max="10"
+                                            oninput="limitScoreInput(this, 10); calcAvgScore()">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label for="math_score_9">Điểm Toán lớp 9 <span style="color:red">*</span></label>
+                                        <input type="text" name="math_score_9" id="math_score_9" inputmode="decimal" data-max="10"
+                                            oninput="limitScoreInput(this, 10); calcAvgScore()">
+                                    </div>
+                                    <div class="form-col">
+                                        <label for="literature_score_9">Điểm Văn lớp 9 <span style="color:red">*</span></label>
+                                        <input type="text" name="literature_score_9" id="literature_score_9" inputmode="decimal" data-max="10"
+                                            oninput="limitScoreInput(this, 10); calcAvgScore()">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label for="avgScore">Điểm trung bình</label>
+                                        <input type="text" name="avg_score" id="avgScore" readonly tabindex="-1"
+                                            style="background:#eee; cursor:not-allowed;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="admission-method-item" data-method="exam">
+                            <button type="button" class="admission-method-header" data-method="exam" aria-expanded="false">
+                                <span class="method-check" aria-hidden="true"></span>
+                                <span class="method-title">
+                                    XÉT TUYỂN THEO ĐIỂM THI THCS
+                                    <small>(Khuyến khích đăng ký)</small>
+                                </span>
+                                <span class="method-toggle" aria-hidden="true">+</span>
+                            </button>
+                            <div class="admission-method-body d-none" id="methodBodyExam">
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label for="graduation_total_score">Tổng điểm tốt nghiệp (≤ 30.0) <span style="color:red">*</span></label>
+                                        <input type="text" name="graduation_total_score" id="graduation_total_score"
+                                            inputmode="decimal" placeholder="VD: 24.5" data-max="30"
+                                            oninput="limitScoreInput(this, 30)">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="graduationScoreBefore" class="d-none">
-                        <p class="mb-1"><strong>Điểm Toán, Văn các lớp THCS</strong> <small>(mỗi môn ≤ 10.0)</small></p>
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="math_score_6">Điểm Toán lớp 6 <span style="color:red">*</span></label>
-                                <input type="text" name="math_score_6" id="math_score_6" inputmode="decimal" data-max="10"
-                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
-                            </div>
-                            <div class="form-col">
-                                <label for="literature_score_6">Điểm Văn lớp 6 <span style="color:red">*</span></label>
-                                <input type="text" name="literature_score_6" id="literature_score_6" inputmode="decimal" data-max="10"
-                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="math_score_7">Điểm Toán lớp 7 <span style="color:red">*</span></label>
-                                <input type="text" name="math_score_7" id="math_score_7" inputmode="decimal" data-max="10"
-                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
-                            </div>
-                            <div class="form-col">
-                                <label for="literature_score_7">Điểm Văn lớp 7 <span style="color:red">*</span></label>
-                                <input type="text" name="literature_score_7" id="literature_score_7" inputmode="decimal" data-max="10"
-                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="math_score_8">Điểm Toán lớp 8 <span style="color:red">*</span></label>
-                                <input type="text" name="math_score_8" id="math_score_8" inputmode="decimal" data-max="10"
-                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
-                            </div>
-                            <div class="form-col">
-                                <label for="literature_score_8">Điểm Văn lớp 8 <span style="color:red">*</span></label>
-                                <input type="text" name="literature_score_8" id="literature_score_8" inputmode="decimal" data-max="10"
-                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="math_score_9">Điểm Toán lớp 9 <span style="color:red">*</span></label>
-                                <input type="text" name="math_score_9" id="math_score_9" inputmode="decimal" data-max="10"
-                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
-                            </div>
-                            <div class="form-col">
-                                <label for="literature_score_9">Điểm Văn lớp 9 <span style="color:red">*</span></label>
-                                <input type="text" name="literature_score_9" id="literature_score_9" inputmode="decimal" data-max="10"
-                                    oninput="limitScoreInput(this, 10); calcAvgScore()">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label for="avgScore">Điểm trung bình</label>
-                                <input type="text" name="avg_score" id="avgScore" readonly tabindex="-1"
-                                    style="background:#eee; cursor:not-allowed;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="mt-3 mb-1"><strong>Kết quả rèn luyện cả năm THCS</strong></p>
+                    <p class="mt-3 mb-1"><strong>Kết quả rèn luyện cả năm THCS</strong> <span class="req">*</span></p>
                     <div class="form-row form-row-4">
                         <div class="form-col">
                             <label for="conduct_6">Lớp 6 <span style="color:red">*</span></label>
@@ -838,7 +1264,9 @@
                         </div>
                     </div>
 
-                    <p class="mt-3 mb-1"><strong>Thông tin cha</strong></p>
+                    <h3 class="form-section-title">4. Thông tin phụ huynh</h3>
+
+                    <p class="mb-1"><strong>Thông tin cha</strong></p>
                     <div class="form-row">
                         <div class="form-col">
                             <label for="father_name">Họ và tên cha <span style="color:red">*</span></label>
@@ -894,7 +1322,9 @@
                         </div>
                     </div>
 
-                    <p class="mt-3">
+                    <h3 class="form-section-title">5. Nguyện vọng &amp; cam kết</h3>
+
+                    <p class="commitment-text mt-2">
                         Sau khi tìm hiểu tổ hợp môn chương trình GDTX của trung tâm năm học 2026-2027,
                         phụ huynh và học viên chọn tổ hợp <strong id="selected-combination"></strong>
                         (<span id="selected-shift"></span>) để học hết năm đến lớp 12.
@@ -918,8 +1348,9 @@
                             </tbody>
                         </table>
                     </div>
+                    <p class="table-scroll-hint">← Vuốt ngang để xem đủ các môn →</p>
 
-                    <p class="mt-3">
+                    <p class="commitment-text mt-3">
                         Nếu được vào học, phụ huynh và học viên cam kết chấp hành nghiêm túc nội quy và các quy định khác của Trung tâm.
                     </p>
 
@@ -936,7 +1367,7 @@
                         </ul>
                     </div>
 
-                    <p class="mt-3 mb-1"><strong>Đăng ký học trung cấp nghề song song chương trình GDTX</strong></p>
+                    <h3 class="form-section-title vocational-section-title">6. Đăng ký học trung cấp nghề song song</h3>
                     <div class="form-row">
                         <div class="form-col">
                             <label for="study_vocational">Học nghề <span style="color:red">*</span></label>
@@ -973,7 +1404,7 @@
 
                     <div class="admission-submit-bar text-center">
                         <button type="button" class="btn btn-outline-secondary mb-2 d-md-none w-100" onclick="prevStep(4)">Quay lại chọn tổ hợp</button>
-                        <button type="submit" class="btn btn-success btn-lg">Gửi đơn đăng ký</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-submit-admission">Gửi đăng ký</button>
                     </div>
                 </form>
             </div>
@@ -985,10 +1416,47 @@
     const PHONE_REGEX = /^0\d{9}$/;
     const CCCD_REGEX = /^0\d{11}$/;
 
+    function syncFieldPillState(input) {
+        const pill = input && input.closest('.form-field-pill');
+        if (!pill) return;
+        pill.classList.toggle('is-invalid', input.classList.contains('input-invalid'));
+        pill.classList.toggle('is-valid', input.classList.contains('input-valid'));
+    }
+
+    function highlightFormControl(el, invalid) {
+        if (!el) return;
+        const pill = el.closest('.form-field-pill');
+        if (pill) {
+            pill.classList.toggle('is-invalid', !!invalid);
+            if (!invalid) pill.classList.remove('is-valid');
+            return;
+        }
+        el.style.borderColor = invalid ? '#dc2626' : '';
+        el.style.borderBottom = invalid ? '2px solid red' : '';
+    }
+
+    function wrapStep4InlineFields() {
+        document.querySelectorAll('#step4 .form-col').forEach(col => {
+            if (col.querySelector(':scope > .form-field-pill')) return;
+            const label = col.querySelector(':scope > label[for]');
+            const control = col.querySelector(':scope > input:not([type="hidden"]), :scope > select, :scope > textarea');
+            if (!label || !control) return;
+
+            const pill = document.createElement('div');
+            pill.className = 'form-field-pill';
+            if (control.readOnly) pill.classList.add('form-field-pill-readonly');
+
+            col.insertBefore(pill, label);
+            pill.appendChild(label);
+            pill.appendChild(control);
+        });
+    }
+
     function setFieldError(input, message) {
         const errorEl = document.getElementById(`${input.id}_error`);
         input.classList.remove('input-valid');
         input.classList.add('input-invalid');
+        syncFieldPillState(input);
         if (errorEl) errorEl.textContent = message;
     }
 
@@ -996,12 +1464,14 @@
         const errorEl = document.getElementById(`${input.id}_error`);
         input.classList.remove('input-invalid');
         input.classList.add('input-valid');
+        syncFieldPillState(input);
         if (errorEl) errorEl.textContent = '';
     }
 
     function clearFieldState(input) {
         const errorEl = document.getElementById(`${input.id}_error`);
         input.classList.remove('input-invalid', 'input-valid');
+        syncFieldPillState(input);
         if (errorEl) errorEl.textContent = '';
     }
 
@@ -1113,6 +1583,8 @@
         setupFormatField('id_number', 'cccd');
         setupFormatField('father_phone', 'phone', 'số điện thoại của cha');
         setupFormatField('mother_phone', 'phone', 'số điện thoại của mẹ');
+        wrapStep4InlineFields();
+        initAdmissionMethods();
     });
 
     function showFormServerError(message) {
@@ -1178,13 +1650,14 @@
             return false;
         }
 
-        const email = document.getElementById('email').value.trim();
+        const emailEl = document.getElementById('email');
+        const email = emailEl.value.trim();
         if (!email) {
             alert("Email là bắt buộc!");
-            document.getElementById('email').style.borderBottom = "2px solid red";
+            highlightFormControl(emailEl, true);
             return false;
         }
-        document.getElementById('email').style.borderBottom = "";
+        highlightFormControl(emailEl, false);
 
         const studyVocational = document.getElementById('study_vocational').value;
         if (studyVocational === 'yes') {
@@ -1192,29 +1665,43 @@
             const vtSel = document.getElementById('vocational_trade_id');
             if (!vcSel.value) {
                 alert("Vui lòng chọn cơ sở dạy nghề!");
-                vcSel.style.borderBottom = "2px solid red";
+                highlightFormControl(vcSel, true);
                 return false;
             }
             if (!vtSel.value) {
                 alert("Vui lòng chọn nghề đăng ký!");
-                vtSel.style.borderBottom = "2px solid red";
+                highlightFormControl(vtSel, true);
                 return false;
             }
-            vcSel.style.borderBottom = "";
-            vtSel.style.borderBottom = "";
+            highlightFormControl(vcSel, false);
+            highlightFormControl(vtSel, false);
         }
 
-        const graduationYear = document.getElementById('graduationYear').value;
-        if (graduationYear === 'current') {
+        const graduationYearEl = document.getElementById('graduationYear');
+        const graduationYear = graduationYearEl.value;
+        if (!graduationYear) {
+            alert("Vui lòng chọn năm tốt nghiệp THCS!");
+            highlightFormControl(graduationYearEl, true);
+            return false;
+        }
+        highlightFormControl(graduationYearEl, false);
+
+        const admissionMethod = document.getElementById('admission_method').value;
+        if (!admissionMethod) {
+            alert("Vui lòng chọn phương thức xét tuyển!");
+            return false;
+        }
+
+        if (admissionMethod === 'exam') {
             const totalScore = document.getElementById('graduation_total_score');
             const value = parseFloat((totalScore.value || '').replace(',', '.'));
             if (isNaN(value) || value < 0 || value > 30) {
                 alert("Tổng điểm tốt nghiệp phải từ 0 đến 30.0!");
-                totalScore.style.borderBottom = "2px solid red";
+                highlightFormControl(totalScore, true);
                 return false;
             }
-            totalScore.style.borderBottom = "";
-        } else if (graduationYear === 'before') {
+            highlightFormControl(totalScore, false);
+        } else if (admissionMethod === 'transcript') {
             const scoreIds = [
                 'math_score_6', 'literature_score_6',
                 'math_score_7', 'literature_score_7',
@@ -1226,11 +1713,21 @@
                 const value = parseFloat((el.value || '').replace(',', '.'));
                 if (isNaN(value) || value < 0 || value > 10) {
                     alert("Điểm Toán, Văn mỗi môn phải từ 0 đến 10.0!");
-                    el.style.borderBottom = "2px solid red";
+                    highlightFormControl(el, true);
                     return false;
                 }
-                el.style.borderBottom = "";
+                highlightFormControl(el, false);
             }
+        }
+
+        for (const id of CONDUCT_FIELDS) {
+            const el = document.getElementById(id);
+            if (!el.value) {
+                alert("Vui lòng chọn kết quả rèn luyện đầy đủ!");
+                highlightFormControl(el, true);
+                return false;
+            }
+            highlightFormControl(el, false);
         }
 
         const addressGroups = [
@@ -1242,16 +1739,16 @@
             const ward = document.getElementById(wardId);
             if (!prov.value) {
                 alert(`Vui lòng chọn tỉnh/thành phố cho ${label}!`);
-                prov.style.borderBottom = "2px solid red";
+                highlightFormControl(prov, true);
                 return false;
             }
-            prov.style.borderBottom = "";
+            highlightFormControl(prov, false);
             if (!ward.value) {
                 alert(`Vui lòng chọn phường/xã cho ${label}!`);
-                ward.style.borderBottom = "2px solid red";
+                highlightFormControl(ward, true);
                 return false;
             }
-            ward.style.borderBottom = "";
+            highlightFormControl(ward, false);
             ward.disabled = false;
         }
 
@@ -1316,15 +1813,15 @@
         if (isNaN(value)) return;
         if (value < 0) {
             el.value = '0';
-            el.style.borderBottom = '';
+            highlightFormControl(el, false);
             return;
         }
         if (value > maxValue) {
             el.value = String(maxValue);
-            el.style.borderBottom = "2px solid red";
+            highlightFormControl(el, true);
             return;
         }
-        el.style.borderBottom = '';
+        highlightFormControl(el, false);
     }
 
     function setFieldRequired(id, required) {
@@ -1335,27 +1832,45 @@
         } else {
             el.removeAttribute('required');
             el.value = '';
-            el.style.borderBottom = '';
+            highlightFormControl(el, false);
         }
     }
 
-    function handleGraduationChange() {
-        const selected = document.getElementById('graduationYear').value;
-        const currentBlock = document.getElementById('graduationScoreCurrent');
-        const beforeBlock = document.getElementById('graduationScoreBefore');
+    const CONDUCT_FIELDS = ['conduct_6', 'conduct_7', 'conduct_8', 'conduct_9'];
 
-        currentBlock.classList.add('d-none');
-        beforeBlock.classList.add('d-none');
-        setFieldRequired('graduation_total_score', false);
-        THCS_SCORE_FIELDS.forEach(id => setFieldRequired(id, false));
-        document.getElementById('avgScore').value = '';
+    function initAdmissionMethods() {
+        document.querySelectorAll('.admission-method-header').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                selectAdmissionMethod(btn.dataset.method);
+            });
+        });
+    }
 
-        if (selected === 'current') {
-            currentBlock.classList.remove('d-none');
-            setFieldRequired('graduation_total_score', true);
-        } else if (selected === 'before') {
-            beforeBlock.classList.remove('d-none');
-            THCS_SCORE_FIELDS.forEach(id => setFieldRequired(id, true));
+    function selectAdmissionMethod(method) {
+        document.getElementById('admission_method').value = method;
+
+        document.querySelectorAll('.admission-method-item').forEach(item => {
+            const m = item.dataset.method;
+            const active = m === method;
+            item.classList.toggle('is-selected', active);
+            item.classList.toggle('is-expanded', active);
+            const body = item.querySelector('.admission-method-body');
+            if (body) body.classList.toggle('d-none', !active);
+            const toggle = item.querySelector('.method-toggle');
+            if (toggle) toggle.textContent = active ? '−' : '+';
+            const header = item.querySelector('.admission-method-header');
+            if (header) header.setAttribute('aria-expanded', active ? 'true' : 'false');
+        });
+
+        updateAdmissionMethodFields(method);
+    }
+
+    function updateAdmissionMethodFields(method) {
+        setFieldRequired('graduation_total_score', method === 'exam');
+        THCS_SCORE_FIELDS.forEach(id => setFieldRequired(id, method === 'transcript'));
+        if (method !== 'transcript') {
+            document.getElementById('avgScore').value = '';
         }
     }
 
@@ -1579,6 +2094,7 @@ function nextStep(current) {
         }
         selectedSubjectGroupId = selectedRadio.value;
         document.getElementById("step4").classList.remove("d-none");
+        wrapStep4InlineFields();
 
         // Hiển thị lại chọn trên form
         document.getElementById("campus_id").value = selectedCampusId;

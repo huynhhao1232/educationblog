@@ -381,10 +381,19 @@ class AdmissionForm(models.Model):
 
     @property
     def student_type_label(self):
-        if self.graduation_year == 'before':
-            return 'Tự do'
         from django.utils import timezone
-        return f'Thi chuyển cấp {timezone.now().year}'
+        year = timezone.now().year
+        gy = self.graduation_year
+        if gy == 'before':
+            return 'Tự do'
+        if gy == 'current':
+            return f'Thi chuyển cấp {year}'
+        try:
+            if int(gy) < year:
+                return 'Tự do'
+        except (ValueError, TypeError):
+            pass
+        return f'Thi chuyển cấp {year}'
 
     def __str__(self):
         return self.full_name
@@ -793,4 +802,97 @@ class ExamSort2SeatAssignment(models.Model):
 
     def __str__(self):
         return f"{self.room.name} — ghế {self.seat_number}"
+
+
+# --- Xếp lớp theo năm học ---
+
+CLASS_ASSIGNMENT_CAMPUS_CODES = ('AS', 'AT', 'CN', 'KT', 'VH', 'ĐS', 'BS', 'CS')
+
+
+class ClassAssignmentOldClassConfig(models.Model):
+    """Cấu hình lớp cũ → tổ hợp môn (import từ CHIA LỚP)."""
+    year = models.ForeignKey(
+        NamhHoc, on_delete=models.CASCADE, related_name='class_assignment_old_configs',
+        verbose_name="Năm học",
+    )
+    class_name = models.CharField(max_length=50, verbose_name="Tên lớp cũ")
+    old_grade = models.PositiveSmallIntegerField(verbose_name="Khối cũ")
+    campus_code = models.CharField(max_length=10, verbose_name="Mã cơ sở")
+    subject_group = models.ForeignKey(
+        SubjectGroup, on_delete=models.PROTECT, verbose_name="Tổ hợp môn",
+    )
+    female_count = models.PositiveIntegerField(null=True, blank=True, verbose_name="Sĩ số nữ (tham khảo)")
+
+    class Meta:
+        verbose_name = "Cấu hình lớp cũ (xếp lớp)"
+        verbose_name_plural = "Cấu hình lớp cũ (xếp lớp)"
+        unique_together = ('year', 'class_name')
+        ordering = ['campus_code', 'old_grade', 'class_name']
+
+    def __str__(self):
+        return f"{self.class_name} → TH {self.subject_group.code}"
+
+
+class ClassAssignmentClass(models.Model):
+    """Lớp mới sau xếp lớp."""
+    year = models.ForeignKey(
+        NamhHoc, on_delete=models.CASCADE, related_name='class_assignment_classes',
+        verbose_name="Năm học",
+    )
+    name = models.CharField(max_length=50, verbose_name="Tên lớp mới")
+    new_grade = models.PositiveSmallIntegerField(verbose_name="Khối mới")
+    old_grade = models.PositiveSmallIntegerField(verbose_name="Khối cũ")
+    campus = models.ForeignKey(Campus, on_delete=models.PROTECT, verbose_name="Cơ sở")
+    subject_group = models.ForeignKey(SubjectGroup, on_delete=models.PROTECT, verbose_name="Tổ hợp môn")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Lớp (xếp lớp)"
+        verbose_name_plural = "Lớp (xếp lớp)"
+        unique_together = ('year', 'name')
+        ordering = ['campus__code', 'new_grade', 'name']
+
+    def __str__(self):
+        return self.name
+
+
+class ClassAssignmentStudent(models.Model):
+    """Học viên chờ / đã xếp lớp trong một năm học."""
+    year = models.ForeignKey(
+        NamhHoc, on_delete=models.CASCADE, related_name='class_assignment_students',
+        verbose_name="Năm học",
+    )
+    id_number = models.CharField(max_length=20, verbose_name="Số định danh")
+    full_name = models.CharField(max_length=255, verbose_name="Họ và tên")
+    old_class_name = models.CharField(max_length=50, verbose_name="Lớp cũ")
+    old_grade = models.PositiveSmallIntegerField(verbose_name="Khối cũ")
+    campus_code = models.CharField(max_length=10, verbose_name="Mã cơ sở")
+    subject_group = models.ForeignKey(
+        SubjectGroup, on_delete=models.PROTECT, null=True, blank=True,
+        verbose_name="Tổ hợp môn",
+    )
+    gender = models.CharField(max_length=10, verbose_name="Giới tính")
+    ethnicity = models.CharField(max_length=50, blank=True, default="", verbose_name="Dân tộc")
+    birthday = models.DateField(null=True, blank=True, verbose_name="Ngày sinh")
+    academic_result = models.CharField(max_length=50, blank=True, default="", verbose_name="KQ học tập HK CN")
+    promoted = models.CharField(max_length=20, blank=True, default="", verbose_name="Lên lớp")
+    assigned_class = models.ForeignKey(
+        ClassAssignmentClass, on_delete=models.SET_NULL, null=True, blank=True,
+        related_name='students', verbose_name="Lớp đã xếp",
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Học viên (xếp lớp)"
+        verbose_name_plural = "Học viên (xếp lớp)"
+        unique_together = ('year', 'id_number')
+        ordering = ['full_name']
+
+    def __str__(self):
+        return f"{self.full_name} ({self.old_class_name})"
+
+    @property
+    def is_assigned(self):
+        return self.assigned_class_id is not None
 

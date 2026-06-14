@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.conf import settings
 from django.contrib import messages
+from django.core.mail import send_mail
 from django.utils import timezone
 import json
 from django.db import transaction
@@ -29,7 +30,7 @@ logger = logging.getLogger(__name__)
 
 def _send_admission_confirmation_email(email, full_name):
     if not email:
-        return
+        return False
     try:
         send_mail(
             subject='Xác nhận đăng ký nhập học',
@@ -38,12 +39,15 @@ def _send_admission_confirmation_email(email, full_name):
                 'Chúng tôi đã nhận được đơn đăng ký của bạn và sẽ liên hệ lại trong thời gian sớm nhất. '
                 'Mọi thắc mắc xin liên hệ SĐT: 0338968006 (thầy Hào)'
             ),
-            from_email=settings.DEFAULT_FROM_EMAIL,
+            from_email=settings.EMAIL_HOST_USER,
             recipient_list=[email],
             fail_silently=False,
         )
+        logger.info('Đã gửi email xác nhận đăng ký tới %s', email)
+        return True
     except Exception:
         logger.exception('Không gửi được email xác nhận đăng ký tới %s', email)
+        return False
 
 
 def group_list(lst, n):
@@ -374,17 +378,23 @@ def getAdmission(request):
                 'error': 'Có lỗi xảy ra khi xử lý đơn đăng ký'
             }, status=500)
 
-        _send_admission_confirmation_email(obj.email, obj.full_name)
+        transaction.on_commit(
+            lambda e=email, n=obj.full_name: _send_admission_confirmation_email(e, n)
+        )
         return JsonResponse({'success': True, 'redirect': '/admission/?success=1'})
 
     configured_campus_ids = CampusShiftGroup.objects.values_list('campus_id', flat=True).distinct()
     campuses = Campus.objects.filter(id__in=configured_campus_ids).order_by('name')
     subject_groups = SubjectGroup.objects.all()
     shifts = Shift.objects.all()
+    current_year = timezone.now().year
+    graduation_year_min = 1985
+    graduation_year_options = list(range(current_year, graduation_year_min - 1, -1))
     return render(request, 'homepage/admission.html', {
         'campuses': campuses,
         'subject_groups': subject_groups,
-        'shifts': shifts
+        'shifts': shifts,
+        'graduation_year_options': graduation_year_options,
     })
 
 

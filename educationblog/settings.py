@@ -140,16 +140,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
 # Email settings (Gmail SMTP)
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# Cấu hình qua biến môi trường (không commit mật khẩu vào repo).
+# Gmail App Password: Google Account → Bảo mật → Xác minh 2 bước → Mật khẩu ứng dụng
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# Cấu hình qua biến môi trường (không commit mật khẩu vào repo).
-# Gmail App Password: Google Account → Bảo mật → Xác minh 2 bước → Mật khẩu ứng dụng
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '').replace(' ', '')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL') or EMAIL_HOST_USER or 'noreply@localhost'
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
-if DEBUG and (not EMAIL_HOST_USER or not EMAIL_HOST_PASSWORD):
+_email_backend = os.environ.get('EMAIL_BACKEND', '').strip().lower()
+if _email_backend == 'console':
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+elif EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

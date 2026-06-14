@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 from datetime import datetime
 from decimal import Decimal, InvalidOperation
@@ -35,12 +36,20 @@ from homepage.models import (
     VocationalTrade,
 )
 from homepage.admission_validation import (
+    GRADUATION_YEAR_MIN,
+    LEGACY_GRADUATION_YEARS,
+    _resolve_admission_method,
+    infer_admission_method_from_admission,
     parse_graduation_scores,
     validate_admission_conduct,
     validate_admission_email,
     validate_admission_image,
+    validate_graduation_year,
 )
 from homepage.validators import validate_vn_cccd, validate_vn_phone
+
+logger = logging.getLogger(__name__)
+
 
 def get_Admission(request):
     if request.user.is_authenticated:
@@ -462,8 +471,24 @@ def _apply_admission_scores(admission, post_data):
     scores, err = parse_graduation_scores(post_data, graduation_year)
     if err:
         return err
-    for field, value in scores.items():
-        setattr(admission, field, value)
+    method = (post_data.get('admission_method') or '').strip()
+    if not method:
+        method = _resolve_admission_method(post_data, graduation_year)
+
+    transcript_fields = (
+        'avg_score', 'math_score_6', 'literature_score_6',
+        'math_score_7', 'literature_score_7',
+        'math_score_8', 'literature_score_8',
+        'math_score_9', 'literature_score_9',
+    )
+    if method == 'exam':
+        admission.exam_score = scores.get('exam_score')
+        for field in transcript_fields:
+            setattr(admission, field, None)
+    else:
+        admission.exam_score = None
+        for field in transcript_fields:
+            setattr(admission, field, scores.get(field))
     return None
 
 
@@ -660,6 +685,12 @@ def get_Letter(request, admission_id):
                     admission.birth_place_facility = request.POST.get('birth_place_facility', '')
 
                     admission.graduation_school = request.POST.get('graduation_school')
+                    gy_raw = request.POST.get('graduation_year', admission.graduation_year)
+                    graduation_year, gy_err = validate_graduation_year(gy_raw)
+                    if gy_err:
+                        return JsonResponse({'status': 'error', 'message': gy_err})
+                    admission.graduation_year = graduation_year
+
                     conduct_err = validate_admission_conduct(
                         request.POST.get('conduct_6', ''),
                         request.POST.get('conduct_7', ''),
@@ -764,9 +795,11 @@ def get_Letter(request, admission_id):
                                 html_message=html_message,
                                 fail_silently=False,
                             )
-                        except Exception as e:
-                            print(f"Error sending email: {e}")
-                            # Continue with success response even if email fails
+                        except Exception:
+                            logger.exception(
+                                'Gửi email duyệt hồ sơ thất bại (%s)',
+                                admission.email,
+                            )
 
                     return JsonResponse({'status': 'success'})
                 except Exception as e:
@@ -774,6 +807,7 @@ def get_Letter(request, admission_id):
                     return JsonResponse({'status': 'error', 'message': str(e)})
 
             import json
+            from django.utils import timezone
             vocational_campuses = VocationalCampus.objects.filter(
                 admission_links__admission_campus=admission.campus
             ).distinct().order_by('name')
@@ -783,6 +817,19 @@ def get_Letter(request, admission_id):
                     {'id': t.id, 'name': t.name} for t in vc.trades.all()
                 ]
 
+            current_year = timezone.now().year
+            graduation_year_options = list(range(current_year, GRADUATION_YEAR_MIN - 1, -1))
+            gy = admission.graduation_year
+            if gy not in LEGACY_GRADUATION_YEARS:
+                try:
+                    y = int(gy)
+                    if y not in graduation_year_options:
+                        graduation_year_options.append(y)
+                        graduation_year_options.sort(reverse=True)
+                except (ValueError, TypeError):
+                    if gy and gy not in graduation_year_options:
+                        graduation_year_options.insert(0, gy)
+
             context = {
                 'admission': admission,
                 'scores': _admission_score_values(admission),
@@ -790,6 +837,8 @@ def get_Letter(request, admission_id):
                 'shifts': Shift.objects.all(),
                 'vocational_campuses': vocational_campuses,
                 'vocational_trades_json': json.dumps(vc_trades),
+                'graduation_year_options': graduation_year_options,
+                'admission_method': infer_admission_method_from_admission(admission),
             }
             return render(request, 'adminpageSIMCODE/letter.html', context)
     return redirect('adminpage:login')
@@ -1113,8 +1162,11 @@ def import_cccd_excel(request):
                             fail_silently=False,
                         )
                         email_count += 1
-                    except Exception as e:
-                        print(f"Error sending email to {admission.email}: {e}")
+                    except Exception:
+                        logger.exception(
+                            'Gửi email duyệt hàng loạt thất bại (%s)',
+                            admission.email,
+                        )
         result_msg = f'Đã duyệt {approved_count} học viên theo danh sách CCCD. Đã gửi email cho {email_count} học viên.'
         return render(request, 'adminpageSIMCODE/admission.html', {'import_result': result_msg})
     return render(request, 'adminpageSIMCODE/admission.html', {'import_result': 'Vui lòng chọn file Excel hợp lệ.'})
