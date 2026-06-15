@@ -1,0 +1,41 @@
+{% extends 'homepage/template.html' %}
+{% block title %}Tìm kiếm{% if q %}: {{ q }}{% endif %}{% endblock %}
+
+{% block search %}
+<div class="neo-content-area">
+  <div class="neo-section">
+    <div class="neo-section__header">
+      <h2 class="neo-section__title">
+        {% if q %}Kết quả tìm kiếm{% else %}Tìm kiếm{% endif %}
+      </h2>
+    </div>
+
+    <form class="neo-search mb-4" action="{% url 'homepage:search' %}" method="get" style="max-width: 100%; margin: 0;">
+      <i class="fa-solid fa-magnifying-glass neo-search__icon"></i>
+      <input class="neo-search__input" type="search" name="q" placeholder="Nhập từ khóa..." value="{{ q }}">
+      <button class="neo-search__btn" type="submit">Tìm kiếm</button>
+    </form>
+
+    {% if q %}
+      {% if posts %}
+      <div class="neo-page-card neo-post-list">
+        <ul class="list-group list-group-flush">
+          {% for post in posts %}
+          <li class="list-group-item">
+            <a href="{% url 'homepage:post' post_id=post.id %}" class="news-title">
+              <p>{{ post.title }}</p>
+            </a>
+            <p class="neo-card__meta">{{ post.createdate|date:"d/m/Y H:i" }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% else %}
+      <p class="neo-card__meta">Không tìm thấy kết quả cho «{{ q }}».</p>
+      {% endif %}
+    {% else %}
+    <p class="neo-card__meta">Nhập từ khóa để tìm tin tức và thông báo.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

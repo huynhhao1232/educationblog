@@ -27,6 +27,16 @@ from .admission_validation import validate_admission_post
 # Create your views here.
 logger = logging.getLogger(__name__)
 
+ADMISSION_NEWS_CATEGORY_NAME = 'Bảng tin tuyển sinh'
+
+
+def _get_admission_news_category():
+    category, _ = Category.objects.get_or_create(
+        name=ADMISSION_NEWS_CATEGORY_NAME,
+        defaults={'enable': True},
+    )
+    return category
+
 
 def _send_admission_confirmation_email(email, full_name):
     if not email:
@@ -53,16 +63,90 @@ def _send_admission_confirmation_email(email, full_name):
 def group_list(lst, n):
     return [lst[i:i + n] for i in range(0, len(lst), n)]
 
+
+ACTIVITY_IMAGE_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp')
+
+
+def _activity_image_files(post):
+    files = []
+    for uploaded in UploadedFile.objects.filter(post=post):
+        name = (uploaded.pdf_file.name or '').lower()
+        if any(name.endswith(ext) for ext in ACTIVITY_IMAGE_EXTENSIONS):
+            files.append(uploaded)
+    return files
+
 def getHomePage(request):
     categories = Category.objects.filter(enable = True)
     postTT = Post.objects.filter(enable = True, category = 1).order_by('-createdate')[:3]
     posttt = Post.objects.filter(enable = True, category = 4).order_by('-createdate')[:3]
     postViews = Post.objects.filter(enable=True).order_by('-views')[:10]
     notifications_HV = Post.objects.filter(enable=True, category=3).order_by('-createdate')[:4]
-    notifination_news = Post.objects.filter(enable = True).exclude(category=3).order_by('-createdate')[:6]
+    admission_category = Category.objects.filter(name=ADMISSION_NEWS_CATEGORY_NAME).first()
+    admission_news = (
+        Post.objects.filter(enable=True, category=admission_category).order_by('-createdate')[:6]
+        if admission_category else Post.objects.none()
+    )
+    latest_news_qs = Post.objects.filter(enable=True).exclude(category=3)
+    if admission_category:
+        latest_news_qs = latest_news_qs.exclude(category=admission_category)
+    notifination_news = latest_news_qs.order_by('-createdate')[:6]
     lichcongtacs = Post.objects.filter(enable=True, category=2).order_by('-createdate')[:6]
-    context = {'categories': categories, 'postTT': postTT, 'notifications_HV': notifications_HV, 'notification_news': notifination_news, 'lichcongtacs': lichcongtacs, 'postViews': postViews, 'posttt': posttt}
+    context = {
+        'categories': categories,
+        'postTT': postTT,
+        'notifications_HV': notifications_HV,
+        'notification_news': notifination_news,
+        'lichcongtacs': lichcongtacs,
+        'postViews': postViews,
+        'posttt': posttt,
+        'admission_news': admission_news,
+    }
     return render(request, 'homepage/index.html', context)
+
+
+def post_admission_news(request):
+    if not request.user.is_authenticated or not (request.user.is_staff or request.user.is_superuser):
+        messages.error(request, 'Bạn không có quyền đăng tin tuyển sinh.')
+        return redirect('homepage:Homepage')
+
+    if request.method != 'POST':
+        return redirect('homepage:Homepage')
+
+    title = (request.POST.get('title') or '').strip()
+    content = (request.POST.get('content') or '').strip()
+    image = request.FILES.get('image')
+
+    if not title or not content:
+        messages.error(request, 'Vui lòng nhập đầy đủ tiêu đề và nội dung.')
+        return redirect('homepage:Homepage')
+
+    category = _get_admission_news_category()
+    post = Post.objects.create(
+        title=title[:50],
+        content=content,
+        category=category,
+        enable=True,
+    )
+    if image:
+        post.image_file = image
+        post.save()
+
+    messages.success(request, 'Đã đăng tin tuyển sinh thành công.')
+    return redirect('homepage:Homepage')
+
+
+def search_posts(request):
+    q = request.GET.get('q', '').strip()
+    posts = []
+    if q:
+        posts = Post.objects.filter(enable=True, title__icontains=q).order_by('-createdate')[:30]
+    return render(request, 'homepage/search.html', {'q': q, 'posts': posts})
+
+
+def getCyberHomePage(request):
+    notifination_news = Post.objects.filter(enable=True).exclude(category=3).order_by('-createdate')[:6]
+    return render(request, 'homepage/cyber_home.html', {'notification_news': notifination_news})
+
 
 def getCategory(request, category_id):
     categories = Category.objects.filter(enable = True)
@@ -195,23 +279,18 @@ def getForumView(request, forum_id):
     return render(request, 'homepage/forumView.html', context)
 
 def getActivity(request):
-    # Lấy các bài viết đã bật công khai trong chuyên mục hoạt động
     posts = Post.objects.filter(enable=True, category__id=8).order_by('-createdate')
-    categories = Category.objects.filter(enable = True)
-    # Tạo một danh sách chứa thông tin về từng bài post và hình ảnh liên quan
+    categories = Category.objects.filter(enable=True)
     post_data = []
     for post in posts:
-        # Lấy tất cả hình ảnh liên quan đến bài post
-        files = UploadedFile.objects.filter(post=post)
         post_data.append({
             'post': post,
-            'files': files,
+            'files': _activity_image_files(post),
         })
 
-    # Truyền dữ liệu vào template
     context = {
         'post_data': post_data,
-        'categories': categories
+        'categories': categories,
     }
 
     return render(request, 'homepage/activity.html', context)

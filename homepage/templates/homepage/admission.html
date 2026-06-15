@@ -3,14 +3,9 @@
 {% block extra_head %}
 <style>
     @media (max-width: 991px) {
-        body:has(.admission-page) .content-left { display: none !important; }
-        body:has(.admission-page) main { margin-top: 56px !important; }
-        body:has(.admission-page) header .banner img {
-            max-height: 72px;
-            width: 100%;
-            object-fit: cover;
-        }
+        body:has(.admission-page) .neo-sidebar { display: none !important; }
     }
+    .admission-page .step4-style .form-intro h2 { color: var(--neo-navy) !important; }
 </style>
 {% endblock %}
 {% block admission %}
@@ -877,7 +872,7 @@
     <div class="loading-text">Đang xử lý đơn đăng ký...</div>
 </div>
 
-<div class="col-12 col-lg-9 admission-page px-2 px-md-3">
+<div class="neo-content-area admission-page px-2 px-md-3">
     <ul class="list-group admission-panel">
         <li class="list-group-item" aria-current="true" style='background-color: #023EB6'>
             <nav aria-label="breadcrumb">
@@ -943,7 +938,7 @@
 
                     <div class="form-row">
                         <div class="form-col">
-                            <label for="full_name">Họ và tên học viên (in hoa) <span class="req">*</span></label>
+                            <label for="full_name">Họ và tên (in hoa) <span class="req">*</span></label>
                             <input type="text" name="full_name" id="full_name" required style="text-transform: uppercase;">
                         </div>
                         <div class="form-col">
@@ -1358,11 +1353,10 @@
                         <p><strong>Lưu ý:</strong> Học viên xin nhập học phải khai đầy đủ những yêu cầu trên để đảm bảo thông tin chính xác cho hồ sơ học viên sau này.</p>
                         <p><strong>Hồ sơ đính kèm:</strong></p>
                         <ul>
-                            <li>01 Bản sao giấy khai sinh có công chứng</li>
-                            <li>01 Bản sao CCCD có công chứng</li>
-                            <li>01 Bản sao giấy CNTNTHCS tạm thời có công chứng</li>
-                            <li>01 Bản sao giấy CN Khuyết tật có công chứng (nếu có)</li>
-                            <li>Bằng tốt nghiệp THCS (nếu có)</li>
+                            <li>Bằng TN THCS (bản chính) <strong>hoặc</strong> học bạ THCS đối với HS tốt nghiệp THCS năm học 2025 - 2026</li>
+                            <li>01 Bản sao giấy khai sinh (có dấu đỏ)</li>
+                            <li>01 Bản sao giấy công chứng CCCD (mặt trước và mặt sau của CCCD nằm trên cùng 01 mặt giấy A4 không cắt)</li>
+                            <li>01 Bản in chụp màn hình thông tin cư trú trên VNeID của học sinh (có đầy đủ nơi thường trú, nơi ở hiện tại)</li>
                             <li>01 Bản sao giấy tờ UT, KK có công chứng (nếu có)</li>
                         </ul>
                     </div>

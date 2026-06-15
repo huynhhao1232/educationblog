@@ -1,137 +1,130 @@
 {% extends 'homepage/template.html' %}
-{% block title %} Trang chủ {% endblock %}
+{% block title %}Hoạt động{% endblock %}
+
 {% block activity %}
 {% load static %}
 
-<style>
-    .modal-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Khoảng cách giữa các nút và ảnh */
-    }
-
-    #modalImage {
-        max-height: 80vh; /* Giới hạn chiều cao */
-        max-width: 80%;   /* Giới hạn chiều rộng */
-    }
-
-    .btn-outline-primary {
-        border: none;
-        background: transparent;
-    }
-
-    .btn-outline-primary i {
-        color: #007bff;
-    }
-
-    .btn-outline-primary:disabled i {
-        color: #ccc; /* Màu xám khi bị disable */
-    }
-
-</style>
-
-<div class="col-sm-9">
-    <!-- Hiển thị từng bài post -->
-    {% for data in post_data %}
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">{{ data.post.title }}</h5>
-                <p class="card-text">{{ data.post.content|safe }}</p>
-                <div class="row g-2 imageGallery">
-                    {% for file in data.files %}
-                        {% if forloop.counter <= 2 %}
-                            <!-- Hiển thị 2 hình đầu -->
-                            <img src="{{ file.pdf_file.url }}" class="col-6 img-thumbnail" style="cursor: pointer;"
-                                 onclick="openPopup('{{ data.post.id }}', {{ forloop.counter0 }})">
-                        {% endif %}
-                    {% endfor %}
-
-                    {% if data.files|length > 2 %}
-                        <!-- Hộp che số ảnh còn lại -->
-                        <div class="col-6 d-flex align-items-center justify-content-center bg-dark text-white rounded p-3"
-                             style="cursor: pointer;" onclick="openPopup('{{ data.post.id }}', 2)">
-                            +{{ data.files|length|add:"-2" }} ảnh
-                        </div>
-                    {% endif %}
-                </div>
-
-            </div>
-        </div>
-    {% endfor %}
-</div>
-
-<!-- Bootstrap Modal để xem ảnh -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Xem ảnh hoạt động</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body d-flex align-items-center justify-content-center">
-                <!-- Nút Previous -->
-                <button class="btn btn-outline-primary me-3" id="prevBtn" onclick="changeImage(-1)">
-                    <i class="fas fa-chevron-left fa-2x"></i>
-                </button>
-
-                <!-- Hình ảnh -->
-                <img id="modalImage" class="img-fluid" alt="Ảnh hoạt động" style="max-height: 80vh; max-width: 80%;">
-
-                <!-- Nút Next -->
-                <button class="btn btn-outline-primary ms-3" id="nextBtn" onclick="changeImage(1)">
-                    <i class="fas fa-chevron-right fa-2x"></i>
-                </button>
-            </div>
-        </div>
+<div class="neo-activity-page">
+  <div class="neo-page-card">
+    <div class="neo-breadcrumb-bar">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'homepage:Homepage' %}">Trang chủ</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Hoạt động</li>
+        </ol>
+      </nav>
     </div>
+
+    <div class="neo-activity-page__intro">
+      <h1 class="neo-activity-page__title">Hoạt động</h1>
+      <p class="neo-activity-page__subtitle">Hình ảnh và thông tin các hoạt động nổi bật của Trung tâm.</p>
+    </div>
+
+    <div class="neo-activity-feed">
+      {% for data in post_data %}
+      <article class="neo-activity-card">
+        <h2 class="neo-activity-card__title">{{ data.post.title }}</h2>
+        {% if data.post.content %}
+        <div class="neo-activity-card__content">{{ data.post.content|safe }}</div>
+        {% endif %}
+
+        {% if data.files %}
+        <div class="neo-activity-gallery">
+          {% for file in data.files %}
+            {% if forloop.counter <= 2 %}
+            <button type="button" class="neo-activity-gallery__item"
+              onclick="openPopup('{{ data.post.id }}', {{ forloop.counter0 }})"
+              aria-label="Xem ảnh {{ forloop.counter }}">
+              <img src="{{ file.pdf_file.url }}" alt="Ảnh hoạt động {{ forloop.counter }}" loading="lazy">
+            </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% if data.files|length > 2 %}
+        <button type="button" class="neo-activity-more-btn"
+          onclick="openPopup('{{ data.post.id }}', 2)"
+          aria-label="Xem thêm {{ data.files|length|add:'-2' }} ảnh">
+          <span class="neo-activity-more-btn__thumb">
+            <img src="{{ data.files.2.pdf_file.url }}" alt="" loading="lazy">
+          </span>
+          <span class="neo-activity-more-btn__text">Xem thêm {{ data.files|length|add:"-2" }} ảnh</span>
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        {% endif %}
+        {% endif %}
+      </article>
+      {% empty %}
+      <div class="neo-activity-empty">
+        <i class="fas fa-images"></i>
+        <p>Chưa có hoạt động nào được đăng.</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
-<!-- JavaScript -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content neo-activity-modal">
+      <div class="modal-header">
+        <h5 class="modal-title">Xem ảnh hoạt động</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="neo-activity-modal__nav" id="prevBtn" onclick="changeImage(-1)" aria-label="Ảnh trước">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <img id="modalImage" class="neo-activity-modal__image" alt="Ảnh hoạt động">
+        <button type="button" class="neo-activity-modal__nav" id="nextBtn" onclick="changeImage(1)" aria-label="Ảnh sau">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-    // Lưu trữ dữ liệu hình ảnh của từng bài post
-    const postImages = {
-        {% for data in post_data %}
-            "{{ data.post.id }}": [
-                {% for file in data.files %}
-                    "{{ file.pdf_file.url }}",
-                {% endfor %}
-            ],
+  const postImages = {
+    {% for data in post_data %}
+      "{{ data.post.id }}": [
+        {% for file in data.files %}
+          "{{ file.pdf_file.url }}",
         {% endfor %}
-    };
+      ],
+    {% endfor %}
+  };
 
-    let currentPostId = null;
-    let currentIndex = 0;
-    const modalImage = document.getElementById("modalImage");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+  let currentPostId = null;
+  let currentIndex = 0;
+  let imageModal = null;
+  const modalImage = document.getElementById("modalImage");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-    // Mở popup và hiển thị hình ảnh
-    function openPopup(postId, index) {
-        currentPostId = postId;
-        currentIndex = index;
-        updateModalImage();
-        var modal = new bootstrap.Modal(document.getElementById("imageModal"));
-        modal.show();
+  function openPopup(postId, index) {
+    if (!postImages[postId] || !postImages[postId].length) {
+      return;
     }
-
-    // Cập nhật hình ảnh trong modal
-    function updateModalImage() {
-        modalImage.src = postImages[currentPostId][currentIndex];
-
-        // Vô hiệu hóa nút nếu ở đầu/cuối danh sách
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex === postImages[currentPostId].length - 1;
+    currentPostId = postId;
+    currentIndex = index;
+    updateModalImage();
+    if (!imageModal) {
+      imageModal = new bootstrap.Modal(document.getElementById("imageModal"));
     }
+    imageModal.show();
+  }
 
-    // Thay đổi hình ảnh khi nhấn nút Previous/Next
-    function changeImage(step) {
-        currentIndex += step;
-        updateModalImage();
-    }
+  function updateModalImage() {
+    const images = postImages[currentPostId] || [];
+    modalImage.src = images[currentIndex] || '';
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= images.length - 1;
+  }
+
+  function changeImage(step) {
+    const images = postImages[currentPostId] || [];
+    currentIndex = Math.min(Math.max(currentIndex + step, 0), images.length - 1);
+    updateModalImage();
+  }
 </script>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 {% endblock %}

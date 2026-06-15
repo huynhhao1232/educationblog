@@ -3,13 +3,13 @@
     src: url(./Roboto/Roboto/Roboto-Regular.ttf);
 }
 :root{
-    --body-color: #E4E9F7;
+    --body-color: #F8F9FB;
     --sidebar-color: #fff;
-    --primary-color: #023EB6;
-    --primary-color-light: #f6f5ff;
+    --primary-color: #1B2A4A;
+    --primary-color-light: #F8F9FB;
     --toggle-color: #ddd;
-    --text-color: #023EB6;
-    --text-line: #707070;
+    --text-color: #1B2A4A;
+    --text-line: rgba(10, 22, 40, 0.12);
 
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;

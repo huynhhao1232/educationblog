@@ -5,6 +5,9 @@ from . import views
 app_name = 'homepage'
 urlpatterns = [
     path('', views.getHomePage, name="Homepage"),
+    path('bang-tin-tuyen-sinh/dang-tin/', views.post_admission_news, name='post_admission_news'),
+    path('tim-kiem/', views.search_posts, name="search"),
+    path('neon-demo/', views.getCyberHomePage, name="cyber_home"),
     path('category/<int:category_id>/', views.getCategory, name="category"),
     path('post/<int:post_id>/', views.getViewPost, name='post'),
     path('cctc/<int:pb_id>/', views.getCCTC, name="cctc"),

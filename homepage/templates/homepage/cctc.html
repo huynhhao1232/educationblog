@@ -6,10 +6,11 @@
 {%block cctc%}
 {% load static %}
             <!----------------------------------------------------------content-right---------------------------------->
-            <div class="col-sm-9">
-              <ul class="list-group">
+            <div class="neo-content-area">
+              <div class="neo-page-card">
+              <ul class="list-group list-group-flush">
 
-                <li class="list-group-item" aria-current="true" style="background-color: #023EB6; color: #fff; font-weight: bold; text-transform: uppercase; font-family: Roboto; ">{{pb.name}}</li>
+                <li class="list-group-item neo-breadcrumb-bar" aria-current="true" style="background-color: var(--neo-navy); color: #fff; font-weight: bold; text-transform: uppercase;">{{pb.name}}</li>
                 <li class="list-group-item">
                   <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="mySelect" onchange="reloadWithPBID()">
                     <option selected>{{pb.name}}</option>
@@ -185,6 +186,7 @@
                 {%endfor%}
 
               </ul>
+              </div>
             </div>
 
 
