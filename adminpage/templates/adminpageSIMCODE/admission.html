@@ -321,10 +321,28 @@
 </div>
 
 <div class="export-section">
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
         <div class="d-flex gap-2">
             <!-- Existing filter buttons if any -->
         </div>
+        <div class="d-flex gap-2 flex-wrap">
+        <form method="GET" action="{% url 'adminpage:export_admission_stats' %}" id="exportStatsForm" style="display: inline;">
+            <input type="hidden" name="name" id="exportStatsName" value="{{ name_filter }}">
+            <input type="hidden" name="id_number" id="exportStatsIdNumber" value="{{ id_number_filter }}">
+            <input type="hidden" name="graduation_year" id="exportStatsGraduationYear" value="{{ graduation_year_filter }}">
+            <input type="hidden" name="status" id="exportStatsStatus" value="{{ status_filter }}">
+            <input type="hidden" name="campus" id="exportStatsCampus" value="{{ campus_filter }}">
+            <input type="hidden" name="shift" id="exportStatsShift" value="{{ shift_filter }}">
+            <input type="hidden" name="subject_group" id="exportStatsSubjectGroup" value="{{ subject_group_filter }}">
+            <input type="hidden" name="exam_score" id="exportStatsExamScore" value="{{ exam_score_order }}">
+            <input type="hidden" name="avg_score" id="exportStatsAvgScore" value="{{ avg_score_order }}">
+            <input type="hidden" name="conduct" id="exportStatsConduct" value="{{ conduct_filter }}">
+            <input type="hidden" name="from_date" id="exportStatsFromDate" value="{{ from_date_filter }}">
+            <input type="hidden" name="to_date" id="exportStatsToDate" value="{{ to_date_filter }}">
+            <button type="submit" class="btn btn-info text-white">
+                <i class="fas fa-chart-bar me-2"></i>Thống kê đăng ký
+            </button>
+        </form>
         <form method="GET" action="{% url 'adminpage:export_approved_admissions' %}" id="exportForm" style="display: inline;">
             <input type="hidden" name="name" id="exportName" value="{{ name_filter }}">
             <input type="hidden" name="id_number" id="exportIdNumber" value="{{ id_number_filter }}">
@@ -342,6 +360,7 @@
                 <i class="fas fa-file-excel me-2"></i>Xuất Excel theo bộ lọc
             </button>
         </form>
+        </div>
     </div>
 </div>
 
@@ -426,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function applyFilters() {
+    function syncExportHiddenFields() {
         const name = document.getElementById('nameFilter')?.value.trim() || '';
         const idNumber = document.getElementById('cccdFilter')?.value.trim() || '';
         const graduationYear = document.getElementById('graduationYearFilter')?.value || '';
@@ -440,18 +459,36 @@ document.addEventListener('DOMContentLoaded', function() {
         const fromDate = document.getElementById('fromDateFilter')?.value || '';
         const toDate = document.getElementById('toDateFilter')?.value || '';
 
-        if (document.getElementById('exportName')) document.getElementById('exportName').value = name;
-        if (document.getElementById('exportIdNumber')) document.getElementById('exportIdNumber').value = idNumber;
-        if (document.getElementById('exportGraduationYear')) document.getElementById('exportGraduationYear').value = graduationYear;
-        if (document.getElementById('exportStatus')) document.getElementById('exportStatus').value = status;
-        if (document.getElementById('exportCampus')) document.getElementById('exportCampus').value = campus;
-        if (document.getElementById('exportShift')) document.getElementById('exportShift').value = shift;
-        if (document.getElementById('exportSubjectGroup')) document.getElementById('exportSubjectGroup').value = subjectGroup;
-        if (document.getElementById('exportExamScore')) document.getElementById('exportExamScore').value = examScore;
-        if (document.getElementById('exportAvgScore')) document.getElementById('exportAvgScore').value = avgScore;
-        if (document.getElementById('exportConduct')) document.getElementById('exportConduct').value = conduct;
-        if (document.getElementById('exportFromDate')) document.getElementById('exportFromDate').value = fromDate;
-        if (document.getElementById('exportToDate')) document.getElementById('exportToDate').value = toDate;
+        const pairs = [
+            ['exportName', name], ['exportIdNumber', idNumber], ['exportGraduationYear', graduationYear],
+            ['exportStatus', status], ['exportCampus', campus], ['exportShift', shift],
+            ['exportSubjectGroup', subjectGroup], ['exportExamScore', examScore], ['exportAvgScore', avgScore],
+            ['exportConduct', conduct], ['exportFromDate', fromDate], ['exportToDate', toDate],
+            ['exportStatsName', name], ['exportStatsIdNumber', idNumber], ['exportStatsGraduationYear', graduationYear],
+            ['exportStatsStatus', status], ['exportStatsCampus', campus], ['exportStatsShift', shift],
+            ['exportStatsSubjectGroup', subjectGroup], ['exportStatsExamScore', examScore], ['exportStatsAvgScore', avgScore],
+            ['exportStatsConduct', conduct], ['exportStatsFromDate', fromDate], ['exportStatsToDate', toDate],
+        ];
+        pairs.forEach(function([id, val]) {
+            const el = document.getElementById(id);
+            if (el) el.value = val;
+        });
+    }
+
+    function applyFilters() {
+        syncExportHiddenFields();
+        const name = document.getElementById('nameFilter')?.value.trim() || '';
+        const idNumber = document.getElementById('cccdFilter')?.value.trim() || '';
+        const graduationYear = document.getElementById('graduationYearFilter')?.value || '';
+        const status = document.getElementById('statusFilter')?.value || '';
+        const campus = document.getElementById('campusFilter')?.value || '';
+        const shift = document.getElementById('shiftFilter')?.value || '';
+        const subjectGroup = document.getElementById('subjectGroupFilter')?.value || '';
+        const examScore = document.getElementById('examScoreFilter')?.value || '';
+        const avgScore = document.getElementById('avgScoreFilter')?.value || '';
+        const conduct = document.getElementById('conductFilter')?.value || '';
+        const fromDate = document.getElementById('fromDateFilter')?.value || '';
+        const toDate = document.getElementById('toDateFilter')?.value || '';
 
         const params = new URLSearchParams();
 
@@ -475,6 +512,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.getElementById('searchFilterBtn')?.addEventListener('click', applyFilters);
+    document.getElementById('exportForm')?.addEventListener('submit', syncExportHiddenFields);
+    document.getElementById('exportStatsForm')?.addEventListener('submit', syncExportHiddenFields);
     document.getElementById('resetFilterBtn')?.addEventListener('click', function() {
         window.location.href = window.location.pathname;
     });
